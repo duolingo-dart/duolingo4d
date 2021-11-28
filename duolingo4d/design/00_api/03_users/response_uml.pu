@@ -1,0 +1,904 @@
+@startjson "Users"
+{
+    "pushPassed": true,
+    "achievements": [],
+    "hasFacebookId": false,
+    "profileCountry": "JP",
+    "bio": "",
+    "trackingProperties": {
+        "streak": 0,
+        "username": "duovoc_tes",
+        "creation_age": 63162113300,
+        "has_observer": false,
+        "has_picture": false,
+        "is_age_restricted": false,
+        "acquisition_last_landing_page": "forum",
+        "acquisition_survey_reason": "none",
+        "premium_had_previous_item": false,
+        "creation_date": "2019-11-10T00:50:09",
+        "num_followers": 0,
+        "is_pearson_user": false,
+        "placement_section_index": null,
+        "notification_wechat_enabled": false,
+        "has_item_weekend_amulet": false,
+        "disable_clubs": false,
+        "gems": 500,
+        "has_fullname": true,
+        "beta_shake_to_report_enabled": null,
+        "user_id": 557897808,
+        "goal": 10,
+        "disable_personalized_ads": false,
+        "has_item_rupee_wager": false,
+        "disable_events": false,
+        "acquisition_landing_url": "https://www.duolingo.com/",
+        "disable_discussions": false,
+        "num_item_streak_freeze": 0,
+        "acquisition_landing_page": "splash",
+        "disable_third_party_tracking": false,
+        "has_item_streak_repair": false,
+        "creation_date_new": "2019-11-10T00:50:09",
+        "disable_mature_words": false,
+        "skill_tree_id": "ee617e5cebcbaa5ab51554cccbc843a7",
+        "disable_stream": false,
+        "placement_depth": null,
+        "has_item_streak_freeze": false,
+        "direction": "ja<-en",
+        "has_item_immersive_subscription": false,
+        "initial_referrer": "https://www.duolingo.com/learn",
+        "has_item_live_subscription": false,
+        "num_sections_unlocked": 2,
+        "num_classrooms": 0,
+        "creation_date_millis": 1573347009000,
+        "beta_enrollment_status": "INELIGIBLE",
+        "disable_profile_country": false,
+        "distinct_id": 557897808,
+        "learning_reason": "CULTURE",
+        "has_facebook": false,
+        "num_observees": 0,
+        "acquisition_last_landing_url": "https://forum.duolingo.com/comment/26687229/How-can-I-find-my-user-id",
+        "achievements": [
+            "completion_1",
+            "items_1",
+            "gold_skills_1",
+            "xp_1",
+            "xp_2"
+        ],
+        "notification_whatsapp_enabled": false,
+        "has_item_premium_subscription": false,
+        "lingots": 2,
+        "trial_account": false,
+        "prior_proficiency_onboarding": null,
+        "level": 2,
+        "notification_sms_enabled": false,
+        "learning_language": "ja",
+        "is_self_observer": false,
+        "num_sessions_completed": 3,
+        "has_item_streak_wager": false,
+        "disable_immersion": false,
+        "acquisition_last_landing_page_date": 1636509111959,
+        "utc_offset": 9,
+        "leaderboard_league": 0,
+        "ui_language": "en",
+        "num_skills_unlocked": 16,
+        "has_phone_number": false,
+        "num_following": 0,
+        "has_location": false
+    },
+    "goalRewards": [],
+    "deactivated": false,
+    "shopItems": [],
+    "totalXp": 126,
+    "timezoneOffset": "+0900",
+    "inviteURL": "https://invite.duolingo.com/BDHTZTB5CWWKT3PHJUM2KTCXWI",
+    "tutorConfig": {
+        "enableTutor": false
+    },
+    "kudosReceived": [],
+    "emailComment": true,
+    "webNotificationIds": null,
+    "gemsConfig": {
+        "gems": 500,
+        "gemsPerSkill": 25,
+        "useGems": false
+    },
+    "id": 557897808,
+    "emailClassroomJoin": true,
+    "autoFacebookPost": false,
+    "emailClassroomLeave": true,
+    "pushClubs": true,
+    "pushStreakFreezeUsed": true,
+    "wechatAll": false,
+    "lastStreak": {
+        "isAvailableForRepair": false,
+        "googlePlayProductId": "com.duolingo.purchase.streakrepair.3",
+        "googlePlayDevPayload": "deprecated",
+        "length": 1,
+        "daysAgo": 58,
+        "lastReachedGoal": 1631502000000,
+        "shortenedProductId": "streak_3"
+    },
+    "emailSchoolsAnnouncement": true,
+    "gems": 500,
+    "acquisitionSurveyReason": "none",
+    "emailEditSuggested": true,
+    "autoUpdatePreloadedCourses": "WIFI",
+    "xpGoal": 10,
+    "practiceReminderSettings": {
+        "tlh": {
+            "timeInMinutes": 780,
+            "pushEnabled": true,
+            "useSmartReminderTime": true,
+            "emailEnabled": true
+        },
+        "ja": {
+            "timeInMinutes": 780,
+            "pushEnabled": true,
+            "useSmartReminderTime": true,
+            "emailEnabled": true
+        }
+    },
+    "rewardBundles": [
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 1,
+                    "id": "aaa9e1dd-4c85-4d30-bafc-cfd9bb34554b"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 5,
+                    "id": "39af2c8b-e322-44a0-876a-8077d14cdf42"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 2,
+                    "id": "7ca87e4f-12dc-4a77-8898-cad84ec467ac"
+                }
+            ],
+            "id": "1a99b940-af21-48b2-889d-3fc490591015",
+            "empty": false,
+            "rewardBundleType": "DAILY_GOAL"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 4,
+                    "id": "a22991db-5c50-4bf4-991e-f4def2cfdf5c"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 4,
+                    "id": "f1326b28-a101-4b65-95c4-1b1a0d85a4a9"
+                }
+            ],
+            "id": "89508efe-2ce8-4a51-92dc-1a4981386310",
+            "empty": false,
+            "rewardBundleType": "DAILY_GOAL_DOUBLE"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 2,
+                    "id": "677f4cda-8693-4f16-b812-ff693c917da6"
+                }
+            ],
+            "id": "051af6c1-3629-45b4-a657-d6b2800eb4ed",
+            "empty": false,
+            "rewardBundleType": "SKILL_COMPLETION"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 1,
+                    "id": "0f962831-8d97-4638-bfbb-f199f94dc8c5"
+                }
+            ],
+            "id": "9286c963-de48-40b4-bed1-1089921dfebd",
+            "empty": false,
+            "rewardBundleType": "WECHAT_STREAK_SHARING"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 66,
+                    "id": "5a6ee789-37e6-488d-99e2-9effae0c2153"
+                }
+            ],
+            "id": "9f5baa01-8a7a-4ca1-9cfc-65634da3ede6",
+            "empty": false,
+            "rewardBundleType": "WECHAT_SERVICE_ACCOUNT"
+        }
+    ],
+    "feedbackProperties": {
+        "Username": "duovoc_tes",
+        "Course": "Japanese <- English",
+        "Tags": ""
+    },
+    "currencyRewardBundles": [
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 2,
+                    "id": "7ca87e4f-12dc-4a77-8898-cad84ec467ac"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 5,
+                    "id": "39af2c8b-e322-44a0-876a-8077d14cdf42"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 1,
+                    "id": "aaa9e1dd-4c85-4d30-bafc-cfd9bb34554b"
+                }
+            ],
+            "id": "1a99b940-af21-48b2-889d-3fc490591015",
+            "empty": false,
+            "rewardBundleType": "DAILY_GOAL"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 4,
+                    "id": "f1326b28-a101-4b65-95c4-1b1a0d85a4a9"
+                },
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 4,
+                    "id": "a22991db-5c50-4bf4-991e-f4def2cfdf5c"
+                }
+            ],
+            "id": "89508efe-2ce8-4a51-92dc-1a4981386310",
+            "empty": false,
+            "rewardBundleType": "DAILY_GOAL_DOUBLE"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 2,
+                    "id": "677f4cda-8693-4f16-b812-ff693c917da6"
+                }
+            ],
+            "id": "051af6c1-3629-45b4-a657-d6b2800eb4ed",
+            "empty": false,
+            "rewardBundleType": "SKILL_COMPLETION"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 1,
+                    "id": "0f962831-8d97-4638-bfbb-f199f94dc8c5"
+                }
+            ],
+            "id": "9286c963-de48-40b4-bed1-1089921dfebd",
+            "empty": false,
+            "rewardBundleType": "WECHAT_STREAK_SHARING"
+        },
+        {
+            "rewards": [
+                {
+                    "tags": [],
+                    "consumed": false,
+                    "rewardType": "CHEST",
+                    "currency": "LINGOTS",
+                    "amount": 66,
+                    "id": "5a6ee789-37e6-488d-99e2-9effae0c2153"
+                }
+            ],
+            "id": "9f5baa01-8a7a-4ca1-9cfc-65634da3ede6",
+            "empty": false,
+            "rewardBundleType": "WECHAT_SERVICE_ACCOUNT"
+        }
+    ],
+    "experiments": {
+        "retention_android_streak_units": {
+            "name": "retention_android_streak_units",
+            "eligible": false,
+            "contexts": [],
+            "treated": false,
+            "condition": "control",
+            "destiny": "control"
+        },
+        "globalization_ES_referral_copy": {
+            "name": "globalization_ES_referral_copy",
+            "eligible": false,
+            "contexts": [],
+            "treated": false,
+            "condition": "control",
+            "destiny": "control"
+        },
+        "retention_android_leagues_show_streak": {
+            "name": "retention_android_leagues_show_streak",
+            "eligible": false,
+            "contexts": [],
+            "treated": false,
+            "condition": "experiment",
+            "destiny": "experiment"
+        }
+    },
+    "emailClubs": true,
+    "emailAssignmentComplete": true,
+    "emailStreakFreezeUsed": true,
+    "pushPromotion": true,
+    "pushComment": true,
+    "xpChallenges": [],
+    "emailPromotion": true,
+    "paymentMethods": [],
+    "kudosOffers": [],
+    "emailEventsDigest": true,
+    "requiresParentalConsent": false,
+    "email": "kato.shinya.dev@gmail.com",
+    "fromLanguage": "en",
+    "shakeToReportEnabled": null,
+    "health": {
+        "maxHearts": 5,
+        "eligibleForFreeRefill": false,
+        "healthEnabled": false,
+        "secondsPerHeartSegment": 18000,
+        "unlimitedHeartsAvailable": false,
+        "hearts": 5,
+        "secondsUntilNextHeartSegment": null,
+        "useHealth": false
+    },
+    "emailStreamPost": true,
+    "picture": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+    "canUseModerationTools": false,
+    "emailVerified": false,
+    "currentCourseId": "DUOLINGO_JA_EN",
+    "emailAssignment": true,
+    "monthlyXp": 0,
+    "coachOutfit": "NORMAL",
+    "emailStreakSaver": true,
+    "longestStreak": 1,
+    "subscriptionConfigs": [],
+    "blockerUserIds": [],
+    "joinedClassroomIds": [],
+    "hasPhoneNumber": false,
+    "pushEditSuggested": true,
+    "pushLeaderboards": true,
+    "insiteImmersionLingots": true,
+    "adsEnabled": true,
+    "pushStreakSaver": true,
+    "betaStatus": "INELIGIBLE",
+    "pushAnnouncement": true,
+    "hasRecentActivity15": false,
+    "lastResurrectionTimestamp": 0,
+    "xpGains": [
+        {
+            "eventType": "LESSON",
+            "xp": 13,
+            "skillId": "c63d8a5c188cda25b0544d67dc139b50",
+            "time": 1631433373
+        },
+        {
+            "eventType": "LESSON",
+            "xp": 13,
+            "skillId": "6e22f162b6a35046aae6caf7c2fef622",
+            "time": 1631433803
+        }
+    ],
+    "courses": [
+        {
+            "preload": false,
+            "placementTestAvailable": false,
+            "authorId": "duolingo",
+            "title": "Japanese",
+            "learningLanguage": "ja",
+            "xp": 100,
+            "healthEnabled": true,
+            "fromLanguage": "en",
+            "crowns": 13,
+            "id": "DUOLINGO_JA_EN"
+        },
+        {
+            "preload": false,
+            "placementTestAvailable": false,
+            "authorId": "duolingo",
+            "title": "Klingon",
+            "learningLanguage": "tlh",
+            "xp": 26,
+            "healthEnabled": false,
+            "fromLanguage": "en",
+            "crowns": 0,
+            "id": "DUOLINGO_TLH_EN"
+        }
+    ],
+    "blockedUserIds": [],
+    "plusStatus": "FREE",
+    "emailAnnouncement": true,
+    "weeklyXp": 0,
+    "streak": 0,
+    "timerBoostConfig": {
+        "timerBoosts": 0,
+        "timePerBoost": 60,
+        "hasFreeTimerBoost": true
+    },
+    "creationDate": 1573347009,
+    "emailPass": true,
+    "unconsumedGiftIds": [
+        "streakFreezeGift"
+    ],
+    "xpConfig": {
+        "maxPlacementTestXp": 100,
+        "maxSkillTestXp": 20,
+        "maxCheckpointTestXp": 50
+    },
+    "pushFollow": true,
+    "phoneNumber": null,
+    "enableMicrophone": true,
+    "name": "duovoc_test",
+    "insiteSentenceEdited": true,
+    "zapsRemaining": 0,
+    "enableSoundEffects": true,
+    "optionalFeatures": [
+        {
+            "status": "AVAILABLE",
+            "id": "convert_lingots_to_gems"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "levels_opt_in_v1"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "stories_ios"
+        },
+        {
+            "status": "ON",
+            "id": "leaderboards_opt_in"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "year_in_review"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "convert_lingots_to_gems_android"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "year_in_review_2020"
+        },
+        {
+            "status": "AVAILABLE",
+            "id": "stories_ios_waitlist"
+        }
+    ],
+    "emailFollow": true,
+    "whatsappAll": false,
+    "pushStreamPost": true,
+    "_achievements": [
+        {
+            "tier": 0,
+            "count": 0,
+            "tierCounts": [
+                2,
+                7,
+                30
+            ],
+            "name": "streak",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 1,
+            "count": 0,
+            "tierCounts": [
+                10,
+                20,
+                131
+            ],
+            "name": "completion",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 0,
+            "count": 0,
+            "tierCounts": [
+                20,
+                50,
+                200
+            ],
+            "name": "spending",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 1,
+            "count": 0,
+            "tierCounts": [
+                1,
+                1,
+                1
+            ],
+            "name": "items",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 0,
+            "count": 0,
+            "tierCounts": [
+                1,
+                1,
+                1
+            ],
+            "name": "time",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 0,
+            "count": 0,
+            "tierCounts": [
+                3,
+                3,
+                1
+            ],
+            "name": "social",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 2,
+            "count": 26,
+            "tierCounts": [
+                50,
+                100,
+                200
+            ],
+            "name": "xp",
+            "shouldShowUnlock": false
+        },
+        {
+            "tier": 0,
+            "count": 0,
+            "tierCounts": [
+                1,
+                5,
+                20
+            ],
+            "name": "perfect",
+            "shouldShowUnlock": false
+        }
+    ],
+    "timezone": "Asia/Tokyo",
+    "globalAmbassadorStatus": {},
+    "roles": [
+        "users"
+    ],
+    "motivation": "culture",
+    "emailWeeklyProgressReport": true,
+    "xpGoalMetToday": false,
+    "currentCourse": {
+        "status": "RELEASED",
+        "learningLanguage": "ja",
+        "healthEnabled": true,
+        "crowns": 13,
+        "xp": 100,
+        "wordsLearned": 385,
+        "id": "DUOLINGO_JA_EN",
+        "managedInHouse": true,
+        "fromLanguage": "en",
+        "numberOfSentences": 10912,
+        "title": "Japanese",
+        "smartTips": [],
+        "trackingProperties": {
+            "direction": "ja<-en",
+            "took_placementtest": true,
+            "max_cefr_level": null,
+            "max_section_index": 1,
+            "final_level_skill_count": 0,
+            "gold_tree_percent": 0,
+            "final_level_tree_percent": 0,
+            "total_crowns": 13,
+            "max_completed_skill_y_coord": null,
+            "learning_language": "ja",
+            "gold_skill_count": 0,
+            "gold_level_skill_count": 0,
+            "num_skills_newly_decayed": 0,
+            "gold_level_tree_percent": 0,
+            "num_skills_decayed": 0,
+            "ui_language": "en",
+            "max_tree_level": 10
+        },
+        "storiesTabPromotionLocation": 8,
+        "inLessonAvatars": [],
+        "progressQuizHistory": [],
+        "finalCheckpointSession": "NONE",
+        "checkpointTests": [],
+        "sections": [
+            {
+                "checkpointFinished": true,
+                "name": "Checkpoint 1",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 6,
+                "masteryScore": null
+            },
+            {
+                "checkpointFinished": false,
+                "checkpointSessionType": "CHECKPOINT_TEST",
+                "name": "Checkpoint 2",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 16,
+                "masteryScore": null
+            },
+            {
+                "checkpointFinished": false,
+                "checkpointSessionType": "CHECKPOINT_TEST",
+                "name": "Checkpoint 3",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 14,
+                "masteryScore": null
+            },
+            {
+                "checkpointFinished": false,
+                "checkpointSessionType": "CHECKPOINT_TEST",
+                "name": "Checkpoint 4",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 14,
+                "masteryScore": null
+            },
+            {
+                "checkpointFinished": false,
+                "checkpointSessionType": "CHECKPOINT_TEST",
+                "name": "Checkpoint 5",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 12,
+                "masteryScore": null
+            },
+            {
+                "checkpointFinished": false,
+                "checkpointSessionType": "CHECKPOINT_TEST",
+                "name": "Checkpoint 6",
+                "checkpointAccessible": false,
+                "summary": null,
+                "numRows": 11,
+                "masteryScore": null
+            }
+        ],
+        "preload": false,
+        "extraCrowns": 1,
+        "placementTestAvailable": false,
+        "numberOfWords": 5805,
+        "authorId": "duolingo",
+        "progressVersion": 0,
+        "skills": [
+            [
+                {
+                    "lessons": 5,
+                    "accessible": true,
+                    "strength": 0.25,
+                    "name": "Hiragana 1",
+                    "iconId": 1,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 1,
+                    "levels": 6,
+                    "tipsAndNotes": "",
+                    "finalLevelTimeLimit": 140,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "Hiragana-1",
+                    "shortName": "Hiragana 1",
+                    "id": "9df87a3cc262680b3ec00bd34b138137",
+                    "hasFinalLevel": true
+                }
+            ],
+            [
+                {
+                    "lessons": 5,
+                    "accessible": true,
+                    "strength": 0.25,
+                    "name": "Hiragana 2",
+                    "iconId": 18,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 1,
+                    "levels": 6,
+                    "tipsAndNotes": "",
+                    "finalLevelTimeLimit": 140,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "Hiragana-2",
+                    "shortName": "Hiragana 2",
+                    "id": "19e20d5214268dacf4ca2b8c9df59a0e",
+                    "hasFinalLevel": true
+                }
+            ],
+            [
+                {
+                    "lessons": 4,
+                    "name": "The Farm",
+                    "iconId": 47,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 0,
+                    "levels": 6,
+                    "tipsAndNotes": null,
+                    "finalLevelTimeLimit": 410,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "The-Farm",
+                    "shortName": "The Farm",
+                    "id": "67ce00767eb32e21ed77ca1a78fd38d3",
+                    "hasFinalLevel": true
+                },
+                {
+                    "lessons": 4,
+                    "name": "Honorifics 2",
+                    "iconId": 31,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 0,
+                    "levels": 6,
+                    "tipsAndNotes": null,
+                    "finalLevelTimeLimit": 410,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "Honorifics-2",
+                    "shortName": "Honorif. 2",
+                    "id": "5e74e15a5b55354340e3742c3fdd3620",
+                    "hasFinalLevel": true
+                }
+            ],
+            [
+                {
+                    "lessons": 6,
+                    "name": "Language",
+                    "iconId": 16,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 0,
+                    "levels": 6,
+                    "tipsAndNotes": null,
+                    "finalLevelTimeLimit": 410,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "Language",
+                    "shortName": "Language",
+                    "id": "df97787b62d80612affa7fff28d53ce0",
+                    "hasFinalLevel": true
+                },
+                {
+                    "lessons": 5,
+                    "name": "Feelings 4",
+                    "iconId": 14,
+                    "experimentalLessons": [],
+                    "finishedLessons": 0,
+                    "lastLessonPerfect": false,
+                    "finishedLevels": 0,
+                    "levels": 6,
+                    "tipsAndNotes": null,
+                    "finalLevelTimeLimit": 410,
+                    "perfectLessonStreak": 0,
+                    "experimentIds": [],
+                    "urlName": "Feelings-4",
+                    "shortName": "Feelings 4",
+                    "id": "3b3f26ce0c6c8d5c6c7c253587d5c888",
+                    "hasFinalLevel": true
+                }
+            ]
+        ]
+    },
+    "plusDiscounts": [],
+    "hasPlus": false,
+    "canCreatePearsonClassroom": false,
+    "emailWeeklyReport": true,
+    "persistentNotifications": [
+        "NET_PROMOTER",
+        "WEB_TO_APP_CONVERSION",
+        "WEB_LEADERBOARDS_INTRODUCTION",
+        "WEB_PLUS_TREE",
+        "WEB_PLUS_NEW_YEARS_2019",
+        "WEB_TRY_PLUS_BADGE",
+        "CHROME_APP_AD",
+        "STREAK_FREEZE_USED"
+    ],
+    "stateNeedsTOS": false,
+    "observedClassroomIds": [],
+    "adsConfig": {
+        "units": {
+            "FORUM": {
+                "id": "ca-pub-2200036119221572/3372244668",
+                "familySafe": false
+            },
+            "SESSION_END": {
+                "id": "ca-pub-2200036119221572/4268784444",
+                "familySafe": false
+            },
+            "TREE": {
+                "id": "ca-pub-2200036119221572/5745517645",
+                "familySafe": false
+            }
+        },
+        "allowPersonalizedAds": true
+    },
+    "hasGoogleId": false,
+    "referralInfo": {
+        "inviterName": null,
+        "isEligibleForOffer": true,
+        "unconsumedInviteeName": null,
+        "unconsumedInviteeIds": [],
+        "numBonusesReady": 0,
+        "hasReachedCap": false,
+        "isEligibleForBonus": true
+    },
+    "privacySettings": [],
+    "streakData": {
+        "churnedStreakTimestamp": 1631502000,
+        "startTimestamp": 1631415600,
+        "updatedTimestamp": 1631502000,
+        "length": 1,
+        "updatedTimeZone": "Asia/Tokyo",
+        "xpGoal": 10
+    },
+    "emailDetMarketing": true,
+    "lingots": 2,
+    "snoozeExpirationTime": 0,
+    "learningLanguage": "ja",
+    "emailWordOfTheDay": false,
+    "smsAll": true,
+    "enableSpeaker": true,
+    "username": "duovoc_tes"
+}
+@endjson

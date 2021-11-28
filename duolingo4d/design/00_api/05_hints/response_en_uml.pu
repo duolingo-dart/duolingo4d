@@ -1,0 +1,123 @@
+@startjson "Hints English"
+{
+    "tokens": [
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "thank",
+                        "selected": true
+                    },
+                    {
+                        "token": "you",
+                        "selected": false
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 2,
+                                "hint": "ありがとう (ございました)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 2,
+                                "hint": "ありがとう (ございます)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "hint": "感謝する (かんしゃする)"
+                            },
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "hint": "お礼を言って (おれいをいって)"
+                            },
+                            {}
+                        ]
+                    }
+                ],
+                "references": [
+                    1
+                ]
+            },
+            "index": 0,
+            "value": "thank"
+        },
+        {
+            "value": " "
+        },
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "thank",
+                        "selected": false
+                    },
+                    {
+                        "token": "you",
+                        "selected": true
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 2,
+                                "hint": "ありがとう (ございました)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 2,
+                                "hint": "ありがとう (ございます)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {
+                                "hint": "あなた (たち) (のこと)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {
+                                "hint": "あなた (たち) (は)"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {
+                                "hint": "あなた (たち) (を)"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    0
+                ]
+            },
+            "index": 1,
+            "value": "you"
+        }
+    ]
+}
+@endjson

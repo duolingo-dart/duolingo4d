@@ -1,0 +1,365 @@
+@startjson "Hints Japanese"
+{
+    "tokens": [
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "あ",
+                        "selected": true
+                    },
+                    {
+                        "token": "り",
+                        "selected": false
+                    },
+                    {
+                        "token": "が",
+                        "selected": false
+                    },
+                    {
+                        "token": "と",
+                        "selected": false
+                    },
+                    {
+                        "token": "う",
+                        "selected": false
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thank you"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thanks"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "hint": "ah"
+                            },
+                            {},
+                            {},
+                            {},
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "hint": "oh"
+                            },
+                            {},
+                            {},
+                            {},
+                            {}
+                        ]
+                    }
+                ],
+                "references": [
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "index": 0,
+            "value": "あ"
+        },
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "あ",
+                        "selected": false
+                    },
+                    {
+                        "token": "り",
+                        "selected": true
+                    },
+                    {
+                        "token": "が",
+                        "selected": false
+                    },
+                    {
+                        "token": "と",
+                        "selected": false
+                    },
+                    {
+                        "token": "う",
+                        "selected": false
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thank you"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thanks"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {
+                                "hint": "things like"
+                            },
+                            {},
+                            {},
+                            {}
+                        ]
+                    }
+                ],
+                "references": [
+                    0,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "index": 1,
+            "value": "り"
+        },
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "あ",
+                        "selected": false
+                    },
+                    {
+                        "token": "り",
+                        "selected": false
+                    },
+                    {
+                        "token": "が",
+                        "selected": true
+                    },
+                    {
+                        "token": "と",
+                        "selected": false
+                    },
+                    {
+                        "token": "う",
+                        "selected": false
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thank you"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thanks"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {
+                                "hint": "(softens the tone)"
+                            },
+                            {},
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {
+                                "hint": "(indicates the subject)"
+                            },
+                            {},
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {
+                                "hint": "but"
+                            },
+                            {},
+                            {}
+                        ]
+                    }
+                ],
+                "references": [
+                    0,
+                    1,
+                    3,
+                    4
+                ]
+            },
+            "index": 2,
+            "value": "が"
+        },
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "あ",
+                        "selected": false
+                    },
+                    {
+                        "token": "り",
+                        "selected": false
+                    },
+                    {
+                        "token": "が",
+                        "selected": false
+                    },
+                    {
+                        "token": "と",
+                        "selected": true
+                    },
+                    {
+                        "token": "う",
+                        "selected": false
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thank you"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thanks"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {},
+                            {
+                                "hint": "and"
+                            },
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {},
+                            {
+                                "hint": "from"
+                            },
+                            {}
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {},
+                            {},
+                            {},
+                            {
+                                "hint": "for"
+                            },
+                            {}
+                        ]
+                    }
+                ],
+                "references": [
+                    0,
+                    1,
+                    2,
+                    4
+                ]
+            },
+            "index": 3,
+            "value": "と"
+        },
+        {
+            "hint_table": {
+                "headers": [
+                    {
+                        "token": "あ",
+                        "selected": false
+                    },
+                    {
+                        "token": "り",
+                        "selected": false
+                    },
+                    {
+                        "token": "が",
+                        "selected": false
+                    },
+                    {
+                        "token": "と",
+                        "selected": false
+                    },
+                    {
+                        "token": "う",
+                        "selected": true
+                    }
+                ],
+                "rows": [
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thank you"
+                            }
+                        ]
+                    },
+                    {
+                        "cells": [
+                            {
+                                "colspan": 5,
+                                "hint": "thanks"
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    0,
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "index": 4,
+            "value": "う"
+        }
+    ]
+}
+@endjson
