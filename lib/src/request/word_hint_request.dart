@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
+import 'package:duolingo4d/src/adapter/word_hint_api_adapter.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
@@ -10,38 +12,37 @@ import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class WordHintRequest extends Request {
-  /// The internal constructor for singleton.
-  WordHintRequest._internal();
+class WordHintRequest extends Request<WordHintEntity> {
+  /// Returns the new instance of [WordHintRequest] based on arguments.
+  WordHintRequest.from({
+    required this.fromLanguage,
+    required this.learningLanguage,
+    required this.sentence,
+  });
 
-  /// Returns the singleton instance of [WordHintRequest].
-  factory WordHintRequest.getInstance() => _singletonInstance;
+  /// The from language
+  final String fromLanguage;
 
-  /// The required parameter for from language
-  static const _paramFromLanguage = 'fromLanguage';
+  /// The learning language
+  final String learningLanguage;
 
-  /// The required parameter for learning language
-  static const _paramLearningLanguage = 'learningLanguage';
-
-  /// The required parameter for sentence
-  static const _paramSentence = 'sentence';
+  /// The sentence
+  final String sentence;
 
   /// The session
   static final _session = Session.getInstance();
 
-  /// The singleton instance of [WordHintRequest].
-  static final _singletonInstance = WordHintRequest._internal();
-
   @override
-  Future<http.Response> send({
+  Future<WordHintEntity> send({
     final params = const <String, String>{},
-  }) async {
-    return await http.get(
-      Uri.parse(
-        Uri.encodeFull(
-            '${DuolingoApi.wordHint.url}/${params[_paramLearningLanguage]}/${params[_paramFromLanguage]}?sentence=${params[_paramSentence]}'),
-      ),
-      headers: _session.headers,
-    );
-  }
+  }) async =>
+      WordHintApiAdapter().execute(
+        response: await http.get(
+          Uri.parse(
+            Uri.encodeFull(
+                '${DuolingoApi.wordHint.url}/$learningLanguage/$fromLanguage?sentence=$sentence'),
+          ),
+          headers: _session.headers,
+        ),
+      );
 }

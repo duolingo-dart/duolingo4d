@@ -17,21 +17,33 @@ class Json {
   }) : jsonResource = jsonDecode(value);
 
   /// The json
-  final Map<String, dynamic> jsonResource;
+  final dynamic jsonResource;
 
   /// Returns the string value linked to the [key], otherwise empty as a default.
   String getStringValue({required String key}) => jsonResource[key] ?? '';
 
   /// Returns the int value linked to the [key], otherwise 0 as a default.
-  int getIntValue({required String key}) => jsonResource[key] ?? 0;
+  int getIntValue({required String key}) => jsonResource[key] ?? -1;
 
   /// Returns the double value linked to the [key], otherwise 0.0 as a default.
-  double getDoubleValue({required String key}) => jsonResource[key] ?? 0.0;
+  double getDoubleValue({required String key}) => jsonResource[key] ?? -1.0;
 
   /// Returns the bool value linked to the [key], otherwise false as a default.
   bool getBoolValue({required String key}) => jsonResource[key] ?? false;
 
+  Json getJson({required String key}) {
+    if (!containsKey(key: key)) {
+      return Json.fromJsonMap(value: {});
+    }
+
+    return Json.fromJsonMap(value: jsonResource[key]);
+  }
+
   List<Json> getJsonList({required String key}) {
+    if (!containsKey(key: key)) {
+      return [];
+    }
+
     final jsonList = <Json>[];
 
     for (final json in jsonResource[key]) {
@@ -58,6 +70,21 @@ class Json {
     return values;
   }
 
+  /// Returns the int value list linked to the [key], otherwise empty list.
+  List<int> getIntValues({required String key}) {
+    if (!containsKey(key: key)) {
+      return <int>[];
+    }
+
+    final values = <int>[];
+
+    for (final value in jsonResource[key]) {
+      values.add(value);
+    }
+
+    return values;
+  }
+
   /// Returns the child json string linked to the [key].
   Json childJsonString({required String key}) =>
       Json.fromJsonString(value: jsonResource[key]);
@@ -71,4 +98,7 @@ class Json {
 
   /// Returns the key set of this json object.
   Set<String> get keySet => jsonResource.keys.toSet();
+
+  /// Returns true if this json object is empty, otherwise false.
+  bool get isEmpty => jsonResource.isEmpty;
 }
