@@ -36,10 +36,6 @@ class WordHintRequest extends Request {
   Future<http.Response> send({
     final params = const <String, String>{},
   }) async {
-    super.checkParameterKey(params: params, name: _paramLearningLanguage);
-    super.checkParameterKey(params: params, name: _paramFromLanguage);
-    super.checkParameterKey(params: params, name: _paramSentence);
-
     return await http.get(
       Uri.parse(
         Uri.encodeFull(

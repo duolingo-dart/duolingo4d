@@ -4,8 +4,8 @@
 
 import 'package:http/http.dart';
 
-abstract class Adapter {
-  Future<void> execute({
+abstract class Adapter<R> {
+  Future<R> execute({
     required Response response,
   });
 }

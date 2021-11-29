@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
+import 'package:duolingo4d/src/adapter/login_api_adapter.dart';
+import 'package:duolingo4d/src/entity/authentication_result_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
@@ -10,43 +12,38 @@ import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class LoginRequest extends Request {
-  /// The internal constructor for singleton.
-  LoginRequest._internal();
+class LoginRequest extends Request<AuthenticationResultEntity> {
+  /// Returns the new instance of [LoginRequest] based on arguments.
+  LoginRequest.from({
+    required this.username,
+    required this.password,
+  });
 
-  /// Returns the singleton instance of [LoginRequest].
-  factory LoginRequest.getInstance() => _singletonInstance;
+  /// The password
+  final String password;
+
+  /// The username
+  final String username;
 
   /// The API uri
   static final _apiUri = Uri.parse(DuolingoApi.login.url);
 
-  /// The required parameter for username
-  static const _paramLogin = 'login';
-
-  /// The required parameter for password
-  static const _paramPassword = 'password';
-
   /// The session
   static final _session = Session.getInstance();
 
-  /// The singleton instance of [_LoginRequest].
-  static final _singletonInstance = LoginRequest._internal();
-
   @override
-  Future<http.Response> send({
+  Future<AuthenticationResultEntity> send({
     final params = const <String, String>{},
-  }) async {
-    super.checkParameterKey(params: params, name: _paramLogin);
-    super.checkParameterKey(params: params, name: _paramPassword);
-
-    return _session.updateCookie(
-      response: await http.post(
-        _apiUri,
-        body: {
-          _paramLogin: '${params[_paramLogin]}',
-          _paramPassword: '${params[_paramPassword]}',
-        },
-      ),
-    );
-  }
+  }) async =>
+      await LoginApiAdapter().execute(
+        response: _session.updateCookie(
+          response: await http.post(
+            _apiUri,
+            body: {
+              'login': username,
+              'password': password,
+            },
+          ),
+        ),
+      );
 }

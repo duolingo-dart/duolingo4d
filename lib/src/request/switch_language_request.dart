@@ -33,9 +33,6 @@ class SwitchLanguageRequest extends Request {
   Future<http.Response> send({
     final params = const <String, String>{},
   }) async {
-    super.checkParameterKey(params: params, name: _paramFromLanguage);
-    super.checkParameterKey(params: params, name: _paramLearningLanguage);
-
     return await http.post(
       Uri.parse(
         DuolingoApi.switchLanguage.url,

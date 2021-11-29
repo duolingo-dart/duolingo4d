@@ -30,8 +30,6 @@ class UserRequest extends Request {
   Future<http.Response> send({
     final params = const <String, String>{},
   }) async {
-    super.checkParameterKey(params: params, name: _paramUserId);
-
     return await http.get(
       Uri.parse('${DuolingoApi.user.url}/${params[_paramUserId]}'),
       headers: _session.headers,
