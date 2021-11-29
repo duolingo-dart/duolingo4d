@@ -9,72 +9,70 @@ import 'package:duolingo4d/src/entity/versioninfo/supported_directions.dart';
 import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
 import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
 import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
-import 'package:duolingo4d/src/json_response.dart';
+import 'package:duolingo4d/src/json.dart';
 
 // Project imports:
 import 'package:http/http.dart';
 
 class VersionInfoAdapter extends Adapter<VersionInfoEntity> {
   @override
-  Future<VersionInfoEntity> execute({
+  VersionInfoEntity execute({
     required Response response,
-  }) async {
-    final jsonResponseBody = JsonResponse.fromJsonString(value: response.body);
+  }) =>
+      _buildVersionInfoEntity(
+        response: response,
+        json: Json.fromJsonString(value: response.body),
+      );
 
-    return VersionInfoEntity.from(
-      statusCode: response.statusCode,
-      reasonPhrase: response.reasonPhrase ?? '',
-      headers: response.headers,
-      ttsCdnUrl: jsonResponseBody.getStringValue(key: 'tts_cdn_url'),
-      ageRestrictionLimit: jsonResponseBody.getIntValue(
-        key: 'age_restriction_limit',
-      ),
-      country: jsonResponseBody.getStringValue(key: 'country'),
-      apiBaseUrl: jsonResponseBody.getStringValue(key: 'api_base_url'),
-      speachHost: jsonResponseBody.getStringValue(key: 'speech_host'),
-      ttsBaseUrl: jsonResponseBody.getStringValue(key: 'tts_base_url'),
-      dictBaseUrl: jsonResponseBody.getStringValue(key: 'dict_base_url'),
-      ttsVoiceConfiguration: _buildTtsVoiceConfiguration(
-        jsonResponse: jsonResponseBody.childJsonMap(
-          key: 'tts_voice_configuration',
+  VersionInfoEntity _buildVersionInfoEntity({
+    required Response response,
+    required Json json,
+  }) =>
+      VersionInfoEntity.from(
+        statusCode: response.statusCode,
+        reasonPhrase: response.reasonPhrase ?? '',
+        headers: response.headers,
+        ttsCdnUrl: json.getStringValue(key: 'tts_cdn_url'),
+        ageRestrictionLimit: json.getIntValue(
+          key: 'age_restriction_limit',
         ),
-      ),
-      supportedDirections: _buildSupportedDirections(
-        jsonResponse: jsonResponseBody.childJsonMap(
-          key: 'supported_directions',
+        country: json.getStringValue(key: 'country'),
+        apiBaseUrl: json.getStringValue(key: 'api_base_url'),
+        speachHost: json.getStringValue(key: 'speech_host'),
+        ttsBaseUrl: json.getStringValue(key: 'tts_base_url'),
+        dictBaseUrl: json.getStringValue(key: 'dict_base_url'),
+        ttsVoiceConfiguration: _buildTtsVoiceConfiguration(
+          json: json.childJsonMap(key: 'tts_voice_configuration'),
         ),
-      ),
-    );
-  }
+        supportedDirections: _buildSupportedDirections(
+          json: json.childJsonMap(key: 'supported_directions'),
+        ),
+      );
 
   TtsVoiceConfiguration _buildTtsVoiceConfiguration({
-    required JsonResponse jsonResponse,
+    required Json json,
   }) {
     return TtsVoiceConfiguration.from(
-      path: jsonResponse.getStringValue(key: 'path'),
+      path: json.getStringValue(key: 'path'),
       multiVoiceDirections: _buildMultiVoiceDirections(
-        jsonResponse: jsonResponse.childJsonString(
-          key: 'multi_voices',
-        ),
+        json: json.childJsonString(key: 'multi_voices'),
       ),
       voiceDirections: _buildVoiceDirections(
-        jsonResponse: jsonResponse.childJsonString(
-          key: 'voices',
-        ),
+        json: json.childJsonString(key: 'voices'),
       ),
     );
   }
 
   List<MultiVoiceDirection> _buildMultiVoiceDirections({
-    required JsonResponse jsonResponse,
+    required Json json,
   }) {
     final multiVoiceDirections = <MultiVoiceDirection>[];
 
-    for (final key in jsonResponse.keySet) {
+    for (final key in json.keySet) {
       multiVoiceDirections.add(
         MultiVoiceDirection.from(
           language: key,
-          voices: jsonResponse.getValues(key: key),
+          voices: json.getStringValues(key: key),
         ),
       );
     }
@@ -83,15 +81,15 @@ class VersionInfoAdapter extends Adapter<VersionInfoEntity> {
   }
 
   List<VoiceDirection> _buildVoiceDirections({
-    required JsonResponse jsonResponse,
+    required Json json,
   }) {
     final voiceDirections = <VoiceDirection>[];
 
-    for (final key in jsonResponse.keySet) {
+    for (final key in json.keySet) {
       voiceDirections.add(
         VoiceDirection.from(
           language: key,
-          voice: jsonResponse.getStringValue(key: key),
+          voice: json.getStringValue(key: key),
         ),
       );
     }
@@ -100,15 +98,15 @@ class VersionInfoAdapter extends Adapter<VersionInfoEntity> {
   }
 
   List<SupportedDirection> _buildSupportedDirections({
-    required JsonResponse jsonResponse,
+    required Json json,
   }) {
     final supportedDirections = <SupportedDirection>[];
 
-    for (final key in jsonResponse.keySet) {
+    for (final key in json.keySet) {
       supportedDirections.add(
         SupportedDirection.from(
           fromLanguage: key,
-          learningLanguages: jsonResponse.getValues(key: key),
+          learningLanguages: json.getStringValues(key: key),
         ),
       );
     }

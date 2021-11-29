@@ -5,7 +5,7 @@
 import 'package:http/http.dart';
 
 abstract class Adapter<R> {
-  Future<R> execute({
+  R execute({
     required Response response,
   });
 }

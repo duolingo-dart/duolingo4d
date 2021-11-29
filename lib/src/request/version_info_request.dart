@@ -22,7 +22,7 @@ class VersionInfoRequest extends Request<VersionInfoEntity> {
   Future<VersionInfoEntity> send({
     final params = const <String, String>{},
   }) async =>
-      await VersionInfoAdapter().execute(
+      VersionInfoAdapter().execute(
         response: await http.get(_apiUri),
       );
 }

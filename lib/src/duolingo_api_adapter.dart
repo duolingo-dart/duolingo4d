@@ -4,7 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/learned_word_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/overview_api_adapter.dart';
 import 'package:duolingo4d/src/adapter/login_api_adapter.dart';
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
 import 'package:duolingo4d/src/adapter/user_api_adapter.dart';
@@ -31,7 +31,7 @@ extension DuolingoApiAdapterExt on DuolingoApiAdapter {
       case DuolingoApiAdapter.user:
         return UserApiAdapter();
       case DuolingoApiAdapter.overview:
-        return LearnedWordApiAdapter();
+        return OverviewApiAdapter();
       case DuolingoApiAdapter.hint:
         return WordHintApiAdapter();
       case DuolingoApiAdapter.switchLanguage:
