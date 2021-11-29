@@ -12,6 +12,9 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
 class OverviewRequest extends Request<OverviewEntity> {
+  /// Returns the new instance of [OverviewRequest].
+  OverviewRequest.newInstance();
+
   /// The API uri
   static final _apiUri =
       Uri.parse('https://www.duolingo.com/vocabulary/overview');
