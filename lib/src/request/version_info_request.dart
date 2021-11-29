@@ -8,7 +8,6 @@ import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 
 class VersionInfoRequest extends Request<VersionInfoEntity> {
@@ -16,7 +15,8 @@ class VersionInfoRequest extends Request<VersionInfoEntity> {
   VersionInfoRequest.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.versionInfo.url);
+  static final _apiUri =
+      Uri.parse('https://www.duolingo.com/api/1/version_info');
 
   @override
   Future<VersionInfoEntity> send({

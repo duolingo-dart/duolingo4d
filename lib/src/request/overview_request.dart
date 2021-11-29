@@ -8,13 +8,13 @@ import 'package:duolingo4d/src/entity/overview/overview_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
 class OverviewRequest extends Request<OverviewEntity> {
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.learnedWord.url);
+  static final _apiUri =
+      Uri.parse('https://www.duolingo.com/vocabulary/overview');
 
   /// The session
   static final _session = Session.getInstance();

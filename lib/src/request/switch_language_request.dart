@@ -6,7 +6,6 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
@@ -16,6 +15,9 @@ class SwitchLanguageRequest extends Request {
 
   /// The required parameter for learning language
   static const _paramLearningLanguage = 'learningLanguage';
+
+  /// The API uri
+  static final _apiUri = Uri.parse('https://www.duolingo.com/switch_language');
 
   /// The internal constructor for singleton.
   SwitchLanguageRequest._internal();
@@ -34,9 +36,7 @@ class SwitchLanguageRequest extends Request {
     final params = const <String, String>{},
   }) async {
     return await http.post(
-      Uri.parse(
-        DuolingoApi.switchLanguage.url,
-      ),
+      _apiUri,
       headers: _session.headers,
       body: {
         'from_language': '${params[_paramFromLanguage]}',

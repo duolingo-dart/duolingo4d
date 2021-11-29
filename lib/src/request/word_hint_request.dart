@@ -8,7 +8,6 @@ import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
@@ -40,7 +39,7 @@ class WordHintRequest extends Request<WordHintEntity> {
         response: await http.get(
           Uri.parse(
             Uri.encodeFull(
-                '${DuolingoApi.wordHint.url}/$learningLanguage/$fromLanguage?sentence=$sentence'),
+                'https://d2.duolingo.com/words/hints/$learningLanguage/$fromLanguage?sentence=$sentence'),
           ),
           headers: _session.headers,
         ),

@@ -8,7 +8,6 @@ import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
@@ -26,7 +25,7 @@ class LoginRequest extends Request<AuthenticationResultEntity> {
   final String username;
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.login.url);
+  static final _apiUri = Uri.parse('https://www.duolingo.com/login');
 
   /// The session
   static final _session = Session.getInstance();

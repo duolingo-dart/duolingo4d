@@ -6,7 +6,6 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
@@ -31,7 +30,9 @@ class UserRequest extends Request {
     final params = const <String, String>{},
   }) async {
     return await http.get(
-      Uri.parse('${DuolingoApi.user.url}/${params[_paramUserId]}'),
+      Uri.parse(
+        'https://www.duolingo.com/2017-06-30/users/${params[_paramUserId]}',
+      ),
       headers: _session.headers,
     );
   }
