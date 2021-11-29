@@ -2,8 +2,8 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:duolingo4d/src/entity/multi_voice_direction.dart';
-import 'package:duolingo4d/src/entity/voice_direction.dart';
+import 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
+import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
 
 class TtsVoiceConfiguration {
   TtsVoiceConfiguration.from({

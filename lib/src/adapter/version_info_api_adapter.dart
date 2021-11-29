@@ -4,11 +4,11 @@
 
 // Flutter imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/multi_voice_direction.dart';
-import 'package:duolingo4d/src/entity/supported_directions.dart';
-import 'package:duolingo4d/src/entity/tts_voice_configuration.dart';
-import 'package:duolingo4d/src/entity/version_info_entity.dart';
-import 'package:duolingo4d/src/entity/voice_direction.dart';
+import 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
+import 'package:duolingo4d/src/entity/versioninfo/supported_directions.dart';
+import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
+import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
+import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
 import 'package:duolingo4d/src/json_response.dart';
 
 // Project imports:

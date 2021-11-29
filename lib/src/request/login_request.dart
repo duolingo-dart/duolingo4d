@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:duolingo4d/src/adapter/login_api_adapter.dart';
-import 'package:duolingo4d/src/entity/authentication_result_entity.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:

@@ -3,8 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:duolingo4d/src/entity/response_entity.dart';
-import 'package:duolingo4d/src/entity/supported_directions.dart';
-import 'package:duolingo4d/src/entity/tts_voice_configuration.dart';
+import 'package:duolingo4d/src/entity/versioninfo/supported_directions.dart';
+import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
 
 class VersionInfoEntity extends ResponseEntity {
   /// Returns the new instance of [VersionInfoEntity] based on arguments.

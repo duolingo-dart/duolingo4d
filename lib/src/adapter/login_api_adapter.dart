@@ -3,8 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/authentication_error.dart';
-import 'package:duolingo4d/src/entity/authentication_result_entity.dart';
+import 'package:duolingo4d/src/entity/login/authentication_error.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
 import 'package:duolingo4d/src/json_response.dart';
 
 // Project imports:

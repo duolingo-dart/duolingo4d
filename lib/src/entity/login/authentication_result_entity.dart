@@ -2,7 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:duolingo4d/src/entity/authentication_error.dart';
+import 'package:duolingo4d/src/entity/login/authentication_error.dart';
 import 'package:duolingo4d/src/entity/response_entity.dart';
 
 /// The entity class that represents the result of Duolingo user authentication.
