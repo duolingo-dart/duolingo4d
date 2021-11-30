@@ -3,8 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
-import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
+import 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
+import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
 class TtsVoiceConfiguration {
   TtsVoiceConfiguration.from({
