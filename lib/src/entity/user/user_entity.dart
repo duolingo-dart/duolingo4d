@@ -4,6 +4,12 @@
 
 // Project imports:
 import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/user/course.dart';
+import 'package:duolingo4d/src/entity/user/gems_configuration.dart';
+import 'package:duolingo4d/src/entity/user/last_streak.dart';
+import 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
+import 'package:duolingo4d/src/entity/user/skill.dart';
+import 'package:duolingo4d/src/entity/user/xp_configuration.dart';
 
 class UserEntity extends ResponseEntity {
   /// Returns the new instance of [UserEntity] based on arguments.
@@ -25,6 +31,11 @@ class UserEntity extends ResponseEntity {
     required this.inviteUrl,
     required this.fromLanguage,
     required this.learningLanguage,
+    required this.xpConfiguration,
+    required this.gemsConfiguration,
+    required this.courses,
+    required this.skills,
+    required this.lastStreak,
     required this.xpGoalMetToday,
     required this.xpGoal,
     required this.weeklyXp,
@@ -38,6 +49,7 @@ class UserEntity extends ResponseEntity {
     required this.longestStreak,
     required this.plusStatus,
     required this.hasPlus,
+    required this.practiceReminderSettings,
     required this.createdAt,
   }) : super.from(
           statusCode: statusCode,
@@ -87,6 +99,21 @@ class UserEntity extends ResponseEntity {
   /// The learning language
   final String learningLanguage;
 
+  /// The XP configuration
+  final XpConfiguration xpConfiguration;
+
+  /// The gems configuration
+  final GemsConfiguration gemsConfiguration;
+
+  /// The courses
+  final List<Course> courses;
+
+  /// The skills
+  final List<Skill> skills;
+
+  /// The last streak
+  final LastStreak lastStreak;
+
   /// The flag that represents xp goal met today or not
   final bool xpGoalMetToday;
 
@@ -125,6 +152,9 @@ class UserEntity extends ResponseEntity {
 
   /// The flag that represents user has plus status or not
   final bool hasPlus;
+
+  /// The practice reminder settings
+  final List<PracticeReminderSetting> practiceReminderSettings;
 
   /// The created datetime
   final DateTime createdAt;
