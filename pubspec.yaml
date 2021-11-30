@@ -1,5 +1,5 @@
 name: duolingo4d
-description: A new Flutter package project.
+description: A most easily usable Duolingo API wrapper in Dart. Duolingo4D is an open-sourced, mavenized Java library. With Duolingo4D, you can easily integrate your application with the Duolingo API. Duolingo4D is an unofficial library.
 version: 0.0.1
 homepage: https://github.com/myConsciousness/duolingo4d
 
