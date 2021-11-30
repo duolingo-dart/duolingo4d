@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
-import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/session.dart';
 
 class SwitchLanguageRequest extends Request<SwitchLanguage> {

@@ -7,9 +7,9 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
+import 'package:duolingo4d/src/json.dart';
 import 'package:duolingo4d/src/response/login/authentication_error.dart';
 import 'package:duolingo4d/src/response/login/authentication_result.dart';
-import 'package:duolingo4d/src/json.dart';
 
 class LoginApiAdapter extends Adapter<AuthenticationResult> {
   @override

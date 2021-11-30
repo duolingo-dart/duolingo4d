@@ -7,8 +7,8 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/overview_api_adapter.dart';
-import 'package:duolingo4d/src/response/overview/overview.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/response/overview/overview.dart';
 import 'package:duolingo4d/src/session.dart';
 
 class OverviewRequest extends Request<Overview> {

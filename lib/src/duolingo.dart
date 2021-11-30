@@ -15,20 +15,20 @@ abstract class Duolingo {
   /// The factory constructor.
   factory Duolingo.getInstance() => DuolingoImpl.instance;
 
-  Future<VersionInfo> fetchVersionInfo();
+  Future<VersionInfo> versionInfo();
 
   Future<AuthenticationResult> authenticate({
     required String username,
     required String password,
   });
 
-  Future<User> fetchUser({
+  Future<User> user({
     required String userId,
   });
 
-  Future<Overview> fetchOverview();
+  Future<Overview> overview();
 
-  Future<WordHint> fetchWordHint({
+  Future<WordHint> wordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
