@@ -10,7 +10,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 - [1. Duolingo4D](#1-duolingo4d)
   - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
-  - [1.2. Introduce](#12-introduce)
+  - [1.2. Introduction](#12-introduction)
     - [1.2.1. Install Library](#121-install-library)
     - [1.2.2. Import It](#122-import-it)
     - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
@@ -37,7 +37,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | Word Hint       |      ❌       | You can fetch hint information about words and sentences.                              |
 | Switch Language |      ✅       | You can switch the learning language.                                                  |
 
-## 1.2. Introduce
+## 1.2. Introduction
 
 ### 1.2.1. Install Library
 
@@ -102,9 +102,9 @@ void main() async {
 
 ### 1.3.1. Version Info API
 
-| Auth Required |                           Snippet                            |
-| :-----------: | :----------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().versionInfo(); |
+| Auth Required |                           Snippet                            |                                                     JSON                                                      |
+| :-----------: | :----------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.getInstance().versionInfo(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/01_version_info/response.json) |
 
 The Version Info API allows you to fetch metadata about the configuration of Duolingo services.</br>
 This metadata includes the TTS data used to play back the audio of the words, as well as mapping information for the languages supported by Duolingo.
@@ -133,9 +133,9 @@ void main() async {
 
 ### 1.3.2. Authentication API
 
-| Auth Required |                                                      Snippet                                                       |
-| :-----------: | :----------------------------------------------------------------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().authenticate(username: 'test_username', password: 'test_password',); |
+| Auth Required |                                                      Snippet                                                       |                                                      JSON                                                      |
+| :-----------: | :----------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.getInstance().authenticate(username: 'test_username', password: 'test_password',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/02_login/response_success.json) |
 
 You can use your username and password to authenticate users registered with Duolingo. The registered e-mail address can be used for authentication in addition to the username.
 
@@ -177,9 +177,9 @@ void main() async {
 
 ### 1.3.3. User API
 
-| Auth Required |                                     Snippet                                      |
-| :-----------: | :------------------------------------------------------------------------------: |
-|      ✅       | final response = await Duolingo.getInstance().user(userId: authResponse.userId); |
+| Auth Required |                                     Snippet                                      |                                                  JSON                                                  |
+| :-----------: | :------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.getInstance().user(userId: authResponse.userId); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/03_users/response.json) |
 
 From the User API, you can get detailed user information associated with the user ID.
 
@@ -217,9 +217,9 @@ void main() async {
 
 ### 1.3.4. Overview API
 
-| Auth Required |                          Snippet                          |
-| :-----------: | :-------------------------------------------------------: |
-|      ✅       | final response = await Duolingo.getInstance().overview(); |
+| Auth Required |                          Snippet                          |                                                   JSON                                                    |
+| :-----------: | :-------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.getInstance().overview(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/04_overview/response.json) |
 
 From the Overview API, you can fetch information about all the words you have learned in the course you have selected. The details that can be retrieved about a word will vary depending on the course and word.
 
@@ -244,15 +244,13 @@ void main() async {
 
 ### 1.3.5. Word Hint API
 
-| Auth Required |                                                           Snippet                                                            |
-| :-----------: | :--------------------------------------------------------------------------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().wordHint(fromLanguage: 'en', learningLanguage: 'es', sentence: 'boligrafos',); |
+| Auth Required |                                                           Snippet                                                            |                                                   JSON                                                    |
+| :-----------: | :--------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.getInstance().wordHint(fromLanguage: 'en', learningLanguage: 'es', sentence: 'boligrafos',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
 
 You can fetch hint information for any word or sentence from the Word Hint API. Since the hint information is hint data managed by Duolingo, the accuracy of the translation data cannot be guaranteed.
 
 The argument `learningLanguage` should be the language code corresponding to the word, and `fromLanguage` should be the language code corresponding to the hint. The `sentence` can be sentences as well as single words.
-
-The data structure of this response object is the same as the [original JSON data](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json).
 
 ```dart
 void main() async {
