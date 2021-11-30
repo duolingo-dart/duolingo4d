@@ -6,6 +6,7 @@
 import 'package:duolingo4d/src/duolingo_api_impl.dart';
 import 'package:duolingo4d/src/entity/login/authentication_result.dart';
 import 'package:duolingo4d/src/entity/overview/overview.dart';
+import 'package:duolingo4d/src/entity/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/entity/user/user.dart';
 import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/entity/wordhint/word_hint.dart';
@@ -16,7 +17,7 @@ abstract class DuolingoApi {
 
   Future<VersionInfo> fetchVersionInfo();
 
-  Future<AuthenticationResult> login({
+  Future<AuthenticationResult> authenticate({
     required String username,
     required String password,
   });
@@ -31,5 +32,10 @@ abstract class DuolingoApi {
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
+  });
+
+  Future<SwitchLanguage> switchLanguage({
+    required String fromLanguage,
+    required String learningLanguage,
   });
 }

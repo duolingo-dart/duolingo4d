@@ -10,7 +10,7 @@ class HintToken {
   HintToken.from({
     required this.index,
     required this.value,
-    required this.hintTable,
+    required this.table,
   });
 
   /// The index
@@ -20,5 +20,5 @@ class HintToken {
   final String value;
 
   /// The hint table
-  final HintTable hintTable;
+  final HintTable table;
 }

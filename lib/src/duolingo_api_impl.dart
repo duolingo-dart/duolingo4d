@@ -11,6 +11,7 @@ import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/entity/wordhint/word_hint.dart';
 import 'package:duolingo4d/src/request/login_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
+import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
@@ -30,7 +31,7 @@ class DuolingoApiImpl implements DuolingoApi {
       await VersionInfoRequest.newInstance().send();
 
   @override
-  Future<AuthenticationResult> login({
+  Future<AuthenticationResult> authenticate({
     required String username,
     required String password,
   }) async =>
@@ -59,5 +60,15 @@ class DuolingoApiImpl implements DuolingoApi {
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
         sentence: sentence,
+      ).send();
+
+  @override
+  Future<SwitchLanguage> switchLanguage({
+    required String fromLanguage,
+    required String learningLanguage,
+  }) async =>
+      await SwitchLanguageRequest.from(
+        fromLanguage: fromLanguage,
+        learningLanguage: learningLanguage,
       ).send();
 }

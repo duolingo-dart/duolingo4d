@@ -8,9 +8,9 @@ import 'package:duolingo4d/src/entity/wordhint/hint_cell.dart';
 class HintRow {
   /// Returns the new instance of [HintRow] based on arguments.
   HintRow.from({
-    required this.hintCells,
+    required this.cells,
   });
 
   /// The hint cells
-  final List<HintCell> hintCells;
+  final List<HintCell> cells;
 }

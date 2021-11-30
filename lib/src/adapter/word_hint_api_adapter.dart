@@ -33,7 +33,7 @@ class WordHintApiAdapter extends Adapter<WordHint> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        hintTokens: _buildHintTokens(
+        tokens: _buildHintTokens(
           jsonList: json.getJsonList(key: 'tokens'),
         ),
       );
@@ -54,7 +54,7 @@ class WordHintApiAdapter extends Adapter<WordHint> {
         HintToken.from(
           index: json.getIntValue(key: 'index'),
           value: value,
-          hintTable: _buildHintTable(
+          table: _buildHintTable(
             json: json.getJson(key: 'hint_table'),
           ),
         ),
@@ -68,10 +68,10 @@ class WordHintApiAdapter extends Adapter<WordHint> {
     required Json json,
   }) =>
       HintTable.from(
-        hintHeaders: _buildHintHeaders(
+        headers: _buildHintHeaders(
           jsonList: json.getJsonList(key: 'headers'),
         ),
-        hintRows: _buildHintRows(
+        rows: _buildHintRows(
           jsonList: json.getJsonList(key: 'rows'),
         ),
         references: json.getIntValues(key: 'references'),
@@ -102,7 +102,7 @@ class WordHintApiAdapter extends Adapter<WordHint> {
     for (final json in jsonList) {
       hintRows.add(
         HintRow.from(
-          hintCells: _buildHintCells(
+          cells: _buildHintCells(
             jsonList: json.getJsonList(key: 'cells'),
           ),
         ),

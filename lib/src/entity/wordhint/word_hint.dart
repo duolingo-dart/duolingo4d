@@ -18,7 +18,7 @@ class WordHint extends Response {
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,
-    required this.hintTokens,
+    required this.tokens,
   }) : super.from(
           statusCode: statusCode,
           reasonPhrase: reasonPhrase,
@@ -26,5 +26,5 @@ class WordHint extends Response {
         );
 
   /// The hint tokens
-  final List<HintToken> hintTokens;
+  final List<HintToken> tokens;
 }
