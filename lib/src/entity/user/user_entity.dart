@@ -11,6 +11,13 @@ import 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
 import 'package:duolingo4d/src/entity/user/skill.dart';
 import 'package:duolingo4d/src/entity/user/xp_configuration.dart';
 
+export 'package:duolingo4d/src/entity/user/xp_configuration.dart';
+export 'package:duolingo4d/src/entity/user/gems_configuration.dart';
+export 'package:duolingo4d/src/entity/user/course.dart';
+export 'package:duolingo4d/src/entity/user/skill.dart';
+export 'package:duolingo4d/src/entity/user/last_streak.dart';
+export 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
+
 class UserEntity extends ResponseEntity {
   /// Returns the new instance of [UserEntity] based on arguments.
   UserEntity.from({

@@ -6,6 +6,8 @@
 import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
 import 'package:duolingo4d/src/entity/response_entity.dart';
 
+export 'package:duolingo4d/src/entity/overview/vocabulary.dart';
+
 class OverviewEntity extends ResponseEntity {
   /// Returns the new instance of [OverviewEntity] based on arguments.
   OverviewEntity.from({

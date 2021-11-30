@@ -8,7 +8,7 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
-import 'package:duolingo4d/src/entity/versioninfo/supported_directions.dart';
+import 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
 import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
 import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';

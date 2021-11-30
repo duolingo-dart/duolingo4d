@@ -4,8 +4,13 @@
 
 // Project imports:
 import 'package:duolingo4d/src/entity/response_entity.dart';
-import 'package:duolingo4d/src/entity/versioninfo/supported_directions.dart';
+import 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
+
+export 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
+export 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
+export 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
+export 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
 
 class VersionInfoEntity extends ResponseEntity {
   /// Returns the new instance of [VersionInfoEntity] based on arguments.
