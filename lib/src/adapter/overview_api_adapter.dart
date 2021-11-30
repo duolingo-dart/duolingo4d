@@ -16,12 +16,12 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
   OverviewResponse execute({
     required Response response,
   }) =>
-      _buildOverviewEntity(
+      _buildOverviewResponse(
         response: response,
         json: Json.fromJsonString(value: response.body),
       );
 
-  OverviewResponse _buildOverviewEntity({
+  OverviewResponse _buildOverviewResponse({
     required Response response,
     required Json json,
   }) =>

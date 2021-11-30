@@ -19,12 +19,12 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   VersionInfoResponse execute({
     required Response response,
   }) =>
-      _buildVersionInfoEntity(
+      _buildVersionInfoResponse(
         response: response,
         json: Json.fromJsonString(value: response.body),
       );
 
-  VersionInfoResponse _buildVersionInfoEntity({
+  VersionInfoResponse _buildVersionInfoResponse({
     required Response response,
     required Json json,
   }) =>

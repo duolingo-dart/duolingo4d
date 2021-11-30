@@ -20,12 +20,12 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
   WordHintResponse execute({
     required Response response,
   }) =>
-      _buildWordHintEntity(
+      _buildWordHintResponse(
         response: response,
         json: Json.fromJsonString(value: response.body),
       );
 
-  WordHintResponse _buildWordHintEntity({
+  WordHintResponse _buildWordHintResponse({
     required Response response,
     required Json json,
   }) =>

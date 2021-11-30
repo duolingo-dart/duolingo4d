@@ -21,14 +21,14 @@ class UserApiAdapter extends Adapter<UserResponse> {
   UserResponse execute({
     required Response response,
   }) =>
-      _buildUserEntity(
+      _buildUserResponse(
         response: response,
         json: Json.fromJsonString(
           value: response.body,
         ),
       );
 
-  UserResponse _buildUserEntity({
+  UserResponse _buildUserResponse({
     required Response response,
     required Json json,
   }) =>
