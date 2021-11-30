@@ -16,8 +16,11 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
     - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
   - [1.3. Using](#13-using)
     - [1.3.1. Version Info API](#131-version-info-api)
-    - [Authentication API](#authentication-api)
-    - [User API](#user-api)
+    - [1.3.2. Authentication API](#132-authentication-api)
+    - [1.3.3. User API](#133-user-api)
+    - [1.3.4. Overview API](#134-overview-api)
+    - [1.3.5. Word Hint API](#135-word-hint-api)
+    - [1.3.6. Switch Language API](#136-switch-language-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -69,26 +72,26 @@ void main() async {
   final duolingo = Duolingo.getInstance();
 
   final authResponse = await duolingo.authenticate(
-      username: 'test_username',
-      password: 'test_password',
+    username: 'test_username',
+    password: 'test_password',
   );
 
   if (authResponse.statusCode != 200) {
-      // Client or Server error or something.
-      authResponse.reasonPhrase;
-      authResponse.headers;
-      return;
+    // Client or Server error or something.
+    authResponse.reasonPhrase;
+    authResponse.headers;
+    return;
   }
 
   if (authResponse.hasError) {
-      // When there is an error on authentication.
-      final authError = authResponse.error!;
-      print(authError.code);
-      print(authError.reason);
+    // When there is an error on authentication.
+    final authError = authResponse.error!;
+    print(authError.code);
+    print(authError.reason);
 
-      authError.isInvalidUser; // Returns true if user is invalid.
-      authError.isInvalidPassword; // Returns true if password is invalid.
-      return;
+    authError.isInvalidUser; // Returns true if user is invalid.
+    authError.isInvalidPassword; // Returns true if password is invalid.
+    return;
   }
 
   // Do something if user is authenticated.
@@ -113,10 +116,10 @@ void main() async {
   final versionInfoResponse = await duolingo.versionInfo();
 
   if (authResponse.statusCode != 200) {
-      // Client or Server error or something.
-      authResponse.reasonPhrase;
-      authResponse.headers;
-      return;
+    // Client or Server error or something.
+    authResponse.reasonPhrase;
+    authResponse.headers;
+    return;
   }
 
   final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;
@@ -128,7 +131,7 @@ void main() async {
 }
 ```
 
-### Authentication API
+### 1.3.2. Authentication API
 
 | Auth Required |                                                      Snippet                                                       |
 | :-----------: | :----------------------------------------------------------------------------------------------------------------: |
@@ -146,33 +149,33 @@ void main() async {
   final duolingo = Duolingo.getInstance();
 
   final authResponse = await duolingo.authenticate(
-      username: 'test_username',
-      password: 'test_password',
+    username: 'test_username',
+    password: 'test_password',
   );
 
   if (authResponse.statusCode != 200) {
-      // Client or Server error or something.
-      authResponse.reasonPhrase;
-      authResponse.headers;
-      return;
+    // Client or Server error or something.
+    authResponse.reasonPhrase;
+    authResponse.headers;
+    return;
   }
 
   if (authResponse.hasError) {
-      // When there is an error on authentication.
-      final authError = authResponse.error!;
-      print(authError.code);
-      print(authError.reason);
+    // When there is an error on authentication.
+    final authError = authResponse.error!;
+    print(authError.code);
+    print(authError.reason);
 
-      authError.isInvalidUser; // Returns true if user is invalid.
-      authError.isInvalidPassword; // Returns true if password is invalid.
-      return;
+    authError.isInvalidUser; // Returns true if user is invalid.
+    authError.isInvalidPassword; // Returns true if password is invalid.
+    return;
   }
 
   // Do something if user is authenticated.
 }
 ```
 
-### User API
+### 1.3.3. User API
 
 | Auth Required |                                     Snippet                                      |
 | :-----------: | :------------------------------------------------------------------------------: |
@@ -184,13 +187,15 @@ The user ID is included in the response returned when the user authentication is
 
 The user information also includes all the course information and skill information user have learned.
 
+If user authentication has not been completed, data cannot be fetched.
+
 ```dart
 void main() async {
   final duolingo = Duolingo.getInstance();
 
   final authResponse = await duolingo.authenticate(
-      username: 'test_username',
-      password: 'test_password',
+    username: 'test_username',
+    password: 'test_password',
   );
 
   final userResponse = await duolingo.user(userId: authResponse.userId);
@@ -207,6 +212,101 @@ void main() async {
     print(skill.name);
     print(skill.proficiency);
   }
+}
+```
+
+### 1.3.4. Overview API
+
+| Auth Required |                          Snippet                          |
+| :-----------: | :-------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.getInstance().overview(); |
+
+From the Overview API, you can fetch information about all the words you have learned in the course you have selected. The details that can be retrieved about a word will vary depending on the course and word.
+
+If user authentication has not been completed, data cannot be fetched.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.getInstance();
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final overviewResponse = await duolingo.overview();
+
+  for (final vocabulary in overviewResponse.vocabularies) {
+      print(vocabulary.word);
+  }
+}
+```
+
+### 1.3.5. Word Hint API
+
+| Auth Required |                                                           Snippet                                                            |
+| :-----------: | :--------------------------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.getInstance().wordHint(fromLanguage: 'en', learningLanguage: 'es', sentence: 'boligrafos',); |
+
+You can fetch hint information for any word or sentence from the Word Hint API. Since the hint information is hint data managed by Duolingo, the accuracy of the translation data cannot be guaranteed.
+
+The argument `learningLanguage` should be the language code corresponding to the word, and `fromLanguage` should be the language code corresponding to the hint. The `sentence` can be sentences as well as single words.
+
+The data structure of this response object is the same as the [original JSON data](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json).
+
+```dart
+void main() async {
+  final duolingo = Duolingo.getInstance();
+
+  final wordHintResponse = await duolingo.wordHint(
+    fromLanguage: 'en',
+    learningLanguage: 'es',
+    sentence: 'boligrafos',
+  );
+
+  for (final token in wordHintResponse.tokens) {
+    final headers = token.table.headers;
+    for (final header in headers) {
+      print(header.selected);
+      print(header.token);
+    }
+
+    final rows = token.table.rows;
+    for (final row in rows) {
+      for (final cell in row.cells) {
+        print(cell.hint);
+      }
+    }
+  }
+}
+```
+
+### 1.3.6. Switch Language API
+
+| Auth Required |                                                  Snippet                                                   |
+| :-----------: | :--------------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.getInstance().switchLanguage(fromLanguage: 'es', learningLanguage: 'en',); |
+
+The Switch Language API allows you to switch between the courses supported by Duolingo. The mapping information for the courses that can be switched using the Switch Language API can be obtained from the Version Info API.
+
+For the argument `learningLanguage`, specify the language to be learned after switching. And for `fromLanguage`, specify the language to be used when learning that `learningLanguage`.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.getInstance();
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final switchLanguageResponse = await duolingo.switchLanguage(
+    fromLanguage: 'es',
+    learningLanguage: 'en',
+  );
+
+  print(switchLanguageResponse.statusCode);
+  print(switchLanguageResponse.reasonPhrase);
 }
 ```
 
