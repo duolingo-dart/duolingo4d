@@ -13,43 +13,43 @@ class DemoDuolingo4D {
 
     // You can fetch metadata about the configuration of Duolingo.
     // ignore: unused_local_variable
-    final versionInfo = await duolingo.versionInfo();
+    final versionInfoResponse = await duolingo.versionInfo();
 
-    // You can login with this api.
+    // You can authenticate user with this api.
     // You can use registered email address as a username.
-    final authenticationResult = await duolingo.authenticate(
-      username: 'test_user',
+    final authResponse = await duolingo.authenticate(
+      username: 'test_username',
       password: 'test_password',
     );
 
-    if (authenticationResult.statusCode != 200) {
+    if (authResponse.statusCode != 200) {
       // Client or Server error or something.
-      authenticationResult.reasonPhrase;
-      authenticationResult.headers;
+      authResponse.reasonPhrase;
+      authResponse.headers;
       return;
     }
 
-    if (authenticationResult.hasError) {
+    if (authResponse.hasError) {
       // When there is an error on authentication.
-      final authenticationError = authenticationResult.error!;
-      authenticationError.code;
-      authenticationError.reason;
-      authenticationError.isInvalidUser; // Returns true if user is invalid.
-      authenticationError
-          .isInvalidPassword; // Returns true if password is invalid.
+      final authError = authResponse.error!;
+      authError.code;
+      authError.reason;
+
+      authError.isInvalidUser; // Returns true if user is invalid.
+      authError.isInvalidPassword; // Returns true if password is invalid.
       return;
     }
 
     // You can fetch hint of word.
     // It is possible to specify not only words but also sentences in bulk.
     // ignore: unused_local_variable
-    final wordHint = await duolingo.wordHint(
+    final wordHintResponse = await duolingo.wordHint(
       fromLanguage: 'en',
       learningLanguage: 'es',
       sentence: 'boligrafos',
     );
 
-    for (final token in wordHint.tokens) {
+    for (final token in wordHintResponse.tokens) {
       final headers = token.table.headers;
       for (final header in headers) {
         // ignore: avoid_print
@@ -71,26 +71,26 @@ class DemoDuolingo4D {
 
     // You can fetch user information based on user id.
     // ignore: unused_local_variable
-    final user = await duolingo.user(userId: authenticationResult.userId);
+    final userResponse = await duolingo.user(userId: authResponse.userId);
 
     // You can fetch all vocabularies you learned in Duolingo.
     // ignore: unused_local_variable
-    final overview = await duolingo.overview();
+    final overviewResponse = await duolingo.overview();
 
-    for (final vocabulary in overview.vocabularies) {
+    for (final vocabulary in overviewResponse.vocabularies) {
       // ignore: avoid_print
       print(vocabulary.word);
     }
 
-    final response = await duolingo.switchLanguage(
+    final switchLanguageResponse = await duolingo.switchLanguage(
       fromLanguage: 'es',
       learningLanguage: 'en',
     );
 
     // ignore: avoid_print
-    print(response.statusCode);
+    print(switchLanguageResponse.statusCode);
     // ignore: avoid_print
-    print(response.reasonPhrase);
+    print(switchLanguageResponse.reasonPhrase);
 
     //! -------------- ↑ Authentication Required ↑ --------------
   }
