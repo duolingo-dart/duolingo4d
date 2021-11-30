@@ -7,7 +7,7 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/switchlanguage/switch_language.dart';
+import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 
 class SwitchLanguageApiAdapter extends Adapter<SwitchLanguage> {
   @override

@@ -7,7 +7,7 @@ import 'package:duolingo4d/duolingo4d.dart';
 class DemoDuolingo4D {
   Future<void> main() async {
     // Get the singleton instance.
-    final api = DuolingoApi.getInstance();
+    final api = Duolingo.getInstance();
 
     //! ---------- ↓ Authentication Does Not Required ↓ ----------
 

@@ -3,20 +3,20 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/response.dart';
-import 'package:duolingo4d/src/entity/user/course.dart';
-import 'package:duolingo4d/src/entity/user/gems_configuration.dart';
-import 'package:duolingo4d/src/entity/user/last_streak.dart';
-import 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
-import 'package:duolingo4d/src/entity/user/skill.dart';
-import 'package:duolingo4d/src/entity/user/xp_configuration.dart';
+import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/user/course.dart';
+import 'package:duolingo4d/src/response/user/gems_configuration.dart';
+import 'package:duolingo4d/src/response/user/last_streak.dart';
+import 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
+import 'package:duolingo4d/src/response/user/skill.dart';
+import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
-export 'package:duolingo4d/src/entity/user/xp_configuration.dart';
-export 'package:duolingo4d/src/entity/user/gems_configuration.dart';
-export 'package:duolingo4d/src/entity/user/course.dart';
-export 'package:duolingo4d/src/entity/user/skill.dart';
-export 'package:duolingo4d/src/entity/user/last_streak.dart';
-export 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
+export 'package:duolingo4d/src/response/user/xp_configuration.dart';
+export 'package:duolingo4d/src/response/user/gems_configuration.dart';
+export 'package:duolingo4d/src/response/user/course.dart';
+export 'package:duolingo4d/src/response/user/skill.dart';
+export 'package:duolingo4d/src/response/user/last_streak.dart';
+export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
 
 class User extends Response {
   /// Returns the new instance of [User] based on arguments.

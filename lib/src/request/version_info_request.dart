@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/version_info_api_adapter.dart';
-import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
+import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/request/request.dart';
 
 class VersionInfoRequest extends Request<VersionInfo> {

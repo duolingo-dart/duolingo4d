@@ -3,10 +3,10 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
-import 'package:duolingo4d/src/entity/response.dart';
+import 'package:duolingo4d/src/response/overview/vocabulary.dart';
+import 'package:duolingo4d/src/response/response.dart';
 
-export 'package:duolingo4d/src/entity/overview/vocabulary.dart';
+export 'package:duolingo4d/src/response/overview/vocabulary.dart';
 
 class Overview extends Response {
   /// Returns the new instance of [Overview] based on arguments.

@@ -7,8 +7,8 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/overview/overview.dart';
-import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
+import 'package:duolingo4d/src/response/overview/overview.dart';
+import 'package:duolingo4d/src/response/overview/vocabulary.dart';
 import 'package:duolingo4d/src/json.dart';
 
 class OverviewApiAdapter extends Adapter<Overview> {

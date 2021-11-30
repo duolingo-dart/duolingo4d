@@ -3,10 +3,10 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/login/authentication_error.dart';
-import 'package:duolingo4d/src/entity/response.dart';
+import 'package:duolingo4d/src/response/login/authentication_error.dart';
+import 'package:duolingo4d/src/response/response.dart';
 
-export 'package:duolingo4d/src/entity/login/authentication_error.dart';
+export 'package:duolingo4d/src/response/login/authentication_error.dart';
 
 /// The entity class that represents the result of Duolingo user authentication.
 class AuthenticationResult extends Response {

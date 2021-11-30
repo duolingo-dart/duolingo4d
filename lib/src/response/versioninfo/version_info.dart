@@ -3,14 +3,14 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/response.dart';
-import 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
-import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
+import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
+import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
 
-export 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
-export 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
-export 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
-export 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
+export 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
+export 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
+export 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
+export 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 
 class VersionInfo extends Response {
   /// Returns the new instance of [VersionInfo] based on arguments.
