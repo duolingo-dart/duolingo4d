@@ -20,18 +20,35 @@ class Json {
   /// The json
   final dynamic jsonResource;
 
-  /// Returns the string value linked to the [key], otherwise empty as a default.
-  String getStringValue({required String key}) => jsonResource[key] ?? '';
+  /// Returns the string value linked to the [key], otherwise [defaultValue].
+  String getStringValue({
+    required String key,
+    String defaultValue = '',
+  }) =>
+      jsonResource[key] ?? defaultValue;
 
-  /// Returns the int value linked to the [key], otherwise 0 as a default.
-  int getIntValue({required String key}) => jsonResource[key] ?? -1;
+  /// Returns the int value linked to the [key], otherwise [defaultValue].
+  int getIntValue({
+    required String key,
+    int defaultValue = -1,
+  }) =>
+      jsonResource[key] ?? defaultValue;
 
-  /// Returns the double value linked to the [key], otherwise 0.0 as a default.
-  double getDoubleValue({required String key}) => jsonResource[key] ?? -1.0;
+  /// Returns the double value linked to the [key], otherwise [defaultValue].
+  double getDoubleValue({
+    required String key,
+    double defaultValue = -1.0,
+  }) =>
+      jsonResource[key] ?? defaultValue;
 
-  /// Returns the bool value linked to the [key], otherwise false as a default.
-  bool getBoolValue({required String key}) => jsonResource[key] ?? false;
+  /// Returns the bool value linked to the [key], otherwise [defaultValue].
+  bool getBoolValue({
+    required String key,
+    bool defaultValue = false,
+  }) =>
+      jsonResource[key] ?? defaultValue;
 
+  /// Returns the child json object linked to the [key], otherwise empty json object.
   Json getJson({required String key}) {
     if (!containsKey(key: key)) {
       return Json.fromJsonMap(value: {});
@@ -40,6 +57,7 @@ class Json {
     return Json.fromJsonMap(value: jsonResource[key]);
   }
 
+  /// Returns the child json list linked to the [key], otherwise empty json list.
   List<Json> getJsonList({required String key}) {
     if (!containsKey(key: key)) {
       return [];

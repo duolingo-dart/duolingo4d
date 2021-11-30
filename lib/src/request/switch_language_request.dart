@@ -6,42 +6,40 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
+import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
+import 'package:duolingo4d/src/entity/switchlanguage/switch_language_entity.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class SwitchLanguageRequest extends Request {
-  /// The required parameter for from language
-  static const _paramFromLanguage = 'fromLanguage';
+class SwitchLanguageRequest extends Request<SwitchLanguageEntity> {
+  /// Returns the new instance of [SwitchLanguageRequest] based on arguments.
+  SwitchLanguageRequest.from({
+    required this.fromLanguage,
+    required this.learningLanguage,
+  });
 
-  /// The required parameter for learning language
-  static const _paramLearningLanguage = 'learningLanguage';
+  /// The from language
+  final String fromLanguage;
+
+  /// The learning language
+  final String learningLanguage;
 
   /// The API uri
   static final _apiUri = Uri.parse('https://www.duolingo.com/switch_language');
 
-  /// The internal constructor for singleton.
-  SwitchLanguageRequest._internal();
-
-  /// Returns the singleton instance of [SwitchLanguageRequest].
-  factory SwitchLanguageRequest.getInstance() => _singletonInstance;
-
   /// The session
   static final _session = Session.getInstance();
 
-  /// The singleton instance of [SwitchLanguageRequest].
-  static final _singletonInstance = SwitchLanguageRequest._internal();
-
   @override
-  Future<http.Response> send({
-    final params = const <String, String>{},
-  }) async {
-    return await http.post(
-      _apiUri,
-      headers: _session.headers,
-      body: {
-        'from_language': '${params[_paramFromLanguage]}',
-        'learning_language': '${params[_paramLearningLanguage]}',
-      },
-    );
-  }
+  Future<SwitchLanguageEntity> send() async =>
+      SwitchLanguageApiAdapter().execute(
+        response: await http.post(
+          _apiUri,
+          headers: _session.headers,
+          body: {
+            'from_language': fromLanguage,
+            'learning_language': learningLanguage,
+          },
+        ),
+      );
 }
