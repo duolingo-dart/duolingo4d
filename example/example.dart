@@ -5,7 +5,7 @@
 import 'package:duolingo4d/duolingo4d.dart';
 
 class DemoDuolingo4D {
-  Future<void> main() async {
+  void main() async {
     // Get the singleton instance.
     final duolingo = Duolingo.getInstance();
 
