@@ -18,9 +18,9 @@ export 'package:duolingo4d/src/response/user/skill.dart';
 export 'package:duolingo4d/src/response/user/last_streak.dart';
 export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
 
-class User extends Response {
-  /// Returns the new instance of [User] based on arguments.
-  User.from({
+class UserResponse extends Response {
+  /// Returns the new instance of [UserResponse] based on arguments.
+  UserResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

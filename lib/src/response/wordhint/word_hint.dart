@@ -12,9 +12,9 @@ export 'package:duolingo4d/src/response/wordhint/hint_header.dart';
 export 'package:duolingo4d/src/response/wordhint/hint_row.dart';
 export 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
 
-class WordHint extends Response {
-  /// Returns the new instance of [WordHint] based on arguments.
-  WordHint.from({
+class WordHintResponse extends Response {
+  /// Returns the new instance of [WordHintResponse] based on arguments.
+  WordHintResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

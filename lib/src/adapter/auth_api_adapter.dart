@@ -8,44 +8,44 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/json.dart';
-import 'package:duolingo4d/src/response/login/authentication_error.dart';
-import 'package:duolingo4d/src/response/login/authentication_result.dart';
+import 'package:duolingo4d/src/response/auth/auth_error.dart';
+import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
-class LoginApiAdapter extends Adapter<AuthenticationResult> {
+class AuthApiAdapter extends Adapter<AuthResponse> {
   @override
-  AuthenticationResult execute({
+  AuthResponse execute({
     required Response response,
   }) =>
-      _buildAuthenticationResultEntity(
+      _buildAuthResponse(
         response: response,
         json: Json.fromJsonString(value: response.body),
       );
 
-  AuthenticationResult _buildAuthenticationResultEntity({
+  AuthResponse _buildAuthResponse({
     required Response response,
     required Json json,
   }) =>
-      AuthenticationResult.from(
+      AuthResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         username: json.getStringValue(key: 'username'),
         userId: json.getStringValue(key: 'user_id'),
-        error: _checkAuthenticationError(json: json),
+        error: _checkAuthError(json: json),
       );
 
   /// Checks for the presence of authentication error.
   ///
   /// Returns an object representing the authentication error
   /// if an authentication error exists, otherwise null.
-  AuthenticationError? _checkAuthenticationError({
+  AuthError? _checkAuthError({
     required Json json,
   }) {
     if (!json.containsKey(key: 'failure')) {
       return null;
     }
 
-    return AuthenticationError.from(
+    return AuthError.from(
       code: json.getStringValue(key: 'failure'),
       reason: json.getStringValue(key: 'message'),
     );

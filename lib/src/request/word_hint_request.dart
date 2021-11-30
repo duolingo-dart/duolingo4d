@@ -11,7 +11,7 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class WordHintRequest extends Request<WordHint> {
+class WordHintRequest extends Request<WordHintResponse> {
   /// Returns the new instance of [WordHintRequest] based on arguments.
   WordHintRequest.from({
     required this.fromLanguage,
@@ -32,7 +32,7 @@ class WordHintRequest extends Request<WordHint> {
   static final _session = Session.getInstance();
 
   @override
-  Future<WordHint> send() async => WordHintApiAdapter().execute(
+  Future<WordHintResponse> send() async => WordHintApiAdapter().execute(
         response: await http.get(
           Uri.parse(
             Uri.encodeFull(

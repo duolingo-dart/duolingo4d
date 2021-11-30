@@ -3,15 +3,15 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/response/login/authentication_error.dart';
+import 'package:duolingo4d/src/response/auth/auth_error.dart';
 import 'package:duolingo4d/src/response/response.dart';
 
-export 'package:duolingo4d/src/response/login/authentication_error.dart';
+export 'package:duolingo4d/src/response/auth/auth_error.dart';
 
 /// The entity class that represents the result of Duolingo user authentication.
-class AuthenticationResult extends Response {
-  /// Returns the new instance of [AuthenticationResult] based on arguments.
-  AuthenticationResult.from({
+class AuthResponse extends Response {
+  /// Returns the new instance of [AuthResponse] based on arguments.
+  AuthResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,
@@ -31,7 +31,7 @@ class AuthenticationResult extends Response {
   final String userId;
 
   /// The error object
-  final AuthenticationError? error;
+  final AuthError? error;
 
   /// Returns true if the response has error, otherwise false.
   bool get hasError => error != null;

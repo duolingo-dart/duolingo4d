@@ -12,9 +12,9 @@ export 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
 export 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 export 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 
-class VersionInfo extends Response {
-  /// Returns the new instance of [VersionInfo] based on arguments.
-  VersionInfo.from({
+class VersionInfoResponse extends Response {
+  /// Returns the new instance of [VersionInfoResponse] based on arguments.
+  VersionInfoResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

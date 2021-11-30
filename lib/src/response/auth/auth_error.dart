@@ -3,9 +3,9 @@
 // BSD-style license that can be found in the LICENSE file.
 
 /// The class that represents the error of Duolingo user authentication.
-class AuthenticationError {
-  /// Returns the new instance of [AuthenticationError] based on arguments.
-  AuthenticationError.from({
+class AuthError {
+  /// Returns the new instance of [AuthError] based on arguments.
+  AuthError.from({
     required this.code,
     required this.reason,
   });

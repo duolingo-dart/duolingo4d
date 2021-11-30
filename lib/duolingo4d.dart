@@ -6,8 +6,8 @@ export 'src/duolingo.dart';
 
 export 'src/response/response.dart';
 export 'src/response/versioninfo/version_info.dart';
-export 'src/response/login/authentication_result.dart';
+export 'src/response/auth/auth_response.dart';
 export 'src/response/user/user.dart';
-export 'src/response/overview/overview.dart';
+export 'src/response/overview/overview_response.dart';
 export 'src/response/wordhint/word_hint.dart';
 export 'src/response/switchlanguage/switch_language.dart';

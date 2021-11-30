@@ -8,9 +8,9 @@ import 'package:duolingo4d/src/response/response.dart';
 
 export 'package:duolingo4d/src/response/overview/vocabulary.dart';
 
-class Overview extends Response {
-  /// Returns the new instance of [Overview] based on arguments.
-  Overview.from({
+class OverviewResponse extends Response {
+  /// Returns the new instance of [OverviewResponse] based on arguments.
+  OverviewResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

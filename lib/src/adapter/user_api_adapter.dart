@@ -16,9 +16,9 @@ import 'package:duolingo4d/src/response/user/skill.dart';
 import 'package:duolingo4d/src/response/user/user.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
-class UserApiAdapter extends Adapter<User> {
+class UserApiAdapter extends Adapter<UserResponse> {
   @override
-  User execute({
+  UserResponse execute({
     required Response response,
   }) =>
       _buildUserEntity(
@@ -28,11 +28,11 @@ class UserApiAdapter extends Adapter<User> {
         ),
       );
 
-  User _buildUserEntity({
+  UserResponse _buildUserEntity({
     required Response response,
     required Json json,
   }) =>
-      User.from(
+      UserResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

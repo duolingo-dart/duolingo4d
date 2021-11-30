@@ -15,9 +15,9 @@ import 'package:duolingo4d/src/response/wordhint/hint_table.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint.dart';
 
-class WordHintApiAdapter extends Adapter<WordHint> {
+class WordHintApiAdapter extends Adapter<WordHintResponse> {
   @override
-  WordHint execute({
+  WordHintResponse execute({
     required Response response,
   }) =>
       _buildWordHintEntity(
@@ -25,11 +25,11 @@ class WordHintApiAdapter extends Adapter<WordHint> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  WordHint _buildWordHintEntity({
+  WordHintResponse _buildWordHintEntity({
     required Response response,
     required Json json,
   }) =>
-      WordHint.from(
+      WordHintResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

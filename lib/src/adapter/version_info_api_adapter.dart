@@ -14,9 +14,9 @@ import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart
 import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
-class VersionInfoAdapter extends Adapter<VersionInfo> {
+class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   @override
-  VersionInfo execute({
+  VersionInfoResponse execute({
     required Response response,
   }) =>
       _buildVersionInfoEntity(
@@ -24,11 +24,11 @@ class VersionInfoAdapter extends Adapter<VersionInfo> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  VersionInfo _buildVersionInfoEntity({
+  VersionInfoResponse _buildVersionInfoEntity({
     required Response response,
     required Json json,
   }) =>
-      VersionInfo.from(
+      VersionInfoResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

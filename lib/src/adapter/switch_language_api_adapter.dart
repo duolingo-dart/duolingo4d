@@ -9,12 +9,12 @@ import 'package:http/http.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 
-class SwitchLanguageApiAdapter extends Adapter<SwitchLanguage> {
+class SwitchLanguageApiAdapter extends Adapter<SwitchLanguageResponse> {
   @override
-  SwitchLanguage execute({
+  SwitchLanguageResponse execute({
     required Response response,
   }) =>
-      SwitchLanguage.from(
+      SwitchLanguageResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

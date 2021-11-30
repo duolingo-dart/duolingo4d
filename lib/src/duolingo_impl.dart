@@ -4,14 +4,14 @@
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
-import 'package:duolingo4d/src/request/login_request.dart';
+import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
-import 'package:duolingo4d/src/response/login/authentication_result.dart';
-import 'package:duolingo4d/src/response/overview/overview.dart';
+import 'package:duolingo4d/src/response/auth/auth_response.dart';
+import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/user/user.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint.dart';
@@ -27,31 +27,31 @@ class DuolingoImpl implements Duolingo {
   static final _singletonInstance = DuolingoImpl._internal();
 
   @override
-  Future<VersionInfo> versionInfo() async =>
+  Future<VersionInfoResponse> versionInfo() async =>
       await VersionInfoRequest.newInstance().send();
 
   @override
-  Future<AuthenticationResult> authenticate({
+  Future<AuthResponse> authenticate({
     required String username,
     required String password,
   }) async =>
-      await LoginRequest.from(
+      await AuthRequest.from(
         username: username,
         password: password,
       ).send();
 
   @override
-  Future<User> user({
+  Future<UserResponse> user({
     required String userId,
   }) async =>
       await UserRequest.from(userId: userId).send();
 
   @override
-  Future<Overview> overview() async =>
+  Future<OverviewResponse> overview() async =>
       await OverviewRequest.newInstance().send();
 
   @override
-  Future<WordHint> wordHint({
+  Future<WordHintResponse> wordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
@@ -63,7 +63,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<SwitchLanguage> switchLanguage({
+  Future<SwitchLanguageResponse> switchLanguage({
     required String fromLanguage,
     required String learningLanguage,
   }) async =>

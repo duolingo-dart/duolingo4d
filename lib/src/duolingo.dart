@@ -4,8 +4,8 @@
 
 // Project imports:
 import 'package:duolingo4d/src/duolingo_impl.dart';
-import 'package:duolingo4d/src/response/login/authentication_result.dart';
-import 'package:duolingo4d/src/response/overview/overview.dart';
+import 'package:duolingo4d/src/response/auth/auth_response.dart';
+import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/response/user/user.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
@@ -15,26 +15,26 @@ abstract class Duolingo {
   /// The factory constructor.
   factory Duolingo.getInstance() => DuolingoImpl.instance;
 
-  Future<VersionInfo> versionInfo();
+  Future<VersionInfoResponse> versionInfo();
 
-  Future<AuthenticationResult> authenticate({
+  Future<AuthResponse> authenticate({
     required String username,
     required String password,
   });
 
-  Future<User> user({
+  Future<UserResponse> user({
     required String userId,
   });
 
-  Future<Overview> overview();
+  Future<OverviewResponse> overview();
 
-  Future<WordHint> wordHint({
+  Future<WordHintResponse> wordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
   });
 
-  Future<SwitchLanguage> switchLanguage({
+  Future<SwitchLanguageResponse> switchLanguage({
     required String fromLanguage,
     required String learningLanguage,
   });

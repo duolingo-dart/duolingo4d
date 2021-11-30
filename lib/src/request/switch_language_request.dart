@@ -11,7 +11,7 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class SwitchLanguageRequest extends Request<SwitchLanguage> {
+class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   /// Returns the new instance of [SwitchLanguageRequest] based on arguments.
   SwitchLanguageRequest.from({
     required this.fromLanguage,
@@ -31,7 +31,8 @@ class SwitchLanguageRequest extends Request<SwitchLanguage> {
   static final _session = Session.getInstance();
 
   @override
-  Future<SwitchLanguage> send() async => SwitchLanguageApiAdapter().execute(
+  Future<SwitchLanguageResponse> send() async =>
+      SwitchLanguageApiAdapter().execute(
         response: await http.post(
           _apiUri,
           headers: _session.headers,

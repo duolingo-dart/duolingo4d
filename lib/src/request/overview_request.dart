@@ -8,10 +8,10 @@ import 'package:http/http.dart' as http;
 // Project imports:
 import 'package:duolingo4d/src/adapter/overview_api_adapter.dart';
 import 'package:duolingo4d/src/request/request.dart';
-import 'package:duolingo4d/src/response/overview/overview.dart';
+import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class OverviewRequest extends Request<Overview> {
+class OverviewRequest extends Request<OverviewResponse> {
   /// Returns the new instance of [OverviewRequest].
   OverviewRequest.newInstance();
 
@@ -23,7 +23,7 @@ class OverviewRequest extends Request<Overview> {
   static final _session = Session.getInstance();
 
   @override
-  Future<Overview> send() async => OverviewApiAdapter().execute(
+  Future<OverviewResponse> send() async => OverviewApiAdapter().execute(
         response: await http.get(
           _apiUri,
           headers: _session.headers,
