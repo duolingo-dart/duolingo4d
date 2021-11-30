@@ -1,3 +1,5 @@
+[![Dart](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml)
+
 # 1. Duolingo4D
 
 **_A most easily usable Duolingo API wrapper in Dart!_**
