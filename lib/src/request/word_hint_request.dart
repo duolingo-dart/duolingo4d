@@ -32,10 +32,7 @@ class WordHintRequest extends Request<WordHintEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<WordHintEntity> send({
-    final params = const <String, String>{},
-  }) async =>
-      WordHintApiAdapter().execute(
+  Future<WordHintEntity> send() async => WordHintApiAdapter().execute(
         response: await http.get(
           Uri.parse(
             Uri.encodeFull(

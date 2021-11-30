@@ -21,7 +21,7 @@ class Session {
   /// Returns cookie headers
   Map<String, String> get headers => _headers;
 
-  http.Response updateCookie({required final http.Response response}) {
+  http.Response refreshCookie({required final http.Response response}) {
     _headers['cookie'] = response.headers['set-cookie'] ?? '';
     _headers['Authorization'] = 'Bearer ${response.headers['jwt']}';
     return response;

@@ -31,11 +31,8 @@ class LoginRequest extends Request<AuthenticationResultEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<AuthenticationResultEntity> send({
-    final params = const <String, String>{},
-  }) async =>
-      LoginApiAdapter().execute(
-        response: _session.updateCookie(
+  Future<AuthenticationResultEntity> send() async => LoginApiAdapter().execute(
+        response: _session.refreshCookie(
           response: await http.post(
             _apiUri,
             body: {

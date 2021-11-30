@@ -23,10 +23,7 @@ class OverviewRequest extends Request<OverviewEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<OverviewEntity> send({
-    final params = const <String, String>{},
-  }) async =>
-      OverviewApiAdapter().execute(
+  Future<OverviewEntity> send() async => OverviewApiAdapter().execute(
         response: await http.get(
           _apiUri,
           headers: _session.headers,

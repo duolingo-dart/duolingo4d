@@ -19,10 +19,7 @@ class VersionInfoRequest extends Request<VersionInfoEntity> {
       Uri.parse('https://www.duolingo.com/api/1/version_info');
 
   @override
-  Future<VersionInfoEntity> send({
-    final params = const <String, String>{},
-  }) async =>
-      VersionInfoAdapter().execute(
+  Future<VersionInfoEntity> send() async => VersionInfoAdapter().execute(
         response: await http.get(_apiUri),
       );
 }

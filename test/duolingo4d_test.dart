@@ -3,8 +3,14 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
+import 'package:duolingo4d/duolingo4d.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  test('', () async {});
+  test('', () async {
+    final a = DuolingoApi.getInstance();
+    final b = DuolingoApi.getInstance();
+
+    print(a == b);
+  });
 }
