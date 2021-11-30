@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/response.dart';
 import 'package:duolingo4d/src/entity/user/course.dart';
 import 'package:duolingo4d/src/entity/user/gems_configuration.dart';
 import 'package:duolingo4d/src/entity/user/last_streak.dart';
@@ -18,9 +18,9 @@ export 'package:duolingo4d/src/entity/user/skill.dart';
 export 'package:duolingo4d/src/entity/user/last_streak.dart';
 export 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
 
-class UserEntity extends ResponseEntity {
-  /// Returns the new instance of [UserEntity] based on arguments.
-  UserEntity.from({
+class User extends Response {
+  /// Returns the new instance of [User] based on arguments.
+  User.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

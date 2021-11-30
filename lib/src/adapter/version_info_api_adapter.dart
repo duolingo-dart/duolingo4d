@@ -10,13 +10,13 @@ import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/entity/versioninfo/multi_voice_direction.dart';
 import 'package:duolingo4d/src/entity/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/entity/versioninfo/tts_voice_configuration.dart';
-import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
+import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/entity/versioninfo/voice_direction.dart';
 import 'package:duolingo4d/src/json.dart';
 
-class VersionInfoAdapter extends Adapter<VersionInfoEntity> {
+class VersionInfoAdapter extends Adapter<VersionInfo> {
   @override
-  VersionInfoEntity execute({
+  VersionInfo execute({
     required Response response,
   }) =>
       _buildVersionInfoEntity(
@@ -24,11 +24,11 @@ class VersionInfoAdapter extends Adapter<VersionInfoEntity> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  VersionInfoEntity _buildVersionInfoEntity({
+  VersionInfo _buildVersionInfoEntity({
     required Response response,
     required Json json,
   }) =>
-      VersionInfoEntity.from(
+      VersionInfo.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

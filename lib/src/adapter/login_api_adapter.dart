@@ -8,12 +8,12 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/entity/login/authentication_error.dart';
-import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result.dart';
 import 'package:duolingo4d/src/json.dart';
 
-class LoginApiAdapter extends Adapter<AuthenticationResultEntity> {
+class LoginApiAdapter extends Adapter<AuthenticationResult> {
   @override
-  AuthenticationResultEntity execute({
+  AuthenticationResult execute({
     required Response response,
   }) =>
       _buildAuthenticationResultEntity(
@@ -21,11 +21,11 @@ class LoginApiAdapter extends Adapter<AuthenticationResultEntity> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  AuthenticationResultEntity _buildAuthenticationResultEntity({
+  AuthenticationResult _buildAuthenticationResultEntity({
     required Response response,
     required Json json,
   }) =>
-      AuthenticationResultEntity.from(
+      AuthenticationResult.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

@@ -7,11 +7,11 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/login_api_adapter.dart';
-import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class LoginRequest extends Request<AuthenticationResultEntity> {
+class LoginRequest extends Request<AuthenticationResult> {
   /// Returns the new instance of [LoginRequest] based on arguments.
   LoginRequest.from({
     required this.username,
@@ -31,7 +31,7 @@ class LoginRequest extends Request<AuthenticationResultEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<AuthenticationResultEntity> send() async => LoginApiAdapter().execute(
+  Future<AuthenticationResult> send() async => LoginApiAdapter().execute(
         response: _session.refreshCookie(
           response: await http.post(
             _apiUri,

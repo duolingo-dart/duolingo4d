@@ -12,12 +12,12 @@ import 'package:duolingo4d/src/entity/hint/hint_header.dart';
 import 'package:duolingo4d/src/entity/hint/hint_row.dart';
 import 'package:duolingo4d/src/entity/hint/hint_table.dart';
 import 'package:duolingo4d/src/entity/hint/hint_token.dart';
-import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint.dart';
 import 'package:duolingo4d/src/json.dart';
 
-class WordHintApiAdapter extends Adapter<WordHintEntity> {
+class WordHintApiAdapter extends Adapter<WordHint> {
   @override
-  WordHintEntity execute({
+  WordHint execute({
     required Response response,
   }) =>
       _buildWordHintEntity(
@@ -25,11 +25,11 @@ class WordHintApiAdapter extends Adapter<WordHintEntity> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  WordHintEntity _buildWordHintEntity({
+  WordHint _buildWordHintEntity({
     required Response response,
     required Json json,
   }) =>
-      WordHintEntity.from(
+      WordHint.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

@@ -4,7 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/entity/hint/hint_token.dart';
-import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/response.dart';
 
 export 'package:duolingo4d/src/entity/hint/hint_token.dart';
 export 'package:duolingo4d/src/entity/hint/hint_table.dart';
@@ -12,9 +12,9 @@ export 'package:duolingo4d/src/entity/hint/hint_header.dart';
 export 'package:duolingo4d/src/entity/hint/hint_row.dart';
 export 'package:duolingo4d/src/entity/hint/hint_cell.dart';
 
-class WordHintEntity extends ResponseEntity {
-  /// Returns the new instance of [WordHintEntity] based on arguments.
-  WordHintEntity.from({
+class WordHint extends Response {
+  /// Returns the new instance of [WordHint] based on arguments.
+  WordHint.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

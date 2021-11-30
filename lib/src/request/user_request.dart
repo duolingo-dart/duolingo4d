@@ -7,11 +7,11 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/user_api_adapter.dart';
-import 'package:duolingo4d/src/entity/user/user_entity.dart';
+import 'package:duolingo4d/src/entity/user/user.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class UserRequest extends Request<UserEntity> {
+class UserRequest extends Request<User> {
   /// Returns the new instance of [UserRequest] based on an argument.
   UserRequest.from({
     required this.userId,
@@ -24,7 +24,7 @@ class UserRequest extends Request<UserEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<UserEntity> send() async => UserApiAdapter().execute(
+  Future<User> send() async => UserApiAdapter().execute(
         response: await http.get(
           Uri.parse(
             'https://www.duolingo.com/2017-06-30/users/$userId',

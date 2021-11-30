@@ -7,11 +7,11 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
-import 'package:duolingo4d/src/entity/switchlanguage/switch_language_entity.dart';
+import 'package:duolingo4d/src/entity/switchlanguage/switch_language.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 
-class SwitchLanguageRequest extends Request<SwitchLanguageEntity> {
+class SwitchLanguageRequest extends Request<SwitchLanguage> {
   /// Returns the new instance of [SwitchLanguageRequest] based on arguments.
   SwitchLanguageRequest.from({
     required this.fromLanguage,
@@ -31,8 +31,7 @@ class SwitchLanguageRequest extends Request<SwitchLanguageEntity> {
   static final _session = Session.getInstance();
 
   @override
-  Future<SwitchLanguageEntity> send() async =>
-      SwitchLanguageApiAdapter().execute(
+  Future<SwitchLanguage> send() async => SwitchLanguageApiAdapter().execute(
         response: await http.post(
           _apiUri,
           headers: _session.headers,

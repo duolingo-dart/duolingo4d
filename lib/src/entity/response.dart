@@ -3,9 +3,9 @@
 // BSD-style license that can be found in the LICENSE file.
 
 /// The abstract class that represents that it is an HTTP response entity.
-abstract class ResponseEntity {
-  /// Returns the new instance of [ResponseEntity] based on arguments.
-  ResponseEntity.from({
+abstract class Response {
+  /// Returns the new instance of [Response] based on arguments.
+  Response.from({
     required this.statusCode,
     required this.reasonPhrase,
     required this.headers,

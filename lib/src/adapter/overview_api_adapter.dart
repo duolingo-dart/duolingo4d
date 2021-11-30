@@ -7,13 +7,13 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/overview/overview_entity.dart';
+import 'package:duolingo4d/src/entity/overview/overview.dart';
 import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
 import 'package:duolingo4d/src/json.dart';
 
-class OverviewApiAdapter extends Adapter<OverviewEntity> {
+class OverviewApiAdapter extends Adapter<Overview> {
   @override
-  OverviewEntity execute({
+  Overview execute({
     required Response response,
   }) =>
       _buildOverviewEntity(
@@ -21,11 +21,11 @@ class OverviewApiAdapter extends Adapter<OverviewEntity> {
         json: Json.fromJsonString(value: response.body),
       );
 
-  OverviewEntity _buildOverviewEntity({
+  Overview _buildOverviewEntity({
     required Response response,
     required Json json,
   }) =>
-      OverviewEntity.from(
+      Overview.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

@@ -4,30 +4,30 @@
 
 // Project imports:
 import 'package:duolingo4d/src/duolingo_api_impl.dart';
-import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
-import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
-import 'package:duolingo4d/src/entity/overview/overview_entity.dart';
-import 'package:duolingo4d/src/entity/user/user_entity.dart';
-import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result.dart';
+import 'package:duolingo4d/src/entity/overview/overview.dart';
+import 'package:duolingo4d/src/entity/user/user.dart';
+import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
 
 abstract class DuolingoApi {
   /// The factory constructor.
   factory DuolingoApi.getInstance() => DuolingoApiImpl.instance;
 
-  Future<VersionInfoEntity> fetchVersionInfo();
+  Future<VersionInfo> fetchVersionInfo();
 
-  Future<AuthenticationResultEntity> login({
+  Future<AuthenticationResult> login({
     required String username,
     required String password,
   });
 
-  Future<UserEntity> fetchUser({
+  Future<User> fetchUser({
     required String userId,
   });
 
-  Future<OverviewEntity> fetchOverview();
+  Future<Overview> fetchOverview();
 
-  Future<WordHintEntity> fetchWordHint({
+  Future<WordHint> fetchWordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,

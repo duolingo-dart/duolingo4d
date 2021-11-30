@@ -4,10 +4,10 @@
 
 export 'src/duolingo_api.dart';
 
-export 'src/entity/response_entity.dart';
-export 'src/entity/versioninfo/version_info_entity.dart';
-export 'src/entity/login/authentication_result_entity.dart';
-export 'src/entity/user/user_entity.dart';
-export 'src/entity/overview/overview_entity.dart';
-export 'src/entity/hint/word_hint_entity.dart';
-export 'src/entity/switchlanguage/switch_language_entity.dart';
+export 'src/entity/response.dart';
+export 'src/entity/versioninfo/version_info.dart';
+export 'src/entity/login/authentication_result.dart';
+export 'src/entity/user/user.dart';
+export 'src/entity/overview/overview.dart';
+export 'src/entity/hint/word_hint.dart';
+export 'src/entity/switchlanguage/switch_language.dart';

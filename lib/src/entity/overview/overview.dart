@@ -4,13 +4,13 @@
 
 // Project imports:
 import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
-import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/response.dart';
 
 export 'package:duolingo4d/src/entity/overview/vocabulary.dart';
 
-class OverviewEntity extends ResponseEntity {
-  /// Returns the new instance of [OverviewEntity] based on arguments.
-  OverviewEntity.from({
+class Overview extends Response {
+  /// Returns the new instance of [Overview] based on arguments.
+  Overview.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

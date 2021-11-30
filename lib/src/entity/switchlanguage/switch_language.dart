@@ -3,11 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/response.dart';
 
-class SwitchLanguageEntity extends ResponseEntity {
-  /// Returns the new instance of [SwitchLanguageEntity] based on arguments.
-  SwitchLanguageEntity.from({
+class SwitchLanguage extends Response {
+  /// Returns the new instance of [SwitchLanguage] based on arguments.
+  SwitchLanguage.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

@@ -4,14 +4,14 @@
 
 // Project imports:
 import 'package:duolingo4d/src/entity/login/authentication_error.dart';
-import 'package:duolingo4d/src/entity/response_entity.dart';
+import 'package:duolingo4d/src/entity/response.dart';
 
 export 'package:duolingo4d/src/entity/login/authentication_error.dart';
 
 /// The entity class that represents the result of Duolingo user authentication.
-class AuthenticationResultEntity extends ResponseEntity {
-  /// Returns the new instance of [AuthenticationResultEntity] based on arguments.
-  AuthenticationResultEntity.from({
+class AuthenticationResult extends Response {
+  /// Returns the new instance of [AuthenticationResult] based on arguments.
+  AuthenticationResult.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,

@@ -4,11 +4,11 @@
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
-import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
-import 'package:duolingo4d/src/entity/login/authentication_result_entity.dart';
-import 'package:duolingo4d/src/entity/overview/overview_entity.dart';
-import 'package:duolingo4d/src/entity/user/user_entity.dart';
-import 'package:duolingo4d/src/entity/versioninfo/version_info_entity.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint.dart';
+import 'package:duolingo4d/src/entity/login/authentication_result.dart';
+import 'package:duolingo4d/src/entity/overview/overview.dart';
+import 'package:duolingo4d/src/entity/user/user.dart';
+import 'package:duolingo4d/src/entity/versioninfo/version_info.dart';
 import 'package:duolingo4d/src/request/login_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
@@ -26,11 +26,11 @@ class DuolingoApiImpl implements DuolingoApi {
   static final _singletonInstance = DuolingoApiImpl._internal();
 
   @override
-  Future<VersionInfoEntity> fetchVersionInfo() async =>
+  Future<VersionInfo> fetchVersionInfo() async =>
       await VersionInfoRequest.newInstance().send();
 
   @override
-  Future<AuthenticationResultEntity> login({
+  Future<AuthenticationResult> login({
     required String username,
     required String password,
   }) async =>
@@ -40,17 +40,17 @@ class DuolingoApiImpl implements DuolingoApi {
       ).send();
 
   @override
-  Future<UserEntity> fetchUser({
+  Future<User> fetchUser({
     required String userId,
   }) async =>
       await UserRequest.from(userId: userId).send();
 
   @override
-  Future<OverviewEntity> fetchOverview() async =>
+  Future<Overview> fetchOverview() async =>
       await OverviewRequest.newInstance().send();
 
   @override
-  Future<WordHintEntity> fetchWordHint({
+  Future<WordHint> fetchWordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,

@@ -7,14 +7,14 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/entity/switchlanguage/switch_language_entity.dart';
+import 'package:duolingo4d/src/entity/switchlanguage/switch_language.dart';
 
-class SwitchLanguageApiAdapter extends Adapter<SwitchLanguageEntity> {
+class SwitchLanguageApiAdapter extends Adapter<SwitchLanguage> {
   @override
-  SwitchLanguageEntity execute({
+  SwitchLanguage execute({
     required Response response,
   }) =>
-      SwitchLanguageEntity.from(
+      SwitchLanguage.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

@@ -12,13 +12,13 @@ import 'package:duolingo4d/src/entity/user/gems_configuration.dart';
 import 'package:duolingo4d/src/entity/user/last_streak.dart';
 import 'package:duolingo4d/src/entity/user/practice_reminder_setting.dart';
 import 'package:duolingo4d/src/entity/user/skill.dart';
-import 'package:duolingo4d/src/entity/user/user_entity.dart';
+import 'package:duolingo4d/src/entity/user/user.dart';
 import 'package:duolingo4d/src/entity/user/xp_configuration.dart';
 import 'package:duolingo4d/src/json.dart';
 
-class UserApiAdapter extends Adapter<UserEntity> {
+class UserApiAdapter extends Adapter<User> {
   @override
-  UserEntity execute({
+  User execute({
     required Response response,
   }) =>
       _buildUserEntity(
@@ -28,11 +28,11 @@ class UserApiAdapter extends Adapter<UserEntity> {
         ),
       );
 
-  UserEntity _buildUserEntity({
+  User _buildUserEntity({
     required Response response,
     required Json json,
   }) =>
-      UserEntity.from(
+      User.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
