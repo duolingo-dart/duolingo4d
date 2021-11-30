@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/hint/hint_cell.dart';
+import 'package:duolingo4d/src/entity/wordhint/hint_cell.dart';
 
 class HintRow {
   /// Returns the new instance of [HintRow] based on arguments.

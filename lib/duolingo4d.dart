@@ -9,5 +9,5 @@ export 'src/entity/versioninfo/version_info.dart';
 export 'src/entity/login/authentication_result.dart';
 export 'src/entity/user/user.dart';
 export 'src/entity/overview/overview.dart';
-export 'src/entity/hint/word_hint.dart';
+export 'src/entity/wordhint/word_hint.dart';
 export 'src/entity/switchlanguage/switch_language.dart';

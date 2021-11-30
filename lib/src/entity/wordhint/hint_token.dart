@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/hint/hint_table.dart';
+import 'package:duolingo4d/src/entity/wordhint/hint_table.dart';
 
 class HintToken {
   /// Returns the new instance of [HintToken] based on arguments.

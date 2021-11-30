@@ -3,14 +3,14 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
-import 'package:duolingo4d/src/entity/hint/hint_token.dart';
 import 'package:duolingo4d/src/entity/response.dart';
+import 'package:duolingo4d/src/entity/wordhint/hint_token.dart';
 
-export 'package:duolingo4d/src/entity/hint/hint_token.dart';
-export 'package:duolingo4d/src/entity/hint/hint_table.dart';
-export 'package:duolingo4d/src/entity/hint/hint_header.dart';
-export 'package:duolingo4d/src/entity/hint/hint_row.dart';
-export 'package:duolingo4d/src/entity/hint/hint_cell.dart';
+export 'package:duolingo4d/src/entity/wordhint/hint_token.dart';
+export 'package:duolingo4d/src/entity/wordhint/hint_table.dart';
+export 'package:duolingo4d/src/entity/wordhint/hint_header.dart';
+export 'package:duolingo4d/src/entity/wordhint/hint_row.dart';
+export 'package:duolingo4d/src/entity/wordhint/hint_cell.dart';
 
 class WordHint extends Response {
   /// Returns the new instance of [WordHint] based on arguments.
