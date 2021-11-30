@@ -21,14 +21,14 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 ## 1.1. Supported Duolingo API
 
-| Name            | Authorization Required | Remarks                                                                                |
-| :-------------- | :--------------------: | :------------------------------------------------------------------------------------- |
-| Version Info    |           ☓            | You can fetch metadata about the various configurations of services in Duolingo.       |
-| Login           |           ☓            | Authenticate user by using Duolingo registered username or email address and password. |
-| User            |           ○            | You can fetch detailed user information.                                               |
-| Overview        |           ○            | You can fetch information on all the words user have learned in Duolingo.              |
-| Word Hint       |           ☓            | You can fetch hint information about words and sentences.                              |
-| Switch Language |           ○            | You can switch the learning language.                                                  |
+| Name            | Auth Required | Remarks                                                                                |
+| :-------------- | :-----------: | :------------------------------------------------------------------------------------- |
+| Version Info    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.       |
+| Authentication  |      ❌       | Authenticate user by using Duolingo registered username or email address and password. |
+| User            |      ✅       | You can fetch detailed user information.                                               |
+| Overview        |      ✅       | You can fetch information on all the words user have learned in Duolingo.              |
+| Word Hint       |      ❌       | You can fetch hint information about words and sentences.                              |
+| Switch Language |      ✅       | You can switch the learning language.                                                  |
 
 ## 1.2. Using
 
@@ -54,35 +54,35 @@ import 'package:duolingo4d/duolingo4d.dart';
 
 ### Use Duolingo4D
 
-The easiest way to use it is to get a singleton instance from `DuolingoApi` and call each method.
+The easiest way to use it is to get a singleton instance from `Duolingo` and call each method.
 
-All entity objects returned from the methods of `DuolingoApi` contain status codes and header information when HTTP communication is performed in internal processing.
+All entity objects returned from the methods of `Duolingo` contain status codes and header information when HTTP communication is performed in internal processing.
 
 For example, when performing the authentication process for a user, it will look like this:
 
 ```dart
-final api = DuolingoApi.getInstance();
+final duolingo = Duolingo.getInstance();
 
-final authenticationResult = await api.authenticate(
+final authResponse = await duolingo.authenticate(
     username: 'test_user',
     password: 'test_password',
 );
 
-if (authenticationResult.statusCode != 200) {
+if (authResponse.statusCode != 200) {
     // Client or Server error or something.
-    authenticationResult.reasonPhrase;
-    authenticationResult.headers;
+    authResponse.reasonPhrase;
+    authResponse.headers;
     return;
 }
 
-if (authenticationResult.hasError) {
+if (authResponse.hasError) {
     // When there is an error on authentication.
-    final authenticationError = authenticationResult.error!;
-    print(authenticationError.code);
-    print(authenticationError.reason);
+    final authError = authResponse.error!;
+    print(authError.code);
+    print(authError.reason);
 
-    authenticationError.isInvalidUser; // Returns true if user is invalid.
-    authenticationError.isInvalidPassword; // Returns true if password is invalid.
+    authError.isInvalidUser; // Returns true if user is invalid.
+    authError.isInvalidPassword; // Returns true if password is invalid.
     return;
 }
 ```
