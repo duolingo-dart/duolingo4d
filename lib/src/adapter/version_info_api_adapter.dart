@@ -11,7 +11,7 @@ import 'package:duolingo4d/src/json.dart';
 import 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
 import 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
-import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
+import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
 class VersionInfoAdapter extends Adapter<VersionInfoResponse> {

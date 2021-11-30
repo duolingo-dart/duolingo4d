@@ -7,17 +7,17 @@ import 'package:duolingo4d/duolingo4d.dart';
 class DemoDuolingo4D {
   Future<void> main() async {
     // Get the singleton instance.
-    final api = Duolingo.getInstance();
+    final duolingo = Duolingo.getInstance();
 
     //! ---------- ↓ Authentication Does Not Required ↓ ----------
 
     // You can fetch metadata about the configuration of Duolingo.
     // ignore: unused_local_variable
-    final versionInfo = await api.fetchVersionInfo();
+    final versionInfo = await duolingo.versionInfo();
 
     // You can login with this api.
     // You can use registered email address as a username.
-    final authenticationResult = await api.authenticate(
+    final authenticationResult = await duolingo.authenticate(
       username: 'test_user',
       password: 'test_password',
     );
@@ -43,7 +43,7 @@ class DemoDuolingo4D {
     // You can fetch hint of word.
     // It is possible to specify not only words but also sentences in bulk.
     // ignore: unused_local_variable
-    final wordHint = await api.fetchWordHint(
+    final wordHint = await duolingo.wordHint(
       fromLanguage: 'en',
       learningLanguage: 'es',
       sentence: 'boligrafos',
@@ -71,18 +71,18 @@ class DemoDuolingo4D {
 
     // You can fetch user information based on user id.
     // ignore: unused_local_variable
-    final user = await api.fetchUser(userId: authenticationResult.userId);
+    final user = await duolingo.user(userId: authenticationResult.userId);
 
     // You can fetch all vocabularies you learned in Duolingo.
     // ignore: unused_local_variable
-    final overview = await api.fetchOverview();
+    final overview = await duolingo.overview();
 
     for (final vocabulary in overview.vocabularies) {
       // ignore: avoid_print
       print(vocabulary.word);
     }
 
-    final response = await api.switchLanguage(
+    final response = await duolingo.switchLanguage(
       fromLanguage: 'es',
       learningLanguage: 'en',
     );

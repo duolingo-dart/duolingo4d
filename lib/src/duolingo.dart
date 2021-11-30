@@ -6,10 +6,10 @@
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
-import 'package:duolingo4d/src/response/switchlanguage/switch_language.dart';
-import 'package:duolingo4d/src/response/user/user.dart';
-import 'package:duolingo4d/src/response/versioninfo/version_info.dart';
-import 'package:duolingo4d/src/response/wordhint/word_hint.dart';
+import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
+import 'package:duolingo4d/src/response/user/user_response.dart';
+import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
+import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 abstract class Duolingo {
   /// The factory constructor.

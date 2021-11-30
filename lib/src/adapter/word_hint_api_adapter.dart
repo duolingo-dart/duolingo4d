@@ -13,7 +13,7 @@ import 'package:duolingo4d/src/response/wordhint/hint_header.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_row.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_table.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
-import 'package:duolingo4d/src/response/wordhint/word_hint.dart';
+import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 class WordHintApiAdapter extends Adapter<WordHintResponse> {
   @override
