@@ -1,0 +1,131 @@
+// Copyright (c) 2021, Kato Shinya. All rights reserved.
+// Use of this source code is governed by a
+// BSD-style license that can be found in the LICENSE file.
+
+// Project imports:
+import 'package:duolingo4d/src/entity/response_entity.dart';
+
+class UserEntity extends ResponseEntity {
+  /// Returns the new instance of [UserEntity] based on arguments.
+  UserEntity.from({
+    required int statusCode,
+    required String reasonPhrase,
+    required Map<String, String> headers,
+    required this.id,
+    required this.username,
+    required this.name,
+    required this.bio,
+    required this.profileCountry,
+    required this.email,
+    required this.emailVerified,
+    required this.pictureUrl,
+    required this.timezone,
+    required this.timezoneOffset,
+    required this.motivation,
+    required this.inviteUrl,
+    required this.fromLanguage,
+    required this.learningLanguage,
+    required this.xpGoalMetToday,
+    required this.xpGoal,
+    required this.weeklyXp,
+    required this.monthlyXp,
+    required this.totalXp,
+    required this.lingots,
+    required this.gems,
+    required this.currentCourseId,
+    required this.coachOutfit,
+    required this.streak,
+    required this.longestStreak,
+    required this.plusStatus,
+    required this.hasPlus,
+    required this.createdAt,
+  }) : super.from(
+          statusCode: statusCode,
+          reasonPhrase: reasonPhrase,
+          headers: headers,
+        );
+
+  /// The id
+  final int id;
+
+  /// The username
+  final String username;
+
+  /// The name
+  final String name;
+
+  /// The biography
+  final String bio;
+
+  /// The profile country
+  final String profileCountry;
+
+  /// The email
+  final String email;
+
+  /// The email verified
+  final bool emailVerified;
+
+  /// The picture url
+  final String pictureUrl;
+
+  /// The timezone
+  final String timezone;
+
+  /// The offset of timezone
+  final String timezoneOffset;
+
+  /// The motivation
+  final String motivation;
+
+  /// The invite url
+  final String inviteUrl;
+
+  /// The from language
+  final String fromLanguage;
+
+  /// The learning language
+  final String learningLanguage;
+
+  /// The flag that represents xp goal met today or not
+  final bool xpGoalMetToday;
+
+  /// The xp goal
+  final int xpGoal;
+
+  /// The weekly xp
+  final int weeklyXp;
+
+  /// The monthly xp
+  final int monthlyXp;
+
+  /// The total xp
+  final int totalXp;
+
+  /// The lingots
+  final int lingots;
+
+  /// The gems
+  final int gems;
+
+  /// The current course id
+  final String currentCourseId;
+
+  /// The coach outfit
+  final String coachOutfit;
+
+  /// The streak
+  final int streak;
+
+  /// The longest streak
+  final int longestStreak;
+
+  /// The plus status
+  final String plusStatus;
+
+  /// The flag that represents user has plus status or not
+  final bool hasPlus;
+
+  /// The created datetime
+  final DateTime createdAt;
+}

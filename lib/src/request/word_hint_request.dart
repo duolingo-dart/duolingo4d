@@ -3,11 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/adapter/word_hint_api_adapter.dart';
-import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
+import 'package:duolingo4d/src/adapter/word_hint_api_adapter.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/session.dart';
 

@@ -2,18 +2,18 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Flutter imports:
+// Package imports:
+import 'package:http/http.dart';
+
+// Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/entity/hint/hint_cell.dart';
-import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:duolingo4d/src/entity/hint/hint_header.dart';
 import 'package:duolingo4d/src/entity/hint/hint_row.dart';
 import 'package:duolingo4d/src/entity/hint/hint_table.dart';
 import 'package:duolingo4d/src/entity/hint/hint_token.dart';
+import 'package:duolingo4d/src/entity/hint/word_hint_entity.dart';
 import 'package:duolingo4d/src/json.dart';
-
-// Project imports:
-import 'package:http/http.dart';
 
 class WordHintApiAdapter extends Adapter<WordHintEntity> {
   @override

@@ -2,11 +2,14 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
+import 'package:http/http.dart';
+
+// Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/entity/overview/overview_entity.dart';
 import 'package:duolingo4d/src/entity/overview/vocabulary.dart';
 import 'package:duolingo4d/src/json.dart';
-import 'package:http/http.dart';
 
 class OverviewApiAdapter extends Adapter<OverviewEntity> {
   @override
