@@ -14,7 +14,7 @@ class UserEntity extends ResponseEntity {
     required this.id,
     required this.username,
     required this.name,
-    required this.bio,
+    required this.biography,
     required this.profileCountry,
     required this.email,
     required this.emailVerified,
@@ -55,7 +55,7 @@ class UserEntity extends ResponseEntity {
   final String name;
 
   /// The biography
-  final String bio;
+  final String biography;
 
   /// The profile country
   final String profileCountry;
