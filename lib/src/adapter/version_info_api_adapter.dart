@@ -42,10 +42,10 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         ttsBaseUrl: json.getStringValue(key: 'tts_base_url'),
         dictBaseUrl: json.getStringValue(key: 'dict_base_url'),
         ttsVoiceConfiguration: _buildTtsVoiceConfiguration(
-          json: json.childJsonMap(key: 'tts_voice_configuration'),
+          json: json.getJson(key: 'tts_voice_configuration'),
         ),
         supportedDirections: _buildSupportedDirections(
-          json: json.childJsonMap(key: 'supported_directions'),
+          json: json.getJson(key: 'supported_directions'),
         ),
       );
 
@@ -55,10 +55,10 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
     return TtsVoiceConfiguration.from(
       path: json.getStringValue(key: 'path'),
       multiVoiceDirections: _buildMultiVoiceDirections(
-        json: json.childJsonString(key: 'multi_voices'),
+        json: json.getJson(key: 'multi_voices'),
       ),
       voiceDirections: _buildVoiceDirections(
-        json: json.childJsonString(key: 'voices'),
+        json: json.getJson(key: 'voices'),
       ),
     );
   }

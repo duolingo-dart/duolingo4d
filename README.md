@@ -5,7 +5,8 @@
 **_A most easily usable Duolingo API wrapper in Dart!_**
 
 `Duolingo4D` is an open-sourced Dart library.</br>
-With `Duolingo4D`, you can easily integrate your application with the Duolingo API.</br>
+With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
+
 `Duolingo4D` is an unofficial library.
 
 <!-- TOC -->
@@ -139,7 +140,7 @@ void main() async {
 | :-----------: | :----------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
 |      ❌       | final response = await Duolingo.getInstance().authenticate(username: 'test_username', password: 'test_password',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/02_login/response_success.json) |
 
-You can use your username and password to authenticate users registered with Duolingo. The registered e-mail address can be used for authentication in addition to the username.
+You can use username and password to authenticate user registered with Duolingo. The registered e-mail address can be used for authentication in addition to the username.
 
 In order to fetch the response you expect from each API that requires authentication, at first you need to use this authentication API to authenticate that the username and password entered are valid.
 

@@ -18,7 +18,7 @@ class Json {
   }) : jsonResource = jsonDecode(value);
 
   /// The json
-  final dynamic jsonResource;
+  final Map<String, dynamic> jsonResource;
 
   /// Returns the string value linked to the [key], otherwise [defaultValue].
   String getStringValue({
@@ -48,13 +48,19 @@ class Json {
   }) =>
       jsonResource[key] ?? defaultValue;
 
-  /// Returns the child json object linked to the [key], otherwise empty json object.
+  /// Returns the child json linked to the [key], otherwise empty json object.
   Json getJson({required String key}) {
     if (!containsKey(key: key)) {
       return Json.fromJsonMap(value: {});
     }
 
-    return Json.fromJsonMap(value: jsonResource[key]);
+    final value = jsonResource[key];
+
+    if (value is String) {
+      return Json.fromJsonString(value: value);
+    }
+
+    return Json.fromJsonMap(value: value);
   }
 
   /// Returns the child json list linked to the [key], otherwise empty json list.
@@ -103,14 +109,6 @@ class Json {
 
     return values;
   }
-
-  /// Returns the child json string linked to the [key].
-  Json childJsonString({required String key}) =>
-      Json.fromJsonString(value: jsonResource[key]);
-
-  /// Returns the child json map linked to the [key].
-  Json childJsonMap({required String key}) =>
-      Json.fromJsonMap(value: jsonResource[key]);
 
   /// Returns true if json contains key linked to [key] passed as an argument.
   bool containsKey({required String key}) => jsonResource.containsKey(key);
