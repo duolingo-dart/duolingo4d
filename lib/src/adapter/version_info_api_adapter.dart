@@ -14,6 +14,8 @@ import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
+/// This class provides the function to convert the response
+/// returned from the version info API into the [VersionInfoResponse] format.
 class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   /// Returns the new instance of [VersionInfoAdapter].
   VersionInfoAdapter.newInstance();

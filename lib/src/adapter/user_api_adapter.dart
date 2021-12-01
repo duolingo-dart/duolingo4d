@@ -16,6 +16,8 @@ import 'package:duolingo4d/src/response/user/skill.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
+/// This class provides the function to convert the response
+/// returned from the user API into the [UserResponse] format.
 class UserApiAdapter extends Adapter<UserResponse> {
   /// Returns the new instance of [UserApiAdapter].
   UserApiAdapter.newInstance();

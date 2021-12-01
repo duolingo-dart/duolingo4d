@@ -9,6 +9,8 @@ import 'package:http/http.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 
+/// This class provides the function to convert the response
+/// returned from the switch language API into the [SwitchLanguageResponse] format.
 class SwitchLanguageApiAdapter extends Adapter<SwitchLanguageResponse> {
   /// Returns the new instance of [SwitchLanguageApiAdapter].
   SwitchLanguageApiAdapter.newInstance();
