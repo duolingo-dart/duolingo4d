@@ -4,6 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
 
@@ -28,8 +29,10 @@ class VersionInfoResponse extends Response {
     required this.ttsVoiceConfiguration,
     required this.supportedDirections,
   }) : super.from(
-          statusCode: statusCode,
-          reasonPhrase: reasonPhrase,
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 

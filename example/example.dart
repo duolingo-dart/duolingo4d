@@ -22,9 +22,9 @@ class DemoDuolingo4D {
       password: 'test_password',
     );
 
-    if (authResponse.statusCode != 200) {
+    if (authResponse.status.isNotOk) {
       // Client or Server error or something.
-      authResponse.reasonPhrase;
+      authResponse.status.reasonPhrase;
       authResponse.headers;
       return;
     }
@@ -88,9 +88,9 @@ class DemoDuolingo4D {
     );
 
     // ignore: avoid_print
-    print(switchLanguageResponse.statusCode);
+    print(switchLanguageResponse.status.code);
     // ignore: avoid_print
-    print(switchLanguageResponse.reasonPhrase);
+    print(switchLanguageResponse.status.reasonPhrase);
 
     //! -------------- ↑ Authentication Required ↑ --------------
   }

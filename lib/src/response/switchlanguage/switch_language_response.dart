@@ -4,6 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
 
 class SwitchLanguageResponse extends Response {
   /// Returns the new instance of [SwitchLanguageResponse] based on arguments.
@@ -12,8 +13,10 @@ class SwitchLanguageResponse extends Response {
     required String reasonPhrase,
     required Map<String, String> headers,
   }) : super.from(
-          statusCode: statusCode,
-          reasonPhrase: reasonPhrase,
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 }

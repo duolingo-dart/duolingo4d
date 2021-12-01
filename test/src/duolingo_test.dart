@@ -30,8 +30,8 @@ void _testVersionInfoApi() {
     final duolingo = Duolingo.getInstance();
     final response = await duolingo.versionInfo();
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(
@@ -46,8 +46,8 @@ void _testUserApi() {
     final duolingo = Duolingo.getInstance();
     final response = await duolingo.user(userId: '557897808');
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.id, 557897808);
@@ -63,8 +63,8 @@ void _testOverviewApi() {
     final duolingo = Duolingo.getInstance();
     final response = await duolingo.overview();
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.vocabularies.isNotEmpty, true);
@@ -80,8 +80,8 @@ void _testWordHintApi() {
       sentence: 'ありがとう',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.tokens.isNotEmpty, true);
@@ -100,8 +100,8 @@ void _testSwitchLanguageApi() {
       learningLanguage: 'ja',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
   });
 }
@@ -114,8 +114,8 @@ void _testAuthApi() {
       password: 'test_duolingo4d',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.hasNotError, true);
@@ -130,8 +130,8 @@ void _testAuthApi() {
       password: 'test_duolingo4d',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.hasError, true);
@@ -152,8 +152,8 @@ void _testAuthApi() {
       password: 'test_duolingo4d',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.hasError, true);
@@ -174,8 +174,8 @@ void _testAuthApi() {
       password: '',
     );
 
-    expect(response.statusCode, 200);
-    expect(response.reasonPhrase, 'OK');
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
     expect(response.hasError, true);

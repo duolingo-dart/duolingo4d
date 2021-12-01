@@ -4,6 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/user/course.dart';
 import 'package:duolingo4d/src/response/user/current_course.dart';
 import 'package:duolingo4d/src/response/user/gems_configuration.dart';
@@ -60,8 +61,10 @@ class UserResponse extends Response {
     required this.practiceReminderSettings,
     required this.createdAt,
   }) : super.from(
-          statusCode: statusCode,
-          reasonPhrase: reasonPhrase,
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 

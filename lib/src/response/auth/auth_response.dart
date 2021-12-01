@@ -5,6 +5,7 @@
 // Project imports:
 import 'package:duolingo4d/src/response/auth/auth_error.dart';
 import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
 
 export 'package:duolingo4d/src/response/auth/auth_error.dart';
 
@@ -19,8 +20,10 @@ class AuthResponse extends Response {
     required this.userId,
     required this.error,
   }) : super.from(
-          statusCode: statusCode,
-          reasonPhrase: reasonPhrase,
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 

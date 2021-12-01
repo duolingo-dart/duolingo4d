@@ -4,6 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 
 export 'package:duolingo4d/src/response/wordhint/hint_token.dart';
@@ -20,8 +21,10 @@ class WordHintResponse extends Response {
     required Map<String, String> headers,
     required this.tokens,
   }) : super.from(
-          statusCode: statusCode,
-          reasonPhrase: reasonPhrase,
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 
