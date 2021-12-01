@@ -26,6 +26,7 @@ class AuthApiAdapter extends Adapter<AuthResponse> {
         json: Json.fromJsonString(value: response.body),
       );
 
+  /// Returns [AuthResponse] based on [response] and [json].
   AuthResponse _buildAuthResponse({
     required Response response,
     required Json json,

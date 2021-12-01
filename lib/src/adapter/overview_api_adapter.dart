@@ -26,6 +26,7 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
         json: Json.fromJsonString(value: response.body),
       );
 
+  /// Returns [OverviewResponse] based on [response] and [json].
   OverviewResponse _buildOverviewResponse({
     required Response response,
     required Json json,
@@ -41,6 +42,7 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
         ),
       );
 
+  /// Returns [Vocabulary] list based on [jsonList].
   List<Vocabulary> _buildVocabularies({
     required List<Json> jsonList,
   }) {

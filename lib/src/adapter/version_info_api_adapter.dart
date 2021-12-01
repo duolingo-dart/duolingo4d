@@ -29,6 +29,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         json: Json.fromJsonString(value: response.body),
       );
 
+  /// Returns [VersionInfoResponse] based on [response] and [json].
   VersionInfoResponse _buildVersionInfoResponse({
     required Response response,
     required Json json,
@@ -54,6 +55,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         ),
       );
 
+  /// Returns [TtsVoiceConfiguration] based on [json].
   TtsVoiceConfiguration _buildTtsVoiceConfiguration({
     required Json json,
   }) {
@@ -68,6 +70,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
     );
   }
 
+  /// Returns [MultiVoiceDirection] list based on [json].
   List<MultiVoiceDirection> _buildMultiVoiceDirections({
     required Json json,
   }) {
@@ -85,6 +88,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
     return multiVoiceDirections;
   }
 
+  /// Returns [VoiceDirection] list based on [json].
   List<VoiceDirection> _buildVoiceDirections({
     required Json json,
   }) {
@@ -102,6 +106,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
     return voiceDirections;
   }
 
+  /// Returns [SupportedDirection] list based on [json].
   List<SupportedDirection> _buildSupportedDirections({
     required Json json,
   }) {

@@ -30,6 +30,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
         json: Json.fromJsonString(value: response.body),
       );
 
+  /// Returns [WordHintResponse] based on [response] and [json].
   WordHintResponse _buildWordHintResponse({
     required Response response,
     required Json json,
@@ -43,6 +44,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
         ),
       );
 
+  /// Returns [HintToken] list based on [jsonList].
   List<HintToken> _buildHintTokens({
     required List<Json> jsonList,
   }) {
@@ -69,6 +71,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
     return hintTokens;
   }
 
+  /// Returns [HintTable] based on [json].
   HintTable _buildHintTable({
     required Json json,
   }) =>
@@ -82,6 +85,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
         references: json.getIntValues(key: 'references'),
       );
 
+  /// Returns [HintHeader] list based on [jsonList].
   List<HintHeader> _buildHintHeaders({
     required List<Json> jsonList,
   }) {
@@ -99,6 +103,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
     return hintHeaders;
   }
 
+  /// Returns [HintRow] list based on [jsonList].
   List<HintRow> _buildHintRows({
     required List<Json> jsonList,
   }) {
@@ -117,6 +122,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
     return hintRows;
   }
 
+  /// Returns [HintCell] list based on [jsonList].
   List<HintCell> _buildHintCells({
     required List<Json> jsonList,
   }) {

@@ -33,6 +33,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         ),
       );
 
+  /// Returns [UserResponse] based on [response] and [json].
   UserResponse _buildUserResponse({
     required Response response,
     required Json json,
@@ -91,6 +92,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         ),
       );
 
+  /// Returns [XpConfiguration] based on [json].
   XpConfiguration _buildXpConfiguration({
     required Json json,
   }) =>
@@ -100,6 +102,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         maxCheckpointTestXp: json.getIntValue(key: 'maxCheckpointTestXp'),
       );
 
+  /// Returns [GemsConfiguration] based on [json].
   GemsConfiguration _buildGemsConfiguration({
     required Json json,
   }) =>
@@ -109,6 +112,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         useGems: json.getBoolValue(key: 'useGems'),
       );
 
+  /// Returns [Course] list based on [jsonList].
   List<Course> _buildCourses({
     required List<Json> jsonList,
   }) {
@@ -136,6 +140,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
     return courses;
   }
 
+  /// Returns [CurrentCourse] based on [json].
   CurrentCourse _buildCurrentCourse({
     required Json json,
   }) =>
@@ -159,6 +164,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         ),
       );
 
+  /// Returns [Skill] list based on [jsonList].
   List<Skill> _buildSkills({
     required List<Json> jsonList,
   }) {
@@ -190,6 +196,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
     return skills;
   }
 
+  /// Returns [LastStreak] based on [json].
   LastStreak _buildLastStreak({
     required Json json,
   }) =>
@@ -200,6 +207,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         ),
       );
 
+  /// Returns [PracticeReminderSetting] list based on [json].
   List<PracticeReminderSetting> _buildPracticeReminderSettings({
     required Json json,
   }) {
