@@ -24,8 +24,7 @@ void main() {
   _testGetJsonFromJsonString();
   _testGetJsonFromJsonMap();
 
-  _testWhenJsonIsNotEmpty();
-  _testWhenJsonIsEmpty();
+  _integrationTest();
 }
 
 void _testFromJsonString() {
@@ -173,8 +172,8 @@ void _testGetJsonFromJsonMap() {
   });
 }
 
-void _testWhenJsonIsNotEmpty() {
-  test('Test when JSON is not empty.', () {
+void _integrationTest() {
+  test('Integration test.', () {
     final json = Json.fromJsonString(value: '''
         {
             "strength_bars": 1,
@@ -226,12 +225,5 @@ void _testWhenJsonIsNotEmpty() {
     );
     expect(json.getStringValue(key: 'word_string'), '窓');
     expect(json.getBoolValue(key: 'test_bool'), true);
-  });
-}
-
-void _testWhenJsonIsEmpty() {
-  test('Test when JSON is empty.', () {
-    final json = Json.fromJsonMap(value: {});
-    expect(json.isEmpty, true);
   });
 }
