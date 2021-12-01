@@ -9,12 +9,20 @@ void main() {
   _testFromJsonString();
   _testFromJsonMap();
 
+  _testIsEmptyWhenJsonIsNotEmpty();
+  _testIsEmptyWhenJsonIsEmpty();
+  _testContainsKey();
+  _testKeySet();
+
   _testGetStringValue();
   _testGetIntValue();
   _testGetDoubleValue();
   _testGetBoolValue();
   _testGetStringValues();
   _testGetIntValues();
+
+  _testGetJsonFromJsonString();
+  _testGetJsonFromJsonMap();
 
   _testWhenJsonIsNotEmpty();
   _testWhenJsonIsEmpty();
@@ -34,11 +42,56 @@ void _testFromJsonMap() {
   });
 }
 
+void _testIsEmptyWhenJsonIsNotEmpty() {
+  test('Test isEmpty when JSON is not empty.', () {
+    final json = Json.fromJsonMap(value: {'test': true});
+    expect(json.isEmpty, false);
+  });
+}
+
+void _testIsEmptyWhenJsonIsEmpty() {
+  test('Test isEmpty when JSON is empty.', () {
+    final json = Json.fromJsonMap(value: {});
+    expect(json.isEmpty, true);
+  });
+}
+
+void _testContainsKey() {
+  test('Test containsKey', () {
+    final json = Json.fromJsonMap(value: {
+      'test': {'test2': true},
+      'test3': [
+        {'test4': 1}
+      ]
+    });
+
+    expect(json.isEmpty, false);
+    expect(json.containsKey(key: 'test'), true);
+    expect(json.containsKey(key: 'test2'), false);
+    expect(json.containsKey(key: 'test3'), true);
+    expect(json.containsKey(key: 'test4'), false);
+  });
+}
+
+void _testKeySet() {
+  test('Test keySet', () {
+    final json = Json.fromJsonMap(
+      value: {'test1': '', 'test2': '', 'test5': ''},
+    );
+
+    final keys = json.keySet;
+    expect(keys.length, 3);
+  });
+}
+
 void _testGetStringValue() {
   test('Test getStringValue.', () {
     final json = Json.fromJsonMap(value: {'test': 'success'});
     expect(json.isEmpty, false);
     expect(json.getStringValue(key: 'test'), 'success');
+    expect(json.getStringValue(key: 'not_exist'), '');
+    expect(json.getStringValue(key: 'not_exist', defaultValue: 'default'),
+        'default');
   });
 }
 
@@ -47,6 +100,8 @@ void _testGetIntValue() {
     final json = Json.fromJsonMap(value: {'test': 1});
     expect(json.isEmpty, false);
     expect(json.getIntValue(key: 'test'), 1);
+    expect(json.getIntValue(key: 'not_exist'), -1);
+    expect(json.getIntValue(key: 'not_exist', defaultValue: 0), 0);
   });
 }
 
@@ -55,6 +110,8 @@ void _testGetDoubleValue() {
     final json = Json.fromJsonMap(value: {'test': 1.0});
     expect(json.isEmpty, false);
     expect(json.getDoubleValue(key: 'test'), 1.0);
+    expect(json.getDoubleValue(key: 'not_exist'), -1.0);
+    expect(json.getDoubleValue(key: 'not_exist', defaultValue: 0.0), 0.0);
   });
 }
 
@@ -63,6 +120,8 @@ void _testGetBoolValue() {
     final json = Json.fromJsonMap(value: {'test': true});
     expect(json.isEmpty, false);
     expect(json.getBoolValue(key: 'test'), true);
+    expect(json.getBoolValue(key: 'not_exist'), false);
+    expect(json.getBoolValue(key: 'not_exist', defaultValue: true), true);
   });
 }
 
@@ -74,6 +133,7 @@ void _testGetStringValues() {
 
     expect(json.isEmpty, false);
     expect(json.getStringValues(key: 'test'), ['example_1', 'example_2']);
+    expect(json.getStringValues(key: 'not_exist'), []);
   });
 }
 
@@ -85,6 +145,31 @@ void _testGetIntValues() {
 
     expect(json.isEmpty, false);
     expect(json.getIntValues(key: 'test'), [0, 1]);
+    expect(json.getIntValues(key: 'not_exist'), []);
+  });
+}
+
+void _testGetJsonFromJsonString() {
+  test('Test getJson from JSON String.', () {
+    final json = Json.fromJsonMap(value: {'test1': '{"test2": true}'});
+    expect(json.isEmpty, false);
+
+    final childJson = json.getJson(key: 'test1');
+    expect(childJson.isEmpty, false);
+    expect(childJson.getBoolValue(key: 'test2'), true);
+  });
+}
+
+void _testGetJsonFromJsonMap() {
+  test('Test getJson from JSON map.', () {
+    final json = Json.fromJsonMap(value: {
+      'test1': {"test2": true}
+    });
+    expect(json.isEmpty, false);
+
+    final childJson = json.getJson(key: 'test1');
+    expect(childJson.isEmpty, false);
+    expect(childJson.getBoolValue(key: 'test2'), true);
   });
 }
 
