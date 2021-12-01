@@ -28,11 +28,14 @@ class WordHintRequest extends Request<WordHintResponse> {
   /// The sentence
   final String sentence;
 
+  /// The adapter
+  static final _adapter = WordHintApiAdapter.newInstance();
+
   /// The session
   static final _session = Session.getInstance();
 
   @override
-  Future<WordHintResponse> send() async => WordHintApiAdapter().execute(
+  Future<WordHintResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
             Uri.encodeFull(

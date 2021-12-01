@@ -15,8 +15,11 @@ import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
 class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
+  /// Returns the new instance of [VersionInfoAdapter].
+  VersionInfoAdapter.newInstance();
+
   @override
-  VersionInfoResponse execute({
+  VersionInfoResponse convert({
     required Response response,
   }) =>
       _buildVersionInfoResponse(

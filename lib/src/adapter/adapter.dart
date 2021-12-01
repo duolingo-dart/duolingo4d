@@ -5,8 +5,9 @@
 // Package imports:
 import 'package:http/http.dart';
 
+///
 abstract class Adapter<R> {
-  R execute({
+  R convert({
     required Response response,
   });
 }

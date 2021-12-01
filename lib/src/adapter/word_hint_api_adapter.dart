@@ -16,8 +16,11 @@ import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 class WordHintApiAdapter extends Adapter<WordHintResponse> {
+  /// Returns the new instance of [WordHintApiAdapter].
+  WordHintApiAdapter.newInstance();
+
   @override
-  WordHintResponse execute({
+  WordHintResponse convert({
     required Response response,
   }) =>
       _buildWordHintResponse(

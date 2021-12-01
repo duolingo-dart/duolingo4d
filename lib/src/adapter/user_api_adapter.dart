@@ -17,8 +17,11 @@ import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
 class UserApiAdapter extends Adapter<UserResponse> {
+  /// Returns the new instance of [UserApiAdapter].
+  UserApiAdapter.newInstance();
+
   @override
-  UserResponse execute({
+  UserResponse convert({
     required Response response,
   }) =>
       _buildUserResponse(

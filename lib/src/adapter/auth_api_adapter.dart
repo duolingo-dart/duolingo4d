@@ -12,8 +12,11 @@ import 'package:duolingo4d/src/response/auth/auth_error.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
 class AuthApiAdapter extends Adapter<AuthResponse> {
+  /// Returns the new instance of [AuthApiAdapter].
+  AuthApiAdapter.newInstance();
+
   @override
-  AuthResponse execute({
+  AuthResponse convert({
     required Response response,
   }) =>
       _buildAuthResponse(

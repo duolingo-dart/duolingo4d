@@ -14,12 +14,15 @@ class VersionInfoRequest extends Request<VersionInfoResponse> {
   /// Returns the new instance of [VersionInfoRequest].
   VersionInfoRequest.newInstance();
 
+  /// The response adapter
+  static final _adapter = VersionInfoAdapter.newInstance();
+
   /// The API uri
   static final _apiUri =
       Uri.parse('https://www.duolingo.com/api/1/version_info');
 
   @override
-  Future<VersionInfoResponse> send() async => VersionInfoAdapter().execute(
+  Future<VersionInfoResponse> send() async => _adapter.convert(
         response: await http.get(_apiUri),
       );
 }

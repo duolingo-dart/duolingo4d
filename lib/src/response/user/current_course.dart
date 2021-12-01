@@ -2,6 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Project imports:
 import 'package:duolingo4d/src/response/user/skill.dart';
 
 class CurrentCourse {

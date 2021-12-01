@@ -20,11 +20,14 @@ class UserRequest extends Request<UserResponse> {
   /// The user id
   final String userId;
 
+  /// The adapter
+  static final _adapter = UserApiAdapter.newInstance();
+
   /// The session
   static final _session = Session.getInstance();
 
   @override
-  Future<UserResponse> send() async => UserApiAdapter().execute(
+  Future<UserResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
             'https://www.duolingo.com/2017-06-30/users/$userId',

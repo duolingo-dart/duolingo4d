@@ -10,8 +10,11 @@ import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 
 class SwitchLanguageApiAdapter extends Adapter<SwitchLanguageResponse> {
+  /// Returns the new instance of [SwitchLanguageApiAdapter].
+  SwitchLanguageApiAdapter.newInstance();
+
   @override
-  SwitchLanguageResponse execute({
+  SwitchLanguageResponse convert({
     required Response response,
   }) =>
       SwitchLanguageResponse.from(

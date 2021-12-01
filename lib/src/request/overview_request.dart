@@ -15,6 +15,9 @@ class OverviewRequest extends Request<OverviewResponse> {
   /// Returns the new instance of [OverviewRequest].
   OverviewRequest.newInstance();
 
+  /// The response adapter
+  static final _adapter = OverviewApiAdapter.newInstance();
+
   /// The API uri
   static final _apiUri =
       Uri.parse('https://www.duolingo.com/vocabulary/overview');
@@ -23,7 +26,7 @@ class OverviewRequest extends Request<OverviewResponse> {
   static final _session = Session.getInstance();
 
   @override
-  Future<OverviewResponse> send() async => OverviewApiAdapter().execute(
+  Future<OverviewResponse> send() async => _adapter.convert(
         response: await http.get(
           _apiUri,
           headers: _session.headers,

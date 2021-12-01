@@ -12,8 +12,11 @@ import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/overview/vocabulary.dart';
 
 class OverviewApiAdapter extends Adapter<OverviewResponse> {
+  /// Returns the new instance of [OverviewApiAdapter].
+  OverviewApiAdapter.newInstance();
+
   @override
-  OverviewResponse execute({
+  OverviewResponse convert({
     required Response response,
   }) =>
       _buildOverviewResponse(
