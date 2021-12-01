@@ -3,8 +3,10 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/response.dart';
 import 'package:http/http.dart' as http;
+
+// Project imports:
+import 'package:duolingo4d/src/response/response.dart';
 
 /// This is an abstract class that provides a function
 /// to convert the response returned from HTTP communication
