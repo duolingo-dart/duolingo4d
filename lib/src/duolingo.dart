@@ -13,7 +13,7 @@ import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 abstract class Duolingo {
   /// The factory constructor.
-  factory Duolingo.getInstance() => DuolingoImpl.instance;
+  factory Duolingo.getInstance() => DuolingoImpl.getInstance();
 
   Future<VersionInfoResponse> versionInfo();
 

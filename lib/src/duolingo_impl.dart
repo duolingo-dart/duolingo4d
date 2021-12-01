@@ -17,13 +17,13 @@ import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 class DuolingoImpl implements Duolingo {
-  /// The internal constructor.
+  /// The internal constructor for singleton.
   DuolingoImpl._internal();
 
   /// Returns the singleton instance of [DuolingoImpl].
-  static DuolingoImpl get instance => _singletonInstance;
+  factory DuolingoImpl.getInstance() => _singletonInstance;
 
-  /// The singleton instance of this [DuolingoImpl].
+  /// The singleton instance of [DuolingoImpl].
   static final _singletonInstance = DuolingoImpl._internal();
 
   @override

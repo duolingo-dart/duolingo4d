@@ -59,8 +59,8 @@ class UserApiAdapter extends Adapter<UserResponse> {
         courses: _buildCourses(
           jsonList: json.getJsonList(key: 'courses'),
         ),
-        skills: _buildSkills(
-          jsonList: json.getJsonList(key: 'skills'),
+        currentCourse: _buildCurrentCourse(
+          json: json.getJson(key: 'currentCourse'),
         ),
         lastStreak: _buildLastStreak(
           json: json.getJson(key: 'lastStreak'),
@@ -130,6 +130,29 @@ class UserApiAdapter extends Adapter<UserResponse> {
 
     return courses;
   }
+
+  CurrentCourse _buildCurrentCourse({
+    required Json json,
+  }) =>
+      CurrentCourse.from(
+        id: json.getStringValue(key: 'id'),
+        title: json.getStringValue(key: 'title'),
+        fromLanguage: json.getStringValue(key: 'fromLanguage'),
+        leraningLanguage: json.getStringValue(key: 'learningLanguage'),
+        numberOfLearnedWords: json.getIntValue(key: 'wordsLearned'),
+        numberOfWords: json.getIntValue(key: 'numberOfWords'),
+        numberOfSentences: json.getIntValue(key: 'numberOfSentences'),
+        xp: json.getIntValue(key: 'xp'),
+        crowns: json.getIntValue(key: 'crowns'),
+        extraCrowns: json.getIntValue(key: 'extraCrowns'),
+        isPlacementTestAvailable: json.getBoolValue(
+          key: 'placementTestAvailable',
+        ),
+        isHealthEnabled: json.getBoolValue(key: 'healthEnabled'),
+        skills: _buildSkills(
+          jsonList: json.getJsonList(key: 'skills'),
+        ),
+      );
 
   List<Skill> _buildSkills({
     required List<Json> jsonList,

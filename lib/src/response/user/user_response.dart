@@ -5,15 +5,16 @@
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/user/course.dart';
+import 'package:duolingo4d/src/response/user/current_course.dart';
 import 'package:duolingo4d/src/response/user/gems_configuration.dart';
 import 'package:duolingo4d/src/response/user/last_streak.dart';
 import 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
-import 'package:duolingo4d/src/response/user/skill.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
 export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 export 'package:duolingo4d/src/response/user/gems_configuration.dart';
 export 'package:duolingo4d/src/response/user/course.dart';
+export 'package:duolingo4d/src/response/user/current_course.dart';
 export 'package:duolingo4d/src/response/user/skill.dart';
 export 'package:duolingo4d/src/response/user/last_streak.dart';
 export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
@@ -41,7 +42,7 @@ class UserResponse extends Response {
     required this.xpConfiguration,
     required this.gemsConfiguration,
     required this.courses,
-    required this.skills,
+    required this.currentCourse,
     required this.lastStreak,
     required this.xpGoalMetToday,
     required this.xpGoal,
@@ -115,8 +116,8 @@ class UserResponse extends Response {
   /// The courses
   final List<Course> courses;
 
-  /// The skills
-  final List<Skill> skills;
+  /// The current course
+  final CurrentCourse currentCourse;
 
   /// The last streak
   final LastStreak lastStreak;

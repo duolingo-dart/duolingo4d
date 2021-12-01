@@ -35,4 +35,7 @@ class AuthResponse extends Response {
 
   /// Returns true if the response has error, otherwise false.
   bool get hasError => error != null;
+
+  /// Returns true if the response has not error, otherwise false.
+  bool get hasNotError => error == null;
 }

@@ -5,12 +5,15 @@
 import 'package:duolingo4d/src/json.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+/// This is a test class for [Json].
 void main() {
   _testFromJsonString();
   _testFromJsonMap();
 
   _testIsEmptyWhenJsonIsNotEmpty();
   _testIsEmptyWhenJsonIsEmpty();
+  _testIsNotEmptyWhenJsonIsNotEmpty();
+  _testIsNotEmptyWhenJsonIsEmpty();
   _testContainsKey();
   _testKeySet();
 
@@ -52,6 +55,20 @@ void _testIsEmptyWhenJsonIsEmpty() {
   test('Test isEmpty when JSON is empty.', () {
     final json = Json.fromJsonMap(value: {});
     expect(json.isEmpty, true);
+  });
+}
+
+void _testIsNotEmptyWhenJsonIsNotEmpty() {
+  test('Test isNotEmpty when JSON is not empty.', () {
+    final json = Json.fromJsonMap(value: {'test': true});
+    expect(json.isNotEmpty, true);
+  });
+}
+
+void _testIsNotEmptyWhenJsonIsEmpty() {
+  test('Test isNotEmpty when JSON is empty.', () {
+    final json = Json.fromJsonMap(value: {});
+    expect(json.isNotEmpty, false);
   });
 }
 

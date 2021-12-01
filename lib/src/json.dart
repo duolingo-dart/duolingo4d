@@ -72,9 +72,17 @@ class Json {
     final jsonList = <Json>[];
 
     for (final json in jsonResource[key]) {
-      jsonList.add(
-        Json.fromJsonMap(value: json),
-      );
+      if (json is List) {
+        for (final childJson in json) {
+          jsonList.add(
+            Json.fromJsonMap(value: childJson),
+          );
+        }
+      } else {
+        jsonList.add(
+          Json.fromJsonMap(value: json),
+        );
+      }
     }
 
     return jsonList;
@@ -118,4 +126,10 @@ class Json {
 
   /// Returns true if this json object is empty, otherwise false.
   bool get isEmpty => jsonResource.isEmpty;
+
+  /// Returns true if this json object is not empty, otherwise false.
+  bool get isNotEmpty => jsonResource.isNotEmpty;
+
+  @override
+  String toString() => jsonResource.toString();
 }
