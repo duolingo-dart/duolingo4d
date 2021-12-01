@@ -11,6 +11,10 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
+/// This class provides the function to send a request
+/// to switch learning language of an authenticated user.
+///
+/// This request requires the user to be authenticated in advance.
 class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   /// Returns the new instance of [SwitchLanguageRequest] based on arguments.
   SwitchLanguageRequest.from({

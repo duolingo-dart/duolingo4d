@@ -11,6 +11,7 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
+/// This class provides the function to send a request for user authentication.
 class AuthRequest extends Request<AuthResponse> {
   /// Returns the new instance of [AuthRequest] based on arguments.
   AuthRequest.from({

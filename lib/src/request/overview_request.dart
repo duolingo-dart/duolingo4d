@@ -11,6 +11,10 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
+/// This class provides the function to send a request
+/// to fetch the learned word information of an authenticated user.
+///
+/// This request requires the user to be authenticated in advance.
 class OverviewRequest extends Request<OverviewResponse> {
   /// Returns the new instance of [OverviewRequest].
   OverviewRequest.newInstance();

@@ -11,6 +11,10 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
+/// This class provides the function to send a request
+/// to fetch user information of an authenticated user.
+///
+/// This request requires the user to be authenticated in advance.
 class UserRequest extends Request<UserResponse> {
   /// Returns the new instance of [UserRequest] based on an argument.
   UserRequest.from({

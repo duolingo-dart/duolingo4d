@@ -10,6 +10,8 @@ import 'package:duolingo4d/src/adapter/version_info_api_adapter.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 
+/// This class provides the function to send a request
+/// to fetch metadata of configuration on Duolingo service.
 class VersionInfoRequest extends Request<VersionInfoResponse> {
   /// Returns the new instance of [VersionInfoRequest].
   VersionInfoRequest.newInstance();

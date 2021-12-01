@@ -11,6 +11,10 @@ import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 import 'package:duolingo4d/src/session.dart';
 
+/// This class provides the function to send a request
+/// to fetch a word hint of an authenticated user.
+///
+/// This request requires the user to be authenticated in advance.
 class WordHintRequest extends Request<WordHintResponse> {
   /// Returns the new instance of [WordHintRequest] based on arguments.
   WordHintRequest.from({
