@@ -178,6 +178,9 @@ void main() async {
 }
 ```
 
+> **_Note:_**</br>
+> If you try to authenticate again using information from an account that has already been authenticated, the Duolingo API will return an invalid password response.
+
 ### 1.3.3. User API
 
 | Auth Required |                                     Snippet                                      |                                                  JSON                                                  |
@@ -211,9 +214,10 @@ void main() async {
     print(course.xp);
   }
 
-  for (final skill in userResponse.skills) {
+  for (final skill in userResponse.currentCourse.skills) {
     print(skill.name);
     print(skill.proficiency);
+    print(skill.tipsAndNotes);
   }
 }
 ```
