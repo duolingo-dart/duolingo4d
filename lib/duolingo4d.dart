@@ -5,6 +5,7 @@
 export 'src/duolingo.dart';
 
 export 'src/response/response.dart';
+export 'src/response/status.dart';
 export 'src/response/versioninfo/version_info_response.dart';
 export 'src/response/auth/auth_response.dart';
 export 'src/response/user/user_response.dart';
