@@ -11,6 +11,18 @@ void main() async {
     password: 'test_duolingo4d',
   );
 
+  _testVersionInfoApi();
+  _testUserApi();
+  _testOverviewApi();
+  _testWordHintApi();
+  _testSwitchLanguageApi();
+
+  //! Test the authentication API last,
+  //! since duplicate authentication requests will affect other tests.
+  _testAuthApi();
+}
+
+void _testVersionInfoApi() {
   test('Test Version Info Request.', () async {
     final duolingo = Duolingo.getInstance();
     final response = await duolingo.versionInfo();
@@ -24,22 +36,74 @@ void main() async {
     expect(response.ttsVoiceConfiguration.voiceDirections.isNotEmpty, true);
     expect(response.supportedDirections.isNotEmpty, true);
   });
+}
 
+void _testUserApi() {
   test('Test User API.', () async {
     final duolingo = Duolingo.getInstance();
-    final userResponse = await duolingo.user(userId: '557897808');
+    final response = await duolingo.user(userId: '557897808');
 
-    expect(userResponse.statusCode, 200);
-    expect(userResponse.reasonPhrase, 'OK');
-    expect(userResponse.headers.isNotEmpty, true);
+    expect(response.statusCode, 200);
+    expect(response.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
 
-    expect(userResponse.id, 557897808);
-    expect(userResponse.username, 'duovoc_tes');
-    expect(userResponse.name, 'Duolingo4D');
-    expect(userResponse.courses.isNotEmpty, true);
-    expect(userResponse.currentCourse.skills.isNotEmpty, true);
+    expect(response.id, 557897808);
+    expect(response.username, 'duovoc_tes');
+    expect(response.name, 'Duolingo4D');
+    expect(response.courses.isNotEmpty, true);
+    expect(response.currentCourse.skills.isNotEmpty, true);
   });
+}
 
+void _testOverviewApi() {
+  test('Test Overview API.', () async {
+    final duolingo = Duolingo.getInstance();
+    final response = await duolingo.overview();
+
+    expect(response.statusCode, 200);
+    expect(response.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.vocabularies.isNotEmpty, true);
+  });
+}
+
+void _testWordHintApi() {
+  test('Test Word Hint API.', () async {
+    final duolingo = Duolingo.getInstance();
+    final response = await duolingo.wordHint(
+      fromLanguage: 'en',
+      learningLanguage: 'ja',
+      sentence: 'ありがとう',
+    );
+
+    expect(response.statusCode, 200);
+    expect(response.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.tokens.isNotEmpty, true);
+    expect(response.tokens[0].table.headers.isNotEmpty, true);
+    expect(response.tokens[0].table.rows.isNotEmpty, true);
+    expect(response.tokens[0].table.rows[0].cells.isNotEmpty, true);
+    expect(response.tokens[0].table.references.isNotEmpty, true);
+  });
+}
+
+void _testSwitchLanguageApi() {
+  test('Test Switch Language API.', () async {
+    final duolingo = Duolingo.getInstance();
+    final response = await duolingo.switchLanguage(
+      fromLanguage: 'en',
+      learningLanguage: 'ja',
+    );
+
+    expect(response.statusCode, 200);
+    expect(response.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+  });
+}
+
+void _testAuthApi() {
   test('Test Auth Request.', () async {
     final duolingo = Duolingo.getInstance();
     final response = await duolingo.authenticate(
