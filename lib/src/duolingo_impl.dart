@@ -22,7 +22,7 @@ class DuolingoImpl implements Duolingo {
   DuolingoImpl._internal();
 
   /// Returns the singleton instance of [DuolingoImpl].
-  factory DuolingoImpl.getInstance() => _singletonInstance;
+  static get instance => _singletonInstance;
 
   /// The singleton instance of [DuolingoImpl].
   static final _singletonInstance = DuolingoImpl._internal();

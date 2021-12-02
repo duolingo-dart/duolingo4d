@@ -79,9 +79,9 @@ void main() async {
     password: 'test_password',
   );
 
-  if (authResponse.statusCode != 200) {
+  if (authResponse.status.isNotOk) {
     // Client or Server error or something.
-    authResponse.reasonPhrase;
+    authResponse.status.reasonPhrase;
     authResponse.headers;
     return;
   }

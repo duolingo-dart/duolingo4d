@@ -12,8 +12,8 @@ import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 abstract class Duolingo {
-  /// The factory constructor.
-  factory Duolingo.getInstance() => DuolingoImpl.getInstance();
+  /// Returns the singleton instance of [Duolingo].
+  static get instance => DuolingoImpl.instance;
 
   Future<VersionInfoResponse> versionInfo();
 

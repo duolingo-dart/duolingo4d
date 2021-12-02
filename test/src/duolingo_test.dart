@@ -9,7 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:duolingo4d/duolingo4d.dart';
 
 void main() async {
-  await Duolingo.getInstance().authenticate(
+  await Duolingo.instance.authenticate(
     username: 'duovoc_tes',
     password: 'test_duolingo4d',
   );
@@ -27,7 +27,7 @@ void main() async {
 
 void _testVersionInfoApi() {
   test('Test Version Info Request.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.versionInfo();
 
     expect(response.status.code, 200);
@@ -43,7 +43,7 @@ void _testVersionInfoApi() {
 
 void _testUserApi() {
   test('Test User API.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.user(userId: '557897808');
 
     expect(response.status.code, 200);
@@ -60,7 +60,7 @@ void _testUserApi() {
 
 void _testOverviewApi() {
   test('Test Overview API.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.overview();
 
     expect(response.status.code, 200);
@@ -73,7 +73,7 @@ void _testOverviewApi() {
 
 void _testWordHintApi() {
   test('Test Word Hint API.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.wordHint(
       fromLanguage: 'en',
       learningLanguage: 'ja',
@@ -94,7 +94,7 @@ void _testWordHintApi() {
 
 void _testSwitchLanguageApi() {
   test('Test Switch Language API.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.switchLanguage(
       fromLanguage: 'en',
       learningLanguage: 'ja',
@@ -108,7 +108,7 @@ void _testSwitchLanguageApi() {
 
 void _testAuthApi() {
   test('Test Auth Request.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.authenticate(
       username: 'duovoc_tes',
       password: 'test_duolingo4d',
@@ -124,7 +124,7 @@ void _testAuthApi() {
   });
 
   test('Test duplicated Auth Request.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.authenticate(
       username: 'duovoc_tes',
       password: 'test_duolingo4d',
@@ -146,7 +146,7 @@ void _testAuthApi() {
   });
 
   test('Test Auth Request with invalid user.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.authenticate(
       username: '',
       password: 'test_duolingo4d',
@@ -168,7 +168,7 @@ void _testAuthApi() {
   });
 
   test('Test Auth Request with invalid password.', () async {
-    final duolingo = Duolingo.getInstance();
+    final duolingo = Duolingo.instance;
     final response = await duolingo.authenticate(
       username: 'duovoc_tes',
       password: '',
