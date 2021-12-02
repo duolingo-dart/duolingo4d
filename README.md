@@ -72,7 +72,7 @@ For example, when performing the authentication process for a user, it will look
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final authResponse = await duolingo.authenticate(
     username: 'test_username',
@@ -105,16 +105,16 @@ void main() async {
 
 ### 1.3.1. Version Info API
 
-| Auth Required |                           Snippet                            |                                                     JSON                                                      |
-| :-----------: | :----------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().versionInfo(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/01_version_info/response.json) |
+| Auth Required |                         Snippet                         |                                                     JSON                                                      |
+| :-----------: | :-----------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.instance.versionInfo(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/01_version_info/response.json) |
 
 The Version Info API allows you to fetch metadata about the configuration of Duolingo services.</br>
 This metadata includes the TTS data used to play back the audio of the words, as well as mapping information for the languages supported by Duolingo.
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final versionInfoResponse = await duolingo.versionInfo();
   final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;
@@ -128,9 +128,9 @@ void main() async {
 
 ### 1.3.2. Authentication API
 
-| Auth Required |                                                      Snippet                                                       |                                                      JSON                                                      |
-| :-----------: | :----------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().authenticate(username: 'test_username', password: 'test_password',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/02_login/response_success.json) |
+| Auth Required |                                                    Snippet                                                    |                                                      JSON                                                      |
+| :-----------: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.instance.authenticate(username: 'test_username', password: 'test_password',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/02_login/response_success.json) |
 
 You can use username and password to authenticate user registered with Duolingo. The registered e-mail address can be used for authentication in addition to the username.
 
@@ -141,7 +141,7 @@ In order to fetch the response you expect from each API that requires authentica
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final authResponse = await duolingo.authenticate(
     username: 'test_username',
@@ -175,9 +175,9 @@ void main() async {
 
 ### 1.3.3. User API
 
-| Auth Required |                                     Snippet                                      |                                                  JSON                                                  |
-| :-----------: | :------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
-|      ✅       | final response = await Duolingo.getInstance().user(userId: authResponse.userId); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/03_users/response.json) |
+| Auth Required |                                   Snippet                                   |                                                  JSON                                                  |
+| :-----------: | :-------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.instance.user(userId: authResponse.userId); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/03_users/response.json) |
 
 From the User API, you can get detailed user information associated with the user ID.
 
@@ -189,7 +189,7 @@ If user authentication has not been completed, data cannot be fetched.
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final authResponse = await duolingo.authenticate(
     username: 'test_username',
@@ -218,9 +218,9 @@ void main() async {
 
 ### 1.3.4. Overview API
 
-| Auth Required |                          Snippet                          |                                                   JSON                                                    |
-| :-----------: | :-------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | final response = await Duolingo.getInstance().overview(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/04_overview/response.json) |
+| Auth Required |                       Snippet                        |                                                   JSON                                                    |
+| :-----------: | :--------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.instance.overview(); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/04_overview/response.json) |
 
 From the Overview API, you can fetch information about all the words you have learned in the course you have selected. The details that can be retrieved about a word will vary depending on the course and word.
 
@@ -228,7 +228,7 @@ If user authentication has not been completed, data cannot be fetched.
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final authResponse = await duolingo.authenticate(
     username: 'test_username',
@@ -245,9 +245,9 @@ void main() async {
 
 ### 1.3.5. Word Hint API
 
-| Auth Required |                                                           Snippet                                                            |                                                   JSON                                                    |
-| :-----------: | :--------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ❌       | final response = await Duolingo.getInstance().wordHint(fromLanguage: 'en', learningLanguage: 'es', sentence: 'boligrafos',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
+| Auth Required |                                                         Snippet                                                         |                                                   JSON                                                    |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ❌       | final response = await Duolingo.instance.wordHint(fromLanguage: 'en', learningLanguage: 'es', sentence: 'boligrafos',); | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
 
 You can fetch hint information for any word or sentence from the Word Hint API. Since the hint information is hint data managed by Duolingo, the accuracy of the translation data cannot be guaranteed.
 
@@ -255,7 +255,7 @@ The argument `learningLanguage` should be the language code corresponding to the
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final wordHintResponse = await duolingo.wordHint(
     fromLanguage: 'en',
@@ -282,9 +282,9 @@ void main() async {
 
 ### 1.3.6. Switch Language API
 
-| Auth Required |                                                  Snippet                                                   |
-| :-----------: | :--------------------------------------------------------------------------------------------------------: |
-|      ✅       | final response = await Duolingo.getInstance().switchLanguage(fromLanguage: 'es', learningLanguage: 'en',); |
+| Auth Required |                                                Snippet                                                |
+| :-----------: | :---------------------------------------------------------------------------------------------------: |
+|      ✅       | final response = await Duolingo.instance.switchLanguage(fromLanguage: 'es', learningLanguage: 'en',); |
 
 The Switch Language API allows you to switch between the courses supported by Duolingo. The mapping information for the courses that can be switched using the Switch Language API can be obtained from the Version Info API.
 
@@ -292,7 +292,7 @@ For the argument `learningLanguage`, specify the language to be learned after sw
 
 ```dart
 void main() async {
-  final duolingo = Duolingo.getInstance();
+  final duolingo = Duolingo.instance;
 
   final authResponse = await duolingo.authenticate(
     username: 'test_username',
@@ -319,9 +319,7 @@ BSD-style license that can be found in the LICENSE file.
 
 ## 1.5. More Information
 
-`Duolingo4D` was designed and implemented by Kato Shinya.
-
-Regardless of the means or content of communication, I would love to hear from you if you have any questions or concerns. I do not check my email box very often so a response may be delayed, anyway thank you for your interest!
+`Duolingo4D` was designed and implemented by **_Kato Shinya_**.
 
 - [Creator Profile](https://github.com/myConsciousness)
 - [License](https://github.com/myConsciousness/duolingo4d/blob/main/LICENSE)
