@@ -10,14 +10,14 @@ class Session {
   /// The internal constructor for singleton.
   Session._internal();
 
-  /// Returns the singleton instance of [Session].
-  factory Session.getInstance() => _singletonInstance;
-
   /// The singleton instance of [_Session].
   static final _singletonInstance = Session._internal();
 
   /// The headers for cookie
   final _headers = <String, String>{};
+
+  /// Returns the singleton instance of [Session].
+  static get instance => _singletonInstance;
 
   /// Returns cookie headers
   Map<String, String> get headers => _headers;

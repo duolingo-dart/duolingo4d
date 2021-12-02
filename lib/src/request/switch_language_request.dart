@@ -34,14 +34,11 @@ class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   /// The API uri
   static final _apiUri = Uri.parse('https://www.duolingo.com/switch_language');
 
-  /// The session
-  static final _session = Session.getInstance();
-
   @override
   Future<SwitchLanguageResponse> send() async => _adapter.convert(
         response: await http.post(
           _apiUri,
-          headers: _session.headers,
+          headers: Session.instance.headers,
           body: {
             'from_language': fromLanguage,
             'learning_language': learningLanguage,

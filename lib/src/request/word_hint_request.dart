@@ -35,9 +35,6 @@ class WordHintRequest extends Request<WordHintResponse> {
   /// The adapter
   static final _adapter = WordHintApiAdapter.newInstance();
 
-  /// The session
-  static final _session = Session.getInstance();
-
   @override
   Future<WordHintResponse> send() async => _adapter.convert(
         response: await http.get(
@@ -45,7 +42,7 @@ class WordHintRequest extends Request<WordHintResponse> {
             Uri.encodeFull(
                 'https://d2.duolingo.com/words/hints/$learningLanguage/$fromLanguage?sentence=$sentence'),
           ),
-          headers: _session.headers,
+          headers: Session.instance.headers,
         ),
       );
 }

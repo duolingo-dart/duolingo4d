@@ -31,12 +31,9 @@ class AuthRequest extends Request<AuthResponse> {
   /// The API uri
   static final _apiUri = Uri.parse('https://www.duolingo.com/login');
 
-  /// The session
-  static final _session = Session.getInstance();
-
   @override
   Future<AuthResponse> send() async => _adapter.convert(
-        response: _session.refreshCookie(
+        response: Session.instance.refreshCookie(
           response: await http.post(
             _apiUri,
             body: {

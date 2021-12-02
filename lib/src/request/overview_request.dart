@@ -26,14 +26,11 @@ class OverviewRequest extends Request<OverviewResponse> {
   static final _apiUri =
       Uri.parse('https://www.duolingo.com/vocabulary/overview');
 
-  /// The session
-  static final _session = Session.getInstance();
-
   @override
   Future<OverviewResponse> send() async => _adapter.convert(
         response: await http.get(
           _apiUri,
-          headers: _session.headers,
+          headers: Session.instance.headers,
         ),
       );
 }
