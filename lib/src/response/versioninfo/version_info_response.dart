@@ -24,7 +24,7 @@ export 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 ///
 ///```dart
 ///void main() async {
-///  final duolingo = Duolingo.getInstance();
+///  final duolingo = Duolingo.instance;
 ///
 ///  final versionInfoResponse = await duolingo.versionInfo();
 ///  final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;

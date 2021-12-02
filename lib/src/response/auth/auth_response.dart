@@ -20,7 +20,7 @@ export 'package:duolingo4d/src/response/auth/auth_error.dart';
 ///
 /// ```dart
 /// void main() async {
-///   final duolingo = Duolingo.getInstance();
+///   final duolingo = Duolingo.instance;
 ///
 ///   final authResponse = await duolingo.authenticate(
 ///     username: 'test_username',

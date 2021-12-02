@@ -20,7 +20,7 @@ import 'package:duolingo4d/src/response/status.dart';
 ///
 /// ```dart
 /// void main() async {
-///   final duolingo = Duolingo.getInstance();
+///   final duolingo = Duolingo.instance;
 ///
 ///   final authResponse = await duolingo.authenticate(
 ///     username: 'test_username',
@@ -30,16 +30,6 @@ import 'package:duolingo4d/src/response/status.dart';
 ///   if (authResponse.status.isNotOk) {
 ///     authResponse.status.reasonPhrase;
 ///     authResponse.headers;
-///     return;
-///   }
-///
-///   if (authResponse.hasError) {
-///     final authError = authResponse.error!;
-///     print(authError.code);
-///     print(authError.reason);
-///
-///     authError.isInvalidUser;
-///     authError.isInvalidPassword;
 ///     return;
 ///   }
 /// }
