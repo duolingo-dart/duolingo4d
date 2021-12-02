@@ -13,6 +13,28 @@ export 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
 export 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 export 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 
+/// This class represents the response entity of the Version Info API of the Duolingo API.
+///
+/// This entity object contains a lot of metadata about the Duolingo service.
+/// For example, it contains [ttsVoiceConfiguration], which is related to the voice data
+/// used for words, and [supportedDirections], which is a mapping table
+/// between the language used for learning and the language being learned.
+///
+/// **_Example:_**
+///
+///```dart
+///void main() async {
+///  final duolingo = Duolingo.getInstance();
+///
+///  final versionInfoResponse = await duolingo.versionInfo();
+///  final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;
+///
+///  for (final voiceDirections in ttsVoiceConfiguration.voiceDirections) {
+///    print(voiceDirections.language);
+///    print(voiceDirections.voice);
+///  }
+///}
+///```
 class VersionInfoResponse extends Response {
   /// Returns the new instance of [VersionInfoResponse] based on arguments.
   VersionInfoResponse.from({
@@ -23,7 +45,7 @@ class VersionInfoResponse extends Response {
     required this.ageRestrictionLimit,
     required this.country,
     required this.apiBaseUrl,
-    required this.speachHost,
+    required this.speechHost,
     required this.ttsBaseUrl,
     required this.dictBaseUrl,
     required this.ttsVoiceConfiguration,
@@ -36,21 +58,30 @@ class VersionInfoResponse extends Response {
           headers: headers,
         );
 
+  /// The CDN for TTS
   final String ttsCdnUrl;
 
+  /// The age limit
   final int ageRestrictionLimit;
 
+  /// The country code
   final String country;
 
+  /// The base url for API
   final String apiBaseUrl;
 
-  final String speachHost;
+  /// The host for speech
+  final String speechHost;
 
+  /// The base url for TTS
   final String ttsBaseUrl;
 
+  /// The base url of dict
   final String dictBaseUrl;
 
+  /// The TTS voice configuration
   final TtsVoiceConfiguration ttsVoiceConfiguration;
 
+  /// The supported language directions
   final List<SupportedDirection> supportedDirections;
 }

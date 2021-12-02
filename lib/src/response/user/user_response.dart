@@ -20,6 +20,41 @@ export 'package:duolingo4d/src/response/user/skill.dart';
 export 'package:duolingo4d/src/response/user/last_streak.dart';
 export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
 
+/// This class represents the response entity of the User API in the Duolingo API.
+///
+/// This entity contains information such as the authenticated user's lingot and XP,
+/// as well as information about the courses they have studied and their skills.
+///
+/// **_Example:_**
+///
+///```dart
+///void main() async {
+///  final duolingo = Duolingo.getInstance();
+///
+///  final authResponse = await duolingo.authenticate(
+///    username: 'test_username',
+///    password: 'test_password',
+///  );
+///
+///  final userResponse = await duolingo.user(userId: authResponse.userId);
+///
+///  print(userResponse.name);
+///  print(userResponse.lingots);
+///
+///  for (final course in userResponse.courses) {
+///    print(course.title);
+///    print(course.xp);
+///  }
+///
+///  for (final skill in userResponse.currentCourse.skills) {
+///    if (skill.isAccessible) {
+///       print(skill.name);
+///       print(skill.proficiency);
+///       print(skill.tipsAndNotes);
+///    }
+///  }
+///}
+///```
 class UserResponse extends Response {
   /// Returns the new instance of [UserResponse] based on arguments.
   UserResponse.from({
@@ -32,7 +67,7 @@ class UserResponse extends Response {
     required this.biography,
     required this.profileCountry,
     required this.email,
-    required this.emailVerified,
+    required this.isVerifiedEmail,
     required this.pictureUrl,
     required this.timezone,
     required this.timezoneOffset,
@@ -86,8 +121,8 @@ class UserResponse extends Response {
   /// The email
   final String email;
 
-  /// The email verified
-  final bool emailVerified;
+  /// The flag that represents email is verified or not
+  final bool isVerifiedEmail;
 
   /// The picture url
   final String pictureUrl;

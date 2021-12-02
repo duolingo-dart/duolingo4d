@@ -2,6 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents a configuration related to XP during learning.
 class XpConfiguration {
   /// Returns the new instance of [XpConfiguration] based on arguments.
   XpConfiguration.from({

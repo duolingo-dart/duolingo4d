@@ -2,7 +2,10 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-/// The class that represents the error of Duolingo user authentication.
+/// This class represents an authentication error in the Duolingo API authentication API.
+///
+/// It provides [isInvalidUser] and [isInvalidPassword] methods
+/// to easily check the cause of authentication errors.
 class AuthError {
   /// Returns the new instance of [AuthError] based on arguments.
   AuthError.from({

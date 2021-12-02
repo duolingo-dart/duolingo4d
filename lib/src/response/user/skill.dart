@@ -2,6 +2,38 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents the skill information in the course user is learning.
+///
+/// This skill information includes information about lessons that user have not yet learned,
+/// and you can use the [isAccessible] flag to check if a lesson has already been learned.
+///
+/// Also, the skill information for lessons that user have not yet learned will be set to incomplete
+/// and you will not be able to access information such as [tipsAndNotes]. Therefore, if you want to use
+/// the complete skill information, be sure to use [isAccessible] for handling.
+///
+/// **_Example:_**
+///
+///```dart
+///void main() async {
+///  final duolingo = Duolingo.getInstance();
+///
+///  final authResponse = await duolingo.authenticate(
+///    username: 'test_username',
+///    password: 'test_password',
+///  );
+///
+///  final userResponse = await duolingo.user(userId: authResponse.userId);
+///
+///  for (final skill in userResponse.currentCourse.skills) {
+///    if (skill.isAccessible) {
+///       print(skill.name);
+///       print(skill.proficiency);
+///       print(skill.tipsAndNotes);
+///    }
+///  }
+///}
+///```
+
 class Skill {
   /// Returns the new instance of [Skill] based on arguments.
   Skill.from({

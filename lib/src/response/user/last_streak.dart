@@ -2,6 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents the state where the goal XP is reached at the end.
 class LastStreak {
   /// Returns the new instance of [LastStreak] based on arguments.
   LastStreak.from({

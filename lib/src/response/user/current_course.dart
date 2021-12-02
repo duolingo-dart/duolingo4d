@@ -5,6 +5,9 @@
 // Project imports:
 import 'package:duolingo4d/src/response/user/skill.dart';
 
+/// This class represents the course that the user is currently selecting.
+///
+/// Skill information is included as [skills] in this current course information.
 class CurrentCourse {
   /// Returns the new instance of [CurrentCourse] based on arguments.
   CurrentCourse.from({
@@ -18,8 +21,6 @@ class CurrentCourse {
     required this.xp,
     required this.crowns,
     required this.extraCrowns,
-    required this.isPlacementTestAvailable,
-    required this.isHealthEnabled,
     required this.skills,
   });
 
@@ -52,12 +53,6 @@ class CurrentCourse {
 
   /// The extra crowns
   final int extraCrowns;
-
-  /// The flag that represents that placement test is available or not
-  final bool isPlacementTestAvailable;
-
-  /// The flag that represents health is enabled or not
-  final bool isHealthEnabled;
 
   /// The skills
   final List<Skill> skills;

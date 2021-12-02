@@ -5,6 +5,15 @@
 // Project imports:
 import 'package:duolingo4d/src/response/wordhint/hint_table.dart';
 
+/// This class represents a token that manages the smallest unit of
+/// words that are meaningful as a language.
+///
+/// The [value] is set to the split word that will be managed by this token.
+/// The [index] is the position of the [value] before the word or sentence was split.
+///
+/// Detailed hint information is contained in the [table].
+/// This [table] contains the header information, which is the metadata for word analysis,
+/// and the row and cell data where the hint information is set.
 class HintToken {
   /// Returns the new instance of [HintToken] based on arguments.
   HintToken.from({

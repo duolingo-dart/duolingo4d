@@ -2,6 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents the word data that the user has already learned.
 class Vocabulary {
   /// Returns the new instance of [Vocabulary] based on arguments.
   Vocabulary.from({

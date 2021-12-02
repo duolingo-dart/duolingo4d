@@ -16,6 +16,7 @@ import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
+/// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
   /// The internal constructor for singleton.
   DuolingoImpl._internal();

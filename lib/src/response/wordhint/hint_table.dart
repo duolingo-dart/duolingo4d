@@ -6,6 +6,13 @@
 import 'package:duolingo4d/src/response/wordhint/hint_header.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_row.dart';
 
+/// This class represents a table that manages the header information
+/// and rows or cells for each hint token.
+///
+/// The [headers] section contains metadata for the token analysis.
+/// The [rows] section contains cell information where token hint information is set.
+/// The [references] contains a reference index to the word or sentence
+/// before it was split, excluding this token.
 class HintTable {
   /// Returns the new instance of [HintTable] based on arguments.
   HintTable.from({

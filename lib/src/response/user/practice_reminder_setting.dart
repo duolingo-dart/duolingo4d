@@ -2,14 +2,15 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents a setting for reminding user to learn.
 class PracticeReminderSetting {
   /// Returns the new instance of [PracticeReminderSetting] based on arguments.
   PracticeReminderSetting.from({
     required this.learningLanguage,
     required this.timeInMinutes,
-    required this.pushEnabled,
+    required this.isEnabledPush,
     required this.useSmartReminderTime,
-    required this.emailEnabled,
+    required this.isEnabledEmail,
   });
 
   /// The learning language
@@ -19,11 +20,11 @@ class PracticeReminderSetting {
   final int timeInMinutes;
 
   /// The flag that represents push is enabled or not
-  final bool pushEnabled;
+  final bool isEnabledPush;
 
   /// The flag that represents use smart reminder time or not
   final bool useSmartReminderTime;
 
   /// The flag that represents email is enabled or not
-  final bool emailEnabled;
+  final bool isEnabledEmail;
 }

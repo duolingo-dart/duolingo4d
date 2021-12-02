@@ -51,9 +51,9 @@ abstract class Response {
     required this.headers,
   });
 
-  /// The status
+  /// The http status
   final Status status;
 
-  /// The response headers
+  /// The http headers
   final Map<String, String> headers;
 }

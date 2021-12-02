@@ -5,6 +5,7 @@
 // Project imports:
 import 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
 
+/// This class represents a row that manages the cells that contain the token hint information.
 class HintRow {
   /// Returns the new instance of [HintRow] based on arguments.
   HintRow.from({

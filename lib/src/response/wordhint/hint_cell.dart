@@ -2,6 +2,11 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents a cell that manages the token's hint information.
+///
+/// The hint information associated with the token is set in [hint].
+/// The index in [span] indicates where the hint information was
+/// derived from in the analysis of the token.
 class HintCell {
   /// Returns the new instance of [HintCell] based on arguments.
   HintCell.from({

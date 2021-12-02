@@ -48,7 +48,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         biography: json.getStringValue(key: 'bio'),
         profileCountry: json.getStringValue(key: 'profileCountry'),
         email: json.getStringValue(key: 'email'),
-        emailVerified: json.getBoolValue(key: 'emailVerified'),
+        isVerifiedEmail: json.getBoolValue(key: 'emailVerified'),
         pictureUrl: json.getStringValue(key: 'picture'),
         timezone: json.getStringValue(key: 'timezone'),
         timezoneOffset: json.getStringValue(key: 'timezoneOffset'),
@@ -123,16 +123,10 @@ class UserApiAdapter extends Adapter<UserResponse> {
         Course.from(
           id: json.getStringValue(key: 'id'),
           title: json.getStringValue(key: 'title'),
-          authorId: json.getStringValue(key: 'authorId'),
           fromLanguage: json.getStringValue(key: 'fromLanguage'),
           learningLanguage: json.getStringValue(key: 'learningLanguage'),
-          preload: json.getBoolValue(key: 'preload'),
-          placementTestAvailable: json.getBoolValue(
-            key: 'placementTestAvailable',
-          ),
           xp: json.getIntValue(key: 'xp'),
           crowns: json.getIntValue(key: 'crowns'),
-          healthEnabled: json.getBoolValue(key: 'healthEnabled'),
         ),
       );
     }
@@ -155,10 +149,6 @@ class UserApiAdapter extends Adapter<UserResponse> {
         xp: json.getIntValue(key: 'xp'),
         crowns: json.getIntValue(key: 'crowns'),
         extraCrowns: json.getIntValue(key: 'extraCrowns'),
-        isPlacementTestAvailable: json.getBoolValue(
-          key: 'placementTestAvailable',
-        ),
-        isHealthEnabled: json.getBoolValue(key: 'healthEnabled'),
         skills: _buildSkills(
           jsonList: json.getJsonList(key: 'skills'),
         ),
@@ -219,9 +209,11 @@ class UserApiAdapter extends Adapter<UserResponse> {
         PracticeReminderSetting.from(
           learningLanguage: key,
           timeInMinutes: childJson.getIntValue(key: 'timeInMinutes'),
-          pushEnabled: childJson.getBoolValue(key: 'pushEnabled'),
-          useSmartReminderTime: childJson.getBoolValue(key: ''),
-          emailEnabled: childJson.getBoolValue(key: ''),
+          isEnabledPush: childJson.getBoolValue(key: 'pushEnabled'),
+          useSmartReminderTime: childJson.getBoolValue(
+            key: 'useSmartReminderTime',
+          ),
+          isEnabledEmail: childJson.getBoolValue(key: 'emailEnabled'),
         ),
       );
     }

@@ -6,6 +6,10 @@
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
+/// This class represents the response entity for the Switch Language API in the Duolingo API.
+///
+/// Since there are currently no responses specific to this API,
+/// only the common HTTP response status and HTTP headers can be referenced.
 class SwitchLanguageResponse extends Response {
   /// Returns the new instance of [SwitchLanguageResponse] based on arguments.
   SwitchLanguageResponse.from({

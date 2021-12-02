@@ -2,6 +2,16 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents the HTTP status.
+///
+/// The detailed HTTP status when HTTP communication is performed can be obtained
+/// from [code] or [reasonPhrase], but we have provided a method to easily determine
+/// whether HTTP communication succeeded or failed.
+///
+/// 1. [isOk]
+/// 2. [isNotOk]
+/// 3. [isClientError]
+/// 4. [isServerError]
 class Status {
   /// Returns the new instance of [Status] based on arguments.
   Status.from({

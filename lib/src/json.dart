@@ -5,7 +5,7 @@
 // Dart imports:
 import 'dart:convert';
 
-/// The class that represents JSON.
+/// It provides safe and convenient functions related to JSON handling.
 class Json {
   /// Returns the new instance of [Json] from json map.
   Json.fromJsonMap({

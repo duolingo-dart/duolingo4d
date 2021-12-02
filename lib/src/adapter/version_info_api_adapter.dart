@@ -44,7 +44,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         ),
         country: json.getStringValue(key: 'country'),
         apiBaseUrl: json.getStringValue(key: 'api_base_url'),
-        speachHost: json.getStringValue(key: 'speech_host'),
+        speechHost: json.getStringValue(key: 'speech_host'),
         ttsBaseUrl: json.getStringValue(key: 'tts_base_url'),
         dictBaseUrl: json.getStringValue(key: 'dict_base_url'),
         ttsVoiceConfiguration: _buildTtsVoiceConfiguration(

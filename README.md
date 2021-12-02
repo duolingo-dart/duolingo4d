@@ -117,14 +117,6 @@ void main() async {
   final duolingo = Duolingo.getInstance();
 
   final versionInfoResponse = await duolingo.versionInfo();
-
-  if (authResponse.statusCode != 200) {
-    // Client or Server error or something.
-    authResponse.reasonPhrase;
-    authResponse.headers;
-    return;
-  }
-
   final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;
 
   for (final voiceDirections in ttsVoiceConfiguration.voiceDirections) {
@@ -156,9 +148,9 @@ void main() async {
     password: 'test_password',
   );
 
-  if (authResponse.statusCode != 200) {
+  if (authResponse.status.isNotOk) {
     // Client or Server error or something.
-    authResponse.reasonPhrase;
+    authResponse.status.reasonPhrase;
     authResponse.headers;
     return;
   }
@@ -215,9 +207,11 @@ void main() async {
   }
 
   for (final skill in userResponse.currentCourse.skills) {
-    print(skill.name);
-    print(skill.proficiency);
-    print(skill.tipsAndNotes);
+    if (skill.isAccessible) {
+      print(skill.name);
+      print(skill.proficiency);
+      print(skill.tipsAndNotes);
+    }
   }
 }
 ```
