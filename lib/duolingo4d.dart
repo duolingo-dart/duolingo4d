@@ -3,7 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 export 'src/duolingo.dart';
-
 export 'src/response/response.dart';
 export 'src/response/status.dart';
 export 'src/response/versioninfo/version_info_response.dart';
