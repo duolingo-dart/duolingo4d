@@ -2,11 +2,9 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Package imports:
-import 'package:flutter_test/flutter_test.dart';
-
 // Project imports:
 import 'package:duolingo4d/src/json.dart';
+import 'package:test/test.dart';
 
 /// This is a test class for [Json].
 void main() {
