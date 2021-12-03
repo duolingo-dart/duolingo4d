@@ -1,6 +1,6 @@
 name: duolingo4d
-description: A most easily usable Duolingo API wrapper in Dart. Duolingo4D is an open-sourced Dart library. With Duolingo4D, you can easily integrate your application with the Duolingo API. Duolingo4D is an unofficial library.
-version: 0.0.1
+description: A most easily usable Duolingo API wrapper in Dart. With Duolingo4D, you can easily integrate your application with the Duolingo API.
+version: 0.0.2
 homepage: https://github.com/myConsciousness/duolingo4d
 
 environment:
@@ -8,15 +8,12 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  flutter:
-    sdk: flutter
   http: ^0.13.4
-  import_sorter: ^4.6.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_lints: ^1.0.0
+  import_sorter: ^4.6.0
+  test: ^1.16.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
