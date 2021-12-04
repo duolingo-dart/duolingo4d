@@ -1,3 +1,5 @@
+![duolingo4d](https://user-images.githubusercontent.com/13072231/144712046-e495a2d4-4167-4d9b-8865-330d8aa54f90.png)
+
 **_A most easily usable Duolingo API wrapper in Dart!_**
 
 [![pub package](https://img.shields.io/pub/v/duolingo4d.svg)](https://pub.dev/packages/duolingo4d)
@@ -139,6 +141,9 @@ In order to fetch the response you expect from each API that requires authentica
 
 > **_Note:_**</br>
 > When a user is authenticated, the cookie information and session information for the Duolingo service is managed internally by Duolingo4D, so there is no need to be aware of this information after calling the API.
+>
+> **_Caution:_**</br>
+> If you try to authenticate again using information from an account that has already been authenticated, the Duolingo API will return an invalid password response.
 
 ```dart
 void main() async {
@@ -170,9 +175,6 @@ void main() async {
   // Do something if user is authenticated.
 }
 ```
-
-> **_Note:_**</br>
-> If you try to authenticate again using information from an account that has already been authenticated, the Duolingo API will return an invalid password response.
 
 ### 1.3.3. User API
 
