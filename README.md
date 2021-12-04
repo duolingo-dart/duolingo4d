@@ -5,13 +5,6 @@
 [![pub package](https://img.shields.io/pub/v/duolingo4d.svg)](https://pub.dev/packages/duolingo4d)
 [![Dart](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml)
 
-# 1. About Duolingo4D
-
-`Duolingo4D` is an open-sourced Dart library.</br>
-With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
-
-`Duolingo4D` is an unofficial library.
-
 <!-- TOC -->
 
 - [1. About Duolingo4D](#1-about-duolingo4d)
@@ -31,6 +24,13 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
   - [1.5. More Information](#15-more-information)
 
 <!-- /TOC -->
+
+# 1. About Duolingo4D
+
+`Duolingo4D` is an open-sourced Dart library.</br>
+With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
+
+`Duolingo4D` is an unofficial library.
 
 ## 1.1. Supported Duolingo API
 
