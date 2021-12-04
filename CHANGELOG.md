@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.0.3
+
+- Added a return type to the getter when get an instance of the `Duolingo` class.
+
 ## 0.0.2
 
 - Improved documentation.
