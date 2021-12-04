@@ -41,6 +41,7 @@ class OverviewResponse extends Response {
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,
+    required this.languageString,
     required this.fromLanguage,
     required this.learningLanguage,
     required this.vocabularies,
@@ -51,6 +52,9 @@ class OverviewResponse extends Response {
           ),
           headers: headers,
         );
+
+  /// The language string
+  final String languageString;
 
   /// The from language
   final String fromLanguage;

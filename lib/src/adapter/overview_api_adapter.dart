@@ -35,6 +35,7 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
+        languageString: json.getStringValue(key: 'language_string'),
         fromLanguage: json.getStringValue(key: 'from_language'),
         learningLanguage: json.getStringValue(key: 'learning_language'),
         vocabularies: _buildVocabularies(
