@@ -1,18 +1,13 @@
+![duolingo4d](https://user-images.githubusercontent.com/13072231/144712046-e495a2d4-4167-4d9b-8865-330d8aa54f90.png)
+
 **_A most easily usable Duolingo API wrapper in Dart!_**
 
 [![pub package](https://img.shields.io/pub/v/duolingo4d.svg)](https://pub.dev/packages/duolingo4d)
 [![Dart](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml/badge.svg?branch=main)](https://github.com/myConsciousness/duolingo4d/actions/workflows/dart.yml)
 
-# 1. About Duolingo4D
-
-`Duolingo4D` is an open-sourced Dart library.</br>
-With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
-
-`Duolingo4D` is an unofficial library.
-
 <!-- TOC -->
 
-- [1. About Duolingo4D](#1-about-duolingo4d)
+- [1. About](#1-about)
   - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
   - [1.2. Introduction](#12-introduction)
     - [1.2.1. Install Library](#121-install-library)
@@ -29,6 +24,13 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
   - [1.5. More Information](#15-more-information)
 
 <!-- /TOC -->
+
+# 1. About
+
+`Duolingo4D` is an open-sourced Dart library.</br>
+With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
+
+`Duolingo4D` is an unofficial library.
 
 ## 1.1. Supported Duolingo API
 
@@ -139,6 +141,9 @@ In order to fetch the response you expect from each API that requires authentica
 
 > **_Note:_**</br>
 > When a user is authenticated, the cookie information and session information for the Duolingo service is managed internally by Duolingo4D, so there is no need to be aware of this information after calling the API.
+>
+> **_Caution:_**</br>
+> If you try to authenticate again using information from an account that has already been authenticated, the Duolingo API will return an invalid password response.
 
 ```dart
 void main() async {
@@ -170,9 +175,6 @@ void main() async {
   // Do something if user is authenticated.
 }
 ```
-
-> **_Note:_**</br>
-> If you try to authenticate again using information from an account that has already been authenticated, the Duolingo API will return an invalid password response.
 
 ### 1.3.3. User API
 
@@ -324,5 +326,6 @@ BSD-style license that can be found in the LICENSE file.
 
 - [Creator Profile](https://github.com/myConsciousness)
 - [License](https://github.com/myConsciousness/duolingo4d/blob/main/LICENSE)
+- [API Document](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/duolingo4d-library.html)
 - [Release Note](https://github.com/myConsciousness/duolingo4d/releases)
 - [Bug Report](https://github.com/myConsciousness/duolingo4d/issues)

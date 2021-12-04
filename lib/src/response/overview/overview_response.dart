@@ -35,7 +35,6 @@ export 'package:duolingo4d/src/response/overview/vocabulary.dart';
 ///  }
 ///}
 ///```
-
 class OverviewResponse extends Response {
   /// Returns the new instance of [OverviewResponse] based on arguments.
   OverviewResponse.from({

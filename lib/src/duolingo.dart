@@ -14,7 +14,7 @@ import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 /// This class provides the features to access the Duolingo API easily.
 abstract class Duolingo {
   /// Returns the singleton instance of [Duolingo].
-  static get instance => DuolingoImpl.instance;
+  static Duolingo get instance => DuolingoImpl.instance;
 
   /// Returns metadata about the configuration of the Duolingo service.
   ///
