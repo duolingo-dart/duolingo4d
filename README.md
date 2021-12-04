@@ -326,5 +326,6 @@ BSD-style license that can be found in the LICENSE file.
 
 - [Creator Profile](https://github.com/myConsciousness)
 - [License](https://github.com/myConsciousness/duolingo4d/blob/main/LICENSE)
+- [API Document](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/duolingo4d-library.html)
 - [Release Note](https://github.com/myConsciousness/duolingo4d/releases)
 - [Bug Report](https://github.com/myConsciousness/duolingo4d/issues)
