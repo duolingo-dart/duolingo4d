@@ -7,7 +7,7 @@
 
 <!-- TOC -->
 
-- [1. About Duolingo4D](#1-about-duolingo4d)
+- [1. About](#1-about)
   - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
   - [1.2. Introduction](#12-introduction)
     - [1.2.1. Install Library](#121-install-library)
@@ -25,7 +25,7 @@
 
 <!-- /TOC -->
 
-# 1. About Duolingo4D
+# 1. About
 
 `Duolingo4D` is an open-sourced Dart library.</br>
 With `Duolingo4D`, you can easily integrate your application with the Duolingo API.
