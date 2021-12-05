@@ -2,9 +2,10 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Project imports:
+// Package imports:
 import 'package:collection/collection.dart';
 
+// Project imports:
 import 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
 
 /// This class represents a row that manages the cells that contain the token hint information.
