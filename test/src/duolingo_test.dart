@@ -2,9 +2,11 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
+import 'package:test/test.dart';
+
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
-import 'package:test/test.dart';
 
 void main() async {
   await Duolingo.instance.authenticate(

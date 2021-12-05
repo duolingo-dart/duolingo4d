@@ -2,9 +2,10 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Project imports:
+// Package imports:
 import 'package:collection/collection.dart';
 
+// Project imports:
 import 'package:duolingo4d/src/response/status.dart';
 
 /// This abstract class represents the common elements
