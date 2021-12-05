@@ -42,7 +42,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        id: json.getIntValue(key: 'id'),
+        id: json.getIntValue(key: 'id').toString(),
         username: json.getStringValue(key: 'username'),
         name: json.getStringValue(key: 'name'),
         biography: json.getStringValue(key: 'bio'),

@@ -107,7 +107,7 @@ class UserResponse extends Response {
         );
 
   /// The id
-  final int id;
+  final String id;
 
   /// The username
   final String username;
