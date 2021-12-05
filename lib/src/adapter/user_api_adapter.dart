@@ -56,6 +56,9 @@ class UserApiAdapter extends Adapter<UserResponse> {
         inviteUrl: json.getStringValue(key: 'inviteURL'),
         fromLanguage: json.getStringValue(key: 'fromLanguage'),
         learningLanguage: json.getStringValue(key: 'learningLanguage'),
+        trackingProperty: _buildTrackingProperty(
+          json: json.getJson(key: 'trackingProperties'),
+        ),
         xpConfiguration: _buildXpConfiguration(
           json: json.getJson(key: 'xpConfig'),
         ),
@@ -90,6 +93,50 @@ class UserApiAdapter extends Adapter<UserResponse> {
         createdAt: DateTime.fromMillisecondsSinceEpoch(
           json.getIntValue(key: 'creationDate'),
         ),
+      );
+
+  TrackingProperty _buildTrackingProperty({
+    required Json json,
+  }) =>
+      TrackingProperty.from(
+        userId: json.getIntValue(key: 'user_id').toString(),
+        username: json.getStringValue(key: 'username'),
+        learningLanguage: json.getStringValue(key: 'learning_language'),
+        learningReason: json.getStringValue(key: 'learning_reason'),
+        uiLanguage: json.getStringValue(key: 'ui_language'),
+        level: json.getIntValue(key: 'level'),
+        followers: json.getIntValue(key: 'num_followers'),
+        following: json.getIntValue(key: 'num_following'),
+        lingots: json.getIntValue(key: 'lingots'),
+        gems: json.getIntValue(key: 'gems'),
+        goalXp: json.getIntValue(key: 'goal'),
+        streak: json.getIntValue(key: 'streak'),
+        hasFullname: json.getBoolValue(key: 'has_fullname'),
+        hasItemStreakFreeze: json.getBoolValue(key: 'has_item_streak_freeze'),
+        hasItemStreakRepair: json.getBoolValue(key: 'has_item_streak_repair'),
+        hasItemStreakWager: json.getBoolValue(key: 'has_item_streak_wager'),
+        hasItemWeekendAmulet: json.getBoolValue(key: 'has_item_weekend_amulet'),
+        hasItemRupeeWager: json.getBoolValue(key: 'has_item_rupee_wager'),
+        hasItemPremiumSubscription: json.getBoolValue(
+          key: 'has_item_premium_subscription',
+        ),
+        hasItemLiveSubscription: json.getBoolValue(
+          key: 'has_item_live_subscription',
+        ),
+        hasItemImmersiveSubscription: json.getBoolValue(
+          key: 'has_item_immersive_subscription',
+        ),
+        hasPicture: json.getBoolValue(key: 'has_picture'),
+        hasPhoneNumber: json.getBoolValue(key: 'has_phone_number'),
+        isAgeRestricted: json.getBoolValue(key: 'is_age_restricted'),
+        isTrialAccount: json.getBoolValue(key: 'trial_account'),
+        numberStreakFreeze: json.getIntValue(key: 'num_item_streak_freeze'),
+        numberUnlockedSection: json.getIntValue(key: 'num_sections_unlocked'),
+        numberCompletedSession: json.getIntValue(key: 'num_sessions_completed'),
+        numberUnlockedSkill: json.getIntValue(key: 'num_skills_unlocked'),
+        numberClassroom: json.getIntValue(key: 'num_classrooms'),
+        numberObservee: json.getIntValue(key: 'num_observees'),
+        achievements: json.getStringValues(key: 'achievements'),
       );
 
   /// Returns [XpConfiguration] based on [json].

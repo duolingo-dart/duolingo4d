@@ -10,8 +10,10 @@ import 'package:duolingo4d/src/response/user/current_course.dart';
 import 'package:duolingo4d/src/response/user/gems_configuration.dart';
 import 'package:duolingo4d/src/response/user/last_streak.dart';
 import 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
+import 'package:duolingo4d/src/response/user/tracking_property.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
+export 'package:duolingo4d/src/response/user/tracking_property.dart';
 export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 export 'package:duolingo4d/src/response/user/gems_configuration.dart';
 export 'package:duolingo4d/src/response/user/course.dart';
@@ -75,6 +77,7 @@ class UserResponse extends Response {
     required this.inviteUrl,
     required this.fromLanguage,
     required this.learningLanguage,
+    required this.trackingProperty,
     required this.xpConfiguration,
     required this.gemsConfiguration,
     required this.courses,
@@ -144,6 +147,9 @@ class UserResponse extends Response {
 
   /// The learning language
   final String learningLanguage;
+
+  /// The tracking property
+  final TrackingProperty trackingProperty;
 
   /// The XP configuration
   final XpConfiguration xpConfiguration;
