@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/wordhint/hint_header.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_row.dart';
 
@@ -29,4 +31,22 @@ class HintTable {
 
   /// The references
   final List<int> references;
+
+  @override
+  String toString() =>
+      'HintTable(headers: $headers, rows: $rows, references: $references)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is HintTable &&
+        listEquals(other.headers, headers) &&
+        listEquals(other.rows, rows) &&
+        listEquals(other.references, references);
+  }
+
+  @override
+  int get hashCode => headers.hashCode ^ rows.hashCode ^ references.hashCode;
 }

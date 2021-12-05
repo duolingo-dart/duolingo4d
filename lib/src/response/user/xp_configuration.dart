@@ -19,4 +19,24 @@ class XpConfiguration {
 
   /// The max checkpoint test xp
   final int maxCheckpointTestXp;
+
+  @override
+  String toString() =>
+      'XpConfiguration(maxPlacementTestXp: $maxPlacementTestXp, maxSkillTestXp: $maxSkillTestXp, maxCheckpointTestXp: $maxCheckpointTestXp)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is XpConfiguration &&
+        other.maxPlacementTestXp == maxPlacementTestXp &&
+        other.maxSkillTestXp == maxSkillTestXp &&
+        other.maxCheckpointTestXp == maxCheckpointTestXp;
+  }
+
+  @override
+  int get hashCode =>
+      maxPlacementTestXp.hashCode ^
+      maxSkillTestXp.hashCode ^
+      maxCheckpointTestXp.hashCode;
 }

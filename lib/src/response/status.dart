@@ -36,4 +36,19 @@ class Status {
 
   /// Returns true if http status code is server error, otherwise false.
   bool get isServerError => 500 <= code && code <= 599;
+
+  @override
+  String toString() => 'Status(code: $code, reasonPhrase: $reasonPhrase)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Status &&
+        other.code == code &&
+        other.reasonPhrase == reasonPhrase;
+  }
+
+  @override
+  int get hashCode => code.hashCode ^ reasonPhrase.hashCode;
 }

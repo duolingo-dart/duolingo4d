@@ -24,4 +24,17 @@ class AuthError {
 
   /// Returns true] if the password is invalid, otherwise false.
   bool get isInvalidPassword => code == 'invalid_password';
+
+  @override
+  String toString() => 'AuthError(code: $code, reason: $reason)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is AuthError && other.code == code && other.reason == reason;
+  }
+
+  @override
+  int get hashCode => code.hashCode ^ reason.hashCode;
 }

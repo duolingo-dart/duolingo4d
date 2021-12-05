@@ -3,15 +3,17 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
 import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
 
-export 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
 export 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
-export 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 export 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
+export 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
+export 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
 /// This class represents the response entity of the Version Info API of the Duolingo API.
 ///
@@ -84,4 +86,39 @@ class VersionInfoResponse extends Response {
 
   /// The supported language directions
   final List<SupportedDirection> supportedDirections;
+
+  @override
+  String toString() {
+    return 'VersionInfoResponse(ttsCdnUrl: $ttsCdnUrl, ageRestrictionLimit: $ageRestrictionLimit, country: $country, apiBaseUrl: $apiBaseUrl, speechHost: $speechHost, ttsBaseUrl: $ttsBaseUrl, dictBaseUrl: $dictBaseUrl, ttsVoiceConfiguration: $ttsVoiceConfiguration, supportedDirections: $supportedDirections)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is VersionInfoResponse &&
+        other.ttsCdnUrl == ttsCdnUrl &&
+        other.ageRestrictionLimit == ageRestrictionLimit &&
+        other.country == country &&
+        other.apiBaseUrl == apiBaseUrl &&
+        other.speechHost == speechHost &&
+        other.ttsBaseUrl == ttsBaseUrl &&
+        other.dictBaseUrl == dictBaseUrl &&
+        other.ttsVoiceConfiguration == ttsVoiceConfiguration &&
+        listEquals(other.supportedDirections, supportedDirections);
+  }
+
+  @override
+  int get hashCode {
+    return ttsCdnUrl.hashCode ^
+        ageRestrictionLimit.hashCode ^
+        country.hashCode ^
+        apiBaseUrl.hashCode ^
+        speechHost.hashCode ^
+        ttsBaseUrl.hashCode ^
+        dictBaseUrl.hashCode ^
+        ttsVoiceConfiguration.hashCode ^
+        supportedDirections.hashCode;
+  }
 }

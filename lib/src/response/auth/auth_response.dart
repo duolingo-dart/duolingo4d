@@ -75,4 +75,21 @@ class AuthResponse extends Response {
 
   /// Returns true if the response has not error, otherwise false.
   bool get hasNotError => error == null;
+
+  @override
+  String toString() =>
+      'AuthResponse(username: $username, userId: $userId, error: $error)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is AuthResponse &&
+        other.username == username &&
+        other.userId == userId &&
+        other.error == error;
+  }
+
+  @override
+  int get hashCode => username.hashCode ^ userId.hashCode ^ error.hashCode;
 }

@@ -19,4 +19,21 @@ class GemsConfiguration {
 
   /// The flag that represents use gems or not
   final bool useGems;
+
+  @override
+  String toString() =>
+      'GemsConfiguration(gems: $gems, gemsPerSkill: $gemsPerSkill, useGems: $useGems)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is GemsConfiguration &&
+        other.gems == gems &&
+        other.gemsPerSkill == gemsPerSkill &&
+        other.useGems == useGems;
+  }
+
+  @override
+  int get hashCode => gems.hashCode ^ gemsPerSkill.hashCode ^ useGems.hashCode;
 }

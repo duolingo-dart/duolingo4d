@@ -31,4 +31,32 @@ class Course {
 
   /// The crowns
   final int crowns;
+
+  @override
+  String toString() {
+    return 'Course(id: $id, title: $title, fromLanguage: $fromLanguage, learningLanguage: $learningLanguage, xp: $xp, crowns: $crowns)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Course &&
+        other.id == id &&
+        other.title == title &&
+        other.fromLanguage == fromLanguage &&
+        other.learningLanguage == learningLanguage &&
+        other.xp == xp &&
+        other.crowns == crowns;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        title.hashCode ^
+        fromLanguage.hashCode ^
+        learningLanguage.hashCode ^
+        xp.hashCode ^
+        crowns.hashCode;
+  }
 }

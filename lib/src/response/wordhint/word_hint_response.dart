@@ -3,15 +3,17 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 
-export 'package:duolingo4d/src/response/wordhint/hint_token.dart';
-export 'package:duolingo4d/src/response/wordhint/hint_table.dart';
+export 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
 export 'package:duolingo4d/src/response/wordhint/hint_header.dart';
 export 'package:duolingo4d/src/response/wordhint/hint_row.dart';
-export 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
+export 'package:duolingo4d/src/response/wordhint/hint_table.dart';
+export 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 
 /// This class represents the Word Hint API response entity in the Duolingo API.
 ///
@@ -72,4 +74,18 @@ class WordHintResponse extends Response {
 
   /// The hint tokens
   final List<HintToken> tokens;
+
+  @override
+  String toString() => 'WordHintResponse(tokens: $tokens)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is WordHintResponse && listEquals(other.tokens, tokens);
+  }
+
+  @override
+  int get hashCode => tokens.hashCode;
 }
