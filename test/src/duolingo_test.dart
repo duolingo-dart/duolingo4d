@@ -48,7 +48,7 @@ void _testUserApi() {
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
-    expect(response.id, 557897808);
+    expect(response.id, '557897808');
     expect(response.username, 'duovoc_tes');
     expect(response.name, 'Duolingo4D');
     expect(response.courses.isNotEmpty, true);
