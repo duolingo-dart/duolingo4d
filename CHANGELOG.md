@@ -1,5 +1,10 @@
 # Release Note
 
+## 0.0.5
+
+- Added `TrackingProperty` field to `UserRespone`.
+- Added implementations for `toString`, `== operator`, and `hashCode` to all response objects.
+
 ## 0.0.4
 
 - Added `languageString` field to `OverviewResponse`.
