@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/overview/vocabulary.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
@@ -64,4 +66,29 @@ class OverviewResponse extends Response {
 
   /// The vocabularies
   final List<Vocabulary> vocabularies;
+
+  @override
+  String toString() {
+    return 'OverviewResponse(languageString: $languageString, fromLanguage: $fromLanguage, learningLanguage: $learningLanguage, vocabularies: $vocabularies)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is OverviewResponse &&
+        other.languageString == languageString &&
+        other.fromLanguage == fromLanguage &&
+        other.learningLanguage == learningLanguage &&
+        listEquals(other.vocabularies, vocabularies);
+  }
+
+  @override
+  int get hashCode {
+    return languageString.hashCode ^
+        fromLanguage.hashCode ^
+        learningLanguage.hashCode ^
+        vocabularies.hashCode;
+  }
 }

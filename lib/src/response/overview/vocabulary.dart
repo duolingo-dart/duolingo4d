@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 // Copyright (c) 2021, Kato Shinya. All rights reserved.
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
@@ -63,4 +65,49 @@ class Vocabulary {
 
   /// The last practices in milliseconds
   final int lastPracticedMs;
+
+  @override
+  String toString() {
+    return 'Vocabulary(id: $id, word: $word, normalizedWord: $normalizedWord, strengthBars: $strengthBars, proficiency: $proficiency, infinitive: $infinitive, skill: $skill, skillUrlTitle: $skillUrlTitle, pos: $pos, gender: $gender, lexemeId: $lexemeId, relatedLexemes: $relatedLexemes, lastPracticed: $lastPracticed, lastPracticedMs: $lastPracticedMs)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is Vocabulary &&
+        other.id == id &&
+        other.word == word &&
+        other.normalizedWord == normalizedWord &&
+        other.strengthBars == strengthBars &&
+        other.proficiency == proficiency &&
+        other.infinitive == infinitive &&
+        other.skill == skill &&
+        other.skillUrlTitle == skillUrlTitle &&
+        other.pos == pos &&
+        other.gender == gender &&
+        other.lexemeId == lexemeId &&
+        listEquals(other.relatedLexemes, relatedLexemes) &&
+        other.lastPracticed == lastPracticed &&
+        other.lastPracticedMs == lastPracticedMs;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        word.hashCode ^
+        normalizedWord.hashCode ^
+        strengthBars.hashCode ^
+        proficiency.hashCode ^
+        infinitive.hashCode ^
+        skill.hashCode ^
+        skillUrlTitle.hashCode ^
+        pos.hashCode ^
+        gender.hashCode ^
+        lexemeId.hashCode ^
+        relatedLexemes.hashCode ^
+        lastPracticed.hashCode ^
+        lastPracticedMs.hashCode;
+  }
 }

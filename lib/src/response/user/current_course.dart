@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/user/skill.dart';
 
 /// This class represents the course that the user is currently selecting.
@@ -56,4 +58,43 @@ class CurrentCourse {
 
   /// The skills
   final List<Skill> skills;
+
+  @override
+  String toString() {
+    return 'CurrentCourse(id: $id, title: $title, fromLanguage: $fromLanguage, leraningLanguage: $leraningLanguage, numberOfLearnedWords: $numberOfLearnedWords, numberOfWords: $numberOfWords, numberOfSentences: $numberOfSentences, xp: $xp, crowns: $crowns, extraCrowns: $extraCrowns, skills: $skills)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is CurrentCourse &&
+        other.id == id &&
+        other.title == title &&
+        other.fromLanguage == fromLanguage &&
+        other.leraningLanguage == leraningLanguage &&
+        other.numberOfLearnedWords == numberOfLearnedWords &&
+        other.numberOfWords == numberOfWords &&
+        other.numberOfSentences == numberOfSentences &&
+        other.xp == xp &&
+        other.crowns == crowns &&
+        other.extraCrowns == extraCrowns &&
+        listEquals(other.skills, skills);
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        title.hashCode ^
+        fromLanguage.hashCode ^
+        leraningLanguage.hashCode ^
+        numberOfLearnedWords.hashCode ^
+        numberOfWords.hashCode ^
+        numberOfSentences.hashCode ^
+        xp.hashCode ^
+        crowns.hashCode ^
+        extraCrowns.hashCode ^
+        skills.hashCode;
+  }
 }

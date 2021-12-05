@@ -15,4 +15,20 @@ class LastStreak {
 
   /// The last reached goal datetime
   final DateTime lastReachedGoalAt;
+
+  @override
+  String toString() =>
+      'LastStreak(daysAgo: $daysAgo, lastReachedGoalAt: $lastReachedGoalAt)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is LastStreak &&
+        other.daysAgo == daysAgo &&
+        other.lastReachedGoalAt == lastReachedGoalAt;
+  }
+
+  @override
+  int get hashCode => daysAgo.hashCode ^ lastReachedGoalAt.hashCode;
 }

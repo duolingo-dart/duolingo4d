@@ -102,4 +102,52 @@ class Skill {
 
   /// The flag that represents ha final level or not
   final bool hasFinalLevel;
+
+  @override
+  String toString() {
+    return 'Skill(id: $id, iconId: $iconId, name: $name, shortName: $shortName, urlName: $urlName, levels: $levels, finishedLevels: $finishedLevels, lessons: $lessons, finishedLessons: $finishedLessons, proficiency: $proficiency, tipsAndNotes: $tipsAndNotes, finalLevelTimeLimit: $finalLevelTimeLimit, isAccessible: $isAccessible, isPerfectOnLastLesson: $isPerfectOnLastLesson, perfectLessonStreak: $perfectLessonStreak, hasFinalLevel: $hasFinalLevel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Skill &&
+        other.id == id &&
+        other.iconId == iconId &&
+        other.name == name &&
+        other.shortName == shortName &&
+        other.urlName == urlName &&
+        other.levels == levels &&
+        other.finishedLevels == finishedLevels &&
+        other.lessons == lessons &&
+        other.finishedLessons == finishedLessons &&
+        other.proficiency == proficiency &&
+        other.tipsAndNotes == tipsAndNotes &&
+        other.finalLevelTimeLimit == finalLevelTimeLimit &&
+        other.isAccessible == isAccessible &&
+        other.isPerfectOnLastLesson == isPerfectOnLastLesson &&
+        other.perfectLessonStreak == perfectLessonStreak &&
+        other.hasFinalLevel == hasFinalLevel;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        iconId.hashCode ^
+        name.hashCode ^
+        shortName.hashCode ^
+        urlName.hashCode ^
+        levels.hashCode ^
+        finishedLevels.hashCode ^
+        lessons.hashCode ^
+        finishedLessons.hashCode ^
+        proficiency.hashCode ^
+        tipsAndNotes.hashCode ^
+        finalLevelTimeLimit.hashCode ^
+        isAccessible.hashCode ^
+        isPerfectOnLastLesson.hashCode ^
+        perfectLessonStreak.hashCode ^
+        hasFinalLevel.hashCode;
+  }
 }

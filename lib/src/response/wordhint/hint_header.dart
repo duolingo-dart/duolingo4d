@@ -20,4 +20,19 @@ class HintHeader {
 
   /// The flag that represents the axis of the token
   final bool selected;
+
+  @override
+  String toString() => 'HintHeader(token: $token, selected: $selected)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is HintHeader &&
+        other.token == token &&
+        other.selected == selected;
+  }
+
+  @override
+  int get hashCode => token.hashCode ^ selected.hashCode;
 }

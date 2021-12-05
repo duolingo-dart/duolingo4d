@@ -30,4 +30,20 @@ class HintToken {
 
   /// The hint table
   final HintTable table;
+
+  @override
+  String toString() => 'HintToken(index: $index, value: $value, table: $table)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is HintToken &&
+        other.index == index &&
+        other.value == value &&
+        other.table == table;
+  }
+
+  @override
+  int get hashCode => index.hashCode ^ value.hashCode ^ table.hashCode;
 }

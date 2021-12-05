@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/status.dart';
 
 /// This abstract class represents the common elements
@@ -46,4 +48,20 @@ abstract class Response {
 
   /// The http headers
   final Map<String, String> headers;
+
+  @override
+  String toString() => 'Response(status: $status, headers: $headers)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final mapEquals = const DeepCollectionEquality().equals;
+
+    return other is Response &&
+        other.status == status &&
+        mapEquals(other.headers, headers);
+  }
+
+  @override
+  int get hashCode => status.hashCode ^ headers.hashCode;
 }

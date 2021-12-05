@@ -15,4 +15,19 @@ class VoiceDirection {
 
   /// The voice
   final String voice;
+
+  @override
+  String toString() => 'VoiceDirection(language: $language, voice: $voice)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is VoiceDirection &&
+        other.language == language &&
+        other.voice == voice;
+  }
+
+  @override
+  int get hashCode => language.hashCode ^ voice.hashCode;
 }

@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:collection/collection.dart';
+
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 import 'package:duolingo4d/src/response/user/course.dart';
@@ -13,14 +15,14 @@ import 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
 import 'package:duolingo4d/src/response/user/tracking_property.dart';
 import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
-export 'package:duolingo4d/src/response/user/tracking_property.dart';
-export 'package:duolingo4d/src/response/user/xp_configuration.dart';
-export 'package:duolingo4d/src/response/user/gems_configuration.dart';
 export 'package:duolingo4d/src/response/user/course.dart';
 export 'package:duolingo4d/src/response/user/current_course.dart';
-export 'package:duolingo4d/src/response/user/skill.dart';
+export 'package:duolingo4d/src/response/user/gems_configuration.dart';
 export 'package:duolingo4d/src/response/user/last_streak.dart';
 export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
+export 'package:duolingo4d/src/response/user/skill.dart';
+export 'package:duolingo4d/src/response/user/tracking_property.dart';
+export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
 /// This class represents the response entity of the User API in the Duolingo API.
 ///
@@ -210,4 +212,91 @@ class UserResponse extends Response {
 
   /// The created datetime
   final DateTime createdAt;
+
+  @override
+  String toString() {
+    return 'UserResponse(id: $id, username: $username, name: $name, biography: $biography, profileCountry: $profileCountry, email: $email, isVerifiedEmail: $isVerifiedEmail, pictureUrl: $pictureUrl, timezone: $timezone, timezoneOffset: $timezoneOffset, motivation: $motivation, inviteUrl: $inviteUrl, fromLanguage: $fromLanguage, learningLanguage: $learningLanguage, trackingProperty: $trackingProperty, xpConfiguration: $xpConfiguration, gemsConfiguration: $gemsConfiguration, courses: $courses, currentCourse: $currentCourse, lastStreak: $lastStreak, xpGoalMetToday: $xpGoalMetToday, xpGoal: $xpGoal, weeklyXp: $weeklyXp, monthlyXp: $monthlyXp, totalXp: $totalXp, lingots: $lingots, gems: $gems, currentCourseId: $currentCourseId, coachOutfit: $coachOutfit, streak: $streak, longestStreak: $longestStreak, plusStatus: $plusStatus, hasPlus: $hasPlus, practiceReminderSettings: $practiceReminderSettings, createdAt: $createdAt)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    final listEquals = const DeepCollectionEquality().equals;
+
+    return other is UserResponse &&
+        other.id == id &&
+        other.username == username &&
+        other.name == name &&
+        other.biography == biography &&
+        other.profileCountry == profileCountry &&
+        other.email == email &&
+        other.isVerifiedEmail == isVerifiedEmail &&
+        other.pictureUrl == pictureUrl &&
+        other.timezone == timezone &&
+        other.timezoneOffset == timezoneOffset &&
+        other.motivation == motivation &&
+        other.inviteUrl == inviteUrl &&
+        other.fromLanguage == fromLanguage &&
+        other.learningLanguage == learningLanguage &&
+        other.trackingProperty == trackingProperty &&
+        other.xpConfiguration == xpConfiguration &&
+        other.gemsConfiguration == gemsConfiguration &&
+        listEquals(other.courses, courses) &&
+        other.currentCourse == currentCourse &&
+        other.lastStreak == lastStreak &&
+        other.xpGoalMetToday == xpGoalMetToday &&
+        other.xpGoal == xpGoal &&
+        other.weeklyXp == weeklyXp &&
+        other.monthlyXp == monthlyXp &&
+        other.totalXp == totalXp &&
+        other.lingots == lingots &&
+        other.gems == gems &&
+        other.currentCourseId == currentCourseId &&
+        other.coachOutfit == coachOutfit &&
+        other.streak == streak &&
+        other.longestStreak == longestStreak &&
+        other.plusStatus == plusStatus &&
+        other.hasPlus == hasPlus &&
+        listEquals(other.practiceReminderSettings, practiceReminderSettings) &&
+        other.createdAt == createdAt;
+  }
+
+  @override
+  int get hashCode {
+    return id.hashCode ^
+        username.hashCode ^
+        name.hashCode ^
+        biography.hashCode ^
+        profileCountry.hashCode ^
+        email.hashCode ^
+        isVerifiedEmail.hashCode ^
+        pictureUrl.hashCode ^
+        timezone.hashCode ^
+        timezoneOffset.hashCode ^
+        motivation.hashCode ^
+        inviteUrl.hashCode ^
+        fromLanguage.hashCode ^
+        learningLanguage.hashCode ^
+        trackingProperty.hashCode ^
+        xpConfiguration.hashCode ^
+        gemsConfiguration.hashCode ^
+        courses.hashCode ^
+        currentCourse.hashCode ^
+        lastStreak.hashCode ^
+        xpGoalMetToday.hashCode ^
+        xpGoal.hashCode ^
+        weeklyXp.hashCode ^
+        monthlyXp.hashCode ^
+        totalXp.hashCode ^
+        lingots.hashCode ^
+        gems.hashCode ^
+        currentCourseId.hashCode ^
+        coachOutfit.hashCode ^
+        streak.hashCode ^
+        longestStreak.hashCode ^
+        plusStatus.hashCode ^
+        hasPlus.hashCode ^
+        practiceReminderSettings.hashCode ^
+        createdAt.hashCode;
+  }
 }

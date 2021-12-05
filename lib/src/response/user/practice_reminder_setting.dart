@@ -27,4 +27,30 @@ class PracticeReminderSetting {
 
   /// The flag that represents email is enabled or not
   final bool isEnabledEmail;
+
+  @override
+  String toString() {
+    return 'PracticeReminderSetting(learningLanguage: $learningLanguage, timeInMinutes: $timeInMinutes, isEnabledPush: $isEnabledPush, useSmartReminderTime: $useSmartReminderTime, isEnabledEmail: $isEnabledEmail)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is PracticeReminderSetting &&
+        other.learningLanguage == learningLanguage &&
+        other.timeInMinutes == timeInMinutes &&
+        other.isEnabledPush == isEnabledPush &&
+        other.useSmartReminderTime == useSmartReminderTime &&
+        other.isEnabledEmail == isEnabledEmail;
+  }
+
+  @override
+  int get hashCode {
+    return learningLanguage.hashCode ^
+        timeInMinutes.hashCode ^
+        isEnabledPush.hashCode ^
+        useSmartReminderTime.hashCode ^
+        isEnabledEmail.hashCode;
+  }
 }
