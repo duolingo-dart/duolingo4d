@@ -9,7 +9,7 @@ import 'package:http/http.dart' as http;
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
-import 'package:duolingo4d/src/session.dart';
+import 'package:duolingo4d/src/request/session.dart';
 
 /// This class provides the function to send a request
 /// to switch learning language of an authenticated user.

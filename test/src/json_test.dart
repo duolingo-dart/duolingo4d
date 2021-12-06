@@ -6,7 +6,7 @@
 import 'package:test/test.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/json.dart';
+import 'package:duolingo4d/src/adapter/json.dart';
 
 /// This is a test class for [Json].
 void main() {
