@@ -4,6 +4,8 @@
 
 export 'src/duolingo.dart';
 export 'src/duolingo_session.dart';
+export 'src/duolingo_request_header.dart';
+export 'src/duolingo_cookie_jar.dart';
 export 'src/response/response.dart';
 export 'src/response/status.dart';
 export 'src/response/versioninfo/version_info_response.dart';
