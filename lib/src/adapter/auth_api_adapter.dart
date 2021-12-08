@@ -7,8 +7,7 @@ import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/json.dart';
-import 'package:duolingo4d/src/response/auth/auth_error.dart';
+import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
 /// This class provides the function to convert the response
@@ -23,7 +22,7 @@ class AuthApiAdapter extends Adapter<AuthResponse> {
   }) =>
       _buildAuthResponse(
         response: response,
-        json: Json.fromJsonString(value: response.body),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [AuthResponse] based on [response] and [json].

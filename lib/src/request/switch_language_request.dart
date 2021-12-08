@@ -7,9 +7,9 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
+import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
-import 'package:duolingo4d/src/session.dart';
 
 /// This class provides the function to send a request
 /// to switch learning language of an authenticated user.
@@ -38,7 +38,7 @@ class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   Future<SwitchLanguageResponse> send() async => _adapter.convert(
         response: await http.post(
           _apiUri,
-          headers: Session.instance.headers,
+          headers: InternalSession.instance.headers,
           body: {
             'from_language': fromLanguage,
             'learning_language': learningLanguage,

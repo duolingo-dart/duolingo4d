@@ -5,6 +5,8 @@
 // Dart imports:
 import 'dart:convert';
 
+import 'dart:typed_data';
+
 /// It provides safe and convenient functions related to JSON handling.
 class Json {
   /// Returns the new instance of [Json] from json map.
@@ -16,6 +18,11 @@ class Json {
   Json.fromJsonString({
     required String value,
   }) : jsonResource = jsonDecode(value);
+
+  /// Returns the new instance of [Json] from raw bytes.
+  Json.fromBytes({
+    required Uint8List bytes,
+  }) : jsonResource = jsonDecode(utf8.decode(bytes));
 
   /// The json
   final Map<String, dynamic> jsonResource;

@@ -7,9 +7,9 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/word_hint_api_adapter.dart';
+import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
-import 'package:duolingo4d/src/session.dart';
 
 /// This class provides the function to send a request
 /// to fetch a word hint of an authenticated user.
@@ -42,7 +42,7 @@ class WordHintRequest extends Request<WordHintResponse> {
             Uri.encodeFull(
                 'https://d2.duolingo.com/words/hints/$learningLanguage/$fromLanguage?sentence=$sentence'),
           ),
-          headers: Session.instance.headers,
+          headers: InternalSession.instance.headers,
         ),
       );
 }

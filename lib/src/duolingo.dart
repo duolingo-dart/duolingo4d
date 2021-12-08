@@ -4,6 +4,7 @@
 
 // Project imports:
 import 'package:duolingo4d/src/duolingo_impl.dart';
+import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
@@ -15,6 +16,28 @@ import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 abstract class Duolingo {
   /// Returns the singleton instance of [Duolingo].
   static Duolingo get instance => DuolingoImpl.instance;
+
+  /// Returns the session information when communicating with the Duolingo API.
+  ///
+  /// This session is created when the user is successfully authenticated by [authenticate],
+  /// so if this [session] method is called before the user's authentication is completed,
+  /// empty session information will be returned.
+  ///
+  /// **_Example:_**
+  ///
+  ///```dart
+  ///void main() {
+  ///  final session = Duolingo.instance.session;
+  ///
+  ///  // You can get request headers as map.
+  ///  print(session.requestHeader.toMap());
+  ///
+  ///  // You can use cookie and authorization header.
+  ///  print(session.requestHeader.cookie);
+  ///  print(session.requestHeader.authHeader);
+  ///}
+  ///```
+  DuolingoSession get session;
 
   /// Returns metadata about the configuration of the Duolingo service.
   ///

@@ -5,16 +5,12 @@
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
+import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
-import 'package:duolingo4d/src/response/auth/auth_response.dart';
-import 'package:duolingo4d/src/response/overview/overview_response.dart';
-import 'package:duolingo4d/src/response/user/user_response.dart';
-import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
-import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -26,6 +22,11 @@ class DuolingoImpl implements Duolingo {
 
   /// The singleton instance of [DuolingoImpl].
   static final _singletonInstance = DuolingoImpl._internal();
+
+  @override
+  DuolingoSession get session => DuolingoSession.from(
+        requestHeader: InternalSession.instance.requestHeader,
+      );
 
   @override
   Future<VersionInfoResponse> versionInfo() async =>
