@@ -22,9 +22,7 @@ class UserApiAdapter extends Adapter<UserResponse> {
   }) =>
       _buildUserResponse(
         response: response,
-        json: Json.fromJsonString(
-          value: response.body,
-        ),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [UserResponse] based on [response] and [json].

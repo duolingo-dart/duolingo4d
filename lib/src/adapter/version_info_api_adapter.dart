@@ -22,7 +22,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   }) =>
       _buildVersionInfoResponse(
         response: response,
-        json: Json.fromJsonString(value: response.body),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [VersionInfoResponse] based on [response] and [json].

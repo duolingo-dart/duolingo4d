@@ -22,7 +22,7 @@ class AuthApiAdapter extends Adapter<AuthResponse> {
   }) =>
       _buildAuthResponse(
         response: response,
-        json: Json.fromJsonString(value: response.body),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [AuthResponse] based on [response] and [json].

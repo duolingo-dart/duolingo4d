@@ -22,7 +22,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
   }) =>
       _buildWordHintResponse(
         response: response,
-        json: Json.fromJsonString(value: response.body),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [WordHintResponse] based on [response] and [json].

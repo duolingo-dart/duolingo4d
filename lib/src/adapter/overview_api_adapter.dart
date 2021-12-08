@@ -22,7 +22,7 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
   }) =>
       _buildOverviewResponse(
         response: response,
-        json: Json.fromJsonString(value: response.body),
+        json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
   /// Returns [OverviewResponse] based on [response] and [json].
