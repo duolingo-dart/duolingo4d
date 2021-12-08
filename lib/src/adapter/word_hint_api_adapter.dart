@@ -8,11 +8,6 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
-import 'package:duolingo4d/src/response/wordhint/hint_cell.dart';
-import 'package:duolingo4d/src/response/wordhint/hint_header.dart';
-import 'package:duolingo4d/src/response/wordhint/hint_row.dart';
-import 'package:duolingo4d/src/response/wordhint/hint_table.dart';
-import 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 /// This class provides the function to convert the response

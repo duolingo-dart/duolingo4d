@@ -3,16 +3,29 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
+import 'package:sweet_cookie_jar/sweet_cookie_jar.dart';
 import 'package:test/test.dart';
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
 
 void main() async {
-  await Duolingo.instance.authenticate(
-    username: 'duovoc_tes',
-    password: 'test_duolingo4d',
-  );
+  test('Test Authentication API and Session', () async {
+    DuolingoSession session = Duolingo.instance.session;
+    expect(session.requestHeader.cookie.rawData.isEmpty, true);
+    expect(session.requestHeader.cookie.jwtToken.isEmpty, true);
+    expect(session.requestHeader.cookie.csrfTokens.isEmpty, true);
+
+    await Duolingo.instance.authenticate(
+      username: 'duovoc_tes',
+      password: 'test_duolingo4d',
+    );
+
+    session = Duolingo.instance.session;
+    expect(session.requestHeader.cookie.rawData.isNotEmpty, true);
+    expect(session.requestHeader.cookie.jwtToken.isNotEmpty, true);
+    expect(session.requestHeader.cookie.csrfTokens.isNotEmpty, true);
+  });
 
   _testVersionInfoApi();
   _testUserApi();

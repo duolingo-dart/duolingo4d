@@ -9,7 +9,6 @@ import 'package:http/http.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
-import 'package:duolingo4d/src/response/overview/vocabulary.dart';
 
 /// This class provides the function to convert the response
 /// returned from the overview API into the [OverviewResponse] format.

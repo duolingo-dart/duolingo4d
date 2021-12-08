@@ -8,11 +8,7 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
-import 'package:duolingo4d/src/response/versioninfo/multi_voice_direction.dart';
-import 'package:duolingo4d/src/response/versioninfo/supported_direction.dart';
-import 'package:duolingo4d/src/response/versioninfo/tts_voice_configuration.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
-import 'package:duolingo4d/src/response/versioninfo/voice_direction.dart';
 
 /// This class provides the function to convert the response
 /// returned from the version info API into the [VersionInfoResponse] format.

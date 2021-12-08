@@ -8,13 +8,7 @@ import 'package:http/http.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
-import 'package:duolingo4d/src/response/user/course.dart';
-import 'package:duolingo4d/src/response/user/gems_configuration.dart';
-import 'package:duolingo4d/src/response/user/last_streak.dart';
-import 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
-import 'package:duolingo4d/src/response/user/skill.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
-import 'package:duolingo4d/src/response/user/xp_configuration.dart';
 
 /// This class provides the function to convert the response
 /// returned from the user API into the [UserResponse] format.
