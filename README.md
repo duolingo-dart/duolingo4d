@@ -122,9 +122,9 @@ void main() async {
   final versionInfoResponse = await duolingo.versionInfo();
   final ttsVoiceConfiguration = versionInfoResponse.ttsVoiceConfiguration;
 
-  for (final voiceDirections in ttsVoiceConfiguration.voiceDirections) {
-    print(voiceDirections.language);
-    print(voiceDirections.voice);
+  for (final voiceDirection in ttsVoiceConfiguration.voiceDirections) {
+    print(voiceDirection.language);
+    print(voiceDirection.voice);
   }
 }
 ```
