@@ -6,6 +6,7 @@
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
+import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
@@ -203,4 +204,6 @@ abstract class Duolingo {
     required String fromLanguage,
     required String learningLanguage,
   });
+
+  Future<LeaderboardResponse> leaderboard();
 }
