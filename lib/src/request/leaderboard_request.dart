@@ -11,6 +11,7 @@ import 'package:http/http.dart' as http;
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 
+/// This class provides the function to send a request for user's leaderboard.
 class LeaderboardRequest extends Request<LeaderboardResponse> {
   /// Returns the new instance of [LeaderboardRequest].
   LeaderboardRequest.newInstance();

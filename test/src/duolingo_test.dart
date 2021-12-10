@@ -129,7 +129,7 @@ void _testLeaderboard() {
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
-    expect(response.ranking.rankingItems.isNotEmpty, true);
+    expect(response.ranking.scores.isNotEmpty, true);
     expect(response.userIds.isNotEmpty, true);
   });
 }

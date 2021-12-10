@@ -5,13 +5,15 @@
 // Package imports:
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/ranking.dart';
-import 'package:duolingo4d/src/response/leaderboard/ranking_item.dart';
+import 'package:duolingo4d/src/response/leaderboard/score.dart';
 import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
 
+/// This class provides the function to convert the response
+/// returned from the leaderboard API into the [LeaderboardResponse] format.
 class LeaderboardApiAdapter extends Adapter<LeaderboardResponse> {
   /// Returns the new instance of [LeaderboardApiAdapter].
   LeaderboardApiAdapter.newInstance();
@@ -25,6 +27,7 @@ class LeaderboardApiAdapter extends Adapter<LeaderboardResponse> {
         json: Json.fromBytes(bytes: response.bodyBytes),
       );
 
+  /// Returns [LeaderboardResponse] based on [response] and [json].
   LeaderboardResponse _buildLeaderboardResponse({
     required Response response,
     required Json json,
@@ -37,22 +40,24 @@ class LeaderboardApiAdapter extends Adapter<LeaderboardResponse> {
         userIds: json.getStringValues(key: 'user_ids_ranked'),
       );
 
+  /// Returns [Ranking] based on [json].
   Ranking _buildRanking({
     required Json json,
   }) =>
       Ranking.from(
-        rankingItems: _buildRankingItems(json: json),
+        scores: _buildScores(json: json),
       );
 
-  List<RankingItem> _buildRankingItems({
+  /// Returns list of [Score] based on [json].
+  List<Score> _buildScores({
     required Json json,
   }) {
-    final items = <RankingItem>[];
+    final items = <Score>[];
     for (final key in json.keySet) {
       items.add(
-        RankingItem.from(
+        Score.from(
           userId: key,
-          score: json.getIntValue(key: key),
+          xp: json.getIntValue(key: key),
         ),
       );
     }
