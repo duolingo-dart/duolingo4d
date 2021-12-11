@@ -6,11 +6,13 @@
 import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
+import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
+import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -73,4 +75,8 @@ class DuolingoImpl implements Duolingo {
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
       ).send();
+
+  @override
+  Future<LeaderboardResponse> leaderboard() async =>
+      await LeaderboardRequest.newInstance().send();
 }

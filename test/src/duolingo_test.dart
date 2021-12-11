@@ -32,6 +32,7 @@ void main() async {
   _testOverviewApi();
   _testWordHintApi();
   _testSwitchLanguageApi();
+  _testLeaderboard();
 
   //! Test the authentication API last,
   //! since duplicate authentication requests will affect other tests.
@@ -116,6 +117,20 @@ void _testSwitchLanguageApi() {
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
+  });
+}
+
+void _testLeaderboard() {
+  test('Test Leaderboard API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.leaderboard();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.ranking.scores.isNotEmpty, true);
+    expect(response.userIds.isNotEmpty, true);
   });
 }
 

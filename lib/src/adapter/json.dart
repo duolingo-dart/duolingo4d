@@ -4,7 +4,6 @@
 
 // Dart imports:
 import 'dart:convert';
-
 import 'dart:typed_data';
 
 /// It provides safe and convenient functions related to JSON handling.

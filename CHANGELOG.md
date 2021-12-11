@@ -1,5 +1,10 @@
 # Release Note
 
+## 0.1.0
+
+- Added a feature to get session about communication with the Duolingo API.
+- Added a feature that references the Leaderboard API.
+
 ## 0.0.5
 
 - Added `TrackingProperty` field to `UserRespone`.
