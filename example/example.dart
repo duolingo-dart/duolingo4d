@@ -2,6 +2,8 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: avoid_print
+
 import 'package:duolingo4d/duolingo4d.dart';
 
 void main() async {
@@ -51,14 +53,12 @@ void main() async {
   for (final token in wordHintResponse.tokens) {
     final headers = token.table.headers;
     for (final header in headers) {
-      // ignore: avoid_print
       print(header.token);
     }
 
     final rows = token.table.rows;
     for (final row in rows) {
       for (final cell in row.cells) {
-        // ignore: avoid_print
         print(cell.hint);
       }
     }
@@ -77,7 +77,6 @@ void main() async {
   final overviewResponse = await duolingo.overview();
 
   for (final vocabulary in overviewResponse.vocabularies) {
-    // ignore: avoid_print
     print(vocabulary.word);
   }
 
@@ -86,10 +85,22 @@ void main() async {
     learningLanguage: 'en',
   );
 
-  // ignore: avoid_print
   print(switchLanguageResponse.status.code);
-  // ignore: avoid_print
   print(switchLanguageResponse.status.reasonPhrase);
+
+  final leaderboardResponse = await duolingo.leaderboard();
+
+  print(leaderboardResponse.ranking);
+  print(leaderboardResponse.userIds);
+
+  final ranking = leaderboardResponse.ranking;
+  print(ranking.orderByScoreNameDesc());
+  print(ranking.orderByScoreXpDesc());
+
+  for (final score in ranking.scores) {
+    print(score.userId);
+    print(score.xp);
+  }
 
   //! -------------- ↑ Authentication Required ↑ --------------
 }
