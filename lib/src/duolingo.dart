@@ -70,6 +70,10 @@ abstract class Duolingo {
   /// If a user who has already been authenticated tries to authenticate again,
   /// the API will return an invalid password error.
   ///
+  /// When the user associated with [username] and [password] is authenticated,
+  /// there is no need to call [cleanCache] or any other method to delete the cache
+  /// when the user is authenticated. The cache information will be cleaned automatically.
+  ///
   /// **_Example:_**
   ///
   /// ```dart

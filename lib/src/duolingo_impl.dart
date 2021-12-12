@@ -40,11 +40,19 @@ class DuolingoImpl implements Duolingo {
   Future<AuthResponse> authenticate({
     required String username,
     required String password,
-  }) async =>
-      await AuthRequest.from(
-        username: username,
-        password: password,
-      ).send();
+  }) async {
+    final response = await AuthRequest.from(
+      username: username,
+      password: password,
+    ).send();
+
+    if (response.hasNotError) {
+      // Delete the cache of another user.
+      cleanCache();
+    }
+
+    return response;
+  }
 
   @override
   Future<UserResponse> user({
