@@ -464,7 +464,7 @@ abstract class Duolingo {
   ///```
   Future<LeaderboardResponse> cachedLeaderboard();
 
-  /// Deletes all cached response object.
+  /// Deletes all cached response objects.
   void cleanCache();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedVersionInfo] method.
