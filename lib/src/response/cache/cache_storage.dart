@@ -8,6 +8,7 @@ import 'package:duolingo4d/src/response/cache/cache_type.dart';
 import 'package:duolingo4d/src/response/cache/duolingo_cache_storage.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
+/// This abstract class represents the storage of the cache.
 abstract class CacheStorage {
   /// Returns the new instance of [CacheStorage].
   static CacheStorage get instance => DuolingoCacheStorage.open();

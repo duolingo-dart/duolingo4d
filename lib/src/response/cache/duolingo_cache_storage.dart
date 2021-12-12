@@ -8,6 +8,7 @@ import 'package:duolingo4d/src/response/cache/cache_storage.dart';
 import 'package:duolingo4d/src/response/cache/cache_type.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
+/// This class represents the storage of cache on response object from Duolingo API.
 class DuolingoCacheStorage implements CacheStorage {
   /// The internal constructor for singleton.
   DuolingoCacheStorage._internal();
