@@ -34,6 +34,12 @@ void main() async {
   _testSwitchLanguageApi();
   _testLeaderboard();
 
+  _testCachedVersionInfoApi();
+  _testCachedUserApi();
+  _testCachedOverviewApi();
+  _testCachedWordHintApi();
+  _testCachedLeaderboard();
+
   //! Test the authentication API last,
   //! since duplicate authentication requests will affect other tests.
   _testAuthApi();
@@ -131,6 +137,150 @@ void _testLeaderboard() {
 
     expect(response.ranking.scores.isNotEmpty, true);
     expect(response.userIds.isNotEmpty, true);
+  });
+}
+
+void _testCachedVersionInfoApi() {
+  test('Test cached Version Info Request.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedVersionInfo();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(
+        response.ttsVoiceConfiguration.multiVoiceDirections.isNotEmpty, true);
+    expect(response.ttsVoiceConfiguration.voiceDirections.isNotEmpty, true);
+    expect(response.supportedDirections.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedVersionInfo();
+    expect(response == cachedResponse, true);
+
+    expect(cachedResponse.status.code, 200);
+    expect(cachedResponse.status.reasonPhrase, 'OK');
+    expect(cachedResponse.headers.isNotEmpty, true);
+
+    expect(cachedResponse.ttsVoiceConfiguration.multiVoiceDirections.isNotEmpty,
+        true);
+    expect(
+        cachedResponse.ttsVoiceConfiguration.voiceDirections.isNotEmpty, true);
+    expect(cachedResponse.supportedDirections.isNotEmpty, true);
+  });
+}
+
+void _testCachedUserApi() {
+  test('Test User API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedUser(userId: '557897808');
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.id, '557897808');
+    expect(response.username, 'duovoc_tes');
+    expect(response.name, 'Duolingo4D');
+    expect(response.courses.isNotEmpty, true);
+    expect(response.currentCourse.skills.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedUser(userId: '557897808');
+    expect(response == cachedResponse, true);
+
+    expect(cachedResponse.status.code, 200);
+    expect(cachedResponse.status.reasonPhrase, 'OK');
+    expect(cachedResponse.headers.isNotEmpty, true);
+
+    expect(cachedResponse.id, '557897808');
+    expect(cachedResponse.username, 'duovoc_tes');
+    expect(cachedResponse.name, 'Duolingo4D');
+    expect(cachedResponse.courses.isNotEmpty, true);
+    expect(cachedResponse.currentCourse.skills.isNotEmpty, true);
+  });
+}
+
+void _testCachedOverviewApi() {
+  test('Test Overview API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedOverview();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.vocabularies.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedOverview();
+    expect(response == cachedResponse, true);
+
+    expect(cachedResponse.status.code, 200);
+    expect(cachedResponse.status.reasonPhrase, 'OK');
+    expect(cachedResponse.headers.isNotEmpty, true);
+
+    expect(cachedResponse.vocabularies.isNotEmpty, true);
+  });
+}
+
+void _testCachedWordHintApi() {
+  test('Test Word Hint API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedWordHint(
+      fromLanguage: 'en',
+      learningLanguage: 'ja',
+      sentence: 'ありがとう',
+    );
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.tokens.isNotEmpty, true);
+    expect(response.tokens[0].table.headers.isNotEmpty, true);
+    expect(response.tokens[0].table.rows.isNotEmpty, true);
+    expect(response.tokens[0].table.rows[0].cells.isNotEmpty, true);
+    expect(response.tokens[0].table.references.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedWordHint(
+      fromLanguage: 'en',
+      learningLanguage: 'ja',
+      sentence: 'ありがとう',
+    );
+
+    expect(response == cachedResponse, true);
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.tokens.isNotEmpty, true);
+    expect(response.tokens[0].table.headers.isNotEmpty, true);
+    expect(response.tokens[0].table.rows.isNotEmpty, true);
+    expect(response.tokens[0].table.rows[0].cells.isNotEmpty, true);
+    expect(response.tokens[0].table.references.isNotEmpty, true);
+  });
+}
+
+void _testCachedLeaderboard() {
+  test('Test Leaderboard API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedLeaderboard();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.ranking.scores.isNotEmpty, true);
+    expect(response.userIds.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedLeaderboard();
+    expect(response == cachedResponse, true);
+
+    expect(cachedResponse.status.code, 200);
+    expect(cachedResponse.status.reasonPhrase, 'OK');
+    expect(cachedResponse.headers.isNotEmpty, true);
+
+    expect(cachedResponse.ranking.scores.isNotEmpty, true);
+    expect(cachedResponse.userIds.isNotEmpty, true);
   });
 }
 
