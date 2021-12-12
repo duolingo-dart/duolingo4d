@@ -3,14 +3,14 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
-import 'package:duolingo4d/src/response/leaderboard/ranking.dart';
-import 'package:duolingo4d/src/response/leaderboard/score.dart';
 import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/adapter/json.dart';
+import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
+import 'package:duolingo4d/src/response/leaderboard/ranking.dart';
+import 'package:duolingo4d/src/response/leaderboard/score.dart';
 
 /// This class provides the function to convert the response
 /// returned from the leaderboard API into the [LeaderboardResponse] format.
