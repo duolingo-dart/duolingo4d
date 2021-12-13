@@ -1,6 +1,6 @@
 name: duolingo4d
 description: A most easily usable Duolingo API wrapper in Dart. With Duolingo4D, you can easily integrate your application with the Duolingo API.
-version: 0.0.5
+version: 0.1.0
 homepage: https://github.com/myConsciousness/duolingo4d
 
 environment:
