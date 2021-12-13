@@ -2,8 +2,10 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Project imports:
+// Package imports:
 import 'package:cache_storage/cache_storage.dart';
+
+// Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
