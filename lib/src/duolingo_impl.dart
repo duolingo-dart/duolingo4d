@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:cache_storage/cache_storage.dart';
 import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
@@ -12,7 +13,6 @@ import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
-import 'package:duolingo4d/src/response/cache/cache_storage.dart';
 import 'package:duolingo4d/src/response/cache/cache_type.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
@@ -26,6 +26,9 @@ class DuolingoImpl implements Duolingo {
 
   /// The singleton instance of [DuolingoImpl].
   static final _singletonInstance = DuolingoImpl._internal();
+
+  /// The cache storage
+  static final _cacheStorage = CacheStorage.open();
 
   @override
   DuolingoSession get session => DuolingoSession.from(
@@ -92,13 +95,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
-    final cacheStorage = CacheStorage.instance;
-    if (cacheStorage.has(type: CacheType.versionInfo)) {
-      return cacheStorage.versionInfoResponse!;
+    if (_cacheStorage.has(key: CacheType.versionInfo.name)) {
+      return _cacheStorage.match(key: CacheType.versionInfo.name);
     }
 
     final response = await VersionInfoRequest.newInstance().send();
-    cacheStorage.save(type: CacheType.versionInfo, response: response);
+    _cacheStorage.save(key: CacheType.versionInfo.name, value: response);
 
     return response;
   }
@@ -107,26 +109,34 @@ class DuolingoImpl implements Duolingo {
   Future<UserResponse> cachedUser({
     required String userId,
   }) async {
-    final cacheStorage = CacheStorage.instance;
-    if (cacheStorage.has(type: CacheType.user)) {
-      return cacheStorage.userResponse!;
+    final cacheSubKeys = [userId];
+
+    if (_cacheStorage.has(key: CacheType.user.name, subKeys: cacheSubKeys)) {
+      return _cacheStorage.match(
+        key: CacheType.user.name,
+        subKeys: cacheSubKeys,
+      );
     }
 
     final response = await UserRequest.from(userId: userId).send();
-    cacheStorage.save(type: CacheType.user, response: response);
+
+    _cacheStorage.save(
+      key: CacheType.user.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
 
     return response;
   }
 
   @override
   Future<OverviewResponse> cachedOverview() async {
-    final cacheStorage = CacheStorage.instance;
-    if (cacheStorage.has(type: CacheType.overview)) {
-      return cacheStorage.overviewResponse!;
+    if (_cacheStorage.has(key: CacheType.overview.name)) {
+      return _cacheStorage.match(key: CacheType.overview.name);
     }
 
     final response = await OverviewRequest.newInstance().send();
-    cacheStorage.save(type: CacheType.overview, response: response);
+    _cacheStorage.save(key: CacheType.overview.name, value: response);
 
     return response;
   }
@@ -137,9 +147,20 @@ class DuolingoImpl implements Duolingo {
     required String learningLanguage,
     required String sentence,
   }) async {
-    final cacheStorage = CacheStorage.instance;
-    if (cacheStorage.has(type: CacheType.wordHint)) {
-      return cacheStorage.wordHintResponse!;
+    final cacheSubKeys = <String>[
+      fromLanguage,
+      learningLanguage,
+      sentence,
+    ];
+
+    if (_cacheStorage.has(
+      key: CacheType.wordHint.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: CacheType.wordHint.name,
+        subKeys: cacheSubKeys,
+      );
     }
 
     final response = await WordHintRequest.from(
@@ -148,48 +169,46 @@ class DuolingoImpl implements Duolingo {
       sentence: sentence,
     ).send();
 
-    cacheStorage.save(type: CacheType.wordHint, response: response);
+    _cacheStorage.save(
+      key: CacheType.wordHint.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
 
     return response;
   }
 
   @override
   Future<LeaderboardResponse> cachedLeaderboard() async {
-    final cacheStorage = CacheStorage.instance;
-    if (cacheStorage.has(type: CacheType.leaderboard)) {
-      return cacheStorage.leaderboardResponse!;
+    if (_cacheStorage.has(key: CacheType.leaderboard.name)) {
+      return _cacheStorage.match(key: CacheType.leaderboard.name);
     }
 
     final response = await LeaderboardRequest.newInstance().send();
-    cacheStorage.save(type: CacheType.leaderboard, response: response);
+    _cacheStorage.save(key: CacheType.leaderboard.name, value: response);
 
     return response;
   }
 
   @override
-  void cleanCache() {
-    final cacheStorage = CacheStorage.instance;
-    for (final type in CacheType.values) {
-      cacheStorage.clean(type: type);
-    }
-  }
+  void cleanCache() => _cacheStorage.delete();
 
   @override
   void cleanCachedVersionInfo() =>
-      CacheStorage.instance.clean(type: CacheType.versionInfo);
+      _cacheStorage.deleteBy(key: CacheType.versionInfo.name);
 
   @override
-  void cleanCachedUser() => CacheStorage.instance.clean(type: CacheType.user);
+  void cleanCachedUser() => _cacheStorage.deleteBy(key: CacheType.user.name);
 
   @override
   void cleanCachedOverview() =>
-      CacheStorage.instance.clean(type: CacheType.overview);
+      _cacheStorage.deleteBy(key: CacheType.overview.name);
 
   @override
   void cleanCachedWordHint() =>
-      CacheStorage.instance.clean(type: CacheType.wordHint);
+      _cacheStorage.deleteBy(key: CacheType.wordHint.name);
 
   @override
   void cleanCachedLeaderboard() =>
-      CacheStorage.instance.clean(type: CacheType.leaderboard);
+      _cacheStorage.deleteBy(key: CacheType.leaderboard.name);
 }
