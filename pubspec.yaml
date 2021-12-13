@@ -13,6 +13,7 @@ dependencies:
   collection: ^1.15.0
   http: ^0.13.4
   sweet_cookie_jar: ^1.0.2
+  universal_io: ^2.0.4
 
 dev_dependencies:
   flutter_lints: ^1.0.0
