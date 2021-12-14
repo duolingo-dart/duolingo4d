@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/user_api_adapter.dart';
+import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
@@ -31,7 +32,7 @@ class UserRequest extends Request<UserResponse> {
   Future<UserResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
-            'https://www.duolingo.com/2017-06-30/users/$userId',
+            '${DuolingoApi.user.url}/$userId',
           ),
           headers: InternalSession.instance.headers,
         ),
