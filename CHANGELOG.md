@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.1.2
+
+- Fixed minor feature.
+
 ## 0.1.1
 
 - Fixed minor feature.
