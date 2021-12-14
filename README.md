@@ -254,7 +254,7 @@ void main() async {
 
 | Auth Required |                                                                                          Method                                                                                           |                                                   JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ❌       | [wordHint({required String fromLanguage, required String learningLanguage, required String sentence})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/wordHint.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
+|      ✅       | [wordHint({required String fromLanguage, required String learningLanguage, required String sentence})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/wordHint.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
 
 You can fetch hint information for any word or sentence from the Word Hint API. Since the hint information is hint data managed by Duolingo, the accuracy of the translation data cannot be guaranteed.
 
@@ -263,6 +263,11 @@ The argument `learningLanguage` should be the language code corresponding to the
 ```dart
 void main() async {
   final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
 
   final wordHintResponse = await duolingo.wordHint(
     fromLanguage: 'en',
