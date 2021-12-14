@@ -41,29 +41,6 @@ void main() async {
     return;
   }
 
-  // You can fetch hint of word.
-  // It is possible to specify not only words but also sentences in bulk.
-  // ignore: unused_local_variable
-  final wordHintResponse = await duolingo.wordHint(
-    fromLanguage: 'en',
-    learningLanguage: 'es',
-    sentence: 'boligrafos',
-  );
-
-  for (final token in wordHintResponse.tokens) {
-    final headers = token.table.headers;
-    for (final header in headers) {
-      print(header.token);
-    }
-
-    final rows = token.table.rows;
-    for (final row in rows) {
-      for (final cell in row.cells) {
-        print(cell.hint);
-      }
-    }
-  }
-
   //! ---------- ↑ Authentication Does Not Required ↑ ----------
 
   //! -------------- ↓ Authentication Required ↓ --------------
@@ -78,6 +55,29 @@ void main() async {
 
   for (final vocabulary in overviewResponse.vocabularies) {
     print(vocabulary.word);
+  }
+
+  // You can fetch hint of word.
+  // It is possible to specify not only words but also sentences in bulk.
+  // ignore: unused_local_variable
+  final wordHintResponse = await duolingo.wordHint(
+    fromLanguage: 'en',
+    learningLanguage: 'es',
+    sentence: 'bolígrafos',
+  );
+
+  for (final token in wordHintResponse.tokens) {
+    final headers = token.table.headers;
+    for (final header in headers) {
+      print(header.token);
+    }
+
+    final rows = token.table.rows;
+    for (final row in rows) {
+      for (final cell in row.cells) {
+        print(cell.hint);
+      }
+    }
   }
 
   final switchLanguageResponse = await duolingo.switchLanguage(

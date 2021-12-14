@@ -43,7 +43,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | Authentication  |      ❌       | Authenticate user by using Duolingo registered username or email address and password. |
 | User            |      ✅       | You can fetch detailed user information.                                               |
 | Overview        |      ✅       | You can fetch information on all the words user have learned in Duolingo.              |
-| Word Hint       |      ❌       | You can fetch hint information about words and sentences.                              |
+| Word Hint       |      ✅       | You can fetch hint information about words and sentences.                              |
 | Switch Language |      ✅       | You can switch the learning language.                                                  |
 | Leaderboard     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.              |
 
@@ -267,7 +267,7 @@ void main() async {
   final wordHintResponse = await duolingo.wordHint(
     fromLanguage: 'en',
     learningLanguage: 'es',
-    sentence: 'boligrafos',
+    sentence: 'bolígrafos',
   );
 
   for (final token in wordHintResponse.tokens) {
