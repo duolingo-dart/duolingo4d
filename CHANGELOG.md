@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.1.1 - 0.1.3
+
+- The configuration file has been adjusted to support multiple platforms. No new features or specifications have been changed.
+
 ## 0.1.0
 
 - Added a feature to get session about communication with the Duolingo API.
