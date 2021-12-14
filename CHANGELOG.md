@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.1.1
+
+- Fixed minor feature.
+
 ## 0.1.0
 
 - Added a feature to get session about communication with the Duolingo API.
