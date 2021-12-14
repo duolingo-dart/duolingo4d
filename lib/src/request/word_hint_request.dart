@@ -40,7 +40,8 @@ class WordHintRequest extends Request<WordHintResponse> {
         response: await http.get(
           Uri.parse(
             Uri.encodeFull(
-                'https://d2.duolingo.com/words/hints/$learningLanguage/$fromLanguage?sentence=$sentence'),
+              'https://d2.duolingo.com/words/hints/$learningLanguage/$fromLanguage?sentence=$sentence',
+            ),
           ),
           headers: InternalSession.instance.headers,
         ),

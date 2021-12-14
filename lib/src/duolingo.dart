@@ -187,10 +187,15 @@ abstract class Duolingo {
   ///void main() async {
   ///  final duolingo = Duolingo.instance;
   ///
+  ///  final authResponse = await duolingo.authenticate(
+  ///    username: 'test_username',
+  ///    password: 'test_password',
+  ///  );
+  ///
   ///  final wordHintResponse = await duolingo.wordHint(
   ///    fromLanguage: 'en',
   ///    learningLanguage: 'es',
-  ///    sentence: 'boligrafos',
+  ///    sentence: 'bolígrafos',
   ///  );
   ///
   ///  for (final token in wordHintResponse.tokens) {
