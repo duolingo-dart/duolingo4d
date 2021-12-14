@@ -7,6 +7,7 @@ import 'package:cache_storage/cache_storage.dart';
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
+import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
@@ -15,7 +16,6 @@ import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
-import 'package:duolingo4d/src/response/cache/cache_type.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
 /// This is an implementation class of [Duolingo].
@@ -97,12 +97,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
-    if (_cacheStorage.has(key: CacheType.versionInfo.name)) {
-      return _cacheStorage.match(key: CacheType.versionInfo.name);
+    if (_cacheStorage.has(key: DuolingoApi.versionInfo.name)) {
+      return _cacheStorage.match(key: DuolingoApi.versionInfo.name);
     }
 
     final response = await VersionInfoRequest.newInstance().send();
-    _cacheStorage.save(key: CacheType.versionInfo.name, value: response);
+    _cacheStorage.save(key: DuolingoApi.versionInfo.name, value: response);
 
     return response;
   }
@@ -113,9 +113,9 @@ class DuolingoImpl implements Duolingo {
   }) async {
     final cacheSubKeys = [userId];
 
-    if (_cacheStorage.has(key: CacheType.user.name, subKeys: cacheSubKeys)) {
+    if (_cacheStorage.has(key: DuolingoApi.user.name, subKeys: cacheSubKeys)) {
       return _cacheStorage.match(
-        key: CacheType.user.name,
+        key: DuolingoApi.user.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -123,7 +123,7 @@ class DuolingoImpl implements Duolingo {
     final response = await UserRequest.from(userId: userId).send();
 
     _cacheStorage.save(
-      key: CacheType.user.name,
+      key: DuolingoApi.user.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -133,12 +133,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<OverviewResponse> cachedOverview() async {
-    if (_cacheStorage.has(key: CacheType.overview.name)) {
-      return _cacheStorage.match(key: CacheType.overview.name);
+    if (_cacheStorage.has(key: DuolingoApi.overview.name)) {
+      return _cacheStorage.match(key: DuolingoApi.overview.name);
     }
 
     final response = await OverviewRequest.newInstance().send();
-    _cacheStorage.save(key: CacheType.overview.name, value: response);
+    _cacheStorage.save(key: DuolingoApi.overview.name, value: response);
 
     return response;
   }
@@ -156,11 +156,11 @@ class DuolingoImpl implements Duolingo {
     ];
 
     if (_cacheStorage.has(
-      key: CacheType.wordHint.name,
+      key: DuolingoApi.wordHint.name,
       subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
-        key: CacheType.wordHint.name,
+        key: DuolingoApi.wordHint.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -172,7 +172,7 @@ class DuolingoImpl implements Duolingo {
     ).send();
 
     _cacheStorage.save(
-      key: CacheType.wordHint.name,
+      key: DuolingoApi.wordHint.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -182,12 +182,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<LeaderboardResponse> cachedLeaderboard() async {
-    if (_cacheStorage.has(key: CacheType.leaderboard.name)) {
-      return _cacheStorage.match(key: CacheType.leaderboard.name);
+    if (_cacheStorage.has(key: DuolingoApi.leaderboard.name)) {
+      return _cacheStorage.match(key: DuolingoApi.leaderboard.name);
     }
 
     final response = await LeaderboardRequest.newInstance().send();
-    _cacheStorage.save(key: CacheType.leaderboard.name, value: response);
+    _cacheStorage.save(key: DuolingoApi.leaderboard.name, value: response);
 
     return response;
   }
@@ -197,20 +197,20 @@ class DuolingoImpl implements Duolingo {
 
   @override
   void cleanCachedVersionInfo() =>
-      _cacheStorage.deleteBy(key: CacheType.versionInfo.name);
+      _cacheStorage.deleteBy(key: DuolingoApi.versionInfo.name);
 
   @override
-  void cleanCachedUser() => _cacheStorage.deleteBy(key: CacheType.user.name);
+  void cleanCachedUser() => _cacheStorage.deleteBy(key: DuolingoApi.user.name);
 
   @override
   void cleanCachedOverview() =>
-      _cacheStorage.deleteBy(key: CacheType.overview.name);
+      _cacheStorage.deleteBy(key: DuolingoApi.overview.name);
 
   @override
   void cleanCachedWordHint() =>
-      _cacheStorage.deleteBy(key: CacheType.wordHint.name);
+      _cacheStorage.deleteBy(key: DuolingoApi.wordHint.name);
 
   @override
   void cleanCachedLeaderboard() =>
-      _cacheStorage.deleteBy(key: CacheType.leaderboard.name);
+      _cacheStorage.deleteBy(key: DuolingoApi.leaderboard.name);
 }

@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/auth_api_adapter.dart';
+import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
@@ -29,7 +30,7 @@ class AuthRequest extends Request<AuthResponse> {
   static final _adapter = AuthApiAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse('https://www.duolingo.com/login');
+  static final _apiUri = Uri.parse(DuolingoApi.auth.url);
 
   @override
   Future<AuthResponse> send() async => _adapter.convert(

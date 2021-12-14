@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/switch_language_api_adapter.dart';
+import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
@@ -32,7 +33,7 @@ class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   static final _adapter = SwitchLanguageApiAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse('https://www.duolingo.com/switch_language');
+  static final _apiUri = Uri.parse(DuolingoApi.switchLanguage.url);
 
   @override
   Future<SwitchLanguageResponse> send() async => _adapter.convert(
