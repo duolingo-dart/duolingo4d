@@ -1,12 +1,8 @@
 # Release Note
 
-## 0.1.2
+## 0.1.1 - 0.1.3
 
-- Fixed minor feature.
-
-## 0.1.1
-
-- Fixed minor feature.
+- The configuration file has been adjusted to support multiple platforms. No new features or specifications have been changed.
 
 ## 0.1.0
 
