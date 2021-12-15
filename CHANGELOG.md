@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.1.4
+
+- Added a feature that references the Dictionary API.
+
 ## 0.1.1 - 0.1.3
 
 - The configuration file has been adjusted to support multiple platforms. No new features or specifications have been changed.
