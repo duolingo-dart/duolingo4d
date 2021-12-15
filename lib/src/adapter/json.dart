@@ -60,7 +60,7 @@ class Json {
       return Json.fromJsonMap(value: {});
     }
 
-    final value = jsonResource[key];
+    final value = jsonResource[key] ?? <String, dynamic>{};
 
     if (value is String) {
       return Json.fromJsonString(value: value);

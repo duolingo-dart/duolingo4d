@@ -21,16 +21,13 @@ class DictionaryRequest extends Request<DictionaryResponse> {
   /// The response adapter
   static final _adapter = DictionaryApiAdapter.newInstance();
 
-  /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.dictionary.url);
-
   /// The word id
   final String wordId;
 
   @override
   Future<DictionaryResponse> send() async => _adapter.convert(
         response: await http.get(
-          _apiUri,
+          Uri.parse('${DuolingoApi.dictionary.url}?lexeme_id=$wordId'),
           headers: InternalSession.instance.headers,
         ),
       );
