@@ -9,6 +9,7 @@ import 'package:cache_storage/cache_storage.dart';
 import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
+import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
@@ -16,7 +17,6 @@ import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
-import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -94,6 +94,12 @@ class DuolingoImpl implements Duolingo {
   @override
   Future<LeaderboardResponse> leaderboard() async =>
       await LeaderboardRequest.newInstance().send();
+
+  @override
+  Future<DictionaryResponse> dictionary({
+    required String wordId,
+  }) async =>
+      await DictionaryRequest.from(wordId: wordId).send();
 
   @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
@@ -193,6 +199,32 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<DictionaryResponse> cachedDictionary({
+    required String wordId,
+  }) async {
+    final cacheSubKeys = [wordId];
+    if (_cacheStorage.has(
+      key: DuolingoApi.dictionary.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: DuolingoApi.dictionary.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await DictionaryRequest.from(wordId: wordId).send();
+
+    _cacheStorage.save(
+      key: DuolingoApi.dictionary.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -213,4 +245,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedLeaderboard() =>
       _cacheStorage.deleteBy(key: DuolingoApi.leaderboard.name);
+
+  @override
+  void cleanCachedDictionary() =>
+      _cacheStorage.deleteBy(key: DuolingoApi.dictionary.name);
 }

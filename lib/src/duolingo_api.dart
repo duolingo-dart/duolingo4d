@@ -24,6 +24,9 @@ enum DuolingoApi {
 
   /// Leaderboard API
   leaderboard,
+
+  /// Dictionary API
+  dictionary,
 }
 
 /// The extension that represents endpoint of Duolingo API.
@@ -45,6 +48,8 @@ extension Endpoint on DuolingoApi {
         return 'https://www.duolingo.com/switch_language';
       case DuolingoApi.leaderboard:
         return 'https://www.duolingo.com/friendships/leaderboard_activity';
+      case DuolingoApi.dictionary:
+        return 'https://www.duolingo.com/api/1/dictionary_page';
     }
   }
 }

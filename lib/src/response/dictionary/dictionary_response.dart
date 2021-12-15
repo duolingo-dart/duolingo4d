@@ -2,12 +2,19 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
 import 'package:collection/collection.dart';
 
-import 'package:duolingo4d/duolingo4d.dart';
+// Project imports:
 import 'package:duolingo4d/src/response/dictionary/alternative_form.dart';
 import 'package:duolingo4d/src/response/dictionary/discussion.dart';
 import 'package:duolingo4d/src/response/dictionary/lexeme.dart';
+import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
+
+export 'package:duolingo4d/src/response/dictionary/alternative_form.dart';
+export 'package:duolingo4d/src/response/dictionary/discussion.dart';
+export 'package:duolingo4d/src/response/dictionary/lexeme.dart';
 
 class DictionaryResponse extends Response {
   /// Returns the new instance of [DictionaryResponse] based on arguments.
@@ -16,7 +23,7 @@ class DictionaryResponse extends Response {
     required String reasonPhrase,
     required Map<String, String> headers,
     required this.id,
-    required this.value,
+    required this.word,
     required this.imageUrl,
     required this.fromLanguage,
     required this.learningLanguage,
@@ -33,15 +40,18 @@ class DictionaryResponse extends Response {
     required this.isGeneric,
     required this.hasTts,
   }) : super.from(
-          status: Status.from(code: statusCode, reasonPhrase: reasonPhrase),
+          status: Status.from(
+            code: statusCode,
+            reasonPhrase: reasonPhrase,
+          ),
           headers: headers,
         );
 
   /// The id
   final String id;
 
-  /// The value
-  final String value;
+  /// The word
+  final String word;
 
   /// The image url
   final String imageUrl;
@@ -90,7 +100,7 @@ class DictionaryResponse extends Response {
 
   @override
   String toString() {
-    return 'DictionaryResponse(id: $id, value: $value, imageUrl: $imageUrl, fromLanguage: $fromLanguage, learningLanguage: $learningLanguage, fromLanguageName: $fromLanguageName, learningLanguageName: $learningLanguageName, pos: $pos, infinitive: $infinitive, translations: $translations, ttsUrl: $ttsUrl, canonicalUrl: $canonicalUrl, alternativeForms: $alternativeForms, relatedLexemes: $relatedLexemes, relatedDiscussions: $relatedDiscussions, isGeneric: $isGeneric, hasTts: $hasTts)';
+    return 'DictionaryResponse(id: $id, word: $word, imageUrl: $imageUrl, fromLanguage: $fromLanguage, learningLanguage: $learningLanguage, fromLanguageName: $fromLanguageName, learningLanguageName: $learningLanguageName, pos: $pos, infinitive: $infinitive, translations: $translations, ttsUrl: $ttsUrl, canonicalUrl: $canonicalUrl, alternativeForms: $alternativeForms, relatedLexemes: $relatedLexemes, relatedDiscussions: $relatedDiscussions, isGeneric: $isGeneric, hasTts: $hasTts)';
   }
 
   @override
@@ -100,7 +110,7 @@ class DictionaryResponse extends Response {
 
     return other is DictionaryResponse &&
         other.id == id &&
-        other.value == value &&
+        other.word == word &&
         other.imageUrl == imageUrl &&
         other.fromLanguage == fromLanguage &&
         other.learningLanguage == learningLanguage &&
@@ -121,7 +131,7 @@ class DictionaryResponse extends Response {
   @override
   int get hashCode {
     return id.hashCode ^
-        value.hashCode ^
+        word.hashCode ^
         imageUrl.hashCode ^
         fromLanguage.hashCode ^
         learningLanguage.hashCode ^

@@ -102,5 +102,11 @@ void main() async {
     print(score.xp);
   }
 
+  final dictionaryResponse = await duolingo.dictionary(
+    wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
+  );
+
+  print(dictionaryResponse);
+
   //! -------------- ↑ Authentication Required ↑ --------------
 }

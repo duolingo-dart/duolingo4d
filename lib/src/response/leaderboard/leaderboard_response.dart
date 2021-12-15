@@ -6,8 +6,12 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/response/leaderboard/ranking.dart';
+import 'package:duolingo4d/src/response/response.dart';
+import 'package:duolingo4d/src/response/status.dart';
+
+export 'package:duolingo4d/src/response/leaderboard/ranking.dart';
+export 'package:duolingo4d/src/response/leaderboard/score.dart';
 
 /// This class represents a leaderboard of authenticated users.
 ///

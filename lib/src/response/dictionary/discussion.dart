@@ -14,7 +14,7 @@ class Discussion {
   final String url;
 
   /// The number of comments
-  final int numComments;
+  final String numComments;
 
   /// The anchor
   final String anchor;
