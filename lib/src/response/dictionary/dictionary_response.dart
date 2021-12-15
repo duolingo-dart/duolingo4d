@@ -16,6 +16,45 @@ export 'package:duolingo4d/src/response/dictionary/alternative_form.dart';
 export 'package:duolingo4d/src/response/dictionary/discussion.dart';
 export 'package:duolingo4d/src/response/dictionary/lexeme.dart';
 
+/// This class represents the response object returned from the Dictionary API.
+///
+/// This entity object contains dictionary-like detailed information about a particular word.
+/// It also contains other information such as [Discussion] about this subject and
+/// [AlternativeForm] using this subject.
+///
+/// From this response, you can refer to the information on the official Duolingo page at the following URL:
+/// https://www.duolingo.com/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9
+///
+/// **_Example:_**
+///
+///```dart
+///void main() async {
+///  final duolingo = Duolingo.instance;
+///
+///  final authResponse = await duolingo.authenticate(
+///    username: 'test_username',
+///    password: 'test_password',
+///  );
+///
+///  final dictionaryResponse = await duolingo.dictionary(
+///    wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
+///  );
+///
+///  print(dictionaryResponse);
+///
+///  for (final alternativeForm in dictionaryResponse.alternativeForms) {
+///    print(alternativeForm);
+///  }
+///
+///  for (final discussion in dictionaryResponse.relatedDiscussions) {
+///    print(discussion);
+///  }
+///
+///  for (final lexeme in dictionaryResponse.relatedLexemes) {
+///    print(lexeme);
+///  }
+///}
+///```
 class DictionaryResponse extends Response {
   /// Returns the new instance of [DictionaryResponse] based on arguments.
   DictionaryResponse.from({

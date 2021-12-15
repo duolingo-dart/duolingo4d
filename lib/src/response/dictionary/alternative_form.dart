@@ -5,6 +5,7 @@
 // Project imports:
 import 'package:duolingo4d/src/response/dictionary/discussion.dart';
 
+/// This class represents the subject in an alternative form.
 class AlternativeForm {
   /// Returns the new instance of [AlternativeForm] based on arguments.
   AlternativeForm.from({

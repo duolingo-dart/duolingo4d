@@ -2,6 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+/// This class represents a lexeme of subject.
 class Lexeme {
   /// Returns the new instance of [Lexeme] based on arguments.
   Lexeme.from({

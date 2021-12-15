@@ -108,5 +108,17 @@ void main() async {
 
   print(dictionaryResponse);
 
+  for (final alternativeForm in dictionaryResponse.alternativeForms) {
+    print(alternativeForm);
+  }
+
+  for (final discussion in dictionaryResponse.relatedDiscussions) {
+    print(discussion);
+  }
+
+  for (final lexeme in dictionaryResponse.relatedLexemes) {
+    print(lexeme);
+  }
+
   //! -------------- ↑ Authentication Required ↑ --------------
 }
