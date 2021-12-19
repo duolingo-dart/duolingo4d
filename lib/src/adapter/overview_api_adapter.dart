@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 
 /// This class provides the function to convert the response
@@ -34,9 +34,9 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        languageString: json.getStringValue(key: 'language_string'),
-        fromLanguage: json.getStringValue(key: 'from_language'),
-        learningLanguage: json.getStringValue(key: 'learning_language'),
+        languageString: json.getString(key: 'language_string'),
+        fromLanguage: json.getString(key: 'from_language'),
+        learningLanguage: json.getString(key: 'learning_language'),
         vocabularies: _buildVocabularies(
           jsonList: json.getJsonList(key: 'vocab_overview'),
         ),
@@ -51,20 +51,20 @@ class OverviewApiAdapter extends Adapter<OverviewResponse> {
     for (final json in jsonList) {
       vocabularies.add(
         Vocabulary.from(
-          id: json.getStringValue(key: 'id'),
-          word: json.getStringValue(key: 'word_string'),
-          normalizedWord: json.getStringValue(key: 'normalized_string'),
-          strengthBars: json.getIntValue(key: 'strength_bars'),
-          proficiency: json.getDoubleValue(key: 'strength'),
-          infinitive: json.getStringValue(key: 'infinitive'),
-          skill: json.getStringValue(key: 'skill'),
-          skillUrlTitle: json.getStringValue(key: 'skill_url_title'),
-          pos: json.getStringValue(key: 'pos'),
-          gender: json.getStringValue(key: 'gender'),
-          lexemeId: json.getStringValue(key: 'lexeme_id'),
+          id: json.getString(key: 'id'),
+          word: json.getString(key: 'word_string'),
+          normalizedWord: json.getString(key: 'normalized_string'),
+          strengthBars: json.getInt(key: 'strength_bars'),
+          proficiency: json.getDouble(key: 'strength'),
+          infinitive: json.getString(key: 'infinitive'),
+          skill: json.getString(key: 'skill'),
+          skillUrlTitle: json.getString(key: 'skill_url_title'),
+          pos: json.getString(key: 'pos'),
+          gender: json.getString(key: 'gender'),
+          lexemeId: json.getString(key: 'lexeme_id'),
           relatedLexemes: json.getStringValues(key: 'related_lexemes'),
-          lastPracticed: json.getStringValue(key: 'last_practiced'),
-          lastPracticedMs: json.getIntValue(key: 'last_practiced_ms'),
+          lastPracticed: json.getString(key: 'last_practiced'),
+          lastPracticedMs: json.getInt(key: 'last_practiced_ms'),
         ),
       );
     }

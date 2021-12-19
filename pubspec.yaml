@@ -11,6 +11,7 @@ dependencies:
   cache_storage: ^1.0.0
   collection: ^1.15.0
   http: ^0.13.4
+  json_pro: ^1.0.0
   sweet_cookie_jar: ^1.0.3
   universal_io: ^2.0.4
 

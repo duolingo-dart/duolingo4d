@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
 
 /// This class provides the function to convert the response
@@ -34,15 +34,15 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        ttsCdnUrl: json.getStringValue(key: 'tts_cdn_url'),
-        ageRestrictionLimit: json.getIntValue(
+        ttsCdnUrl: json.getString(key: 'tts_cdn_url'),
+        ageRestrictionLimit: json.getInt(
           key: 'age_restriction_limit',
         ),
-        country: json.getStringValue(key: 'country'),
-        apiBaseUrl: json.getStringValue(key: 'api_base_url'),
-        speechHost: json.getStringValue(key: 'speech_host'),
-        ttsBaseUrl: json.getStringValue(key: 'tts_base_url'),
-        dictBaseUrl: json.getStringValue(key: 'dict_base_url'),
+        country: json.getString(key: 'country'),
+        apiBaseUrl: json.getString(key: 'api_base_url'),
+        speechHost: json.getString(key: 'speech_host'),
+        ttsBaseUrl: json.getString(key: 'tts_base_url'),
+        dictBaseUrl: json.getString(key: 'dict_base_url'),
         ttsVoiceConfiguration: _buildTtsVoiceConfiguration(
           json: json.getJson(key: 'tts_voice_configuration'),
         ),
@@ -56,7 +56,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
     required Json json,
   }) {
     return TtsVoiceConfiguration.from(
-      path: json.getStringValue(key: 'path'),
+      path: json.getString(key: 'path'),
       multiVoiceDirections: _buildMultiVoiceDirections(
         json: json.getJson(key: 'multi_voices'),
       ),
@@ -94,7 +94,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
       voiceDirections.add(
         VoiceDirection.from(
           language: key,
-          voice: json.getStringValue(key: key),
+          voice: json.getString(key: key),
         ),
       );
     }

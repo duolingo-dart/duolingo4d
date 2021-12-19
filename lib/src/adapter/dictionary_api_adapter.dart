@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 
 class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
@@ -31,19 +31,18 @@ class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        id: json.getStringValue(key: 'lexeme_id'),
-        word: json.getStringValue(key: 'word'),
-        imageUrl: json.getStringValue(key: 'lexeme_image'),
-        fromLanguage: json.getStringValue(key: 'from_language'),
-        learningLanguage: json.getStringValue(key: 'learning_language'),
-        fromLanguageName: json.getStringValue(key: 'from_language_name'),
-        learningLanguageName:
-            json.getStringValue(key: 'learning_language_name'),
-        pos: json.getStringValue(key: 'pos'),
-        infinitive: json.getStringValue(key: 'infinitive'),
-        translations: json.getStringValue(key: 'translations'),
-        ttsUrl: json.getStringValue(key: 'tts'),
-        canonicalUrl: json.getStringValue(key: 'canonical_path'),
+        id: json.getString(key: 'lexeme_id'),
+        word: json.getString(key: 'word'),
+        imageUrl: json.getString(key: 'lexeme_image'),
+        fromLanguage: json.getString(key: 'from_language'),
+        learningLanguage: json.getString(key: 'learning_language'),
+        fromLanguageName: json.getString(key: 'from_language_name'),
+        learningLanguageName: json.getString(key: 'learning_language_name'),
+        pos: json.getString(key: 'pos'),
+        infinitive: json.getString(key: 'infinitive'),
+        translations: json.getString(key: 'translations'),
+        ttsUrl: json.getString(key: 'tts'),
+        canonicalUrl: json.getString(key: 'canonical_path'),
         alternativeForms: _buildAlternativeForms(
           jsonList: json.getJsonList(key: 'alternative_forms'),
         ),
@@ -53,8 +52,8 @@ class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
         relatedDiscussions: _buildDiscussions(
           jsonList: json.getJsonList(key: 'related_discussions'),
         ),
-        isGeneric: json.getBoolValue(key: 'is_generic'),
-        hasTts: json.getBoolValue(key: 'has_tts'),
+        isGeneric: json.getBool(key: 'is_generic'),
+        hasTts: json.getBool(key: 'has_tts'),
       );
 
   List<AlternativeForm> _buildAlternativeForms({
@@ -64,21 +63,21 @@ class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
     for (final json in jsonList) {
       alternativeForms.add(
         AlternativeForm.from(
-          word: json.getStringValue(key: 'word'),
-          numeral: json.getStringValue(key: 'number'),
-          gender: json.getStringValue(key: 'gender'),
-          text: json.getStringValue(key: 'text'),
-          translationText: json.getStringValue(key: 'translation_text'),
-          translation: json.getStringValue(key: 'translation'),
-          exampleSentence: json.getStringValue(key: 'example_sentence'),
-          link: json.getStringValue(key: 'link'),
-          ttsUrl: json.getStringValue(key: 'tts'),
+          word: json.getString(key: 'word'),
+          numeral: json.getString(key: 'number'),
+          gender: json.getString(key: 'gender'),
+          text: json.getString(key: 'text'),
+          translationText: json.getString(key: 'translation_text'),
+          translation: json.getString(key: 'translation'),
+          exampleSentence: json.getString(key: 'example_sentence'),
+          link: json.getString(key: 'link'),
+          ttsUrl: json.getString(key: 'tts'),
           discussion: _buildDiscussion(
             json: json.getJson(key: 'discussion'),
           ),
-          isMatched: json.getBoolValue(key: 'word_value_matched'),
-          isInvalid: json.getBoolValue(key: 'invalid'),
-          isHighlighted: json.getBoolValue(key: 'highlighted'),
+          isMatched: json.getBool(key: 'word_value_matched'),
+          isInvalid: json.getBool(key: 'invalid'),
+          isHighlighted: json.getBool(key: 'highlighted'),
         ),
       );
     }
@@ -93,8 +92,8 @@ class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
     for (final json in jsonList) {
       lexemes.add(
         Lexeme.from(
-          url: json.getStringValue(key: 'url'),
-          abchor: json.getStringValue(
+          url: json.getString(key: 'url'),
+          abchor: json.getString(
             key: 'anchor',
           ),
         ),
@@ -121,8 +120,8 @@ class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
     required Json json,
   }) =>
       Discussion.from(
-        url: json.getStringValue(key: 'url'),
-        numComments: json.getStringValue(key: 'num_comments'),
-        anchor: json.getStringValue(key: 'anchor'),
+        url: json.getString(key: 'url'),
+        numComments: json.getString(key: 'num_comments'),
+        anchor: json.getString(key: 'anchor'),
       );
 }

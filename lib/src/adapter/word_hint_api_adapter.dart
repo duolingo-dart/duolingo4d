@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 /// This class provides the function to convert the response
@@ -46,7 +46,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
     final hintTokens = <HintToken>[];
 
     for (final json in jsonList) {
-      final value = json.getStringValue(key: 'value');
+      final value = json.getString(key: 'value');
 
       if (value.trim().isEmpty) {
         continue;
@@ -54,7 +54,7 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
 
       hintTokens.add(
         HintToken.from(
-          index: json.getIntValue(key: 'index'),
+          index: json.getInt(key: 'index'),
           value: value,
           table: _buildHintTable(
             json: json.getJson(key: 'hint_table'),
@@ -89,8 +89,8 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
     for (final json in jsonList) {
       hintHeaders.add(
         HintHeader.from(
-          token: json.getStringValue(key: 'token'),
-          selected: json.getBoolValue(key: 'selected'),
+          token: json.getString(key: 'token'),
+          selected: json.getBool(key: 'selected'),
         ),
       );
     }
@@ -130,8 +130,8 @@ class WordHintApiAdapter extends Adapter<WordHintResponse> {
 
       hintCells.add(
         HintCell.from(
-          hint: json.getStringValue(key: 'hint'),
-          span: json.getIntValue(key: 'colspan'),
+          hint: json.getString(key: 'hint'),
+          span: json.getInt(key: 'colspan'),
         ),
       );
     }
