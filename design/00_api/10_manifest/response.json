@@ -1,0 +1,21 @@
+{
+    "short_name": "Duolingo",
+    "name": "Duolingo",
+    "icons": [
+        {
+            "src": "https://d35aaqx5ub95lt.cloudfront.net/images/pwa-icon-circle-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "https://d35aaqx5ub95lt.cloudfront.net/images/pwa-icon-circle-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/?utm_source=pwa_launch",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#eeeeee"
+}
