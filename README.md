@@ -16,15 +16,16 @@
     - [1.2.2. Import It](#122-import-it)
     - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
   - [1.3. Using](#13-using)
-    - [1.3.1. Version Info API](#131-version-info-api)
-    - [1.3.2. Authentication API](#132-authentication-api)
-    - [1.3.3. User API](#133-user-api)
-    - [1.3.4. Overview API](#134-overview-api)
-    - [1.3.5. Word Hint API](#135-word-hint-api)
-    - [1.3.6. Switch Language API](#136-switch-language-api)
-    - [1.3.7. Leaderboard API](#137-leaderboard-api)
-    - [1.3.8. Dictionary API](#138-dictionary-api)
-    - [1.3.9. Friends API](#139-friends-api)
+    - [1.3.1. Manifest](#131-manifest)
+    - [1.3.2. Version Info API](#132-version-info-api)
+    - [1.3.3. Authentication API](#133-authentication-api)
+    - [1.3.4. User API](#134-user-api)
+    - [1.3.5. Overview API](#135-overview-api)
+    - [1.3.6. Word Hint API](#136-word-hint-api)
+    - [1.3.7. Switch Language API](#137-switch-language-api)
+    - [1.3.8. Leaderboard API](#138-leaderboard-api)
+    - [1.3.9. Dictionary API](#139-dictionary-api)
+    - [1.3.10. Friends API](#1310-friends-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -41,6 +42,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 |                     | Auth Required | Remarks                                                                                                            |
 | :------------------ | :-----------: | :----------------------------------------------------------------------------------------------------------------- |
+| **Manifest**        |      ❌       | You can get the manifest information of Duolingo.                                                                  |
 | **Version Info**    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.                                   |
 | **Authentication**  |      ❌       | Authenticate user by using Duolingo registered username or email address and password.                             |
 | **User**            |      ✅       | You can fetch detailed user information.                                                                           |
@@ -114,7 +116,26 @@ void main() async {
 
 ## 1.3. Using
 
-### 1.3.1. Version Info API
+### 1.3.1. Manifest
+
+| Auth Required |                                             Method                                              |                                                   JSON                                                    |
+| :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ❌       | [manifest()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/manifest.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/10_manifest/response.json) |
+
+You can get the manifest information of Duolingo.
+
+This manifest information includes information about Duolingo icons and the theme and background colors used by Duolingo.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final response = await duolingo.manifest();
+  print(response);
+}
+```
+
+### 1.3.2. Version Info API
 
 | Auth Required |                                                Method                                                 |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -137,7 +158,7 @@ void main() async {
 }
 ```
 
-### 1.3.2. Authentication API
+### 1.3.3. Authentication API
 
 | Auth Required |                                                                           Method                                                                            |                                                      JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
@@ -184,7 +205,7 @@ void main() async {
 }
 ```
 
-### 1.3.3. User API
+### 1.3.4. User API
 
 | Auth Required |                                                     Method                                                      |                                                  JSON                                                  |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
@@ -227,7 +248,7 @@ void main() async {
 }
 ```
 
-### 1.3.4. Overview API
+### 1.3.5. Overview API
 
 | Auth Required |                                             Method                                              |                                                   JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
@@ -254,7 +275,7 @@ void main() async {
 }
 ```
 
-### 1.3.5. Word Hint API
+### 1.3.6. Word Hint API
 
 | Auth Required |                                                                                          Method                                                                                           |                                                   JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
@@ -296,7 +317,7 @@ void main() async {
 }
 ```
 
-### 1.3.6. Switch Language API
+### 1.3.7. Switch Language API
 
 | Auth Required |                                                                                   Method                                                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -325,7 +346,7 @@ void main() async {
 }
 ```
 
-### 1.3.7. Leaderboard API
+### 1.3.8. Leaderboard API
 
 | Auth Required |                                                Method                                                 |                                                     JSON                                                     |
 | :-----------: | :---------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
@@ -360,7 +381,7 @@ void main() async {
 }
 ```
 
-### 1.3.8. Dictionary API
+### 1.3.9. Dictionary API
 
 | Auth Required |                                                           Method                                                            |                                                      JSON                                                      |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
@@ -399,7 +420,7 @@ void main() async {
 }
 ```
 
-### 1.3.9. Friends API
+### 1.3.10. Friends API
 
 | Auth Required |                                                        Method                                                         |                                                   JSON                                                   |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |

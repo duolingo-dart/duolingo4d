@@ -27,6 +27,7 @@ void main() async {
     expect(session.requestHeader.cookie.csrfTokens.isNotEmpty, true);
   });
 
+  _testManifestApi();
   _testVersionInfoApi();
   _testUserApi();
   _testOverviewApi();
@@ -46,6 +47,28 @@ void main() async {
   //! Test the authentication API last,
   //! since duplicate authentication requests will affect other tests.
   _testAuthApi();
+}
+
+void _testManifestApi() {
+  test('Test Manifest Request.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.manifest();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.name.isNotEmpty, true);
+    expect(response.icons.isNotEmpty, true);
+    expect(response.backgroundColor.isNotEmpty, true);
+    expect(response.themeColor.isNotEmpty, true);
+
+    for (final icon in response.icons) {
+      expect(icon.src.isNotEmpty, true);
+      expect(icon.type.isNotEmpty, true);
+      expect(icon.sizes.isNotEmpty, true);
+    }
+  });
 }
 
 void _testVersionInfoApi() {

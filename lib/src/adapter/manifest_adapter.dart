@@ -33,8 +33,8 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
         icons: _buildIcons(
           jsonList: json.getJsonList(key: 'icons'),
         ),
-        backgroundColor: json.getString(key: 'backgroundColor'),
-        themeColor: json.getString(key: 'themeColor'),
+        backgroundColor: json.getString(key: 'background_color'),
+        themeColor: json.getString(key: 'theme_color'),
       );
 
   List<Icon> _buildIcons({required List<Json> jsonList}) {
