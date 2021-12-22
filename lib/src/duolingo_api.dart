@@ -27,6 +27,9 @@ enum DuolingoApi {
 
   /// Dictionary API
   dictionary,
+
+  /// The friends
+  friends,
 }
 
 /// The extension that represents endpoint of Duolingo API.
@@ -39,6 +42,7 @@ extension Endpoint on DuolingoApi {
       case DuolingoApi.auth:
         return 'https://www.duolingo.com/login';
       case DuolingoApi.user:
+      case DuolingoApi.friends:
         return 'https://www.duolingo.com/2017-06-30/users';
       case DuolingoApi.overview:
         return 'https://www.duolingo.com/vocabulary/overview';
