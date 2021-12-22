@@ -28,7 +28,7 @@ enum DuolingoApi {
   /// Dictionary API
   dictionary,
 
-  /// The friends
+  /// Friends API
   friends,
 }
 
