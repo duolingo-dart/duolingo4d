@@ -39,18 +39,17 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 ## 1.1. Supported Duolingo API
 
-| Name            | Auth Required | Remarks                                                                                                            |
-| :-------------- | :-----------: | :----------------------------------------------------------------------------------------------------------------- |
-| Version Info    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.                                   |
-| Authentication  |      ❌       | Authenticate user by using Duolingo registered username or email address and password.                             |
-| User            |      ✅       | You can fetch detailed user information.                                                                           |
-| Overview        |      ✅       | You can fetch information on all the words user have learned in Duolingo.                                          |
-| Word Hint       |      ✅       | You can fetch hint information about words and sentences.                                                          |
-| Switch Language |      ✅       | You can switch the learning language.                                                                              |
-| Leaderboard     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
-| Dictionary      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
-| Friends         |      ✅       | You can get information on all friends associated with a user id.                                                  |
-|                 |
+|                     | Auth Required | Remarks                                                                                                            |
+| :------------------ | :-----------: | :----------------------------------------------------------------------------------------------------------------- |
+| **Version Info**    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.                                   |
+| **Authentication**  |      ❌       | Authenticate user by using Duolingo registered username or email address and password.                             |
+| **User**            |      ✅       | You can fetch detailed user information.                                                                           |
+| **Overview**        |      ✅       | You can fetch information on all the words user have learned in Duolingo.                                          |
+| **Word Hint**       |      ✅       | You can fetch hint information about words and sentences.                                                          |
+| **Switch Language** |      ✅       | You can switch the learning language.                                                                              |
+| **Leaderboard**     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
+| **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
+| **Friends**         |      ✅       | You can get information on all friends associated with a user id.                                                  |
 
 ## 1.2. Introduction
 
