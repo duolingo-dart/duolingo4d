@@ -3,14 +3,14 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/adapter/friends_api_adapter.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
+import 'package:duolingo4d/src/adapter/friends_api_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/response/friends/friends_response.dart';
 
 class FriendsRequest extends Request<FriendsResponse> {
   /// Returns the new instance of [FriendsRequest] based on arguments.
