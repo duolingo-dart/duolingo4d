@@ -4,6 +4,9 @@
 
 /// The enum that represents Duolingo API.
 enum DuolingoApi {
+  /// Manifest API
+  manifest,
+
   /// Version Info API
   versionInfo,
 
@@ -37,6 +40,8 @@ extension Endpoint on DuolingoApi {
   /// Returns API url.
   String get url {
     switch (this) {
+      case DuolingoApi.manifest:
+        return 'https://www.duolingo.com/manifest.json';
       case DuolingoApi.versionInfo:
         return 'https://www.duolingo.com/api/1/version_info';
       case DuolingoApi.auth:

@@ -4,6 +4,8 @@ import 'package:duolingo4d/src/response/manifest/icon.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
+export 'package:duolingo4d/src/response/manifest/icon.dart';
+
 class ManifestResponse extends Response {
   /// Returns the new instance of [ManifestResponse] based on arguments.
   ManifestResponse.from({

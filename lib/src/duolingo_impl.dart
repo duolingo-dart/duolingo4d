@@ -13,6 +13,7 @@ import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/friends_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
+import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
@@ -37,6 +38,10 @@ class DuolingoImpl implements Duolingo {
   DuolingoSession get session => DuolingoSession.from(
         requestHeader: InternalSession.instance.requestHeader,
       );
+
+  @override
+  Future<ManifestResponse> manifest() async =>
+      await ManifestRequest.newInstance().send();
 
   @override
   Future<VersionInfoResponse> versionInfo() async =>
@@ -107,6 +112,18 @@ class DuolingoImpl implements Duolingo {
     required String userId,
   }) async =>
       await FriendsRequest.from(userId: userId).send();
+
+  @override
+  Future<ManifestResponse> cachedManifest() async {
+    if (_cacheStorage.has(key: DuolingoApi.manifest.name)) {
+      return _cacheStorage.match(key: DuolingoApi.manifest.name);
+    }
+
+    final response = await manifest();
+    _cacheStorage.save(key: DuolingoApi.manifest.name, value: response);
+
+    return response;
+  }
 
   @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
@@ -259,6 +276,10 @@ class DuolingoImpl implements Duolingo {
 
   @override
   void cleanCache() => _cacheStorage.delete();
+
+  @override
+  void cleanCachedManifest() =>
+      _cacheStorage.deleteBy(key: DuolingoApi.manifest.name);
 
   @override
   void cleanCachedVersionInfo() =>

@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.1.5
+
+- Added a feature that references the Manifest API.
+
 ## 0.1.4
 
 - Added a feature that references the Dictionary API.
