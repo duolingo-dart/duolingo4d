@@ -315,7 +315,7 @@ packages:
       name: sweet_cookie_jar
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.3"
+    version: "1.0.4"
   term_glyph:
     dependency: transitive
     description:
