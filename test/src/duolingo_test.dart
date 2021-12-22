@@ -34,6 +34,7 @@ void main() async {
   _testSwitchLanguageApi();
   _testLeaderboard();
   _testDictionary();
+  _testFriends();
 
   _testCachedVersionInfoApi();
   _testCachedUserApi();
@@ -152,6 +153,31 @@ void _testDictionary() {
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
+  });
+}
+
+void _testFriends() {
+  test('Test Friends API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.friends(
+      userId: '557897808',
+    );
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.friends.isNotEmpty, true);
+
+    for (final friend in response.friends) {
+      expect(friend.id.isNotEmpty, true);
+      expect(friend.username.isNotEmpty, true);
+      expect(friend.name.isNotEmpty, true);
+      expect(friend.pictureUrl.isNotEmpty, true);
+      expect(friend.weeklyXp > -1, true);
+      expect(friend.monthlyXp > -1, true);
+      expect(friend.totalXp > -1, true);
+    }
   });
 }
 

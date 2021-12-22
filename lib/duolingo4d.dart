@@ -16,3 +16,4 @@ export 'src/response/wordhint/word_hint_response.dart';
 export 'src/response/switchlanguage/switch_language_response.dart';
 export 'src/response/leaderboard/leaderboard_response.dart';
 export 'src/response/dictionary/dictionary_response.dart';
+export 'package:duolingo4d/src/response/friends/friends_response.dart';

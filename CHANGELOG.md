@@ -3,6 +3,7 @@
 ## 0.1.4
 
 - Added a feature that references the Dictionary API.
+- Added a feature that references the Friends API.
 
 ## 0.1.1 - 0.1.3
 

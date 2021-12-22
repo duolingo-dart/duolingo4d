@@ -10,22 +10,23 @@
 <!-- TOC -->
 
 - [1. About](#1-about)
-    - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
-    - [1.2. Introduction](#12-introduction)
-        - [1.2.1. Install Library](#121-install-library)
-        - [1.2.2. Import It](#122-import-it)
-        - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
-    - [1.3. Using](#13-using)
-        - [1.3.1. Version Info API](#131-version-info-api)
-        - [1.3.2. Authentication API](#132-authentication-api)
-        - [1.3.3. User API](#133-user-api)
-        - [1.3.4. Overview API](#134-overview-api)
-        - [1.3.5. Word Hint API](#135-word-hint-api)
-        - [1.3.6. Switch Language API](#136-switch-language-api)
-        - [1.3.7. Leaderboard API](#137-leaderboard-api)
-        - [1.3.8. Dictionary API](#138-dictionary-api)
-    - [1.4. License](#14-license)
-    - [1.5. More Information](#15-more-information)
+  - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
+  - [1.2. Introduction](#12-introduction)
+    - [1.2.1. Install Library](#121-install-library)
+    - [1.2.2. Import It](#122-import-it)
+    - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
+  - [1.3. Using](#13-using)
+    - [1.3.1. Version Info API](#131-version-info-api)
+    - [1.3.2. Authentication API](#132-authentication-api)
+    - [1.3.3. User API](#133-user-api)
+    - [1.3.4. Overview API](#134-overview-api)
+    - [1.3.5. Word Hint API](#135-word-hint-api)
+    - [1.3.6. Switch Language API](#136-switch-language-api)
+    - [1.3.7. Leaderboard API](#137-leaderboard-api)
+    - [1.3.8. Dictionary API](#138-dictionary-api)
+    - [1.3.9. Friends API](#139-friends-api)
+  - [1.4. License](#14-license)
+  - [1.5. More Information](#15-more-information)
 
 <!-- /TOC -->
 
@@ -48,6 +49,8 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | Switch Language |      ✅       | You can switch the learning language.                                                                              |
 | Leaderboard     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
 | Dictionary      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
+| Friends         |      ✅       | You can get information on all friends associated with a user id.                                                  |
+|                 |
 
 ## 1.2. Introduction
 
@@ -393,6 +396,32 @@ void main() async {
 
   for (final lexeme in dictionaryResponse.relatedLexemes) {
     print(lexeme);
+  }
+}
+```
+
+### 1.3.9. Friends API
+
+| Auth Required |                                                        Method                                                         |                                                   JSON                                                   |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ✅       | [friends({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/friends.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/09_friends/response.json) |
+
+From Friends API, you can get information on all friends associated with a user id.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final friendsResponse = await duolingo.friends(userId: 'xxxxxx');
+  print(friendsResponse);
+
+  for (final friend in friendsResponse.friends) {
+    print(friend);
   }
 }
 ```

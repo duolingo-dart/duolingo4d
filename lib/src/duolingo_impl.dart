@@ -10,6 +10,7 @@ import 'package:duolingo4d/duolingo4d.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
+import 'package:duolingo4d/src/request/friends_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
@@ -102,12 +103,18 @@ class DuolingoImpl implements Duolingo {
       await DictionaryRequest.from(wordId: wordId).send();
 
   @override
+  Future<FriendsResponse> friends({
+    required String userId,
+  }) async =>
+      await FriendsRequest.from(userId: userId).send();
+
+  @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
     if (_cacheStorage.has(key: DuolingoApi.versionInfo.name)) {
       return _cacheStorage.match(key: DuolingoApi.versionInfo.name);
     }
 
-    final response = await VersionInfoRequest.newInstance().send();
+    final response = await versionInfo();
     _cacheStorage.save(key: DuolingoApi.versionInfo.name, value: response);
 
     return response;
@@ -126,7 +133,7 @@ class DuolingoImpl implements Duolingo {
       );
     }
 
-    final response = await UserRequest.from(userId: userId).send();
+    final response = await user(userId: userId);
 
     _cacheStorage.save(
       key: DuolingoApi.user.name,
@@ -143,7 +150,7 @@ class DuolingoImpl implements Duolingo {
       return _cacheStorage.match(key: DuolingoApi.overview.name);
     }
 
-    final response = await OverviewRequest.newInstance().send();
+    final response = await overview();
     _cacheStorage.save(key: DuolingoApi.overview.name, value: response);
 
     return response;
@@ -171,11 +178,11 @@ class DuolingoImpl implements Duolingo {
       );
     }
 
-    final response = await WordHintRequest.from(
+    final response = await wordHint(
       fromLanguage: fromLanguage,
       learningLanguage: learningLanguage,
       sentence: sentence,
-    ).send();
+    );
 
     _cacheStorage.save(
       key: DuolingoApi.wordHint.name,
@@ -192,7 +199,7 @@ class DuolingoImpl implements Duolingo {
       return _cacheStorage.match(key: DuolingoApi.leaderboard.name);
     }
 
-    final response = await LeaderboardRequest.newInstance().send();
+    final response = await leaderboard();
     _cacheStorage.save(key: DuolingoApi.leaderboard.name, value: response);
 
     return response;
@@ -213,10 +220,36 @@ class DuolingoImpl implements Duolingo {
       );
     }
 
-    final response = await DictionaryRequest.from(wordId: wordId).send();
+    final response = await dictionary(wordId: wordId);
 
     _cacheStorage.save(
       key: DuolingoApi.dictionary.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
+  Future<FriendsResponse> cachedFriends({
+    required String userId,
+  }) async {
+    final cacheSubKeys = [userId];
+    if (_cacheStorage.has(
+      key: DuolingoApi.friends.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: DuolingoApi.friends.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await friends(userId: userId);
+
+    _cacheStorage.save(
+      key: DuolingoApi.friends.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -249,4 +282,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedDictionary() =>
       _cacheStorage.deleteBy(key: DuolingoApi.dictionary.name);
+
+  @override
+  void cleanCachedFriends() =>
+      _cacheStorage.deleteBy(key: DuolingoApi.friends.name);
 }
