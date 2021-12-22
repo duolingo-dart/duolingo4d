@@ -12,9 +12,9 @@ import 'package:duolingo4d/src/response/user/user_response.dart';
 
 /// This class provides the function to convert the response
 /// returned from the user API into the [UserResponse] format.
-class UserApiAdapter extends Adapter<UserResponse> {
-  /// Returns the new instance of [UserApiAdapter].
-  UserApiAdapter.newInstance();
+class UserAdapter extends Adapter<UserResponse> {
+  /// Returns the new instance of [UserAdapter].
+  UserAdapter.newInstance();
 
   @override
   UserResponse convert({

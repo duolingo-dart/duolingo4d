@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/word_hint_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/word_hint_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -34,7 +34,7 @@ class WordHintRequest extends Request<WordHintResponse> {
   final String sentence;
 
   /// The adapter
-  static final _adapter = WordHintApiAdapter.newInstance();
+  static final _adapter = WordHintAdapter.newInstance();
 
   @override
   Future<WordHintResponse> send() async => _adapter.convert(

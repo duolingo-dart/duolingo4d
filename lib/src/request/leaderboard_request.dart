@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/leaderboard_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/leaderboard_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -18,7 +18,7 @@ class LeaderboardRequest extends Request<LeaderboardResponse> {
   LeaderboardRequest.newInstance();
 
   /// The response adapter
-  static final _adapter = LeaderboardApiAdapter.newInstance();
+  static final _adapter = LeaderboardAdapter.newInstance();
 
   /// The API uri
   static final _apiUri = Uri.parse(DuolingoApi.leaderboard.url);

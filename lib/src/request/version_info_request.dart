@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/version_info_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/version_info_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';

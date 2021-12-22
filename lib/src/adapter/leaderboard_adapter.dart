@@ -12,9 +12,9 @@ import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
 /// This class provides the function to convert the response
 /// returned from the leaderboard API into the [LeaderboardResponse] format.
-class LeaderboardApiAdapter extends Adapter<LeaderboardResponse> {
-  /// Returns the new instance of [LeaderboardApiAdapter].
-  LeaderboardApiAdapter.newInstance();
+class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
+  /// Returns the new instance of [LeaderboardAdapter].
+  LeaderboardAdapter.newInstance();
 
   @override
   LeaderboardResponse convert({

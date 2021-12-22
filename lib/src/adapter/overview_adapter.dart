@@ -12,9 +12,9 @@ import 'package:duolingo4d/src/response/overview/overview_response.dart';
 
 /// This class provides the function to convert the response
 /// returned from the overview API into the [OverviewResponse] format.
-class OverviewApiAdapter extends Adapter<OverviewResponse> {
-  /// Returns the new instance of [OverviewApiAdapter].
-  OverviewApiAdapter.newInstance();
+class OverviewAdapter extends Adapter<OverviewResponse> {
+  /// Returns the new instance of [OverviewAdapter].
+  OverviewAdapter.newInstance();
 
   @override
   OverviewResponse convert({

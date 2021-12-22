@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/dictionary_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/dictionary_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -19,7 +19,7 @@ class DictionaryRequest extends Request<DictionaryResponse> {
   });
 
   /// The response adapter
-  static final _adapter = DictionaryApiAdapter.newInstance();
+  static final _adapter = DictionaryAdapter.newInstance();
 
   /// The word id
   final String wordId;

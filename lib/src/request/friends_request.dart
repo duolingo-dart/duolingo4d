@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/friends_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/friends_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -19,7 +19,7 @@ class FriendsRequest extends Request<FriendsResponse> {
   });
 
   /// The response adapter
-  static final _adapter = FriendsApiAdapter.newInstance();
+  static final _adapter = FriendsAdapter.newInstance();
 
   /// The word id
   final String userId;

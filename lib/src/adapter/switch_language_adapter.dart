@@ -11,9 +11,9 @@ import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.
 
 /// This class provides the function to convert the response
 /// returned from the switch language API into the [SwitchLanguageResponse] format.
-class SwitchLanguageApiAdapter extends Adapter<SwitchLanguageResponse> {
-  /// Returns the new instance of [SwitchLanguageApiAdapter].
-  SwitchLanguageApiAdapter.newInstance();
+class SwitchLanguageAdapter extends Adapter<SwitchLanguageResponse> {
+  /// Returns the new instance of [SwitchLanguageAdapter].
+  SwitchLanguageAdapter.newInstance();
 
   @override
   SwitchLanguageResponse convert({

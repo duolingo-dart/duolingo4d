@@ -10,9 +10,9 @@ import 'package:json_pro/json_pro.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/friends/friends_response.dart';
 
-class FriendsApiAdapter extends Adapter<FriendsResponse> {
-  /// Returns the new instance of [FriendsApiAdapter].
-  FriendsApiAdapter.newInstance();
+class FriendsAdapter extends Adapter<FriendsResponse> {
+  /// Returns the new instance of [FriendsAdapter].
+  FriendsAdapter.newInstance();
 
   @override
   FriendsResponse convert({

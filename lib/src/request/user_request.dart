@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/user_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/user_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -26,7 +26,7 @@ class UserRequest extends Request<UserResponse> {
   final String userId;
 
   /// The adapter
-  static final _adapter = UserApiAdapter.newInstance();
+  static final _adapter = UserAdapter.newInstance();
 
   @override
   Future<UserResponse> send() async => _adapter.convert(

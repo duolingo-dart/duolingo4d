@@ -12,9 +12,9 @@ import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 /// This class provides the function to convert the response
 /// returned from the word hint API into the [WordHintResponse] format.
-class WordHintApiAdapter extends Adapter<WordHintResponse> {
-  /// Returns the new instance of [WordHintApiAdapter].
-  WordHintApiAdapter.newInstance();
+class WordHintAdapter extends Adapter<WordHintResponse> {
+  /// Returns the new instance of [WordHintAdapter].
+  WordHintAdapter.newInstance();
 
   @override
   WordHintResponse convert({

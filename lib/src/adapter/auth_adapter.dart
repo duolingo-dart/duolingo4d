@@ -12,9 +12,9 @@ import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
 /// This class provides the function to convert the response
 /// returned from the authentication API into the [AuthResponse] format.
-class AuthApiAdapter extends Adapter<AuthResponse> {
-  /// Returns the new instance of [AuthApiAdapter].
-  AuthApiAdapter.newInstance();
+class AuthAdapter extends Adapter<AuthResponse> {
+  /// Returns the new instance of [AuthAdapter].
+  AuthAdapter.newInstance();
 
   @override
   AuthResponse convert({

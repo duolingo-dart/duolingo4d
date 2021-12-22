@@ -6,7 +6,7 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/overview_api_adapter.dart';
+import 'package:duolingo4d/src/adapter/overview_adapter.dart';
 import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
@@ -21,7 +21,7 @@ class OverviewRequest extends Request<OverviewResponse> {
   OverviewRequest.newInstance();
 
   /// The response adapter
-  static final _adapter = OverviewApiAdapter.newInstance();
+  static final _adapter = OverviewAdapter.newInstance();
 
   /// The API uri
   static final _apiUri = Uri.parse(DuolingoApi.overview.url);

@@ -10,9 +10,9 @@ import 'package:json_pro/json_pro.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 
-class DictionaryApiAdapter extends Adapter<DictionaryResponse> {
-  /// Returns the new instance of [DictionaryApiAdapter].
-  DictionaryApiAdapter.newInstance();
+class DictionaryAdapter extends Adapter<DictionaryResponse> {
+  /// Returns the new instance of [DictionaryAdapter].
+  DictionaryAdapter.newInstance();
 
   @override
   DictionaryResponse convert({
