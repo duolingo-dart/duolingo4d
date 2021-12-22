@@ -2,6 +2,7 @@
 
 | Name            | URL                                                         | Query Parameter                                        | Body                             | Required Auth |
 | --------------- | ----------------------------------------------------------- | ------------------------------------------------------ | -------------------------------- | ------------- |
+| Manifest        | <https://www.duolingo.com/manifest.json>                    | -                                                      | -                                | NO            |
 | Version Info    | <https://www.duolingo.com/api/1/version_info>               | -                                                      | -                                | NO            |
 | Login           | <https://www.duolingo.com/login>                            | ?login={username or email}&password={password}         | -                                | NO            |
 | Users           | <https://www.duolingo.com/2017-06-30/users>                 | /{userid}                                              | -                                | YES           |
