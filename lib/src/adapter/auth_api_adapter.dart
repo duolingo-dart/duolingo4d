@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
 /// This class provides the function to convert the response
@@ -34,8 +34,8 @@ class AuthApiAdapter extends Adapter<AuthResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        username: json.getStringValue(key: 'username'),
-        userId: json.getStringValue(key: 'user_id'),
+        username: json.getString(key: 'username'),
+        userId: json.getString(key: 'user_id'),
         error: _checkAuthError(json: json),
       );
 
@@ -51,8 +51,8 @@ class AuthApiAdapter extends Adapter<AuthResponse> {
     }
 
     return AuthError.from(
-      code: json.getStringValue(key: 'failure'),
-      reason: json.getStringValue(key: 'message'),
+      code: json.getString(key: 'failure'),
+      reason: json.getString(key: 'message'),
     );
   }
 }

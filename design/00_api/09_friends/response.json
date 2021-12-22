@@ -1,0 +1,28 @@
+{
+    "nextCursor": null,
+    "totalSubscriptions": 2,
+    "subscriptions": [
+        {
+            "username": "sega_m00n",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/695817668/XvawluOM_H",
+            "name": "Gavrilla Christabelle",
+            "monthlyXp": 1370,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 2339,
+            "id": 695817668,
+            "hasPlus": false
+        },
+        {
+            "username": "A.-.A.-.",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/433800710/UN5XlI8T0U",
+            "name": "A - A -.",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 475,
+            "id": 433800710,
+            "hasPlus": false
+        }
+    ]
+}

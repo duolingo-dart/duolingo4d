@@ -25,6 +25,9 @@ enum DuolingoApi {
   /// Leaderboard API
   leaderboard,
 
+  /// Dictionary API
+  dictionary,
+
   /// Friends API
   friends,
 }
@@ -49,6 +52,8 @@ extension Endpoint on DuolingoApi {
         return 'https://www.duolingo.com/switch_language';
       case DuolingoApi.leaderboard:
         return 'https://www.duolingo.com/friendships/leaderboard_activity';
+      case DuolingoApi.dictionary:
+        return 'https://www.duolingo.com/api/1/dictionary_page';
     }
   }
 }

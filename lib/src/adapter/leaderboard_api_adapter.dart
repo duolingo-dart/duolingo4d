@@ -4,13 +4,11 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
-import 'package:duolingo4d/src/response/leaderboard/ranking.dart';
-import 'package:duolingo4d/src/response/leaderboard/score.dart';
 
 /// This class provides the function to convert the response
 /// returned from the leaderboard API into the [LeaderboardResponse] format.
@@ -57,7 +55,7 @@ class LeaderboardApiAdapter extends Adapter<LeaderboardResponse> {
       items.add(
         Score.from(
           userId: key,
-          xp: json.getIntValue(key: key),
+          xp: json.getInt(key: key),
         ),
       );
     }

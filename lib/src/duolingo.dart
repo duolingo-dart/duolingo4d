@@ -6,6 +6,7 @@
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
+import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
@@ -259,6 +260,48 @@ abstract class Duolingo {
   /// ```
   Future<LeaderboardResponse> leaderboard();
 
+  /// Returns the dictionary information linked to [wordId].
+  ///
+  /// A call to this method will always cause a communication process with the Duolingo API.
+  /// If you want to reuse the cached response object, use [cachedDictionary].
+  ///
+  /// From this API, you can refer to the information on the official Duolingo page at the following URL:
+  /// https://www.duolingo.com/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9
+  ///
+  /// **_Example:_**
+  ///
+  ///```dart
+  ///void main() async {
+  ///  final duolingo = Duolingo.instance;
+  ///
+  ///  final authResponse = await duolingo.authenticate(
+  ///    username: 'test_username',
+  ///    password: 'test_password',
+  ///  );
+  ///
+  ///  final dictionaryResponse = await duolingo.dictionary(
+  ///    wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
+  ///  );
+  ///
+  ///  print(dictionaryResponse);
+  ///
+  ///  for (final alternativeForm in dictionaryResponse.alternativeForms) {
+  ///    print(alternativeForm);
+  ///  }
+  ///
+  ///  for (final discussion in dictionaryResponse.relatedDiscussions) {
+  ///    print(discussion);
+  ///  }
+  ///
+  ///  for (final lexeme in dictionaryResponse.relatedLexemes) {
+  ///    print(lexeme);
+  ///  }
+  ///}
+  ///```
+  Future<DictionaryResponse> dictionary({
+    required String wordId,
+  });
+
   /// Returns cached metadata about the configuration of the Duolingo service.
   ///
   /// The first call to this [cachedVersionInfo] method will always result in a communication with the Duolingo API
@@ -473,6 +516,55 @@ abstract class Duolingo {
   ///```
   Future<LeaderboardResponse> cachedLeaderboard();
 
+  /// Returns cached dictionary information linked to [wordId].
+  ///
+  /// From this API, you can refer to the information on the official Duolingo page at the following URL:
+  /// https://www.duolingo.com/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9
+  ///
+  /// The first call to this [cachedDictionary] method will always result in a communication with the Duolingo API
+  /// because there is no cached [DictionaryResponse]. In the second and subsequent method calls, the cached [DictionaryResponse]
+  /// from the first method call will be returned.
+  ///
+  /// The type and data structure of the response is consistent with the [dictionary] method. However, please note that
+  /// the cached data is returned from this method, so unless you explicitly delete this cached object data,
+  /// the cached response object will always be returned.
+  ///
+  /// To delete the explicitly cached [DictionaryResponse], call the [cleanCachedDictionary] method.
+  ///
+  /// **_Example:_**
+  ///
+  ///```dart
+  ///void main() async {
+  ///  final duolingo = Duolingo.instance;
+  ///
+  ///  final authResponse = await duolingo.authenticate(
+  ///    username: 'test_username',
+  ///    password: 'test_password',
+  ///  );
+  ///
+  ///  final dictionaryResponse = await duolingo.cachedDictionary(
+  ///    wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
+  ///  );
+  ///
+  ///  print(dictionaryResponse);
+  ///
+  ///  for (final alternativeForm in dictionaryResponse.alternativeForms) {
+  ///    print(alternativeForm);
+  ///  }
+  ///
+  ///  for (final discussion in dictionaryResponse.relatedDiscussions) {
+  ///    print(discussion);
+  ///  }
+  ///
+  ///  for (final lexeme in dictionaryResponse.relatedLexemes) {
+  ///    print(lexeme);
+  ///  }
+  ///}
+  ///```
+  Future<DictionaryResponse> cachedDictionary({
+    required String wordId,
+  });
+
   /// Deletes all cached response objects.
   void cleanCache();
 
@@ -490,4 +582,7 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedLeaderboard] method.
   void cleanCachedLeaderboard();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedDictionary] method.
+  void cleanCachedDictionary();
 }

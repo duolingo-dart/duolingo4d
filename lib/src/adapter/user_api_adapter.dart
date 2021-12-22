@@ -4,10 +4,10 @@
 
 // Package imports:
 import 'package:http/http.dart';
+import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/adapter/json.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 
 /// This class provides the function to convert the response
@@ -34,20 +34,20 @@ class UserApiAdapter extends Adapter<UserResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        id: json.getIntValue(key: 'id').toString(),
-        username: json.getStringValue(key: 'username'),
-        name: json.getStringValue(key: 'name'),
-        biography: json.getStringValue(key: 'bio'),
-        profileCountry: json.getStringValue(key: 'profileCountry'),
-        email: json.getStringValue(key: 'email'),
-        isVerifiedEmail: json.getBoolValue(key: 'emailVerified'),
-        pictureUrl: json.getStringValue(key: 'picture'),
-        timezone: json.getStringValue(key: 'timezone'),
-        timezoneOffset: json.getStringValue(key: 'timezoneOffset'),
-        motivation: json.getStringValue(key: 'motivation'),
-        inviteUrl: json.getStringValue(key: 'inviteURL'),
-        fromLanguage: json.getStringValue(key: 'fromLanguage'),
-        learningLanguage: json.getStringValue(key: 'learningLanguage'),
+        id: json.getInt(key: 'id').toString(),
+        username: json.getString(key: 'username'),
+        name: json.getString(key: 'name'),
+        biography: json.getString(key: 'bio'),
+        profileCountry: json.getString(key: 'profileCountry'),
+        email: json.getString(key: 'email'),
+        isVerifiedEmail: json.getBool(key: 'emailVerified'),
+        pictureUrl: json.getString(key: 'picture'),
+        timezone: json.getString(key: 'timezone'),
+        timezoneOffset: json.getString(key: 'timezoneOffset'),
+        motivation: json.getString(key: 'motivation'),
+        inviteUrl: json.getString(key: 'inviteURL'),
+        fromLanguage: json.getString(key: 'fromLanguage'),
+        learningLanguage: json.getString(key: 'learningLanguage'),
         trackingProperty: _buildTrackingProperty(
           json: json.getJson(key: 'trackingProperties'),
         ),
@@ -66,24 +66,24 @@ class UserApiAdapter extends Adapter<UserResponse> {
         lastStreak: _buildLastStreak(
           json: json.getJson(key: 'lastStreak'),
         ),
-        xpGoalMetToday: json.getBoolValue(key: 'xpGoalMetToday'),
-        xpGoal: json.getIntValue(key: 'xpGoal'),
-        weeklyXp: json.getIntValue(key: 'weeklyXp'),
-        monthlyXp: json.getIntValue(key: 'monthlyXp'),
-        totalXp: json.getIntValue(key: 'totalXp'),
-        lingots: json.getIntValue(key: 'lingots'),
-        gems: json.getIntValue(key: 'gems'),
-        currentCourseId: json.getStringValue(key: 'currentCourseId'),
-        coachOutfit: json.getStringValue(key: 'coachOutfit'),
-        streak: json.getIntValue(key: 'streak'),
-        longestStreak: json.getIntValue(key: 'longestStreak'),
-        plusStatus: json.getStringValue(key: 'plusStatus'),
-        hasPlus: json.getBoolValue(key: 'hasPlus'),
+        xpGoalMetToday: json.getBool(key: 'xpGoalMetToday'),
+        xpGoal: json.getInt(key: 'xpGoal'),
+        weeklyXp: json.getInt(key: 'weeklyXp'),
+        monthlyXp: json.getInt(key: 'monthlyXp'),
+        totalXp: json.getInt(key: 'totalXp'),
+        lingots: json.getInt(key: 'lingots'),
+        gems: json.getInt(key: 'gems'),
+        currentCourseId: json.getString(key: 'currentCourseId'),
+        coachOutfit: json.getString(key: 'coachOutfit'),
+        streak: json.getInt(key: 'streak'),
+        longestStreak: json.getInt(key: 'longestStreak'),
+        plusStatus: json.getString(key: 'plusStatus'),
+        hasPlus: json.getBool(key: 'hasPlus'),
         practiceReminderSettings: _buildPracticeReminderSettings(
           json: json.getJson(key: 'practiceReminderSettings'),
         ),
         createdAt: DateTime.fromMillisecondsSinceEpoch(
-          json.getIntValue(key: 'creationDate'),
+          json.getInt(key: 'creationDate'),
         ),
       );
 
@@ -91,43 +91,43 @@ class UserApiAdapter extends Adapter<UserResponse> {
     required Json json,
   }) =>
       TrackingProperty.from(
-        userId: json.getIntValue(key: 'user_id').toString(),
-        username: json.getStringValue(key: 'username'),
-        learningLanguage: json.getStringValue(key: 'learning_language'),
-        learningReason: json.getStringValue(key: 'learning_reason'),
-        uiLanguage: json.getStringValue(key: 'ui_language'),
-        level: json.getIntValue(key: 'level'),
-        followers: json.getIntValue(key: 'num_followers'),
-        following: json.getIntValue(key: 'num_following'),
-        lingots: json.getIntValue(key: 'lingots'),
-        gems: json.getIntValue(key: 'gems'),
-        goalXp: json.getIntValue(key: 'goal'),
-        streak: json.getIntValue(key: 'streak'),
-        hasFullname: json.getBoolValue(key: 'has_fullname'),
-        hasItemStreakFreeze: json.getBoolValue(key: 'has_item_streak_freeze'),
-        hasItemStreakRepair: json.getBoolValue(key: 'has_item_streak_repair'),
-        hasItemStreakWager: json.getBoolValue(key: 'has_item_streak_wager'),
-        hasItemWeekendAmulet: json.getBoolValue(key: 'has_item_weekend_amulet'),
-        hasItemRupeeWager: json.getBoolValue(key: 'has_item_rupee_wager'),
-        hasItemPremiumSubscription: json.getBoolValue(
+        userId: json.getInt(key: 'user_id').toString(),
+        username: json.getString(key: 'username'),
+        learningLanguage: json.getString(key: 'learning_language'),
+        learningReason: json.getString(key: 'learning_reason'),
+        uiLanguage: json.getString(key: 'ui_language'),
+        level: json.getInt(key: 'level'),
+        followers: json.getInt(key: 'num_followers'),
+        following: json.getInt(key: 'num_following'),
+        lingots: json.getInt(key: 'lingots'),
+        gems: json.getInt(key: 'gems'),
+        goalXp: json.getInt(key: 'goal'),
+        streak: json.getInt(key: 'streak'),
+        hasFullname: json.getBool(key: 'has_fullname'),
+        hasItemStreakFreeze: json.getBool(key: 'has_item_streak_freeze'),
+        hasItemStreakRepair: json.getBool(key: 'has_item_streak_repair'),
+        hasItemStreakWager: json.getBool(key: 'has_item_streak_wager'),
+        hasItemWeekendAmulet: json.getBool(key: 'has_item_weekend_amulet'),
+        hasItemRupeeWager: json.getBool(key: 'has_item_rupee_wager'),
+        hasItemPremiumSubscription: json.getBool(
           key: 'has_item_premium_subscription',
         ),
-        hasItemLiveSubscription: json.getBoolValue(
+        hasItemLiveSubscription: json.getBool(
           key: 'has_item_live_subscription',
         ),
-        hasItemImmersiveSubscription: json.getBoolValue(
+        hasItemImmersiveSubscription: json.getBool(
           key: 'has_item_immersive_subscription',
         ),
-        hasPicture: json.getBoolValue(key: 'has_picture'),
-        hasPhoneNumber: json.getBoolValue(key: 'has_phone_number'),
-        isAgeRestricted: json.getBoolValue(key: 'is_age_restricted'),
-        isTrialAccount: json.getBoolValue(key: 'trial_account'),
-        numberStreakFreeze: json.getIntValue(key: 'num_item_streak_freeze'),
-        numberUnlockedSection: json.getIntValue(key: 'num_sections_unlocked'),
-        numberCompletedSession: json.getIntValue(key: 'num_sessions_completed'),
-        numberUnlockedSkill: json.getIntValue(key: 'num_skills_unlocked'),
-        numberClassroom: json.getIntValue(key: 'num_classrooms'),
-        numberObservee: json.getIntValue(key: 'num_observees'),
+        hasPicture: json.getBool(key: 'has_picture'),
+        hasPhoneNumber: json.getBool(key: 'has_phone_number'),
+        isAgeRestricted: json.getBool(key: 'is_age_restricted'),
+        isTrialAccount: json.getBool(key: 'trial_account'),
+        numberStreakFreeze: json.getInt(key: 'num_item_streak_freeze'),
+        numberUnlockedSection: json.getInt(key: 'num_sections_unlocked'),
+        numberCompletedSession: json.getInt(key: 'num_sessions_completed'),
+        numberUnlockedSkill: json.getInt(key: 'num_skills_unlocked'),
+        numberClassroom: json.getInt(key: 'num_classrooms'),
+        numberObservee: json.getInt(key: 'num_observees'),
         achievements: json.getStringValues(key: 'achievements'),
       );
 
@@ -136,9 +136,9 @@ class UserApiAdapter extends Adapter<UserResponse> {
     required Json json,
   }) =>
       XpConfiguration.from(
-        maxSkillTestXp: json.getIntValue(key: 'maxSkillTestXp'),
-        maxPlacementTestXp: json.getIntValue(key: 'maxPlacementTestXp'),
-        maxCheckpointTestXp: json.getIntValue(key: 'maxCheckpointTestXp'),
+        maxSkillTestXp: json.getInt(key: 'maxSkillTestXp'),
+        maxPlacementTestXp: json.getInt(key: 'maxPlacementTestXp'),
+        maxCheckpointTestXp: json.getInt(key: 'maxCheckpointTestXp'),
       );
 
   /// Returns [GemsConfiguration] based on [json].
@@ -146,9 +146,9 @@ class UserApiAdapter extends Adapter<UserResponse> {
     required Json json,
   }) =>
       GemsConfiguration.from(
-        gems: json.getIntValue(key: 'gems'),
-        gemsPerSkill: json.getIntValue(key: 'gemsPerSkill'),
-        useGems: json.getBoolValue(key: 'useGems'),
+        gems: json.getInt(key: 'gems'),
+        gemsPerSkill: json.getInt(key: 'gemsPerSkill'),
+        useGems: json.getBool(key: 'useGems'),
       );
 
   /// Returns [Course] list based on [jsonList].
@@ -160,12 +160,12 @@ class UserApiAdapter extends Adapter<UserResponse> {
     for (final json in jsonList) {
       courses.add(
         Course.from(
-          id: json.getStringValue(key: 'id'),
-          title: json.getStringValue(key: 'title'),
-          fromLanguage: json.getStringValue(key: 'fromLanguage'),
-          learningLanguage: json.getStringValue(key: 'learningLanguage'),
-          xp: json.getIntValue(key: 'xp'),
-          crowns: json.getIntValue(key: 'crowns'),
+          id: json.getString(key: 'id'),
+          title: json.getString(key: 'title'),
+          fromLanguage: json.getString(key: 'fromLanguage'),
+          learningLanguage: json.getString(key: 'learningLanguage'),
+          xp: json.getInt(key: 'xp'),
+          crowns: json.getInt(key: 'crowns'),
         ),
       );
     }
@@ -178,16 +178,16 @@ class UserApiAdapter extends Adapter<UserResponse> {
     required Json json,
   }) =>
       CurrentCourse.from(
-        id: json.getStringValue(key: 'id'),
-        title: json.getStringValue(key: 'title'),
-        fromLanguage: json.getStringValue(key: 'fromLanguage'),
-        leraningLanguage: json.getStringValue(key: 'learningLanguage'),
-        numberOfLearnedWords: json.getIntValue(key: 'wordsLearned'),
-        numberOfWords: json.getIntValue(key: 'numberOfWords'),
-        numberOfSentences: json.getIntValue(key: 'numberOfSentences'),
-        xp: json.getIntValue(key: 'xp'),
-        crowns: json.getIntValue(key: 'crowns'),
-        extraCrowns: json.getIntValue(key: 'extraCrowns'),
+        id: json.getString(key: 'id'),
+        title: json.getString(key: 'title'),
+        fromLanguage: json.getString(key: 'fromLanguage'),
+        leraningLanguage: json.getString(key: 'learningLanguage'),
+        numberOfLearnedWords: json.getInt(key: 'wordsLearned'),
+        numberOfWords: json.getInt(key: 'numberOfWords'),
+        numberOfSentences: json.getInt(key: 'numberOfSentences'),
+        xp: json.getInt(key: 'xp'),
+        crowns: json.getInt(key: 'crowns'),
+        extraCrowns: json.getInt(key: 'extraCrowns'),
         skills: _buildSkills(
           jsonList: json.getJsonList(key: 'skills'),
         ),
@@ -202,22 +202,22 @@ class UserApiAdapter extends Adapter<UserResponse> {
     for (final json in jsonList) {
       skills.add(
         Skill.from(
-          id: json.getStringValue(key: 'id'),
-          iconId: json.getIntValue(key: 'iconId'),
-          name: json.getStringValue(key: 'name'),
-          shortName: json.getStringValue(key: 'shortName'),
-          urlName: json.getStringValue(key: 'urlName'),
-          levels: json.getIntValue(key: 'levels'),
-          finishedLevels: json.getIntValue(key: 'finishedLevels'),
-          lessons: json.getIntValue(key: 'lessons'),
-          finishedLessons: json.getIntValue(key: 'finishedLessons'),
-          proficiency: json.getDoubleValue(key: 'strength'),
-          tipsAndNotes: json.getStringValue(key: 'tipsAndNotes'),
-          finalLevelTimeLimit: json.getIntValue(key: 'finalLevelTimeLimit'),
-          isAccessible: json.getBoolValue(key: 'accessible'),
-          isPerfectOnLastLesson: json.getBoolValue(key: 'lastLessonPerfect'),
-          perfectLessonStreak: json.getIntValue(key: 'perfectLessonStreak'),
-          hasFinalLevel: json.getBoolValue(key: 'hasFinalLevel'),
+          id: json.getString(key: 'id'),
+          iconId: json.getInt(key: 'iconId'),
+          name: json.getString(key: 'name'),
+          shortName: json.getString(key: 'shortName'),
+          urlName: json.getString(key: 'urlName'),
+          levels: json.getInt(key: 'levels'),
+          finishedLevels: json.getInt(key: 'finishedLevels'),
+          lessons: json.getInt(key: 'lessons'),
+          finishedLessons: json.getInt(key: 'finishedLessons'),
+          proficiency: json.getDouble(key: 'strength'),
+          tipsAndNotes: json.getString(key: 'tipsAndNotes'),
+          finalLevelTimeLimit: json.getInt(key: 'finalLevelTimeLimit'),
+          isAccessible: json.getBool(key: 'accessible'),
+          isPerfectOnLastLesson: json.getBool(key: 'lastLessonPerfect'),
+          perfectLessonStreak: json.getInt(key: 'perfectLessonStreak'),
+          hasFinalLevel: json.getBool(key: 'hasFinalLevel'),
         ),
       );
     }
@@ -230,9 +230,9 @@ class UserApiAdapter extends Adapter<UserResponse> {
     required Json json,
   }) =>
       LastStreak.from(
-        daysAgo: json.getIntValue(key: 'daysAgo'),
+        daysAgo: json.getInt(key: 'daysAgo'),
         lastReachedGoalAt: DateTime.fromMillisecondsSinceEpoch(
-          json.getIntValue(key: 'lastReachedGoal'),
+          json.getInt(key: 'lastReachedGoal'),
         ),
       );
 
@@ -247,12 +247,12 @@ class UserApiAdapter extends Adapter<UserResponse> {
       practiceReminderSettings.add(
         PracticeReminderSetting.from(
           learningLanguage: key,
-          timeInMinutes: childJson.getIntValue(key: 'timeInMinutes'),
-          isEnabledPush: childJson.getBoolValue(key: 'pushEnabled'),
-          useSmartReminderTime: childJson.getBoolValue(
+          timeInMinutes: childJson.getInt(key: 'timeInMinutes'),
+          isEnabledPush: childJson.getBool(key: 'pushEnabled'),
+          useSmartReminderTime: childJson.getBool(
             key: 'useSmartReminderTime',
           ),
-          isEnabledEmail: childJson.getBoolValue(key: 'emailEnabled'),
+          isEnabledEmail: childJson.getBool(key: 'emailEnabled'),
         ),
       );
     }

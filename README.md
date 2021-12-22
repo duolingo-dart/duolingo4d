@@ -10,21 +10,22 @@
 <!-- TOC -->
 
 - [1. About](#1-about)
-  - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
-  - [1.2. Introduction](#12-introduction)
-    - [1.2.1. Install Library](#121-install-library)
-    - [1.2.2. Import It](#122-import-it)
-    - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
-  - [1.3. Using](#13-using)
-    - [1.3.1. Version Info API](#131-version-info-api)
-    - [1.3.2. Authentication API](#132-authentication-api)
-    - [1.3.3. User API](#133-user-api)
-    - [1.3.4. Overview API](#134-overview-api)
-    - [1.3.5. Word Hint API](#135-word-hint-api)
-    - [1.3.6. Switch Language API](#136-switch-language-api)
-    - [1.3.7. Leaderboard API](#137-leaderboard-api)
-  - [1.4. License](#14-license)
-  - [1.5. More Information](#15-more-information)
+    - [1.1. Supported Duolingo API](#11-supported-duolingo-api)
+    - [1.2. Introduction](#12-introduction)
+        - [1.2.1. Install Library](#121-install-library)
+        - [1.2.2. Import It](#122-import-it)
+        - [1.2.3. Use Duolingo4D](#123-use-duolingo4d)
+    - [1.3. Using](#13-using)
+        - [1.3.1. Version Info API](#131-version-info-api)
+        - [1.3.2. Authentication API](#132-authentication-api)
+        - [1.3.3. User API](#133-user-api)
+        - [1.3.4. Overview API](#134-overview-api)
+        - [1.3.5. Word Hint API](#135-word-hint-api)
+        - [1.3.6. Switch Language API](#136-switch-language-api)
+        - [1.3.7. Leaderboard API](#137-leaderboard-api)
+        - [1.3.8. Dictionary API](#138-dictionary-api)
+    - [1.4. License](#14-license)
+    - [1.5. More Information](#15-more-information)
 
 <!-- /TOC -->
 
@@ -37,15 +38,16 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 ## 1.1. Supported Duolingo API
 
-| Name            | Auth Required | Remarks                                                                                |
-| :-------------- | :-----------: | :------------------------------------------------------------------------------------- |
-| Version Info    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.       |
-| Authentication  |      ❌       | Authenticate user by using Duolingo registered username or email address and password. |
-| User            |      ✅       | You can fetch detailed user information.                                               |
-| Overview        |      ✅       | You can fetch information on all the words user have learned in Duolingo.              |
-| Word Hint       |      ✅       | You can fetch hint information about words and sentences.                              |
-| Switch Language |      ✅       | You can switch the learning language.                                                  |
-| Leaderboard     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.              |
+| Name            | Auth Required | Remarks                                                                                                            |
+| :-------------- | :-----------: | :----------------------------------------------------------------------------------------------------------------- |
+| Version Info    |      ❌       | You can fetch metadata about the various configurations of services in Duolingo.                                   |
+| Authentication  |      ❌       | Authenticate user by using Duolingo registered username or email address and password.                             |
+| User            |      ✅       | You can fetch detailed user information.                                                                           |
+| Overview        |      ✅       | You can fetch information on all the words user have learned in Duolingo.                                          |
+| Word Hint       |      ✅       | You can fetch hint information about words and sentences.                                                          |
+| Switch Language |      ✅       | You can switch the learning language.                                                                              |
+| Leaderboard     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
+| Dictionary      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 
 ## 1.2. Introduction
 
@@ -352,6 +354,45 @@ void main() async {
   for (final score in ranking.scores) {
     print(score.userId);
     print(score.xp);
+  }
+}
+```
+
+### 1.3.8. Dictionary API
+
+| Auth Required |                                                           Method                                                            |                                                      JSON                                                      |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [dictionary({required String wordId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/dictionary.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/08_dictionary/response_en.json) |
+
+Dictionary API allows you to get detailed information including discussion information associated with a particular word, URL to audio data, and sample sentences.
+
+Specifically, you can get the information on [this page](https://www.duolingo.com/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9) on the official Duolingo.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final dictionaryResponse = await duolingo.dictionary(
+    wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
+  );
+
+  print(dictionaryResponse);
+
+  for (final alternativeForm in dictionaryResponse.alternativeForms) {
+    print(alternativeForm);
+  }
+
+  for (final discussion in dictionaryResponse.relatedDiscussions) {
+    print(discussion);
+  }
+
+  for (final lexeme in dictionaryResponse.relatedLexemes) {
+    print(lexeme);
   }
 }
 ```

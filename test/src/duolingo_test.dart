@@ -33,12 +33,14 @@ void main() async {
   _testWordHintApi();
   _testSwitchLanguageApi();
   _testLeaderboard();
+  _testDictionary();
 
   _testCachedVersionInfoApi();
   _testCachedUserApi();
   _testCachedOverviewApi();
   _testCachedWordHintApi();
   _testCachedLeaderboard();
+  _testCachedDictionary();
 
   //! Test the authentication API last,
   //! since duplicate authentication requests will affect other tests.
@@ -137,6 +139,19 @@ void _testLeaderboard() {
 
     expect(response.ranking.scores.isNotEmpty, true);
     expect(response.userIds.isNotEmpty, true);
+  });
+}
+
+void _testDictionary() {
+  test('Test Dictionary API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.dictionary(
+      wordId: '949c64079503b63ec9b795019476c27b',
+    );
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
   });
 }
 
@@ -281,6 +296,28 @@ void _testCachedLeaderboard() {
 
     expect(cachedResponse.ranking.scores.isNotEmpty, true);
     expect(cachedResponse.userIds.isNotEmpty, true);
+  });
+}
+
+void _testCachedDictionary() {
+  test('Test Dictionary API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.cachedDictionary(
+      wordId: '949c64079503b63ec9b795019476c27b',
+    );
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    final cachedResponse = await duolingo.cachedDictionary(
+      wordId: '949c64079503b63ec9b795019476c27b',
+    );
+    expect(response == cachedResponse, true);
+
+    expect(cachedResponse.status.code, 200);
+    expect(cachedResponse.status.reasonPhrase, 'OK');
+    expect(cachedResponse.headers.isNotEmpty, true);
   });
 }
 

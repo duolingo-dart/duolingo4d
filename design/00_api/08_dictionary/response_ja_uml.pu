@@ -1,0 +1,112 @@
+@startjson "Word Definition"
+{
+    "alternative_forms": [
+        {
+            "case": null,
+            "gender": null,
+            "word": "数学",
+            "tts": "https://d1vq87e9lcf771.cloudfront.net/beaja/d52b611fb0cb11c0a4bd1e33e1971230",
+            "text": "明日は数学の試験があるでしょう。",
+            "discussion": null,
+            "number": null,
+            "invalid": false,
+            "highlighted": true,
+            "translation_text": "We will probably have a math exam tomorrow.",
+            "link": "/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9",
+            "example_sentence": "明日は数学の試験があるでしょう。",
+            "word_value_matched": true,
+            "translation": "We will probably have a <span class=\"highlighted\">math</span> exam tomorrow."
+        },
+        {
+            "case": null,
+            "gender": null,
+            "word": "数学",
+            "tts": "https://d1vq87e9lcf771.cloudfront.net/zarija/04d993ea690aec783fad612bb99bdc38",
+            "text": "数学の試験を始めましょう。",
+            "discussion": null,
+            "number": null,
+            "invalid": true,
+            "highlighted": true,
+            "translation_text": "Let's begin the math exam.",
+            "link": "/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9",
+            "example_sentence": "数学の試験を始めましょう。",
+            "word_value_matched": true,
+            "translation": "Let's begin the <span class=\"highlighted\">math</span> exam."
+        },
+        {
+            "case": null,
+            "gender": null,
+            "word": "数学",
+            "tts": "https://d1vq87e9lcf771.cloudfront.net/beaja/8da3500dedd7728a133690bcdcd1474f",
+            "text": "数学",
+            "discussion": null,
+            "number": null,
+            "invalid": true,
+            "highlighted": true,
+            "translation_text": "Math",
+            "link": "/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9",
+            "example_sentence": "<span class=\"highlighted\">数学</span>",
+            "word_value_matched": true,
+            "translation": "<span class=\"highlighted\">Math</span>"
+        }
+    ],
+    "has_tts": true,
+    "word": "数学",
+    "language_information": {},
+    "from_language_name": "English",
+    "tts": "https://d1vq87e9lcf771.cloudfront.net/beaja/8da3500dedd7728a133690bcdcd1474f",
+    "infinitive": null,
+    "learning_language": "ja",
+    "translations": "mathematics, math",
+    "learning_language_name": "Japanese",
+    "pos": null,
+    "lexeme_image": "https://d2pur3iezf4d1j.cloudfront.net/images/a0f5dec81b5def9aff636515a96094fe",
+    "from_language": "en",
+    "is_generic": false,
+    "lexeme_id": "00a6288128ad4e286a35078ded5ffde9",
+    "related_lexemes": [
+        {
+            "url": "/dictionary/Japanese/%E4%BD%8F%E3%82%93%E3%81%A7/a97c678f75121ac56f66895291d324fb",
+            "anchor": "住んで"
+        },
+        {
+            "url": "/dictionary/Japanese/%E4%BA%AC%E9%83%BD/9071a62d3124d182410b27304fb7c321",
+            "anchor": "京都"
+        },
+        {
+            "url": "/dictionary/Japanese/%E7%9B%B4%E7%BE%8E/d6116341ce245875007faebc83a7c198",
+            "anchor": "直美"
+        },
+        {
+            "url": "/dictionary/Japanese/%E7%94%B3%E3%81%97/b37790109840f7c0eb9475e52586be2e",
+            "anchor": "申し"
+        },
+        {
+            "url": "/dictionary/Japanese/%E5%81%A5%E5%A4%AA/7c7db2e65a36522d46e72b0504b112a0",
+            "anchor": "健太"
+        },
+        {
+            "url": "/dictionary/Japanese/%E6%9D%B1%E4%BA%AC/c54a3835fcd60150b0e67106f07d5429",
+            "anchor": "東京"
+        },
+        {
+            "url": "/dictionary/Japanese/%E5%A4%96%E5%9B%BD%E4%BA%BA/1daaa38985e4a9049fa380241c8f6258",
+            "anchor": "外国人"
+        },
+        {
+            "url": "/dictionary/Japanese/%E9%81%95%E3%81%84/b5e161fed6e909b74ca831cb209f6c67",
+            "anchor": "違い"
+        },
+        {
+            "url": "/dictionary/Japanese/%E5%B9%B4%E7%94%9F/66e5e03b7dc841d73d7468e4557cd500",
+            "anchor": "年生"
+        },
+        {
+            "url": "/dictionary/Japanese/%E5%A4%A7%E9%98%AA/fab5d1a512b3fada1355d3f1396176b8",
+            "anchor": "大阪"
+        }
+    ],
+    "related_discussions": [],
+    "canonical_path": "/dictionary/Japanese/%E6%95%B0%E5%AD%A6/00a6288128ad4e286a35078ded5ffde9"
+}
+@endjson
