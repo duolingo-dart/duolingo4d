@@ -36,6 +36,7 @@ void main() async {
   _testLeaderboard();
   _testDictionary();
   _testFriends();
+  _testShopItems();
 
   _testCachedVersionInfoApi();
   _testCachedUserApi();
@@ -201,6 +202,19 @@ void _testFriends() {
       expect(friend.monthlyXp > -1, true);
       expect(friend.totalXp > -1, true);
     }
+  });
+}
+
+void _testShopItems() {
+  test('Test Shop Items API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.shopItems();
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
+
+    expect(response.products.isNotEmpty, true);
   });
 }
 

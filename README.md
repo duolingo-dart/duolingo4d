@@ -26,6 +26,7 @@
     - [1.3.8. Leaderboard API](#138-leaderboard-api)
     - [1.3.9. Dictionary API](#139-dictionary-api)
     - [1.3.10. Friends API](#1310-friends-api)
+    - [1.3.11. Shop Items API](#1311-shop-items-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -52,6 +53,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Leaderboard**     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 | **Friends**         |      ✅       | You can get information on all friends associated with a user id.                                                  |
+| **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
 
 ## 1.2. Introduction
 
@@ -442,6 +444,31 @@ void main() async {
 
   for (final friend in friendsResponse.friends) {
     print(friend);
+  }
+}
+```
+
+### 1.3.11. Shop Items API
+
+| Auth Required |                                              Method                                               |                                                    JSON                                                    |
+| :-----------: | :-----------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+|      ✅       | [shopItems()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/shopItems.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/11_shopItems/response.json) |
+
+From Shop Items API, you can get a list of items that can be purchased in Duolingo.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final shopItemsResponse = await duolingo.shopItems();
+
+  for (final product in shopItemsResponse.products) {
+    print(product);
   }
 }
 ```

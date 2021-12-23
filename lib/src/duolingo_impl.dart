@@ -15,10 +15,12 @@ import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
+import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
+import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -112,6 +114,10 @@ class DuolingoImpl implements Duolingo {
     required String userId,
   }) async =>
       await FriendsRequest.from(userId: userId).send();
+
+  @override
+  Future<ShopItemsResponse> shopItems() async =>
+      await ShopItemsRequest.newInstance().send();
 
   @override
   Future<ManifestResponse> cachedManifest() async {
@@ -275,6 +281,18 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<ShopItemsResponse> cachedShopItems() async {
+    if (_cacheStorage.has(key: DuolingoApi.shopItems.name)) {
+      return _cacheStorage.match(key: DuolingoApi.shopItems.name);
+    }
+
+    final response = await shopItems();
+    _cacheStorage.save(key: DuolingoApi.shopItems.name, value: response);
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -307,4 +325,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedFriends() =>
       _cacheStorage.deleteBy(key: DuolingoApi.friends.name);
+
+  @override
+  void cleanCachedShopItems() =>
+      _cacheStorage.deleteBy(key: DuolingoApi.shopItems.name);
 }

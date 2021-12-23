@@ -1,0 +1,356 @@
+{
+    "shopItems": [
+        {
+            "name": "Streak Freeze",
+            "localizedDescription": "Streak Freeze allows your streak to remain in place for one full day of inactivity.",
+            "price": 10,
+            "id": "streak_freeze",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 1299,
+            "productId": "com_duolingo_stripe_subscription_premium_onemonth_1299",
+            "type": "in_app_purchase",
+            "id": "premium_subscription",
+            "currencyType": "USD"
+        },
+        {
+            "price": 8388,
+            "productId": "com.duolingo.stripe.subscription.premium.twelvemonth.8388",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11999,
+            "productId": "com_duolingo_stripe_subscription_premium_fam_twelvemonth_2021_q3_11999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1299,
+            "productId": "com_duolingo_stripe_subscription_premium_onemonth_ny_2022_1299",
+            "type": "in_app_purchase",
+            "id": "premium_subscription",
+            "currencyType": "USD"
+        },
+        {
+            "price": 5999,
+            "productId": "com_duolingo_stripe_subscription_premium_twelvemonth_ny_2022_5999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11999,
+            "productId": "com_duolingo_stripe_subscription_premium_fam_twelvemonth_ny_2022_11999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1299,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_onemonth_ny_2022_1299",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14",
+            "currencyType": "USD"
+        },
+        {
+            "price": 5999,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_twelvemonth_ny_2022_5999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11999,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_fam_twelvemonth_ny_2022_11999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1299,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_onemonth_1299",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14",
+            "currencyType": "USD"
+        },
+        {
+            "price": 8388,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_twelvemonth_8388",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11999,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_fam_twelvemonth_2021_q3_11999",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1275,
+            "productId": "com_duolingo_stripe_subscription_premium_onemonth_jpy_140000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription",
+            "currencyType": "USD"
+        },
+        {
+            "price": 7833,
+            "productId": "com_duolingo_stripe_subscription_premium_twelvemonth_jpy_860000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 12029,
+            "productId": "com_duolingo_stripe_subscription_premium_fam_twelvemonth_2021_q3_jpy_inclusive_1320000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1234,
+            "productId": "com_duolingo_stripe_subscription_premium_onemonth_ny_2022_jpy_inclusive_140000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription",
+            "currencyType": "USD"
+        },
+        {
+            "price": 6348,
+            "productId": "com_duolingo_stripe_subscription_premium_twelvemonth_ny_2022_jpy_inclusive_720000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11638,
+            "productId": "com_duolingo_stripe_subscription_premium_fam_twelvemonth_ny_2022_jpy_inclusive_1320000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1234,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_onemonth_ny_2022_jpy_inclusive_140000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14",
+            "currencyType": "USD"
+        },
+        {
+            "price": 6348,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_twelvemonth_ny_2022_jpy_inclusive_720000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 11638,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_fam_twelvemonth_ny_2022_jpy_inclusive_1320000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 1275,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_onemonth_jpy_140000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14",
+            "currencyType": "USD"
+        },
+        {
+            "price": 7833,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_twelvemonth_jpy_860000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "price": 12029,
+            "productId": "com_duolingo_stripe_subscription_premium_trial14_fam_twelvemonth_2021_q3_jpy_inclusive_1320000",
+            "type": "in_app_purchase",
+            "id": "premium_subscription_trial14_twelve_month",
+            "currencyType": "USD"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 0,
+            "id": "streak_repair",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Formal Attire",
+            "localizedDescription": "Learn in style. Duo has always been a sharp guy, now he'll look sharp too.",
+            "price": 20,
+            "id": "formal_outfit",
+            "type": "outfit",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Luxury Tracksuit",
+            "localizedDescription": "Learn in luxury. Duo will love the feel of 24 carat gold silk on his feathers.",
+            "price": 30,
+            "id": "luxury_outfit",
+            "type": "outfit",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Double or Nothing",
+            "localizedDescription": "Attempt to double your two lingot wager by maintaining a three day streak.",
+            "price": 2,
+            "id": "rupee_wager_3",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 25,
+            "type": "misc",
+            "id": "certification",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Extra Moves",
+            "localizedDescription": "Get extra moves to keep going.",
+            "price": 20,
+            "id": "extra_moves",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 100,
+            "type": "misc",
+            "id": "certification_human",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 15,
+            "id": "zaps_3",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 5,
+            "id": "skill_test_lingots",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 10,
+            "id": "skill_test_lingots_10",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 5,
+            "id": "skill_test_lingots_5",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 10,
+            "type": "misc",
+            "id": "timed_practice",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Heart Refill",
+            "localizedDescription": "Allows you to regain one heart lost during a lesson.",
+            "price": 4,
+            "id": "heart_refill",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Double or Nothing",
+            "localizedDescription": "Attempt to double your five lingot wager by maintaining a seven day streak.",
+            "price": 5,
+            "id": "rupee_wager",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "Zaps",
+            "localizedDescription": "Use a Zap to skip one question during a lesson.",
+            "price": 5,
+            "id": "zap",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 20,
+            "id": "skill_test_lingots_20",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 10,
+            "type": "misc",
+            "id": "final_level_attempt",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 30,
+            "type": "misc",
+            "id": "final_level_attempt_30",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 100,
+            "type": "misc",
+            "id": "leaderboard_gem_wager_100",
+            "currencyType": "XGM"
+        },
+        {
+            "price": 50,
+            "type": "misc",
+            "id": "leaderboard_gem_wager_50",
+            "currencyType": "XGM"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 35,
+            "id": "general_xp_boost",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 35,
+            "id": "xp_boost_15",
+            "type": "misc",
+            "currencyType": "XLG"
+        },
+        {
+            "price": 35,
+            "type": "misc",
+            "id": "xp_boost_60",
+            "currencyType": "XLG"
+        },
+        {
+            "name": "",
+            "localizedDescription": "",
+            "price": 35,
+            "id": "unlimited_hearts_boost",
+            "type": "misc",
+            "currencyType": "XLG"
+        }
+    ]
+}

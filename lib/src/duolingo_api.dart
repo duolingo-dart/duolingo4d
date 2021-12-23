@@ -33,6 +33,9 @@ enum DuolingoApi {
 
   /// Friends API
   friends,
+
+  /// Shop Items API
+  shopItems,
 }
 
 /// The extension that represents endpoint of Duolingo API.
@@ -59,6 +62,8 @@ extension Endpoint on DuolingoApi {
         return 'https://www.duolingo.com/friendships/leaderboard_activity';
       case DuolingoApi.dictionary:
         return 'https://www.duolingo.com/api/1/dictionary_page';
+      case DuolingoApi.shopItems:
+        return 'https://www.duolingo.com/2017-06-30/shop-items';
     }
   }
 }
