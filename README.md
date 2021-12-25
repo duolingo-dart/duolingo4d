@@ -23,7 +23,7 @@
     - [1.3.5. Overview API](#135-overview-api)
     - [1.3.6. Word Hint API](#136-word-hint-api)
     - [1.3.7. Switch Language API](#137-switch-language-api)
-    - [1.3.8. Leaderboard API](#138-leaderboard-api)
+    - [1.3.8. Activity API](#138-activity-api)
     - [1.3.9. Dictionary API](#139-dictionary-api)
     - [1.3.10. Friends API](#1310-friends-api)
     - [1.3.11. Shop Items API](#1311-shop-items-api)
@@ -51,7 +51,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Overview**        |      ✅       | You can fetch information on all the words user have learned in Duolingo.                                          |
 | **Word Hint**       |      ✅       | You can fetch hint information about words and sentences.                                                          |
 | **Switch Language** |      ✅       | You can switch the learning language.                                                                              |
-| **Leaderboard**     |      ✅       | You can get the leaderboards of you and your friends in a ranking format.                                          |
+| **Activity**        |      ✅       | You can get the activity of you and your friends in a ranking format.                                              |
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 | **Friends**         |      ✅       | You can get information on all friends associated with a user id.                                                  |
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
@@ -350,13 +350,13 @@ void main() async {
 }
 ```
 
-### 1.3.8. Leaderboard API
+### 1.3.8. Activity API
 
-| Auth Required |                                                Method                                                 |                                                     JSON                                                     |
-| :-----------: | :---------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [leaderboard()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/leaderboard.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_leaderboard/response.json) |
+| Auth Required |                                             Method                                              |                                                   JSON                                                    |
+| :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ✅       | [activity()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/activity.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_activity/response.json) |
 
-The Leaderboard API allows you to get information about your ranking with friends who are following you on Duolingo. The [Ranking](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Ranking-class.html) provides the feature to sort in ascending or descending order by score item.
+The Activity API allows you to get information about your ranking with friends who are following you on Duolingo. The [Ranking](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Ranking-class.html) provides the feature to sort in ascending or descending order by score item.
 
 ```dart
 void main() async {
@@ -367,12 +367,12 @@ void main() async {
     password: 'test_password',
   );
 
-  final leaderboardResponse = await duolingo.leaderboard();
+  final activityResponse = await duolingo.activity();
 
-  print(leaderboardResponse.ranking);
-  print(leaderboardResponse.userIds);
+  print(activityResponse.ranking);
+  print(activityResponse.userIds);
 
-  final ranking = leaderboardResponse.ranking;
+  final ranking = activityResponse.ranking;
 
   // You can order ranking by score item.
   print(ranking.orderByScoreNameDesc());

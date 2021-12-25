@@ -7,11 +7,11 @@ import 'package:cache_storage/cache_storage.dart';
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
+import 'package:duolingo4d/src/request/activity_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/friends_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
-import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/purchase_request.dart';
@@ -21,8 +21,6 @@ import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
-import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -102,8 +100,8 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<LeaderboardResponse> leaderboard() async =>
-      await LeaderboardRequest.newInstance().send();
+  Future<ActivityResponse> activity() async =>
+      await ActivityRequest.newInstance().send();
 
   @override
   Future<DictionaryResponse> dictionary({
@@ -231,13 +229,13 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<LeaderboardResponse> cachedLeaderboard() async {
-    if (_cacheStorage.has(key: Resource.leaderboard.name)) {
-      return _cacheStorage.match(key: Resource.leaderboard.name);
+  Future<ActivityResponse> cachedActivity() async {
+    if (_cacheStorage.has(key: Resource.activity.name)) {
+      return _cacheStorage.match(key: Resource.activity.name);
     }
 
-    final response = await leaderboard();
-    _cacheStorage.save(key: Resource.leaderboard.name, value: response);
+    final response = await activity();
+    _cacheStorage.save(key: Resource.activity.name, value: response);
 
     return response;
   }
@@ -329,8 +327,8 @@ class DuolingoImpl implements Duolingo {
       _cacheStorage.deleteBy(key: Resource.wordHint.name);
 
   @override
-  void cleanCachedLeaderboard() =>
-      _cacheStorage.deleteBy(key: Resource.leaderboard.name);
+  void cleanCachedActivity() =>
+      _cacheStorage.deleteBy(key: Resource.activity.name);
 
   @override
   void cleanCachedDictionary() =>

@@ -88,12 +88,12 @@ void main() async {
   print(switchLanguageResponse.status.code);
   print(switchLanguageResponse.status.reasonPhrase);
 
-  final leaderboardResponse = await duolingo.leaderboard();
+  final activityResponse = await duolingo.activity();
 
-  print(leaderboardResponse.ranking);
-  print(leaderboardResponse.userIds);
+  print(activityResponse.ranking);
+  print(activityResponse.userIds);
 
-  final ranking = leaderboardResponse.ranking;
+  final ranking = activityResponse.ranking;
   print(ranking.orderByScoreNameDesc());
   print(ranking.orderByScoreXpDesc());
 

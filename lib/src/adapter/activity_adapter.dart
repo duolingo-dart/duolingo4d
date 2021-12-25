@@ -8,29 +8,29 @@ import 'package:json_pro/json_pro.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
+import 'package:duolingo4d/src/response/activity/activity_response.dart';
 
 /// This class provides the function to convert the response
-/// returned from the leaderboard API into the [LeaderboardResponse] format.
-class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
-  /// Returns the new instance of [LeaderboardAdapter].
-  LeaderboardAdapter.newInstance();
+/// returned from the Activity API into the [ActivityResponse] format.
+class ActivityAdapter extends Adapter<ActivityResponse> {
+  /// Returns the new instance of [ActivityAdapter].
+  ActivityAdapter.newInstance();
 
   @override
-  LeaderboardResponse convert({
+  ActivityResponse convert({
     required Response response,
   }) =>
-      _buildLeaderboardResponse(
+      _buildActivityResponse(
         response: response,
         json: super.jsonDecode(response: response),
       );
 
-  /// Returns [LeaderboardResponse] based on [response] and [json].
-  LeaderboardResponse _buildLeaderboardResponse({
+  /// Returns [ActivityResponse] based on [response] and [json].
+  ActivityResponse _buildActivityResponse({
     required Response response,
     required Json json,
   }) =>
-      LeaderboardResponse.from(
+      ActivityResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

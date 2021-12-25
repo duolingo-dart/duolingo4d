@@ -6,7 +6,7 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/response/leaderboard/score.dart';
+import 'package:duolingo4d/src/response/activity/score.dart';
 
 /// This class represents a ranking in the leaderboard.
 class Ranking {

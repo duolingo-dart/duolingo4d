@@ -33,7 +33,7 @@ void main() async {
   _testOverviewApi();
   _testWordHintApi();
   _testSwitchLanguageApi();
-  _testLeaderboard();
+  _testActivity();
   _testDictionary();
   _testFriends();
   _testShopItems();
@@ -42,7 +42,7 @@ void main() async {
   _testCachedUserApi();
   _testCachedOverviewApi();
   _testCachedWordHintApi();
-  _testCachedLeaderboard();
+  _testCachedActivity();
   _testCachedDictionary();
 
   //! Test the authentication API last,
@@ -153,10 +153,10 @@ void _testSwitchLanguageApi() {
   });
 }
 
-void _testLeaderboard() {
-  test('Test Leaderboard API.', () async {
+void _testActivity() {
+  test('Test Activity API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.leaderboard();
+    final response = await duolingo.activity();
 
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
@@ -338,10 +338,10 @@ void _testCachedWordHintApi() {
   });
 }
 
-void _testCachedLeaderboard() {
-  test('Test Leaderboard API.', () async {
+void _testCachedActivity() {
+  test('Test Activity API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.cachedLeaderboard();
+    final response = await duolingo.cachedActivity();
 
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
@@ -350,7 +350,7 @@ void _testCachedLeaderboard() {
     expect(response.ranking.scores.isNotEmpty, true);
     expect(response.userIds.isNotEmpty, true);
 
-    final cachedResponse = await duolingo.cachedLeaderboard();
+    final cachedResponse = await duolingo.cachedActivity();
     expect(response == cachedResponse, true);
 
     expect(cachedResponse.status.code, 200);

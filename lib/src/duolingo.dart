@@ -5,10 +5,10 @@
 // Project imports:
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
+import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 import 'package:duolingo4d/src/response/friends/friends_response.dart';
-import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
@@ -233,10 +233,10 @@ abstract class Duolingo {
     required String learningLanguage,
   });
 
-  /// Returns the leaderboard information of the authenticated user.
+  /// Returns the activity information of the authenticated user.
   ///
   /// A call to this method will always cause a communication process with the Duolingo API.
-  /// If you want to reuse the cached response object, use [cachedLeaderboard].
+  /// If you want to reuse the cached response object, use [cachedActivity].
   ///
   /// ```dart
   ///void main() async {
@@ -247,12 +247,12 @@ abstract class Duolingo {
   ///    password: 'test_password',
   ///  );
   ///
-  ///  final leaderboardResponse = await duolingo.leaderboard();
+  ///  final activityResponse = await duolingo.activity();
   ///
-  ///  print(leaderboardResponse.ranking);
-  ///  print(leaderboardResponse.userIds);
+  ///  print(activityResponse.ranking);
+  ///  print(activityResponse.userIds);
   ///
-  ///  final ranking = leaderboardResponse.ranking;
+  ///  final ranking = activityResponse.ranking;
   ///
   ///  // You can order ranking by score item.
   ///  print(ranking.orderByScoreNameDesc());
@@ -264,7 +264,7 @@ abstract class Duolingo {
   ///  }
   ///}
   /// ```
-  Future<LeaderboardResponse> leaderboard();
+  Future<ActivityResponse> activity();
 
   /// Returns the dictionary information linked to [wordId].
   ///
@@ -494,14 +494,14 @@ abstract class Duolingo {
   /// Returns cached leaderboard information of the authenticated user.
   ///
   /// The first call to this [cachedLeaderboard] method will always result in a communication with the Duolingo API
-  /// because there is no cached [LeaderboardResponse]. In the second and subsequent method calls, the cached [LeaderboardResponse]
+  /// because there is no cached [activityResponse]. In the second and subsequent method calls, the cached [activityResponse]
   /// from the first method call will be returned.
   ///
   /// The type and data structure of the response is consistent with the [leaderboard] method. However, please note that
   /// the cached data is returned from this method, so unless you explicitly delete this cached object data,
   /// the cached response object will always be returned.
   ///
-  /// To delete the explicitly cached [LeaderboardResponse], call the [cleanCachedLeaderboard] method.
+  /// To delete the explicitly cached [activityResponse], call the [cleanCachedLeaderboard] method.
   ///
   /// **_Example:_**
   ///
@@ -514,12 +514,12 @@ abstract class Duolingo {
   ///    password: 'test_password',
   ///  );
   ///
-  ///  final leaderboardResponse = await duolingo.cachedLeaderboard();
+  ///  final activityResponse = await duolingo.cachedActivity();
   ///
-  ///  print(leaderboardResponse.ranking);
-  ///  print(leaderboardResponse.userIds);
+  ///  print(activityResponse.ranking);
+  ///  print(activityResponse.userIds);
   ///
-  ///  final ranking = leaderboardResponse.ranking;
+  ///  final ranking = activityResponse.ranking;
   ///
   ///  // You can order ranking by score item.
   ///  print(ranking.orderByScoreNameDesc());
@@ -534,7 +534,7 @@ abstract class Duolingo {
   ///  duolingo.cleanCachedLeaderboard();
   ///}
   ///```
-  Future<LeaderboardResponse> cachedLeaderboard();
+  Future<ActivityResponse> cachedActivity();
 
   /// Returns cached dictionary information linked to [wordId].
   ///
@@ -609,8 +609,8 @@ abstract class Duolingo {
   /// Deletes the cached data of the response object that was cached by calling the [cachedWordHint] method.
   void cleanCachedWordHint();
 
-  /// Deletes the cached data of the response object that was cached by calling the [cachedLeaderboard] method.
-  void cleanCachedLeaderboard();
+  /// Deletes the cached data of the response object that was cached by calling the [cachedActivity] method.
+  void cleanCachedActivity();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedDictionary] method.
   void cleanCachedDictionary();
