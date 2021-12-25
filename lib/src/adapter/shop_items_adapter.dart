@@ -17,11 +17,19 @@ class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
   @override
   ShopItemsResponse convert({
     required Response response,
-  }) =>
-      _buildShopItemsResponse(
+  }) {
+    if (response.statusCode != 200) {
+      return _buildShopItemsResponse(
         response: response,
-        json: Json.fromBytes(bytes: response.bodyBytes),
+        json: Json.fromMap(value: {}),
       );
+    }
+
+    return _buildShopItemsResponse(
+      response: response,
+      json: Json.fromBytes(bytes: response.bodyBytes),
+    );
+  }
 
   ShopItemsResponse _buildShopItemsResponse({
     required Response response,

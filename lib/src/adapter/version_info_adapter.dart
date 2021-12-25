@@ -19,11 +19,19 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   @override
   VersionInfoResponse convert({
     required Response response,
-  }) =>
-      _buildVersionInfoResponse(
+  }) {
+    if (response.statusCode != 200) {
+      return _buildVersionInfoResponse(
         response: response,
-        json: Json.fromBytes(bytes: response.bodyBytes),
+        json: Json.fromMap(value: {}),
       );
+    }
+
+    return _buildVersionInfoResponse(
+      response: response,
+      json: Json.fromBytes(bytes: response.bodyBytes),
+    );
+  }
 
   /// Returns [VersionInfoResponse] based on [response] and [json].
   VersionInfoResponse _buildVersionInfoResponse({
