@@ -2,6 +2,9 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Dart imports:
+import 'dart:convert';
+
 // Package imports:
 import 'package:http/http.dart' as http;
 
@@ -42,10 +45,12 @@ class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
         response: await http.post(
           _apiUri,
           headers: InternalSession.instance.headers,
-          body: {
-            'from_language': fromLanguage,
-            'learning_language': learningLanguage,
-          },
+          body: json.encode(
+            {
+              'from_language': fromLanguage,
+              'learning_language': learningLanguage,
+            },
+          ),
         ),
       );
 }

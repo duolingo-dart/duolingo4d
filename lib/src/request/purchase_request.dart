@@ -2,20 +2,30 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Dart imports:
+import 'dart:convert';
+
+// Package imports:
+import 'package:http/http.dart' as http;
+
+// Project imports:
 import 'package:duolingo4d/src/adapter/purchase_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/shopitems/purchase_response.dart';
-import 'package:http/http.dart' as http;
+import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 
 class PurchaseRequest extends Request<PurchaseResponse> {
   /// Returns the new instance of [PurchaseRequest] based on arguments.
   PurchaseRequest.from({
+    required this.userId,
     required this.itemId,
     required this.learningLanguage,
   });
+
+  /// The user id
+  final String userId;
 
   /// The item id
   final String itemId;
@@ -26,19 +36,19 @@ class PurchaseRequest extends Request<PurchaseResponse> {
   /// The response adapter
   static final _adapter = PurchaseAdapter.newInstance();
 
-  /// The API uri
-  static final _apiUri =
-      Uri.parse('${Endpoint.base.url}/${Resource.shopItems.url}');
-
   @override
   Future<PurchaseResponse> send() async => _adapter.convert(
         response: InternalSession.instance.refreshRequestHeader(
           response: await http.post(
-            _apiUri,
-            body: {
-              'itemName': itemId,
-              'learningLanguage': learningLanguage,
-            },
+            Uri.parse(
+                '${Endpoint.base.url}/${Resource.purchase.url}/$userId/shop-items'),
+            headers: InternalSession.instance.headers,
+            body: json.encode(
+              {
+                'itemName': itemId,
+                'learningLanguage': learningLanguage,
+              },
+            ),
           ),
         ),
       );

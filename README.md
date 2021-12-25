@@ -27,6 +27,7 @@
     - [1.3.9. Dictionary API](#139-dictionary-api)
     - [1.3.10. Friends API](#1310-friends-api)
     - [1.3.11. Shop Items API](#1311-shop-items-api)
+    - [1.3.11. Purchase API](#1311-purchase-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -54,6 +55,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 | **Friends**         |      ✅       | You can get information on all friends associated with a user id.                                                  |
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
+| **Purchase**        |      ✅       | You can purchase items sold in Duoligno by spending Lingots or Gems.                                               |
 
 ## 1.2. Introduction
 
@@ -470,6 +472,36 @@ void main() async {
   for (final product in shopItemsResponse.products) {
     print(product);
   }
+}
+```
+
+### 1.3.11. Purchase API
+
+| Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ✅       | [purchase({required String userId, required String itemId, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/purchase.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/12_purchase/response.json) |
+
+With Purchase API, you can purchase items sold in Duoligno by spending Lingots or Gems.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final userResponse = await duolingo.user(userId: authResponse.userId);
+  final shopItemsResponse = await duolingo.shopItems();
+
+  final response = await duolingo.purchase(
+    userId: userResponse.id,
+    itemId: shopItemsResponse.products[0].id,
+    learningLanguage: userResponse.learningLanguage,
+  );
+
+  print(response);
 }
 ```
 

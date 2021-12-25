@@ -4,6 +4,7 @@
 
 - Added a feature that references the Manifest API.
 - Added a feature that references the Shop Items API.
+- Added a feature to purchase items sold on Duolingo.
 - Improved the processing when the status code of the response returned from the API is other than 200. If the HTTP status code is other than 200, an empty object will be returned.
 
 ## 0.1.4

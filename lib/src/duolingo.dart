@@ -11,6 +11,7 @@ import 'package:duolingo4d/src/response/friends/friends_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
+import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
@@ -312,6 +313,12 @@ abstract class Duolingo {
   });
 
   Future<ShopItemsResponse> shopItems();
+
+  Future<PurchaseResponse> purchase({
+    required String userId,
+    required String itemId,
+    required String learningLanguage,
+  });
 
   Future<ManifestResponse> cachedManifest();
 

@@ -13,3 +13,4 @@
 | Dictionary      | <https://www.duolingo.com/api/1/dictionary_page>            | ?lexeme_id={lexemeId}                                  | -                                | YES           |
 | Friends         | <https://www.duolingo.com/2017-06-30/users>                 | /{userId}/subscriptions                                | -                                | YES           |
 | Shop Items      | <https://www.duolingo.com/2017-06-30/shop-items>            | -                                                      | -                                | YES           |
+| Purchase        | <https://www.duolingo.com/2017-06-30/users>                 | /{userId}/shop-items                                   | itemName, learningLanguage       | YES           |

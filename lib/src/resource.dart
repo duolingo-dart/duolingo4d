@@ -35,6 +35,9 @@ enum Resource {
 
   /// Shop Items API
   shopItems,
+
+  /// Purchase API
+  purchase,
 }
 
 extension ReourceFeature on Resource {
@@ -49,6 +52,7 @@ extension ReourceFeature on Resource {
         return 'login';
       case Resource.user:
       case Resource.friends:
+      case Resource.purchase:
         return '2017-06-30/users';
       case Resource.overview:
         return 'vocabulary/overview';

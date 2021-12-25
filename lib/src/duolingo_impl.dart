@@ -14,12 +14,14 @@ import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
+import 'package:duolingo4d/src/request/purchase_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
 import 'package:duolingo4d/src/resource.dart';
+import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 
 /// This is an implementation class of [Duolingo].
@@ -118,6 +120,18 @@ class DuolingoImpl implements Duolingo {
   @override
   Future<ShopItemsResponse> shopItems() async =>
       await ShopItemsRequest.newInstance().send();
+
+  @override
+  Future<PurchaseResponse> purchase({
+    required String userId,
+    required String itemId,
+    required String learningLanguage,
+  }) async =>
+      await PurchaseRequest.from(
+        userId: userId,
+        itemId: itemId,
+        learningLanguage: learningLanguage,
+      ).send();
 
   @override
   Future<ManifestResponse> cachedManifest() async {
