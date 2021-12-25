@@ -17,19 +17,11 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
   @override
   DictionaryResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildDictionaryResponse(
+  }) =>
+      _buildDictionaryResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildDictionaryResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   DictionaryResponse _buildDictionaryResponse({
     required Response response,

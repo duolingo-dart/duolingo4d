@@ -17,19 +17,11 @@ class FriendsAdapter extends Adapter<FriendsResponse> {
   @override
   FriendsResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildFriendsResponse(
+  }) =>
+      _buildFriendsResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildFriendsResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   FriendsResponse _buildFriendsResponse({
     required Response response,

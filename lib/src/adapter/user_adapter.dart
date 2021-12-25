@@ -19,19 +19,11 @@ class UserAdapter extends Adapter<UserResponse> {
   @override
   UserResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildUserResponse(
+  }) =>
+      _buildUserResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildUserResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [UserResponse] based on [response] and [json].
   UserResponse _buildUserResponse({

@@ -19,19 +19,11 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
   @override
   OverviewResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildOverviewResponse(
+  }) =>
+      _buildOverviewResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildOverviewResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [OverviewResponse] based on [response] and [json].
   OverviewResponse _buildOverviewResponse({

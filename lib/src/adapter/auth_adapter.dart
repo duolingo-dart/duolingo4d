@@ -19,19 +19,11 @@ class AuthAdapter extends Adapter<AuthResponse> {
   @override
   AuthResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildAuthResponse(
+  }) =>
+      _buildAuthResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildAuthResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [AuthResponse] based on [response] and [json].
   AuthResponse _buildAuthResponse({

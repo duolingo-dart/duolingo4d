@@ -19,19 +19,11 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
   @override
   LeaderboardResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildLeaderboardResponse(
+  }) =>
+      _buildLeaderboardResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildLeaderboardResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [LeaderboardResponse] based on [response] and [json].
   LeaderboardResponse _buildLeaderboardResponse({

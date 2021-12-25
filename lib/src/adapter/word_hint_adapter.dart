@@ -19,19 +19,11 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
   @override
   WordHintResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildWordHintResponse(
+  }) =>
+      _buildWordHintResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildWordHintResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [WordHintResponse] based on [response] and [json].
   WordHintResponse _buildWordHintResponse({

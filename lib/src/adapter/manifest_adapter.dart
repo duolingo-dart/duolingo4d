@@ -17,19 +17,11 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
   @override
   ManifestResponse convert({
     required Response response,
-  }) {
-    if (response.statusCode != 200) {
-      return _buildManifestResponse(
+  }) =>
+      _buildManifestResponse(
         response: response,
-        json: Json.fromMap(value: {}),
+        json: super.jsonDecode(response: response),
       );
-    }
-
-    return _buildManifestResponse(
-      response: response,
-      json: Json.fromBytes(bytes: response.bodyBytes),
-    );
-  }
 
   /// Returns [ManifestResponse] based on [response] and [json].
   ManifestResponse _buildManifestResponse({
