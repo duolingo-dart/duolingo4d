@@ -7,9 +7,10 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/user_adapter.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 
 /// This class provides the function to send a request
@@ -32,7 +33,7 @@ class UserRequest extends Request<UserResponse> {
   Future<UserResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
-            '${DuolingoApi.user.url}/$userId',
+            '${Endpoint.base.url}/${Resource.user.url}/$userId',
           ),
           headers: InternalSession.instance.headers,
         ),

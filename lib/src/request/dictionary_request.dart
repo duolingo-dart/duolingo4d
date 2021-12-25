@@ -7,9 +7,10 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/dictionary_adapter.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 
 class DictionaryRequest extends Request<DictionaryResponse> {
@@ -27,7 +28,9 @@ class DictionaryRequest extends Request<DictionaryResponse> {
   @override
   Future<DictionaryResponse> send() async => _adapter.convert(
         response: await http.get(
-          Uri.parse('${DuolingoApi.dictionary.url}?lexeme_id=$wordId'),
+          Uri.parse(
+            '${Endpoint.base.url}/${Resource.dictionary.url}?lexeme_id=$wordId',
+          ),
           headers: InternalSession.instance.headers,
         ),
       );

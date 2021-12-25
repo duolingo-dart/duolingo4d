@@ -2,10 +2,13 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:duolingo4d/src/adapter/adapter.dart';
+// Package imports:
 import 'package:http/http.dart';
-import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:json_pro/json_pro.dart';
+
+// Project imports:
+import 'package:duolingo4d/src/adapter/adapter.dart';
+import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 
 class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
   /// Returns the new instance of [ShopItemsAdapter].

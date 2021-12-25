@@ -7,9 +7,10 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/leaderboard_adapter.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
 /// This class provides the function to send a request for user's leaderboard.
@@ -21,7 +22,9 @@ class LeaderboardRequest extends Request<LeaderboardResponse> {
   static final _adapter = LeaderboardAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.leaderboard.url);
+  static final _apiUri = Uri.parse(
+    '${Endpoint.base.url}/${Resource.leaderboard.url}',
+  );
 
   @override
   Future<LeaderboardResponse> send() async => _adapter.convert(

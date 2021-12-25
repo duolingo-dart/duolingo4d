@@ -7,7 +7,6 @@ import 'package:cache_storage/cache_storage.dart';
 
 // Project imports:
 import 'package:duolingo4d/duolingo4d.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/friends_request.dart';
@@ -20,6 +19,7 @@ import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 
 /// This is an implementation class of [Duolingo].
@@ -121,24 +121,24 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<ManifestResponse> cachedManifest() async {
-    if (_cacheStorage.has(key: DuolingoApi.manifest.name)) {
-      return _cacheStorage.match(key: DuolingoApi.manifest.name);
+    if (_cacheStorage.has(key: Resource.manifest.name)) {
+      return _cacheStorage.match(key: Resource.manifest.name);
     }
 
     final response = await manifest();
-    _cacheStorage.save(key: DuolingoApi.manifest.name, value: response);
+    _cacheStorage.save(key: Resource.manifest.name, value: response);
 
     return response;
   }
 
   @override
   Future<VersionInfoResponse> cachedVersionInfo() async {
-    if (_cacheStorage.has(key: DuolingoApi.versionInfo.name)) {
-      return _cacheStorage.match(key: DuolingoApi.versionInfo.name);
+    if (_cacheStorage.has(key: Resource.versionInfo.name)) {
+      return _cacheStorage.match(key: Resource.versionInfo.name);
     }
 
     final response = await versionInfo();
-    _cacheStorage.save(key: DuolingoApi.versionInfo.name, value: response);
+    _cacheStorage.save(key: Resource.versionInfo.name, value: response);
 
     return response;
   }
@@ -149,9 +149,9 @@ class DuolingoImpl implements Duolingo {
   }) async {
     final cacheSubKeys = [userId];
 
-    if (_cacheStorage.has(key: DuolingoApi.user.name, subKeys: cacheSubKeys)) {
+    if (_cacheStorage.has(key: Resource.user.name, subKeys: cacheSubKeys)) {
       return _cacheStorage.match(
-        key: DuolingoApi.user.name,
+        key: Resource.user.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -159,7 +159,7 @@ class DuolingoImpl implements Duolingo {
     final response = await user(userId: userId);
 
     _cacheStorage.save(
-      key: DuolingoApi.user.name,
+      key: Resource.user.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -169,12 +169,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<OverviewResponse> cachedOverview() async {
-    if (_cacheStorage.has(key: DuolingoApi.overview.name)) {
-      return _cacheStorage.match(key: DuolingoApi.overview.name);
+    if (_cacheStorage.has(key: Resource.overview.name)) {
+      return _cacheStorage.match(key: Resource.overview.name);
     }
 
     final response = await overview();
-    _cacheStorage.save(key: DuolingoApi.overview.name, value: response);
+    _cacheStorage.save(key: Resource.overview.name, value: response);
 
     return response;
   }
@@ -192,11 +192,11 @@ class DuolingoImpl implements Duolingo {
     ];
 
     if (_cacheStorage.has(
-      key: DuolingoApi.wordHint.name,
+      key: Resource.wordHint.name,
       subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
-        key: DuolingoApi.wordHint.name,
+        key: Resource.wordHint.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -208,7 +208,7 @@ class DuolingoImpl implements Duolingo {
     );
 
     _cacheStorage.save(
-      key: DuolingoApi.wordHint.name,
+      key: Resource.wordHint.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -218,12 +218,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<LeaderboardResponse> cachedLeaderboard() async {
-    if (_cacheStorage.has(key: DuolingoApi.leaderboard.name)) {
-      return _cacheStorage.match(key: DuolingoApi.leaderboard.name);
+    if (_cacheStorage.has(key: Resource.leaderboard.name)) {
+      return _cacheStorage.match(key: Resource.leaderboard.name);
     }
 
     final response = await leaderboard();
-    _cacheStorage.save(key: DuolingoApi.leaderboard.name, value: response);
+    _cacheStorage.save(key: Resource.leaderboard.name, value: response);
 
     return response;
   }
@@ -234,11 +234,11 @@ class DuolingoImpl implements Duolingo {
   }) async {
     final cacheSubKeys = [wordId];
     if (_cacheStorage.has(
-      key: DuolingoApi.dictionary.name,
+      key: Resource.dictionary.name,
       subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
-        key: DuolingoApi.dictionary.name,
+        key: Resource.dictionary.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -246,7 +246,7 @@ class DuolingoImpl implements Duolingo {
     final response = await dictionary(wordId: wordId);
 
     _cacheStorage.save(
-      key: DuolingoApi.dictionary.name,
+      key: Resource.dictionary.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -260,11 +260,11 @@ class DuolingoImpl implements Duolingo {
   }) async {
     final cacheSubKeys = [userId];
     if (_cacheStorage.has(
-      key: DuolingoApi.friends.name,
+      key: Resource.friends.name,
       subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
-        key: DuolingoApi.friends.name,
+        key: Resource.friends.name,
         subKeys: cacheSubKeys,
       );
     }
@@ -272,7 +272,7 @@ class DuolingoImpl implements Duolingo {
     final response = await friends(userId: userId);
 
     _cacheStorage.save(
-      key: DuolingoApi.friends.name,
+      key: Resource.friends.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -282,12 +282,12 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<ShopItemsResponse> cachedShopItems() async {
-    if (_cacheStorage.has(key: DuolingoApi.shopItems.name)) {
-      return _cacheStorage.match(key: DuolingoApi.shopItems.name);
+    if (_cacheStorage.has(key: Resource.shopItems.name)) {
+      return _cacheStorage.match(key: Resource.shopItems.name);
     }
 
     final response = await shopItems();
-    _cacheStorage.save(key: DuolingoApi.shopItems.name, value: response);
+    _cacheStorage.save(key: Resource.shopItems.name, value: response);
 
     return response;
   }
@@ -297,36 +297,36 @@ class DuolingoImpl implements Duolingo {
 
   @override
   void cleanCachedManifest() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.manifest.name);
+      _cacheStorage.deleteBy(key: Resource.manifest.name);
 
   @override
   void cleanCachedVersionInfo() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.versionInfo.name);
+      _cacheStorage.deleteBy(key: Resource.versionInfo.name);
 
   @override
-  void cleanCachedUser() => _cacheStorage.deleteBy(key: DuolingoApi.user.name);
+  void cleanCachedUser() => _cacheStorage.deleteBy(key: Resource.user.name);
 
   @override
   void cleanCachedOverview() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.overview.name);
+      _cacheStorage.deleteBy(key: Resource.overview.name);
 
   @override
   void cleanCachedWordHint() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.wordHint.name);
+      _cacheStorage.deleteBy(key: Resource.wordHint.name);
 
   @override
   void cleanCachedLeaderboard() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.leaderboard.name);
+      _cacheStorage.deleteBy(key: Resource.leaderboard.name);
 
   @override
   void cleanCachedDictionary() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.dictionary.name);
+      _cacheStorage.deleteBy(key: Resource.dictionary.name);
 
   @override
   void cleanCachedFriends() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.friends.name);
+      _cacheStorage.deleteBy(key: Resource.friends.name);
 
   @override
   void cleanCachedShopItems() =>
-      _cacheStorage.deleteBy(key: DuolingoApi.shopItems.name);
+      _cacheStorage.deleteBy(key: Resource.shopItems.name);
 }

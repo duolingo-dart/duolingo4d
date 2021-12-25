@@ -2,8 +2,10 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
 import 'package:collection/collection.dart';
 
+// Project imports:
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/shopitems/product.dart';
 import 'package:duolingo4d/src/response/status.dart';

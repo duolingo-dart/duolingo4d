@@ -2,10 +2,13 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
+// Package imports:
 import 'package:http/http.dart';
 import 'package:json_pro/json_pro.dart';
+
+// Project imports:
+import 'package:duolingo4d/src/adapter/adapter.dart';
+import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 
 class ManifestAdapter extends Adapter<ManifestResponse> {
   /// Returns the new instance of [ManifestAdapter].

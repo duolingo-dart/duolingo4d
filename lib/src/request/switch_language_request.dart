@@ -7,9 +7,10 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/switch_language_adapter.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 
 /// This class provides the function to send a request
@@ -33,7 +34,8 @@ class SwitchLanguageRequest extends Request<SwitchLanguageResponse> {
   static final _adapter = SwitchLanguageAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.switchLanguage.url);
+  static final _apiUri =
+      Uri.parse('${Endpoint.base.url}/${Resource.switchLanguage.url}');
 
   @override
   Future<SwitchLanguageResponse> send() async => _adapter.convert(

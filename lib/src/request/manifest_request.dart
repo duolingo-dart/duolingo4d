@@ -3,14 +3,15 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/adapter/manifest_adapter.dart';
-import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/adapter/manifest_adapter.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
+import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 
 class ManifestRequest extends Request<ManifestResponse> {
   /// Returns the new instance of [ManifestRequest].
@@ -20,7 +21,8 @@ class ManifestRequest extends Request<ManifestResponse> {
   static final _adapter = ManifestAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.manifest.url);
+  static final _apiUri =
+      Uri.parse('${Endpoint.base.url}/${Resource.manifest.url}');
 
   @override
   Future<ManifestResponse> send() async => _adapter.convert(

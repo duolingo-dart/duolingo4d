@@ -7,9 +7,10 @@ import 'package:http/http.dart' as http;
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/auth_adapter.dart';
-import 'package:duolingo4d/src/duolingo_api.dart';
+import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
+import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 
 /// This class provides the function to send a request for user authentication.
@@ -30,7 +31,7 @@ class AuthRequest extends Request<AuthResponse> {
   static final _adapter = AuthAdapter.newInstance();
 
   /// The API uri
-  static final _apiUri = Uri.parse(DuolingoApi.auth.url);
+  static final _apiUri = Uri.parse('${Endpoint.base.url}/${Resource.auth.url}');
 
   @override
   Future<AuthResponse> send() async => _adapter.convert(
