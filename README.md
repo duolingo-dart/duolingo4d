@@ -40,6 +40,8 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 
 `Duolingo4D` is an unofficial library.
 
+Duolingo does not publish any official API references or specifications, so I reverse-engineered Duolingo by analyzing its communication content.
+
 ## 1.1. Supported Duolingo API
 
 |                     | Auth Required | Remarks                                                                                                            |
