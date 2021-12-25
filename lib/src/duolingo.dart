@@ -315,8 +315,8 @@ abstract class Duolingo {
   Future<ShopItemsResponse> shopItems();
 
   Future<PurchaseResponse> purchase({
-    required String userId,
     required String itemId,
+    required String userId,
     required String learningLanguage,
   });
 

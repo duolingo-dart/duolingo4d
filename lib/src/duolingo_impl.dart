@@ -123,13 +123,13 @@ class DuolingoImpl implements Duolingo {
 
   @override
   Future<PurchaseResponse> purchase({
-    required String userId,
     required String itemId,
+    required String userId,
     required String learningLanguage,
   }) async =>
       await PurchaseRequest.from(
-        userId: userId,
         itemId: itemId,
+        userId: userId,
         learningLanguage: learningLanguage,
       ).send();
 

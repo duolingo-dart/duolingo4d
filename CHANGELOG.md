@@ -1,6 +1,6 @@
 # Release Note
 
-## 0.1.5
+## 0.2.0
 
 - Added a feature that references the Manifest API.
 - Added a feature that references the Shop Items API.

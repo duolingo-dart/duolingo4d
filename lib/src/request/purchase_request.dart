@@ -19,16 +19,16 @@ import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 class PurchaseRequest extends Request<PurchaseResponse> {
   /// Returns the new instance of [PurchaseRequest] based on arguments.
   PurchaseRequest.from({
-    required this.userId,
     required this.itemId,
+    required this.userId,
     required this.learningLanguage,
   });
 
-  /// The user id
-  final String userId;
-
   /// The item id
   final String itemId;
+
+  /// The user id
+  final String userId;
 
   /// The learning language
   final String learningLanguage;

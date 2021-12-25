@@ -479,7 +479,7 @@ void main() async {
 
 | Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [purchase({required String userId, required String itemId, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/purchase.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/12_purchase/response.json) |
+|      ✅       | [purchase({required String itemId, required String userId, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/purchase.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/12_purchase/response.json) |
 
 With Purchase API, you can purchase items sold in Duoligno by spending Lingots or Gems.
 
@@ -496,8 +496,8 @@ void main() async {
   final shopItemsResponse = await duolingo.shopItems();
 
   final response = await duolingo.purchase(
-    userId: userResponse.id,
     itemId: shopItemsResponse.products[0].id,
+    userId: userResponse.id,
     learningLanguage: userResponse.learningLanguage,
   );
 
