@@ -354,7 +354,7 @@ void main() async {
 
 | Auth Required |                                             Method                                              |                                                   JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [activity()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/activity.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_activity/response.json) |
+|      ✅       | [activity()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/activity.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/07_activity/response.json) |
 
 The Activity API allows you to get information about your ranking with friends who are following you on Duolingo. The [Ranking](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Ranking-class.html) provides the feature to sort in ascending or descending order by score item.
 
