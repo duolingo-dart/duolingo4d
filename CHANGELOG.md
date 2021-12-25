@@ -4,13 +4,14 @@
 
 - Added a feature that references the Manifest API.
 - Added a feature that references the Shop Items API.
+- Improved the processing when the status code of the response returned from the API is other than 200. If the HTTP status code is other than 200, an empty object will be returned.
 
 ## 0.1.4
 
 - Added a feature that references the Dictionary API.
 - Added a feature that references the Friends API.
 
-## 0.1.1 - 0.1.3
+## 0.1.3
 
 - The configuration file has been adjusted to support multiple platforms. No new features or specifications have been changed.
 
