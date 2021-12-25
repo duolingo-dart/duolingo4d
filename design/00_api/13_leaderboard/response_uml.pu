@@ -1,0 +1,1169 @@
+@startjson "Leaderboard"
+{
+    "active": {
+        "cohort": {
+            "cohort_id": "83985935-40ec-4fb5-9262-5553eb751740",
+            "creation_date": "2021-12-25T03:14:22Z",
+            "rankings": [
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/583549939/pn3SVYlKkV",
+                    "display_name": "Derax",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 1471,
+                    "streak_extended_today": true,
+                    "user_id": 583549939
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Diệu",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 182,
+                    "streak_extended_today": true,
+                    "user_id": 819572672
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Balram",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 116,
+                    "streak_extended_today": true,
+                    "user_id": 856091107
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/835219009/XQukq5CSKd",
+                    "display_name": "shushi",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 110,
+                    "streak_extended_today": true,
+                    "user_id": 835219009
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Ing",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 78,
+                    "streak_extended_today": true,
+                    "user_id": 851387575
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Tit",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 63,
+                    "streak_extended_today": true,
+                    "user_id": 860454702
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/850469030/X0JR1NSzJf",
+                    "display_name": "Ykhon Nie",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 57,
+                    "streak_extended_today": true,
+                    "user_id": 850469030
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Vania",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 53,
+                    "streak_extended_today": true,
+                    "user_id": 856035459
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/831029340/dXGEQaW9eY",
+                    "display_name": "Ian STRIKE YT",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 44,
+                    "streak_extended_today": true,
+                    "user_id": 831029340
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Myle",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 43,
+                    "streak_extended_today": true,
+                    "user_id": 783117276
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/816574781/_zUgVd_1TL",
+                    "display_name": "Rajeev Kumar",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 42,
+                    "streak_extended_today": true,
+                    "user_id": 816574781
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Ishita laksh",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 38,
+                    "streak_extended_today": true,
+                    "user_id": 860981892
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "olga",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 37,
+                    "streak_extended_today": true,
+                    "user_id": 855320968
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/858406248/Z9c39R49qk",
+                    "display_name": "vishal",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 31,
+                    "streak_extended_today": true,
+                    "user_id": 858406248
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Duolingo4D",
+                    "has_plus": false,
+                    "has_recent_activity_15": true,
+                    "reaction": "NONE",
+                    "score": 28,
+                    "streak_extended_today": false,
+                    "user_id": 557897808
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/739260563/hBkIaaUy7-",
+                    "display_name": "Kendrick",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 26,
+                    "streak_extended_today": false,
+                    "user_id": 739260563
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/671496655/c4wlzjZg4P",
+                    "display_name": "Fenosoa Sandratra",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 23,
+                    "streak_extended_today": true,
+                    "user_id": 671496655
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "たかこ",
+                    "has_plus": true,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 23,
+                    "streak_extended_today": false,
+                    "user_id": 860074382
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Layla",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 22,
+                    "streak_extended_today": false,
+                    "user_id": 714665724
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Maged",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 20,
+                    "streak_extended_today": true,
+                    "user_id": 826884592
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "TR Roy",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 20,
+                    "streak_extended_today": true,
+                    "user_id": 854102637
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Naura",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 20,
+                    "streak_extended_today": true,
+                    "user_id": 860906804
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Nguyễn Yên Chi",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 19,
+                    "streak_extended_today": true,
+                    "user_id": 859722868
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Như Y",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 18,
+                    "streak_extended_today": true,
+                    "user_id": 702673068
+                },
+                {
+                    "avatar_url": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                    "display_name": "Lakhan Panchal",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 17,
+                    "streak_extended_today": true,
+                    "user_id": 780902390
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/861403435/N2JRxSUbhf",
+                    "display_name": "Hung Do",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 17,
+                    "streak_extended_today": true,
+                    "user_id": 861403435
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/780993087/fcfMtw0mk5",
+                    "display_name": "Liladhar Jaat",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 15,
+                    "streak_extended_today": true,
+                    "user_id": 780993087
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/857279974/HeNiRz8PG5",
+                    "display_name": "12. Thu Hương",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 15,
+                    "streak_extended_today": true,
+                    "user_id": 857279974
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/849181407/eCG4ywGJfq",
+                    "display_name": "藤崎",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 15,
+                    "streak_extended_today": false,
+                    "user_id": 849181407
+                },
+                {
+                    "avatar_url": "//duolingo-images.s3.amazonaws.com/avatars/840335487/ViNtNZD-BJ",
+                    "display_name": "Đoàn Gia Linh",
+                    "has_plus": false,
+                    "has_recent_activity_15": false,
+                    "reaction": "NONE",
+                    "score": 12,
+                    "streak_extended_today": true,
+                    "user_id": 840335487
+                }
+            ],
+            "tier": 0
+        },
+        "collab_goal_achieved": false,
+        "complete": false,
+        "contest": {
+            "contest_end": "2021-12-26T10:00:00Z",
+            "contest_id": "e0eb6d33-c7d1-4e72-b85e-9822bc98b487",
+            "contest_start": "2021-12-19T10:00:00Z",
+            "contest_state": "ACTIVE",
+            "offset_bucket": 11,
+            "registration_end": "2021-12-25T10:00:00Z",
+            "registration_state": "CLOSED",
+            "ruleset": {
+                "cohort_size": 30,
+                "cohort_type": "RANDOM",
+                "goals": null,
+                "num_demoted": [
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    5
+                ],
+                "num_losers": 0,
+                "num_promoted": [
+                    15,
+                    15,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    5
+                ],
+                "num_winners": 10,
+                "rewards": [
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 8,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    }
+                ],
+                "score_type": "XP",
+                "tiered": true
+            }
+        },
+        "goal_claimed": null,
+        "is_demoted": false,
+        "is_loser": false,
+        "is_promoted": true,
+        "is_winner": false,
+        "rewards": [],
+        "score": 28,
+        "user_id": 557897808
+    },
+    "ended": [],
+    "leaderboard": {
+        "active_contest": {
+            "contest_end": "2021-12-26T10:00:00Z",
+            "contest_id": "e0eb6d33-c7d1-4e72-b85e-9822bc98b487",
+            "contest_start": "2021-12-19T10:00:00Z",
+            "contest_state": "ACTIVE",
+            "offset_bucket": 11,
+            "registration_end": "2021-12-25T10:00:00Z",
+            "registration_state": "CLOSED",
+            "ruleset": {
+                "cohort_size": 30,
+                "cohort_type": "RANDOM",
+                "goals": null,
+                "num_demoted": [
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    7,
+                    5
+                ],
+                "num_losers": 0,
+                "num_promoted": [
+                    15,
+                    15,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    10,
+                    5
+                ],
+                "num_winners": 10,
+                "rewards": [
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 0
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 1,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 1
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 2
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 2,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 3
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 4
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 3,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 5
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 6
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 4,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 7
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 8
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 8,
+                        "rank": 0,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 6,
+                        "rank": 1,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    },
+                    {
+                        "expiration": "None",
+                        "item_id": null,
+                        "item_quantity": 5,
+                        "rank": 2,
+                        "reward_type": "CURRENCY",
+                        "tier": 9
+                    }
+                ],
+                "score_type": "XP",
+                "tiered": true
+            }
+        },
+        "next_contest_start": "2021-12-26T10:00:00Z",
+        "ruleset": {
+            "cohort_size": 30,
+            "cohort_type": "RANDOM",
+            "goals": null,
+            "num_demoted": [
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                7,
+                5
+            ],
+            "num_losers": 0,
+            "num_promoted": [
+                15,
+                15,
+                10,
+                10,
+                10,
+                10,
+                10,
+                10,
+                5
+            ],
+            "num_winners": 10,
+            "rewards": [
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 2,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 0
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 1,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 0
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 1,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 0
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 1
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 2,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 1
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 1,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 1
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 2
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 2,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 2
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 2,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 2
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 3
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 3
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 2,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 3
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 4
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 4
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 4
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 5
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 5
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 3,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 5
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 6
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 6
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 6
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 6,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 7
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 7
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 4,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 7
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 6,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 8
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 8
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 8
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 8,
+                    "rank": 0,
+                    "reward_type": "CURRENCY",
+                    "tier": 9
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 6,
+                    "rank": 1,
+                    "reward_type": "CURRENCY",
+                    "tier": 9
+                },
+                {
+                    "expiration": "None",
+                    "item_id": null,
+                    "item_quantity": 5,
+                    "rank": 2,
+                    "reward_type": "CURRENCY",
+                    "tier": 9
+                }
+            ],
+            "score_type": "XP",
+            "tiered": true
+        }
+    },
+    "num_sessions_remaining_to_unlock": 0,
+    "num_wins": 0,
+    "streak_in_tier": 3,
+    "tier": 0,
+    "top_three_finishes": 0
+}
+@endjson
