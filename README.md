@@ -27,7 +27,7 @@
     - [1.3.9. Dictionary API](#139-dictionary-api)
     - [1.3.10. Friends API](#1310-friends-api)
     - [1.3.11. Shop Items API](#1311-shop-items-api)
-    - [1.3.11. Purchase API](#1311-purchase-api)
+    - [1.3.12. Purchase API](#1312-purchase-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -475,7 +475,7 @@ void main() async {
 }
 ```
 
-### 1.3.11. Purchase API
+### 1.3.12. Purchase API
 
 | Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
