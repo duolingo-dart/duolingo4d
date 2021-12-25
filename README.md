@@ -502,6 +502,11 @@ void main() async {
   );
 
   print(response);
+
+  if (response.isNotEstablished) {
+    // It indicates purchase request was failed.
+    return;
+  }
 }
 ```
 
