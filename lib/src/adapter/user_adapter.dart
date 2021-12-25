@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class UserAdapter extends Adapter<UserResponse> {
   /// Returns [UserResponse] based on [response] and [json].
   UserResponse _buildUserResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       UserResponse.from(
         statusCode: response.statusCode,
@@ -88,7 +88,7 @@ class UserAdapter extends Adapter<UserResponse> {
       );
 
   TrackingProperty _buildTrackingProperty({
-    required Json json,
+    required JsonResponse json,
   }) =>
       TrackingProperty.from(
         userId: json.getInt(key: 'user_id').toString(),
@@ -133,7 +133,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [XpConfiguration] based on [json].
   XpConfiguration _buildXpConfiguration({
-    required Json json,
+    required JsonResponse json,
   }) =>
       XpConfiguration.from(
         maxSkillTestXp: json.getInt(key: 'maxSkillTestXp'),
@@ -143,7 +143,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [GemsConfiguration] based on [json].
   GemsConfiguration _buildGemsConfiguration({
-    required Json json,
+    required JsonResponse json,
   }) =>
       GemsConfiguration.from(
         gems: json.getInt(key: 'gems'),
@@ -153,7 +153,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [Course] list based on [jsonList].
   List<Course> _buildCourses({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final courses = <Course>[];
 
@@ -175,7 +175,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [CurrentCourse] based on [json].
   CurrentCourse _buildCurrentCourse({
-    required Json json,
+    required JsonResponse json,
   }) =>
       CurrentCourse.from(
         id: json.getString(key: 'id'),
@@ -195,7 +195,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [Skill] list based on [jsonList].
   List<Skill> _buildSkills({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final skills = <Skill>[];
 
@@ -227,7 +227,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [LastStreak] based on [json].
   LastStreak _buildLastStreak({
-    required Json json,
+    required JsonResponse json,
   }) =>
       LastStreak.from(
         daysAgo: json.getInt(key: 'daysAgo'),
@@ -238,7 +238,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [PracticeReminderSetting] list based on [json].
   List<PracticeReminderSetting> _buildPracticeReminderSettings({
-    required Json json,
+    required JsonResponse json,
   }) {
     final practiceReminderSettings = <PracticeReminderSetting>[];
 

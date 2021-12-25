@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -25,7 +25,7 @@ class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
 
   ShopItemsResponse _buildShopItemsResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       ShopItemsResponse.from(
         statusCode: response.statusCode,
@@ -37,7 +37,7 @@ class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
       );
 
   List<Product> _buildProducts({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final products = <Product>[];
     for (final json in jsonList) {

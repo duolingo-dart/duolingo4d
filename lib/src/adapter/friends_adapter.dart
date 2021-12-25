@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -25,7 +25,7 @@ class FriendsAdapter extends Adapter<FriendsResponse> {
 
   FriendsResponse _buildFriendsResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       FriendsResponse.from(
         statusCode: response.statusCode,
@@ -37,7 +37,7 @@ class FriendsAdapter extends Adapter<FriendsResponse> {
       );
 
   List<Friend> _buildFriends({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final friends = <Friend>[];
     for (final json in jsonList) {

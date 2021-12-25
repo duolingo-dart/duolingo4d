@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart' as http;
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
@@ -27,17 +27,17 @@ abstract class Adapter<R extends Response> {
     required http.Response response,
   });
 
-  Json jsonDecode({
+  JsonResponse jsonDecode({
     required http.Response response,
   }) {
     if (response.statusCode != 200) {
-      return Json.fromMap(value: {});
+      return JsonResponse.fromMap(value: {});
     }
 
     try {
-      return Json.fromBytes(bytes: response.bodyBytes);
+      return JsonResponse.fromBytes(value: response.bodyBytes);
     } on FormatException {
-      return Json.fromMap(value: {});
+      return JsonResponse.fromMap(value: {});
     }
   }
 }

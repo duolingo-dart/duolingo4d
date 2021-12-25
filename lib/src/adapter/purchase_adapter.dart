@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -27,7 +27,7 @@ class PurchaseAdapter extends Adapter<PurchaseResponse> {
 /// Returns [PurchaseResponse] based on [response] and [json].
 PurchaseResponse _buildPurchaseResponse({
   required Response response,
-  required Json json,
+  required JsonResponse json,
 }) =>
     PurchaseResponse.from(
       statusCode: response.statusCode,
@@ -36,7 +36,7 @@ PurchaseResponse _buildPurchaseResponse({
       invoice: _buildInvoice(json: json),
     );
 
-Invoice? _buildInvoice({required Json json}) {
+Invoice? _buildInvoice({required JsonResponse json}) {
   if (json.isEmpty) {
     return null;
   }

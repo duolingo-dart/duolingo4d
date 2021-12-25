@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
   /// Returns [OverviewResponse] based on [response] and [json].
   OverviewResponse _buildOverviewResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       OverviewResponse.from(
         statusCode: response.statusCode,
@@ -44,7 +44,7 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
 
   /// Returns [Vocabulary] list based on [jsonList].
   List<Vocabulary> _buildVocabularies({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final vocabularies = <Vocabulary>[];
 

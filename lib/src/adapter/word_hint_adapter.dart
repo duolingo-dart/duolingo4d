@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
   /// Returns [WordHintResponse] based on [response] and [json].
   WordHintResponse _buildWordHintResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       WordHintResponse.from(
         statusCode: response.statusCode,
@@ -41,7 +41,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
 
   /// Returns [HintToken] list based on [jsonList].
   List<HintToken> _buildHintTokens({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final hintTokens = <HintToken>[];
 
@@ -68,7 +68,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
 
   /// Returns [HintTable] based on [json].
   HintTable _buildHintTable({
-    required Json json,
+    required JsonResponse json,
   }) =>
       HintTable.from(
         headers: _buildHintHeaders(
@@ -82,7 +82,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
 
   /// Returns [HintHeader] list based on [jsonList].
   List<HintHeader> _buildHintHeaders({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final hintHeaders = <HintHeader>[];
 
@@ -100,7 +100,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
 
   /// Returns [HintRow] list based on [jsonList].
   List<HintRow> _buildHintRows({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final hintRows = <HintRow>[];
 
@@ -119,7 +119,7 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
 
   /// Returns [HintCell] list based on [jsonList].
   List<HintCell> _buildHintCells({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final hintCells = <HintCell>[];
 

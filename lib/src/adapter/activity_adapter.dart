@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class ActivityAdapter extends Adapter<ActivityResponse> {
   /// Returns [ActivityResponse] based on [response] and [json].
   ActivityResponse _buildActivityResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       ActivityResponse.from(
         statusCode: response.statusCode,
@@ -40,7 +40,7 @@ class ActivityAdapter extends Adapter<ActivityResponse> {
 
   /// Returns [Ranking] based on [json].
   Ranking _buildRanking({
-    required Json json,
+    required JsonResponse json,
   }) =>
       Ranking.from(
         scores: _buildScores(json: json),
@@ -48,7 +48,7 @@ class ActivityAdapter extends Adapter<ActivityResponse> {
 
   /// Returns list of [Score] based on [json].
   List<Score> _buildScores({
-    required Json json,
+    required JsonResponse json,
   }) {
     final items = <Score>[];
     for (final key in json.keySet) {

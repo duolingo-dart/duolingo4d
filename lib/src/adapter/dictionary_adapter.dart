@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -25,7 +25,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
 
   DictionaryResponse _buildDictionaryResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       DictionaryResponse.from(
         statusCode: response.statusCode,
@@ -57,7 +57,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
       );
 
   List<AlternativeForm> _buildAlternativeForms({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final alternativeForms = <AlternativeForm>[];
     for (final json in jsonList) {
@@ -86,7 +86,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
   }
 
   List<Lexeme> _buildLexemes({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final lexemes = <Lexeme>[];
     for (final json in jsonList) {
@@ -104,7 +104,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
   }
 
   List<Discussion> _buildDiscussions({
-    required List<Json> jsonList,
+    required List<JsonResponse> jsonList,
   }) {
     final discussions = <Discussion>[];
     for (final json in jsonList) {
@@ -117,7 +117,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
   }
 
   Discussion _buildDiscussion({
-    required Json json,
+    required JsonResponse json,
   }) =>
       Discussion.from(
         url: json.getString(key: 'url'),

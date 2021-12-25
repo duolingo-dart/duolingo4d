@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -26,7 +26,7 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
   /// Returns [ManifestResponse] based on [response] and [json].
   ManifestResponse _buildManifestResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       ManifestResponse.from(
         statusCode: response.statusCode,
@@ -40,7 +40,7 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
         themeColor: json.getString(key: 'theme_color'),
       );
 
-  List<Icon> _buildIcons({required List<Json> jsonList}) {
+  List<Icon> _buildIcons({required List<JsonResponse> jsonList}) {
     final icons = <Icon>[];
     for (final json in jsonList) {
       icons.add(

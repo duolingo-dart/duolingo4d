@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class AuthAdapter extends Adapter<AuthResponse> {
   /// Returns [AuthResponse] based on [response] and [json].
   AuthResponse _buildAuthResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       AuthResponse.from(
         statusCode: response.statusCode,
@@ -44,7 +44,7 @@ class AuthAdapter extends Adapter<AuthResponse> {
   /// Returns an object representing the authentication error
   /// if an authentication error exists, otherwise null.
   AuthError? _checkAuthError({
-    required Json json,
+    required JsonResponse json,
   }) {
     if (!json.containsKey(key: 'failure')) {
       return null;

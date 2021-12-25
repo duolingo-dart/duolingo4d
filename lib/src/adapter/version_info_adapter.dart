@@ -4,7 +4,7 @@
 
 // Package imports:
 import 'package:http/http.dart';
-import 'package:json_pro/json_pro.dart';
+import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
@@ -28,7 +28,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   /// Returns [VersionInfoResponse] based on [response] and [json].
   VersionInfoResponse _buildVersionInfoResponse({
     required Response response,
-    required Json json,
+    required JsonResponse json,
   }) =>
       VersionInfoResponse.from(
         statusCode: response.statusCode,
@@ -53,7 +53,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [TtsVoiceConfiguration] based on [json].
   TtsVoiceConfiguration _buildTtsVoiceConfiguration({
-    required Json json,
+    required JsonResponse json,
   }) {
     return TtsVoiceConfiguration.from(
       path: json.getString(key: 'path'),
@@ -68,7 +68,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [MultiVoiceDirection] list based on [json].
   List<MultiVoiceDirection> _buildMultiVoiceDirections({
-    required Json json,
+    required JsonResponse json,
   }) {
     final multiVoiceDirections = <MultiVoiceDirection>[];
 
@@ -86,7 +86,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [VoiceDirection] list based on [json].
   List<VoiceDirection> _buildVoiceDirections({
-    required Json json,
+    required JsonResponse json,
   }) {
     final voiceDirections = <VoiceDirection>[];
 
@@ -104,7 +104,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [SupportedDirection] list based on [json].
   List<SupportedDirection> _buildSupportedDirections({
-    required Json json,
+    required JsonResponse json,
   }) {
     final supportedDirections = <SupportedDirection>[];
 

@@ -155,10 +155,10 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
-  json_pro:
+  json_response:
     dependency: "direct main"
     description:
-      name: json_pro
+      name: json_response
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
