@@ -14,7 +14,6 @@ class Cohort {
     required this.id,
     required this.ranks,
     required this.tier,
-    required this.creationDate,
   });
 
   /// The id
@@ -26,13 +25,8 @@ class Cohort {
   /// The tier
   final int tier;
 
-  /// The creation date
-  final String creationDate;
-
   @override
-  String toString() {
-    return 'Cohort(id: $id, ranks: $ranks, tier: $tier, creationDate: $creationDate)';
-  }
+  String toString() => 'Cohort(id: $id, ranks: $ranks, tier: $tier)';
 
   @override
   bool operator ==(Object other) {
@@ -42,12 +36,9 @@ class Cohort {
     return other is Cohort &&
         other.id == id &&
         listEquals(other.ranks, ranks) &&
-        other.tier == tier &&
-        other.creationDate == creationDate;
+        other.tier == tier;
   }
 
   @override
-  int get hashCode {
-    return id.hashCode ^ ranks.hashCode ^ tier.hashCode ^ creationDate.hashCode;
-  }
+  int get hashCode => id.hashCode ^ ranks.hashCode ^ tier.hashCode;
 }

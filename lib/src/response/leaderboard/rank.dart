@@ -7,7 +7,7 @@ class Rank {
   /// Returns the new instance of [Rank] based on arguments.
   Rank.from({
     required this.userId,
-    required this.userName,
+    required this.name,
     required this.avatarUrl,
     required this.xp,
     required this.reaction,
@@ -17,8 +17,8 @@ class Rank {
   /// The user id
   final String userId;
 
-  /// The user id
-  final String userName;
+  /// The name
+  final String name;
 
   /// The avatar url
   final String avatarUrl;
@@ -34,7 +34,7 @@ class Rank {
 
   @override
   String toString() {
-    return 'Rank(userId: $userId, userName: $userName, avatarUrl: $avatarUrl, xp: $xp, reaction: $reaction, isStreakExtendedToday: $isStreakExtendedToday)';
+    return 'Rank(userId: $userId, name: $name, avatarUrl: $avatarUrl, xp: $xp, reaction: $reaction, isStreakExtendedToday: $isStreakExtendedToday)';
   }
 
   @override
@@ -43,7 +43,7 @@ class Rank {
 
     return other is Rank &&
         other.userId == userId &&
-        other.userName == userName &&
+        other.name == name &&
         other.avatarUrl == avatarUrl &&
         other.xp == xp &&
         other.reaction == reaction &&
@@ -53,7 +53,7 @@ class Rank {
   @override
   int get hashCode {
     return userId.hashCode ^
-        userName.hashCode ^
+        name.hashCode ^
         avatarUrl.hashCode ^
         xp.hashCode ^
         reaction.hashCode ^

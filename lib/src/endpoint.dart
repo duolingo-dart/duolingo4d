@@ -8,6 +8,9 @@ enum Endpoint {
 
   /// Dictionary
   dictionary,
+
+  /// Leaderboard
+  leaderboard,
 }
 
 extension EndpointFeature on Endpoint {
@@ -17,6 +20,8 @@ extension EndpointFeature on Endpoint {
         return 'https://www.duolingo.com';
       case Endpoint.dictionary:
         return 'https://d2.duolingo.com';
+      case Endpoint.leaderboard:
+        return 'https://duolingo-leaderboards-prod.duolingo.com';
     }
   }
 }

@@ -9,6 +9,7 @@ import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
@@ -265,6 +266,10 @@ abstract class Duolingo {
   ///}
   /// ```
   Future<ActivityResponse> activity();
+
+  Future<LeaderboardResponse> leaderboard({
+    required String userId,
+  });
 
   /// Returns the dictionary information linked to [wordId].
   ///
@@ -536,6 +541,10 @@ abstract class Duolingo {
   ///```
   Future<ActivityResponse> cachedActivity();
 
+  Future<LeaderboardResponse> cachedLeaderboard({
+    required String userId,
+  });
+
   /// Returns cached dictionary information linked to [wordId].
   ///
   /// From this API, you can refer to the information on the official Duolingo page at the following URL:
@@ -611,6 +620,9 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedActivity] method.
   void cleanCachedActivity();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedLeaderboard] method.
+  void cleanCachedLeaderboard();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedDictionary] method.
   void cleanCachedDictionary();

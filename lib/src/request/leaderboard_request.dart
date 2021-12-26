@@ -6,30 +6,30 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/friends_adapter.dart';
+import 'package:duolingo4d/src/adapter/leaderboard_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 
-class FriendsRequest extends Request<FriendsResponse> {
-  /// Returns the new instance of [FriendsRequest] based on arguments.
-  FriendsRequest.from({
+class LeaderboardRequest extends Request<LeaderboardResponse> {
+  /// Returns the new instance of [LeaderboardRequest] based on arguments.
+  LeaderboardRequest.from({
     required this.userId,
   });
 
   /// The response adapter
-  static final _adapter = FriendsAdapter.newInstance();
+  static final _adapter = LeaderboardAdapter.newInstance();
 
   /// The user id
   final String userId;
 
   @override
-  Future<FriendsResponse> send() async => _adapter.convert(
+  Future<LeaderboardResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
-            '${Endpoint.base.url}/${Resource.friends.url}/$userId/subscriptions',
+            '${Endpoint.leaderboard.url}/${Resource.leaderboard.url}/$userId?client_unlocked=true',
           ),
           headers: InternalSession.instance.headers,
         ),

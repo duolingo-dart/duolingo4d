@@ -20,3 +20,4 @@ export 'src/response/dictionary/dictionary_response.dart';
 export 'package:duolingo4d/src/response/friends/friends_response.dart';
 export 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 export 'package:duolingo4d/src/response/purchase/purchase_response.dart';
+export 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';

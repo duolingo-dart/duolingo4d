@@ -7,6 +7,10 @@ import 'package:duolingo4d/src/response/leaderboard/current_user.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
+export 'package:duolingo4d/src/response/leaderboard/current_user.dart';
+export 'package:duolingo4d/src/response/leaderboard/rank.dart';
+export 'package:duolingo4d/src/response/leaderboard/cohort.dart';
+
 class LeaderboardResponse extends Response {
   /// Returns the new instance of [LeaderboardResponse] based on arguments.
   LeaderboardResponse.from({
