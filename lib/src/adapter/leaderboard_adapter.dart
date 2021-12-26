@@ -41,7 +41,7 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
   }) =>
       CurrentUser.from(
         id: '${json.getInt(key: 'user_id')}',
-        xp: json.getInt(key: 'score'),
+        xp: json.getDouble(key: 'score').toInt(),
         cohort: _buildCohort(
           json: json.getJson(key: 'cohort'),
         ),
@@ -72,7 +72,7 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
           userId: '${json.getInt(key: 'user_id')}',
           name: json.getString(key: 'display_name'),
           avatarUrl: json.getString(key: 'avatar_url'),
-          xp: json.getInt(key: 'score'),
+          xp: json.getDouble(key: 'score').toInt(),
           reaction: json.getString(key: 'reaction'),
           isStreakExtendedToday: json.getBool(
             key: 'streak_extended_today',
