@@ -31,15 +31,15 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        currentUser: _buildCurrentUser(
+        activeThread: _buildActiveThread(
           json: json.getJson(key: 'active'),
         ),
       );
 
-  CurrentUser _buildCurrentUser({
+  ActiveThread _buildActiveThread({
     required JsonResponse json,
   }) =>
-      CurrentUser.from(
+      ActiveThread.from(
         id: '${json.getInt(key: 'user_id')}',
         xp: json.getDouble(key: 'score').toInt(),
         cohort: _buildCohort(

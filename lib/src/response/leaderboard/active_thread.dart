@@ -5,9 +5,9 @@
 // Project imports:
 import 'package:duolingo4d/src/response/leaderboard/cohort.dart';
 
-class CurrentUser {
-  /// Returns the new instance of [CurrentUser] based on arguments.
-  CurrentUser.from({
+class ActiveThread {
+  /// Returns the new instance of [ActiveThread] based on arguments.
+  ActiveThread.from({
     required this.id,
     required this.xp,
     required this.cohort,
@@ -47,7 +47,7 @@ class CurrentUser {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is CurrentUser &&
+    return other is ActiveThread &&
         other.id == id &&
         other.xp == xp &&
         other.cohort == cohort &&
