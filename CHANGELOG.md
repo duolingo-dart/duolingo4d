@@ -7,6 +7,7 @@
 - Added a feature that allows you to get a Duolingo's manifest information.
 - Added a feature that allows you to get a list of items sold on Duolingo.
 - Added a feature to purchase items sold on Duolingo.
+- Added a feature that allows you to get information about leaderboard on Duolingo.
 - Improved the processing when the status code of the response returned from the API is other than 200. If the HTTP status code is other than 200, an empty object will be returned.
 
 ### Destructive changes
