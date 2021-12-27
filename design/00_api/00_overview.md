@@ -15,3 +15,4 @@
 | Friends         | <https://www.duolingo.com/2017-06-30/users>                                                               | /{userId}/subscriptions                                | -                                | YES           |
 | Shop Items      | <https://www.duolingo.com/2017-06-30/shop-items>                                                          | -                                                      | -                                | YES           |
 | Purchase        | <https://www.duolingo.com/2017-06-30/users>                                                               | /{userId}/shop-items                                   | itemName, learningLanguage       | YES           |
+| Alphabets       | <https://www-prod.duolingo.com/2017-06-30/alphabets/courses>                                              | /ja/en/                                                | -                                | YES           |

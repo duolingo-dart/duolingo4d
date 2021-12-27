@@ -41,6 +41,9 @@ enum Resource {
 
   /// Purchase API
   purchase,
+
+  /// Alphabets API
+  alphabets,
 }
 
 extension ReourceFeature on Resource {
@@ -66,11 +69,13 @@ extension ReourceFeature on Resource {
       case Resource.activity:
         return 'friendships/leaderboard_activity';
       case Resource.leaderboard:
-        return '/leaderboards/7d9f5dd1-8423-491a-91f2-2532052038ce/users';
+        return 'leaderboards/7d9f5dd1-8423-491a-91f2-2532052038ce/users';
       case Resource.dictionary:
         return 'api/1/dictionary_page';
       case Resource.shopItems:
         return '2017-06-30/shop-items';
+      case Resource.alphabets:
+        return '2017-06-30/alphabets/courses';
     }
   }
 }

@@ -6,6 +6,7 @@
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/activity/activity_response.dart';
+import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
 import 'package:duolingo4d/src/response/friends/friends_response.dart';
@@ -325,6 +326,11 @@ abstract class Duolingo {
     required String learningLanguage,
   });
 
+  Future<AlphabetsResponse> alphabets({
+    required String fromLanguage,
+    required String learningLanguage,
+  });
+
   Future<ManifestResponse> cachedManifest();
 
   /// Returns cached metadata about the configuration of the Duolingo service.
@@ -600,6 +606,11 @@ abstract class Duolingo {
 
   Future<ShopItemsResponse> cachedShopItems();
 
+  Future<AlphabetsResponse> cachedAlphabets({
+    required String fromLanguage,
+    required String learningLanguage,
+  });
+
   /// Deletes all cached response objects.
   void cleanCache();
 
@@ -632,4 +643,7 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedShopItems] method.
   void cleanCachedShopItems();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedAlphabets] method.
+  void cleanCachedAlphabets();
 }

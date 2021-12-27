@@ -1,0 +1,1925 @@
+{
+    "alphabets": [
+        {
+            "id": "hiragana",
+            "name": "Hiragana",
+            "title": "Let's learn Hiragana!",
+            "subtitle": "Get to know the main writing system in Japanese",
+            "alphabetSessionId": "hiragana",
+            "practiceSessionId": null,
+            "explanationUrl": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana1_1/android/5/13.json",
+            "explanationListing": {
+                "title": "Hiragana Tips",
+                "subtitle": "See all the tips about Hiragana",
+                "groups": [
+                    {
+                        "title": "Hiragana",
+                        "tips": [
+                            {
+                                "title": "す, し, う, こ",
+                                "subtitle": "su, shi, u, ko",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana1_1/android/5/13.json"
+                            },
+                            {
+                                "title": "あ, か, さ, い",
+                                "subtitle": "a, ka, sa, i",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana1_2/android/5/7.json"
+                            },
+                            {
+                                "title": "え, み, ち, わ",
+                                "subtitle": "e, mi, chi, wa",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana1_3/android/5/10.json"
+                            },
+                            {
+                                "title": "き, ん, お, た",
+                                "subtitle": "ki, n, o, ta",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana2_1/android/5/10.json"
+                            },
+                            {
+                                "title": "り, ら, つ, ゆ",
+                                "subtitle": "ri, ra, tsu, yu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana2_2/android/5/8.json"
+                            },
+                            {
+                                "title": "は, そ, ま, て",
+                                "subtitle": "ha, so, ma, te",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana2_3/android/5/9.json"
+                            },
+                            {
+                                "title": "く, も, せ, な",
+                                "subtitle": "ku, mo, se, na",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana2_4/android/5/9.json"
+                            },
+                            {
+                                "title": "ふ, け, ね, に",
+                                "subtitle": "fu, ke, ne, ni",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana3_1/android/5/6.json"
+                            },
+                            {
+                                "title": "ぬ, ひ, ほ, る",
+                                "subtitle": "nu, hi, ho, ru",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana3_2/android/5/8.json"
+                            },
+                            {
+                                "title": "へ, や, の, む, れ",
+                                "subtitle": "he, ya, no, mu, re",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana3_3/android/5/12.json"
+                            },
+                            {
+                                "title": "を, よ, め, と, ろ",
+                                "subtitle": "o, yo, me, to, ro",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/hiragana3_4/android/5/13.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Dakuten",
+                        "tips": [
+                            {
+                                "title": "が, ぎ, ぐ, げ, ご",
+                                "subtitle": "ga, gi, gu, ge, go",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/dakuten_1/android/5/8.json"
+                            },
+                            {
+                                "title": "ざ, ず, ぜ, ぞ, じ",
+                                "subtitle": "za, zu, ze, zo, ji",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/dakuten_2/android/5/7.json"
+                            },
+                            {
+                                "title": "だ, で, ど, ぢ, づ",
+                                "subtitle": "da, de, do, ji, zu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/dakuten_3/android/5/10.json"
+                            },
+                            {
+                                "title": "ば, び, ぶ, べ, ぼ",
+                                "subtitle": "ba, bi, bu, be, bo",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/dakuten_4/android/5/6.json"
+                            },
+                            {
+                                "title": "ぱ, ぴ, ぷ, ぺ, ぽ",
+                                "subtitle": "pa, pi, pu, pe, po",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/dakuten_5/android/5/8.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Small Kana",
+                        "tips": [
+                            {
+                                "title": "ひゃ, みゃ, りゃ, きゃ, にゃ, しゃ, ちゃ",
+                                "subtitle": "hya, mya, rya, kya, nya, sha, cha",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_1/android/5/6.json"
+                            },
+                            {
+                                "title": "りゅ, きゅ, しゅ, ちゅ, にゅ, ひゅ, みゅ",
+                                "subtitle": "ryu, kyu, shu, chu, nyu, hyu, myu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_2/android/5/5.json"
+                            },
+                            {
+                                "title": "きょ, にょ, ひょ, みょ, りょ, しょ, ちょ",
+                                "subtitle": "kyo, nyo, hyo, myo, ryo, sho, cho",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_3/android/5/4.json"
+                            },
+                            {
+                                "title": "ぎゃ, じゃ, ぢゃ, びゃ, ぴゃ",
+                                "subtitle": "gya, ja, ja, bya, pya",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_4/android/5/6.json"
+                            },
+                            {
+                                "title": "ぎゅ, じゅ, びゅ, ぴゅ, りゅ",
+                                "subtitle": "gyu, ju, ju, byu, pyu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_5/android/5/5.json"
+                            },
+                            {
+                                "title": "ぎょ, じょ, ぢょ, びょ, ぴょ",
+                                "subtitle": "gyo, jo, jo, byo, pyo",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/small_kana_6/android/5/5.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Spelling",
+                        "tips": [
+                            {
+                                "title": "Small っ 1",
+                                "subtitle": "kk, pp, ss, tt",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/spelling_1/android/5/7.json"
+                            },
+                            {
+                                "title": "Small っ 2",
+                                "subtitle": "tt, ss, kk, pp",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/spelling_2/android/5/6.json"
+                            },
+                            {
+                                "title": "Small っ 3",
+                                "subtitle": "tt, kk, pp, ss, ssh",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/spelling_3/android/5/7.json"
+                            },
+                            {
+                                "title": "Small っ 4",
+                                "subtitle": "kk, pp, cch, ttsu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/spelling_4/android/5/6.json"
+                            },
+                            {
+                                "title": "Long Vowels",
+                                "subtitle": "oo, aa, ee, ii, uu, ei, ou",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/spelling_5/android/5/5.json"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "groups": [
+                {
+                    "name": "kanas",
+                    "title": null,
+                    "subtitle": null,
+                    "characters": [
+                        [
+                            {
+                                "character": "あ",
+                                "transliteration": "a",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/21c88220be3ae3b72e0e9718ff7d5d64",
+                                "strength": 0
+                            },
+                            {
+                                "character": "い",
+                                "transliteration": "i",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5fb279037e25d9477f61f0d2a91555a8",
+                                "strength": 0
+                            },
+                            {
+                                "character": "う",
+                                "transliteration": "u",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c4dc07e4cd2681a9d3aad69e40867fbe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "え",
+                                "transliteration": "e",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/f5c79a4727f50cf23cbc074b189614b4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "お",
+                                "transliteration": "o",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/94fced162be2a100287908213e5ae206",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "か",
+                                "transliteration": "ka",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c07329522ed772c786b8bb3aa958bff0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "き",
+                                "transliteration": "ki",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/78effa058dca81914e8f5a6507217521",
+                                "strength": 0
+                            },
+                            {
+                                "character": "く",
+                                "transliteration": "ku",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/fdd58de55006a7aa2f71e29361716fe4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "け",
+                                "transliteration": "ke",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/dd6d514f0d15709855dae4fc40b1022c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "こ",
+                                "transliteration": "ko",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/81a9941c7947673d84e23a282a87f1a4",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "さ",
+                                "transliteration": "sa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/ec131c6015c0185d06efd1c0c73f4184",
+                                "strength": 0
+                            },
+                            {
+                                "character": "し",
+                                "transliteration": "shi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/276550424c5169d0d9befebbccd351eb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "す",
+                                "transliteration": "su",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/a0f4e9f82cb6c50c7bd67080622d1546",
+                                "strength": 0
+                            },
+                            {
+                                "character": "せ",
+                                "transliteration": "se",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/53f4f69114b9de95c261e267924781c2",
+                                "strength": 0
+                            },
+                            {
+                                "character": "そ",
+                                "transliteration": "so",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/37550c98a16d440ddcdc87f9570035ed",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "た",
+                                "transliteration": "ta",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/0259f3dc3f9f737648a30b73b89f8933",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ち",
+                                "transliteration": "chi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/4ef1bd31049ee03d15fa4a11cc1a525a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "つ",
+                                "transliteration": "tsu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/bbb2428e919ef628f6f654575d3da0dc",
+                                "strength": 0
+                            },
+                            {
+                                "character": "て",
+                                "transliteration": "te",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/8753253c0177678a646f612b806d6b1e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "と",
+                                "transliteration": "to",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6c3bb323fc345aa4e8802b035efcae5e",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "な",
+                                "transliteration": "na",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2f0023ad84a15bbe966a13e834ecb801",
+                                "strength": 0
+                            },
+                            {
+                                "character": "に",
+                                "transliteration": "ni",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/79ba36714231542cd26803aed5bf226c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぬ",
+                                "transliteration": "nu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6566b7d344634262bac94ea378d23eec",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ね",
+                                "transliteration": "ne",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/393fade5e9029cdd177fb130f0fef272",
+                                "strength": 0
+                            },
+                            {
+                                "character": "の",
+                                "transliteration": "no",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/d2d0a3445891446eb81b8b7b8ab1887f",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "は",
+                                "transliteration": "ha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/a6cd693127522d12131346eda716e69c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ひ",
+                                "transliteration": "hi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7c1e167f64def7d6548fb1aa94eca5b4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ふ",
+                                "transliteration": "fu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2e632f32c714b4bcb6aabf6cd6e32c4a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "へ",
+                                "transliteration": "he",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c3c800a53bbbbd86ba9e77b6bbb80f7c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ほ",
+                                "transliteration": "ho",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2b82d9fe73f9e12e1d4b2425d5e39704",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ま",
+                                "transliteration": "ma",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6150c06c15bfde1f6c30a6c9a48dabce",
+                                "strength": 0
+                            },
+                            {
+                                "character": "み",
+                                "transliteration": "mi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/3bb6b451966963921df70304411a72f4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "む",
+                                "transliteration": "mu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/92954f4d69d0a76f221b6f167ce4d749",
+                                "strength": 0
+                            },
+                            {
+                                "character": "め",
+                                "transliteration": "me",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/31a84656228d0d1a79505946239f4940",
+                                "strength": 0
+                            },
+                            {
+                                "character": "も",
+                                "transliteration": "mo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59b44ce760f0e85f94db78e62d621a5c",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "や",
+                                "transliteration": "ya",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6384ef3f71c2ce8f1b73e76741ac271a",
+                                "strength": 0
+                            },
+                            null,
+                            {
+                                "character": "ゆ",
+                                "transliteration": "yu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7d6b8b2d2d8aee799bda35a487bef96a",
+                                "strength": 0
+                            },
+                            null,
+                            {
+                                "character": "よ",
+                                "transliteration": "yo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/92f132f2020cd2d3e2f849f483df7a4f",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ら",
+                                "transliteration": "ra",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/4fa14190212b4b883cf83580a92384d1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "り",
+                                "transliteration": "ri",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/19e74effea4c95f2f1348e899774d762",
+                                "strength": 0
+                            },
+                            {
+                                "character": "る",
+                                "transliteration": "ru",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6b41b2ee2cd08894913c9c3d10e6719d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "れ",
+                                "transliteration": "re",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/55a8bec04361a66ed7cdc985e3d40545",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ろ",
+                                "transliteration": "ro",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/de425bbc113f91514798185f6d8c560a",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "わ",
+                                "transliteration": "wa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/ca5202d8b907de9073d222ea006aaf38",
+                                "strength": 0
+                            },
+                            null,
+                            null,
+                            null,
+                            {
+                                "character": "を",
+                                "transliteration": "wo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c7db66cdda40ba489ef342f7d12b07a8",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ん",
+                                "transliteration": "n",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6ab599653e3bbc3ae8b3fc95a15af3cf",
+                                "strength": 0
+                            },
+                            null,
+                            null,
+                            null,
+                            null
+                        ]
+                    ]
+                },
+                {
+                    "name": "dakutens",
+                    "title": "Dakuon",
+                    "subtitle": "Add a symbol to change the sound",
+                    "characters": [
+                        [
+                            {
+                                "character": "が",
+                                "transliteration": "ga",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9b5d5ad04937a0e3529817e21bcf280d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぎ",
+                                "transliteration": "gi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/0cf9e95b628634fbfa0b2866ee85cbf2",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぐ",
+                                "transliteration": "gu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/e961c897da01d344b0deb3708cc31dec",
+                                "strength": 0
+                            },
+                            {
+                                "character": "げ",
+                                "transliteration": "ge",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7a1e2751e92eaf5235f82cab7d45132e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ご",
+                                "transliteration": "go",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/73ecbd7b2527803707bb6042f158dc7d",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ざ",
+                                "transliteration": "za",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7eeeba556af2d021d914f6c7774ea308",
+                                "strength": 0
+                            },
+                            {
+                                "character": "じ",
+                                "transliteration": "ji",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/68d8d5a3dd16ccd80011eabd9cd69c51",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ず",
+                                "transliteration": "zu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/cb11c7cdc623c125f22900354be6034b",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぜ",
+                                "transliteration": "ze",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/bdc76cfb9da6edc4b8e48e6bfc7ee366",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぞ",
+                                "transliteration": "zo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/39e7eaf72559ae57f4011a5a7b2a1127",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "だ",
+                                "transliteration": "da",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7262af9ad1b4bc927c6f728473b87321",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぢ",
+                                "transliteration": "ji",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/b21c07e7a3a652f3a097e83113895af0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "づ",
+                                "transliteration": "zu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/817e4b809a655b0e4965f7f06d4d951d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "で",
+                                "transliteration": "de",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/f5e5aabf68f9d1bfff13417ef79fdd25",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ど",
+                                "transliteration": "do",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59e5eb3aac553ae0865a044011c264dd",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ば",
+                                "transliteration": "ba",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/05e861a605b382f49df25fdc780aeac8",
+                                "strength": 0
+                            },
+                            {
+                                "character": "び",
+                                "transliteration": "bi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/fb1fe9d1d47f691b79ca863c17ce6def",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぶ",
+                                "transliteration": "bu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/53bcec1180498fc5b6cb64bf5393a169",
+                                "strength": 0
+                            },
+                            {
+                                "character": "べ",
+                                "transliteration": "be",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/3ce7df7005c152c4c97843455602d49e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぼ",
+                                "transliteration": "bo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/666c64c6cea6d85953347fa0c58f9f32",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ぱ",
+                                "transliteration": "pa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/d253ed0385b0d4acbda1f512db596c8e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぴ",
+                                "transliteration": "pi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/163fc63c61051ec80438ca15bba7aa5c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぷ",
+                                "transliteration": "pu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59d78e7b2a9f1af48f93908323b90653",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぺ",
+                                "transliteration": "pe",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5f43473aa8099d73cc710fc1d8e3471a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぽ",
+                                "transliteration": "po",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/95570d15da4a51875c601bc370b13b26",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "combinations",
+                    "title": "Combo",
+                    "subtitle": "Add small characters to make new syllables",
+                    "characters": [
+                        [
+                            {
+                                "character": "きゃ",
+                                "transliteration": "kya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/cf8c63ca5a73d4cd870203e3b7d6adeb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "きゅ",
+                                "transliteration": "kyu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6f0ea054ecf66fea1ad7c1d3fc33913e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "きょ",
+                                "transliteration": "kyo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/069a60275a4a8167b5994c8630802342",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ぎゃ",
+                                "transliteration": "gya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9758639bad74ef62942a576bf4567ad1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぎゅ",
+                                "transliteration": "gyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/36dcc432a0aac47bda9fd3c0f5971f79",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぎょ",
+                                "transliteration": "gyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/42561e25d3ad347c15929c5217269a1c",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "しゃ",
+                                "transliteration": "sha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/84e9afa735c201812a2f10d809503241",
+                                "strength": 0
+                            },
+                            {
+                                "character": "しゅ",
+                                "transliteration": "shu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/00261b39065f41b7da33b86f285f0bcb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "しょ",
+                                "transliteration": "sho",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/dd5c9efa1d73cca5ea80563fc6ef3cb7",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "じゃ",
+                                "transliteration": "ja",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/385000cbb05155fc4632e02149bb87d1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "じゅ",
+                                "transliteration": "ju",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9da27213035b9b7493601879aee1a1b9",
+                                "strength": 0
+                            },
+                            {
+                                "character": "じょ",
+                                "transliteration": "jo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/982c87c789ea1efa02f73222215b0e0d",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ちゃ",
+                                "transliteration": "cha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5d8d42725cb569af91dce7ecc1fdf285",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ちゅ",
+                                "transliteration": "chu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/ea2b43648908383225c94e4579293dbe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ちょ",
+                                "transliteration": "cho",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e2a9354656be01b05abb08dff736f934",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "にゃ",
+                                "transliteration": "nya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/0b36a7f390e2de6d3b0aeb5764f253e5",
+                                "strength": 0
+                            },
+                            {
+                                "character": "にゅ",
+                                "transliteration": "nyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/16542be183ca10e93eb6178a3f47a6ad",
+                                "strength": 0
+                            },
+                            {
+                                "character": "にょ",
+                                "transliteration": "nyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f595668880b7a3f1d6e7c0d0493174bd",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ひゃ",
+                                "transliteration": "hya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f3fd98377edb4464a8541ee55185706a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ひゅ",
+                                "transliteration": "hyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e59fe7754f31958125813e6194b4f72b",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ひょ",
+                                "transliteration": "hyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f5be8e72adf7e20449448e441ab374ef",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "びゃ",
+                                "transliteration": "bya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/5959d15954071a94beec4e9e6530a437",
+                                "strength": 0
+                            },
+                            {
+                                "character": "びゅ",
+                                "transliteration": "byu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f66a6fb4fab8671c9eeabce02a1fce27",
+                                "strength": 0
+                            },
+                            {
+                                "character": "びょ",
+                                "transliteration": "byo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/bb976a290b2db5009bf3e680640f07b6",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ぴゃ",
+                                "transliteration": "pya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/6beab7b0ee7aeadb03e50594d7cc03c4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぴゅ",
+                                "transliteration": "pyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/112fa78ccead56ed00da518a16310df3",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ぴょ",
+                                "transliteration": "pyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/3bbb71861a785285e7f954bdfe773274",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "みゃ",
+                                "transliteration": "mya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/4dec0012d5ce340521f614b1cafc7dfe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "みゅ",
+                                "transliteration": "myu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f7700f91908ffc4d810d09722814efde",
+                                "strength": 0
+                            },
+                            {
+                                "character": "みょ",
+                                "transliteration": "myo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e59758db1aa5ddd197c7f1aa9e8f2947",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "りゃ",
+                                "transliteration": "rya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/c6f70322c7f1b3cc072dbda4c66d2684",
+                                "strength": 0
+                            },
+                            {
+                                "character": "りゅ",
+                                "transliteration": "ryu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/a14bf46ce9e2a10df510f0574447aa15",
+                                "strength": 0
+                            },
+                            {
+                                "character": "りょ",
+                                "transliteration": "ryo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9a328eab7f8fceee3010e3662a139c68",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "smallTsu",
+                    "title": "Small っ",
+                    "subtitle": "Double the following consonant",
+                    "characters": [
+                        [
+                            {
+                                "character": "っ+k",
+                                "transliteration": "kk",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/8dc0b4ef7f30edc744710cd12e2990a3",
+                                "strength": 0
+                            },
+                            {
+                                "character": "っ+s",
+                                "transliteration": "ss",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/26ebaaa617db457ac83f18dbe6e976f4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "っ+t",
+                                "transliteration": "tt",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9607378932ecbbf94aad299632c8f3b0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "っ+p",
+                                "transliteration": "pp",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/05c9b14c8b96f119cb491b83e5645506",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "longVowels",
+                    "title": "Long vowels",
+                    "subtitle": null,
+                    "characters": [
+                        [
+                            {
+                                "character": "ああ",
+                                "transliteration": "aa",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/90c7fb964a758d180231c658ec9109a9",
+                                "strength": 0
+                            },
+                            {
+                                "character": "いい",
+                                "transliteration": "ii",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/6a564f6aefb1fb3650414204fbac4aaa",
+                                "strength": 0
+                            },
+                            {
+                                "character": "うう",
+                                "transliteration": "uu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9258aafd9f9fbe1b90eb94ae53682795",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ええ",
+                                "transliteration": "ee",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/c36f8bb0a5941437d6069390a6fd3573",
+                                "strength": 0
+                            },
+                            {
+                                "character": "おお",
+                                "transliteration": "oo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/454ac40875d6f94c4bef12609a1a257a",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            null,
+                            null,
+                            null,
+                            {
+                                "character": "えい",
+                                "transliteration": "ei",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6ed7d852fec50a970fc731d5a183d734",
+                                "strength": 0
+                            },
+                            {
+                                "character": "おう",
+                                "transliteration": "ou",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/8c8221828e54d22883a2afac60680393",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "katakana",
+            "name": "Katakana",
+            "title": "Let's learn Katakana!",
+            "subtitle": "Practice characters used for loanwords",
+            "alphabetSessionId": "katakana",
+            "practiceSessionId": null,
+            "explanationUrl": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_1_1/android/5/4.json",
+            "explanationListing": {
+                "title": "Katakana Tips",
+                "subtitle": "See all the tips about Katakana",
+                "groups": [
+                    {
+                        "title": "Katakana",
+                        "tips": [
+                            {
+                                "title": "イ, カ, ア, サ",
+                                "subtitle": "i, ka, a, sa",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_1_1/android/5/4.json"
+                            },
+                            {
+                                "title": "コ, ス, シ, ウ",
+                                "subtitle": "ko, su, shi, u",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_1_2/android/5/2.json"
+                            },
+                            {
+                                "title": "チ, ワ, エ, ミ",
+                                "subtitle": "chi, wa, e, mi",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_1_3/android/5/2.json"
+                            },
+                            {
+                                "title": "タ, キ, ン, オ",
+                                "subtitle": "ta, ki, n, o",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_2_1/android/5/4.json"
+                            },
+                            {
+                                "title": "リ, ラ, ツ, ユ",
+                                "subtitle": "ri, ra, tsu, yu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_2_2/android/5/5.json"
+                            },
+                            {
+                                "title": "テ, ハ, ソ, マ",
+                                "subtitle": "te, ha, so, ma",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_2_3/android/5/3.json"
+                            },
+                            {
+                                "title": "ク, モ, セ, ナ",
+                                "subtitle": "ku, mo, se, na",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_2_4/android/5/2.json"
+                            },
+                            {
+                                "title": "フ, ケ, ネ, ニ",
+                                "subtitle": "fu, ke, ne, ni",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_3_1/android/5/4.json"
+                            },
+                            {
+                                "title": "ル, ヌ, ヒ, ホ",
+                                "subtitle": "ru, nu, hi, ho",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_3_2/android/5/4.json"
+                            },
+                            {
+                                "title": "ム, ノ, へ, ヤ, レ",
+                                "subtitle": "mu, no, he, ya, re",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_3_3/android/5/3.json"
+                            },
+                            {
+                                "title": "ヲ, メ, ヨ, ト, ロ",
+                                "subtitle": "o, me, yo, to, ro",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_3_4/android/5/9.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Dakuten",
+                        "tips": [
+                            {
+                                "title": "ガ, ギ, グ, ゲ, ゴ",
+                                "subtitle": "ga, gi, gu, ge, go",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_dakuten_1/android/5/5.json"
+                            },
+                            {
+                                "title": "ザ, ズ, ゼ, ゾ, ジ",
+                                "subtitle": "za, zu, ze, zo, ji",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_dakuten_2/android/5/5.json"
+                            },
+                            {
+                                "title": "ダ, デ, ド, ヂ, ヅ",
+                                "subtitle": "da, de, do, ji, zu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_dakuten_3/android/5/4.json"
+                            },
+                            {
+                                "title": "バ, ビ, ブ, ベ, ボ",
+                                "subtitle": "ba, bi, bu, be, bo",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_dakuten_4/android/5/5.json"
+                            },
+                            {
+                                "title": "パ, ピ, プ, ペ, ポ",
+                                "subtitle": "pa, pi, pu, pe, po",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_dakuten_5/android/5/5.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Small Kana",
+                        "tips": [
+                            {
+                                "title": "ヒャ, ミャ, リャ, キャ, ニャ, シャ, チャ",
+                                "subtitle": "hya, mya, rya, kya, nya, sha, cha",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_1/android/5/4.json"
+                            },
+                            {
+                                "title": "リュ, キュ, シュ, チュ , ニュ, ヒュ, ミュ",
+                                "subtitle": "ryu, kyu, shu, chu, nyu, hyu, myu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_2/android/5/4.json"
+                            },
+                            {
+                                "title": "キョ, ニョ, ヒョ, ミョ, リョ, ショ, チョ",
+                                "subtitle": "kyo, nyo, hyo, myo, ryo, sho, cho",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_3/android/5/4.json"
+                            },
+                            {
+                                "title": "ギャ, ジャ,  ヂャ, ビャ, ピャ",
+                                "subtitle": "gya, ja, ja, bya, pya",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_4/android/5/6.json"
+                            },
+                            {
+                                "title": "ギュ, ジュ, ヂュ, ビュ, ピュ",
+                                "subtitle": "gyu, ju, ju, byu, pyu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_5/android/5/4.json"
+                            },
+                            {
+                                "title": "ギョ,ジョ, ヂョ,ビョ,ピョ",
+                                "subtitle": "gyo, jo, jo, byo, pyo",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_small_kana_6/android/5/6.json"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Spelling",
+                        "tips": [
+                            {
+                                "title": "Small ッ 1",
+                                "subtitle": "kk, pp, ss, tt",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_spelling_1/android/5/7.json"
+                            },
+                            {
+                                "title": "Small ッ 2",
+                                "subtitle": "ss, kk, pp, tt",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_spelling_2/android/5/7.json"
+                            },
+                            {
+                                "title": "Small ッ 3",
+                                "subtitle": "pp, tt, kk, ss, ssh",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_spelling_3/android/5/6.json"
+                            },
+                            {
+                                "title": "Small ッ 4",
+                                "subtitle": "kk, pp, cch, ttsu",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_spelling_4/android/5/3.json"
+                            },
+                            {
+                                "title": "Long Vowels",
+                                "subtitle": "aa, ii, uu, oo, ee",
+                                "url": "https://d1btvuu4dwu627.cloudfront.net/a1ca985ad2b47ff5b9ecebe8d0247eeb/katakana_spelling_5/android/5/2.json"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "groups": [
+                {
+                    "name": "kanas",
+                    "title": null,
+                    "subtitle": null,
+                    "characters": [
+                        [
+                            {
+                                "character": "ア",
+                                "transliteration": "a",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/21c88220be3ae3b72e0e9718ff7d5d64",
+                                "strength": 0
+                            },
+                            {
+                                "character": "イ",
+                                "transliteration": "i",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5fb279037e25d9477f61f0d2a91555a8",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ウ",
+                                "transliteration": "u",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c4dc07e4cd2681a9d3aad69e40867fbe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "エ",
+                                "transliteration": "e",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/f5c79a4727f50cf23cbc074b189614b4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "オ",
+                                "transliteration": "o",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/94fced162be2a100287908213e5ae206",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "カ",
+                                "transliteration": "ka",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c07329522ed772c786b8bb3aa958bff0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "キ",
+                                "transliteration": "ki",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/78effa058dca81914e8f5a6507217521",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ク",
+                                "transliteration": "ku",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/fdd58de55006a7aa2f71e29361716fe4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ケ",
+                                "transliteration": "ke",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/dd6d514f0d15709855dae4fc40b1022c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "コ",
+                                "transliteration": "ko",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/81a9941c7947673d84e23a282a87f1a4",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "サ",
+                                "transliteration": "sa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/ec131c6015c0185d06efd1c0c73f4184",
+                                "strength": 0
+                            },
+                            {
+                                "character": "シ",
+                                "transliteration": "shi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/276550424c5169d0d9befebbccd351eb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ス",
+                                "transliteration": "su",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/a0f4e9f82cb6c50c7bd67080622d1546",
+                                "strength": 0
+                            },
+                            {
+                                "character": "セ",
+                                "transliteration": "se",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/53f4f69114b9de95c261e267924781c2",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ソ",
+                                "transliteration": "so",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/37550c98a16d440ddcdc87f9570035ed",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "タ",
+                                "transliteration": "ta",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/0259f3dc3f9f737648a30b73b89f8933",
+                                "strength": 0
+                            },
+                            {
+                                "character": "チ",
+                                "transliteration": "chi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/4ef1bd31049ee03d15fa4a11cc1a525a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ツ",
+                                "transliteration": "tsu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/bbb2428e919ef628f6f654575d3da0dc",
+                                "strength": 0
+                            },
+                            {
+                                "character": "テ",
+                                "transliteration": "te",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/8753253c0177678a646f612b806d6b1e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ト",
+                                "transliteration": "to",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6c3bb323fc345aa4e8802b035efcae5e",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ナ",
+                                "transliteration": "na",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2f0023ad84a15bbe966a13e834ecb801",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ニ",
+                                "transliteration": "ni",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/79ba36714231542cd26803aed5bf226c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヌ",
+                                "transliteration": "nu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6566b7d344634262bac94ea378d23eec",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ネ",
+                                "transliteration": "ne",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/393fade5e9029cdd177fb130f0fef272",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ノ",
+                                "transliteration": "no",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/d2d0a3445891446eb81b8b7b8ab1887f",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ハ",
+                                "transliteration": "ha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/003da8ff9cb9bddde4c9d8907b1a876b",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヒ",
+                                "transliteration": "hi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7c1e167f64def7d6548fb1aa94eca5b4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "フ",
+                                "transliteration": "fu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2e632f32c714b4bcb6aabf6cd6e32c4a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヘ",
+                                "transliteration": "he",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c3c800a53bbbbd86ba9e77b6bbb80f7c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ホ",
+                                "transliteration": "ho",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/2b82d9fe73f9e12e1d4b2425d5e39704",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "マ",
+                                "transliteration": "ma",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6150c06c15bfde1f6c30a6c9a48dabce",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ミ",
+                                "transliteration": "mi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/3bb6b451966963921df70304411a72f4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ム",
+                                "transliteration": "mu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/92954f4d69d0a76f221b6f167ce4d749",
+                                "strength": 0
+                            },
+                            {
+                                "character": "メ",
+                                "transliteration": "me",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/31a84656228d0d1a79505946239f4940",
+                                "strength": 0
+                            },
+                            {
+                                "character": "モ",
+                                "transliteration": "mo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59b44ce760f0e85f94db78e62d621a5c",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ヤ",
+                                "transliteration": "ya",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6384ef3f71c2ce8f1b73e76741ac271a",
+                                "strength": 0
+                            },
+                            null,
+                            {
+                                "character": "ユ",
+                                "transliteration": "yu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7d6b8b2d2d8aee799bda35a487bef96a",
+                                "strength": 0
+                            },
+                            null,
+                            {
+                                "character": "ヨ",
+                                "transliteration": "yo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/92f132f2020cd2d3e2f849f483df7a4f",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ラ",
+                                "transliteration": "ra",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/4fa14190212b4b883cf83580a92384d1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "リ",
+                                "transliteration": "ri",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/19e74effea4c95f2f1348e899774d762",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ル",
+                                "transliteration": "ru",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6b41b2ee2cd08894913c9c3d10e6719d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "レ",
+                                "transliteration": "re",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/55a8bec04361a66ed7cdc985e3d40545",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ロ",
+                                "transliteration": "ro",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/de425bbc113f91514798185f6d8c560a",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ワ",
+                                "transliteration": "wa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/ca5202d8b907de9073d222ea006aaf38",
+                                "strength": 0
+                            },
+                            null,
+                            null,
+                            null,
+                            {
+                                "character": "ヲ",
+                                "transliteration": "wo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/c7db66cdda40ba489ef342f7d12b07a8",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ン",
+                                "transliteration": "n",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6ab599653e3bbc3ae8b3fc95a15af3cf",
+                                "strength": 0
+                            },
+                            null,
+                            null,
+                            null,
+                            null
+                        ]
+                    ]
+                },
+                {
+                    "name": "dakutens",
+                    "title": "Dakuon",
+                    "subtitle": "Add a symbol to change the sound",
+                    "characters": [
+                        [
+                            {
+                                "character": "ガ",
+                                "transliteration": "ga",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9b5d5ad04937a0e3529817e21bcf280d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ギ",
+                                "transliteration": "gi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/0cf9e95b628634fbfa0b2866ee85cbf2",
+                                "strength": 0
+                            },
+                            {
+                                "character": "グ",
+                                "transliteration": "gu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/e961c897da01d344b0deb3708cc31dec",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ゲ",
+                                "transliteration": "ge",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7a1e2751e92eaf5235f82cab7d45132e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ゴ",
+                                "transliteration": "go",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/73ecbd7b2527803707bb6042f158dc7d",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ザ",
+                                "transliteration": "za",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7eeeba556af2d021d914f6c7774ea308",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ジ",
+                                "transliteration": "ji",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/68d8d5a3dd16ccd80011eabd9cd69c51",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ズ",
+                                "transliteration": "zu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/cb11c7cdc623c125f22900354be6034b",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ゼ",
+                                "transliteration": "ze",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/bdc76cfb9da6edc4b8e48e6bfc7ee366",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ゾ",
+                                "transliteration": "zo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/39e7eaf72559ae57f4011a5a7b2a1127",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ダ",
+                                "transliteration": "da",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/7262af9ad1b4bc927c6f728473b87321",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヂ",
+                                "transliteration": "ji",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/b21c07e7a3a652f3a097e83113895af0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヅ",
+                                "transliteration": "zu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/817e4b809a655b0e4965f7f06d4d951d",
+                                "strength": 0
+                            },
+                            {
+                                "character": "デ",
+                                "transliteration": "de",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/f5e5aabf68f9d1bfff13417ef79fdd25",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ド",
+                                "transliteration": "do",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59e5eb3aac553ae0865a044011c264dd",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "バ",
+                                "transliteration": "ba",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/05e861a605b382f49df25fdc780aeac8",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ビ",
+                                "transliteration": "bi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/fb1fe9d1d47f691b79ca863c17ce6def",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ブ",
+                                "transliteration": "bu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/53bcec1180498fc5b6cb64bf5393a169",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ベ",
+                                "transliteration": "be",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/3ce7df7005c152c4c97843455602d49e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ボ",
+                                "transliteration": "bo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/666c64c6cea6d85953347fa0c58f9f32",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "パ",
+                                "transliteration": "pa",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/d253ed0385b0d4acbda1f512db596c8e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ピ",
+                                "transliteration": "pi",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/163fc63c61051ec80438ca15bba7aa5c",
+                                "strength": 0
+                            },
+                            {
+                                "character": "プ",
+                                "transliteration": "pu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/59d78e7b2a9f1af48f93908323b90653",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ペ",
+                                "transliteration": "pe",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5f43473aa8099d73cc710fc1d8e3471a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ポ",
+                                "transliteration": "po",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/95570d15da4a51875c601bc370b13b26",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "combinations",
+                    "title": "Combo",
+                    "subtitle": "Add small characters to make new syllables",
+                    "characters": [
+                        [
+                            {
+                                "character": "キャ",
+                                "transliteration": "kya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/cf8c63ca5a73d4cd870203e3b7d6adeb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "キュ",
+                                "transliteration": "kyu",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/6f0ea054ecf66fea1ad7c1d3fc33913e",
+                                "strength": 0
+                            },
+                            {
+                                "character": "キョ",
+                                "transliteration": "kyo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/069a60275a4a8167b5994c8630802342",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ギャ",
+                                "transliteration": "gya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9758639bad74ef62942a576bf4567ad1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ギュ",
+                                "transliteration": "gyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/36dcc432a0aac47bda9fd3c0f5971f79",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ギョ",
+                                "transliteration": "gyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/42561e25d3ad347c15929c5217269a1c",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "シャ",
+                                "transliteration": "sha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/84e9afa735c201812a2f10d809503241",
+                                "strength": 0
+                            },
+                            {
+                                "character": "シュ",
+                                "transliteration": "shu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/00261b39065f41b7da33b86f285f0bcb",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ショ",
+                                "transliteration": "sho",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/dd5c9efa1d73cca5ea80563fc6ef3cb7",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ジャ",
+                                "transliteration": "ja",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/385000cbb05155fc4632e02149bb87d1",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ジュ",
+                                "transliteration": "ju",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9da27213035b9b7493601879aee1a1b9",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ジョ",
+                                "transliteration": "jo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/982c87c789ea1efa02f73222215b0e0d",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "チャ",
+                                "transliteration": "cha",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/5d8d42725cb569af91dce7ecc1fdf285",
+                                "strength": 0
+                            },
+                            {
+                                "character": "チュ",
+                                "transliteration": "chu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/ea2b43648908383225c94e4579293dbe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "チョ",
+                                "transliteration": "cho",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e2a9354656be01b05abb08dff736f934",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ニャ",
+                                "transliteration": "nya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/0b36a7f390e2de6d3b0aeb5764f253e5",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ニュ",
+                                "transliteration": "nyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/16542be183ca10e93eb6178a3f47a6ad",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ニョ",
+                                "transliteration": "nyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f595668880b7a3f1d6e7c0d0493174bd",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ヒャ",
+                                "transliteration": "hya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f3fd98377edb4464a8541ee55185706a",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヒュ",
+                                "transliteration": "hyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e59fe7754f31958125813e6194b4f72b",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ヒョ",
+                                "transliteration": "hyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f5be8e72adf7e20449448e441ab374ef",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ビャ",
+                                "transliteration": "bya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/5959d15954071a94beec4e9e6530a437",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ビュ",
+                                "transliteration": "byu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f66a6fb4fab8671c9eeabce02a1fce27",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ビョ",
+                                "transliteration": "byo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/bb976a290b2db5009bf3e680640f07b6",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ピャ",
+                                "transliteration": "pya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/6beab7b0ee7aeadb03e50594d7cc03c4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ピュ",
+                                "transliteration": "pyu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/112fa78ccead56ed00da518a16310df3",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ピョ",
+                                "transliteration": "pyo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/3bbb71861a785285e7f954bdfe773274",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "ミャ",
+                                "transliteration": "mya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/4dec0012d5ce340521f614b1cafc7dfe",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ミュ",
+                                "transliteration": "myu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/f7700f91908ffc4d810d09722814efde",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ミョ",
+                                "transliteration": "myo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/e59758db1aa5ddd197c7f1aa9e8f2947",
+                                "strength": 0
+                            }
+                        ],
+                        [
+                            {
+                                "character": "リャ",
+                                "transliteration": "rya",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/c6f70322c7f1b3cc072dbda4c66d2684",
+                                "strength": 0
+                            },
+                            {
+                                "character": "リュ",
+                                "transliteration": "ryu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/a14bf46ce9e2a10df510f0574447aa15",
+                                "strength": 0
+                            },
+                            {
+                                "character": "リョ",
+                                "transliteration": "ryo",
+                                "ttsUrl": "https://d1ugqg1wx6doua.cloudfront.net/audio/ja/9a328eab7f8fceee3010e3662a139c68",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "smallTsu",
+                    "title": "Small っ",
+                    "subtitle": "Double the following consonant",
+                    "characters": [
+                        [
+                            {
+                                "character": "ッ+k",
+                                "transliteration": "kk",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/8dc0b4ef7f30edc744710cd12e2990a3",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ッ+s",
+                                "transliteration": "ss",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/26ebaaa617db457ac83f18dbe6e976f4",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ッ+t",
+                                "transliteration": "tt",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9607378932ecbbf94aad299632c8f3b0",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ッ+p",
+                                "transliteration": "pp",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/05c9b14c8b96f119cb491b83e5645506",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "longVowels",
+                    "title": "Long vowels",
+                    "subtitle": null,
+                    "characters": [
+                        [
+                            {
+                                "character": "アー",
+                                "transliteration": "aa",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/90c7fb964a758d180231c658ec9109a9",
+                                "strength": 0
+                            },
+                            {
+                                "character": "イー",
+                                "transliteration": "ii",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/6a564f6aefb1fb3650414204fbac4aaa",
+                                "strength": 0
+                            },
+                            {
+                                "character": "ウー",
+                                "transliteration": "uu",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/9258aafd9f9fbe1b90eb94ae53682795",
+                                "strength": 0
+                            },
+                            {
+                                "character": "エー",
+                                "transliteration": "ee",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/c36f8bb0a5941437d6069390a6fd3573",
+                                "strength": 0
+                            },
+                            {
+                                "character": "オー",
+                                "transliteration": "oo",
+                                "ttsUrl": "https://d1vq87e9lcf771.cloudfront.net/ichika/454ac40875d6f94c4bef12609a1a257a",
+                                "strength": 0
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
