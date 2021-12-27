@@ -552,7 +552,7 @@ void main() async {
 
 | Auth Required |                                                                              Method                                                                               |                                                    JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-|      ✅       | [alphabets({required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/alphabets.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/13_alphabets/response.json) |
+|      ✅       | [alphabets({required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/alphabets.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/14_alphabets/response.json) |
 
 With Alphabets API, you can get alphabet information for the learning language.
 
