@@ -1,5 +1,11 @@
 # Release Note
 
+## 0.2.1
+
+### New Features
+
+- Added a feature that allows you to get alphabets information.
+
 ## 0.2.0
 
 ### New Features

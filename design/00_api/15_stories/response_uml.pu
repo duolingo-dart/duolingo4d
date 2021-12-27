@@ -1,0 +1,1214 @@
+@startjson "Stories"
+{
+    "sets": [
+        [
+            {
+                "isVideo": false,
+                "id": "ja-en-パスポート",
+                "isMultipart": false,
+                "title": "The Passport",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/643347b755001a918130ddf5f6d3e914e63a00ce.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/56c5cffdd014051ee497192dd27764ffd56c0cee.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/26c3df33b8bc85ba341b6d8a68982d4e39d87f92.png"
+                },
+                "colors": {
+                    "activeLip": "2bb3ee",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-パスポート",
+                    "story_revision": 94,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-エディせんせい",
+                "isMultipart": false,
+                "title": "Doctor Eddy",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/29c5abbf74b46e43a4de510ac83e302c0722a100.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/ee3b26756c0d3b85ae186ee7733635375615172d.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/99085bdc874f69eb2a87a2e53a3068bf1dc4417f.png"
+                },
+                "colors": {
+                    "activeLip": "3a8500",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-エディせんせい",
+                    "story_revision": 102,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-あたらしい-コート",
+                "isMultipart": false,
+                "title": "A New Coat",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/b2702b2974228dcea571f3a27cc4e4dd5b3ade64.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/fea34e6c34b4e7f5df4ac886d1b6cb35c2a0af41.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/95a5d190b17c9f1c305079f8b8047ea90cf54297.png"
+                },
+                "colors": {
+                    "activeLip": "874522",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-あたらしい-コート",
+                    "story_revision": 89,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-てんこうせい",
+                "isMultipart": false,
+                "title": "The New Student",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/5afbf601db955e3db76a96aea1d4e0a535c16e7c.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/c8ea06bca713918effa128474da553c4d1ec9ace.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/e2a0f49c1e20fdee4ac6a9d955669fe418e283e3.png"
+                },
+                "colors": {
+                    "activeLip": "58311d",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-てんこうせい",
+                    "story_revision": 93,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ジュニアの-しつもん",
+                "isMultipart": false,
+                "title": "Junior's Question",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/d845f544be0f67c8960124f8ef46185826f40763.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/e90eac26e74c7ddcac9d7235bcb183768cad886f.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/b9adcbf57bc5e7e6c7407babc543a106b3ed3ba0.png"
+                },
+                "colors": {
+                    "activeLip": "333333",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ジュニアの-しつもん",
+                    "story_revision": 87,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-えきまで",
+                "isMultipart": false,
+                "title": "To the Station!",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/5bee618bd907474764094eddf36ddcbc46523c98.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/02857a839a92e79d6d994b5146853d4b44f2e61a.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/e43c5fbe906a8a177f783c757305e8e4e8cfc445.png"
+                },
+                "colors": {
+                    "activeLip": "1b56ae",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-えきまで",
+                    "story_revision": 80,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ベジタリアン",
+                "isMultipart": false,
+                "title": "The Vegetarian",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/dc9d2edcd2a744cd53771bab283eb22922dd1347.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/82781437a7256881b51aa4fd1a9c6c2414128a6f.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/ab244e05a49e12e6f0e270174e4fde493425529c.png"
+                },
+                "colors": {
+                    "activeLip": "5d9a00",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ベジタリアン",
+                    "story_revision": 89,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-バケーションの-ふく",
+                "isMultipart": false,
+                "title": "Vacation Clothes",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/eda1b8214a6937df66a552eb581f2353da4d0352.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/ab788c9e4b191f059e241677e31d623f23dfb3ec.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/267e684111f55872f964b823503eaa329963cb34.png"
+                },
+                "colors": {
+                    "activeLip": "13c67f",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-バケーションの-ふく",
+                    "story_revision": 73,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-よやく",
+                "isMultipart": false,
+                "title": "The Reservation",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/3ef44f16233d10a5c2f1b5cb171779208191e11a.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/dbb16670d47ff8f04c6e6c8503689dd655cb1131.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/c307ddee7164cbf024eb0ba76de07b4901d202f8.png"
+                },
+                "colors": {
+                    "activeLip": "6b42b0",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-よやく",
+                    "story_revision": 121,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-なにが-ほしいですか",
+                "isMultipart": false,
+                "title": "What Do You Want?",
+                "subtitle": "+14 XP",
+                "state": "ACTIVE",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 14,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/aa84a24e80b83bc37162a04593f1f72dcceec2e4.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/ad9d61dc012414749fc7c84cd910a8d16a14e586.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/6d35140b4f43351465b993ea31f27ac51103e115.png"
+                },
+                "colors": {
+                    "activeLip": "6b42b0",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": false,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 14
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-なにが-ほしいですか",
+                    "story_revision": 65,
+                    "story_language": "ja",
+                    "story_set_number": 1,
+                    "already_completed": false,
+                    "locked": false,
+                    "multipart": false,
+                    "cefr_level": "Intro",
+                    "session_cefr_level_section": "Intro",
+                    "session_cefr_level": "Intro"
+                }
+            }
+        ],
+        [
+            {
+                "isVideo": false,
+                "id": "ja-en-かってくれる",
+                "isMultipart": false,
+                "title": "Can I Have It?",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/a43844440848298947d074c3ba21224c4b7265c3.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/fe061b842849e51260a839a14aed3fced8760ed7.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/e8dd6128c07819b672070f31a9f3c3eb785d2db5.png"
+                },
+                "colors": {
+                    "activeLip": "6b42b0",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-かってくれる",
+                    "story_revision": 81,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-かのじょを-さがしてくれませんか",
+                "isMultipart": false,
+                "title": "Find My Girlfriend",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/0d18f0403cfa415591d7ef50a9e9c01f1094936e.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/c5c16c3d5c87916306a01bf2d7eab3f79165ed48.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/cf68f80abab6ca99ea8d19adba8fd8dabd757af9.png"
+                },
+                "colors": {
+                    "activeLip": "1576ac",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-かのじょを-さがしてくれませんか",
+                    "story_revision": 84,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-バスケットボール-せんしゅ",
+                "isMultipart": false,
+                "title": "The Basketball Player",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/93b7dddcb57fc76fde878bfb42e8c4f35d68fb5d.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/1845fc381e173449100b73b5dc84322dd6d0a060.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/5d1909f92b3d3d331de4de79e4bd3e07218ef229.png"
+                },
+                "colors": {
+                    "activeLip": "6d42b0",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-バスケットボール-せんしゅ",
+                    "story_revision": 75,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-チケットを-にまい-ください",
+                "isMultipart": false,
+                "title": "Two Tickets Please!",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/b8d10ee56171817ff548af825d5065b5561d1482.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/a0af7ce5b8d876f042aba4380be9f29c431bf220.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/0a0398f865f197ea5857d31896772a0eca957f11.png"
+                },
+                "colors": {
+                    "activeLip": "1588bf",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-チケットを-にまい-ください",
+                    "story_revision": 79,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ありがとう",
+                "isMultipart": false,
+                "title": "Thanks?",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/0e35077f2bf31284d5967e7096a66da10d0a9bdf.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/12a41a3c905674f7be66dfe1232b46666aa8192b.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/8e67100afc950e352d97f65558f15456a92ce10f.png"
+                },
+                "colors": {
+                    "activeLip": "6a489f",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ありがとう",
+                    "story_revision": 64,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ダンスの-クラス",
+                "isMultipart": false,
+                "title": "The Dance Class",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/9a6beecaaea348fb3939a0bda8c064c9d9c79dc5.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/0f48fc1c2e156ed688394bfd7c4940b228891588.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/1a9ae2c1126068acf0482aa29e864f87fa2ba966.png"
+                },
+                "colors": {
+                    "activeLip": "6f4ba2",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ダンスの-クラス",
+                    "story_revision": 76,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-メアリー-じゃない",
+                "isMultipart": false,
+                "title": "You're Not Mary",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/7aefccc7b273aae21c19409b7cb1c7e64e96c4ec.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/3ed2594c31d264f35cf7739d02ad824d91b55769.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/309618d5fe2aecd77c177a357f4163558f117ce3.png"
+                },
+                "colors": {
+                    "activeLip": "6f4ea1",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-メアリー-じゃない",
+                    "story_revision": 86,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-かぞくとの-ばんごはん",
+                "isMultipart": false,
+                "title": "Family Dinner",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/8a8875810a4da32fd00d493513efd3adcb2a7c2a.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/c9237f04887f05d086cd1aadcbbde4a61283518a.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/aa5565060cd09fbabaf38cca7f8a8fe62756c10f.png"
+                },
+                "colors": {
+                    "activeLip": "ad62e6",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-かぞくとの-ばんごはん",
+                    "story_revision": 89,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ジュニアの-うんどう",
+                "isMultipart": false,
+                "title": "Junior's Exercise",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/9f2d4bdaca5fe3e93b4a97529d903567ee23fd4e.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/bb97ca6251e49a5a9d9fc432a240e23ff0557fce.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/fba02547a805db9d2310ab13cda2b19c31314110.png"
+                },
+                "colors": {
+                    "activeLip": "573688",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ジュニアの-うんどう",
+                    "story_revision": 87,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-にわ",
+                "isMultipart": false,
+                "title": "The Garden",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/353ec768516986a1fc3f8a061638a3646f1de26b.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/fe1f0b51cd9b89add7957512e35203592f3c5ec1.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/49564d75892cd6456da272d510c9dccc1ce3154b.png"
+                },
+                "colors": {
+                    "activeLip": "1dc0ee",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-にわ",
+                    "story_revision": 95,
+                    "story_language": "ja",
+                    "story_set_number": 2,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            }
+        ],
+        [
+            {
+                "isVideo": false,
+                "id": "ja-en-ぴったりな-ひと",
+                "isMultipart": false,
+                "title": "The Perfect Person",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/9a22c5f11ddc4785a81d887f35d522f3317e2f4c.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/32aa66f693fec8ec8d2ff21a5689e5155ae47d22.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/039644a0b6b5bd53a28931ccfc7487382b5ef0ff.png"
+                },
+                "colors": {
+                    "activeLip": "6f4ea1",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ぴったりな-ひと",
+                    "story_revision": 99,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-おてつだい-しましょうか",
+                "isMultipart": false,
+                "title": "Need Help?",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/bef5c43c8220e1f08b5eeea1d574aa9a9d106d6d.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/31f1d53d7e6d3d4719ca6963112deb075cec6776.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/4a88aa4301b89705829db128966fbf2bf727c14b.png"
+                },
+                "colors": {
+                    "activeLip": "bebebe",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-おてつだい-しましょうか",
+                    "story_revision": 108,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ジュニアの-せんたく",
+                "isMultipart": false,
+                "title": "Junior's Choice",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/53bded8a873131832543feb9e1a3f4c7ffeb74e0.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/1f4b393bb8a82fe62aafa27702bedb94cdaf2399.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/551ce3d4360d2ccf8af0ca68e0018b2ee75cf17f.png"
+                },
+                "colors": {
+                    "activeLip": "fc8fcd",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ジュニアの-せんたく",
+                    "story_revision": 85,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-いぬが-ほしいんだ",
+                "isMultipart": false,
+                "title": "I Really Want a Dog",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/bd9341c78bf48d9dd6261a57030ac813fb1c6452.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/5b427e049ae423778a4809594902138628f5ed63.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/869a74ea593e05d1dbd3ec8022091e5280d9d23b.png"
+                },
+                "colors": {
+                    "activeLip": "d94545",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-いぬが-ほしいんだ",
+                    "story_revision": 78,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-モデル",
+                "isMultipart": false,
+                "title": "The Model",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/56270460b85dc001d7a33977ab2f16942cf67251.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/759343c7123ca4629adf91d7184f6f284d2a3c76.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/22d8646c854bfda99384e4e6b58de7deafa71f9a.png"
+                },
+                "colors": {
+                    "activeLip": "1b56ae",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-モデル",
+                    "story_revision": 95,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ひどい-え",
+                "isMultipart": false,
+                "title": "Bad Painting",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/a4e5b308551611be027e77674e4d0806d54a36d6.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/d8ced7b1e93fb899bbae0f1a21e942d2aceda468.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/f58ceaa4ead753bc9f31c5493b0f016229387750.png"
+                },
+                "colors": {
+                    "activeLip": "58a700",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ひどい-え",
+                    "story_revision": 78,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-しゃしんを-とって",
+                "isMultipart": false,
+                "title": "Take My Photo",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/5101c8ac89c819e49195d51d3146f410cd7b4ddf.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/1f02fa036a701b86db6775d3eb2896847d3e01c9.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/8a954220a8c5317a84ab3491e95bc17b9c901d45.png"
+                },
+                "colors": {
+                    "activeLip": "5d9a00",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-しゃしんを-とって",
+                    "story_revision": 99,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-あたらしい-スポーツ",
+                "isMultipart": false,
+                "title": "A New Sport",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/ffc3b50b92f23fc916451e34174edcdcea58d258.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/3df09e79233666176939579b78907337f3ac08e9.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/9368db4841806a31b582a0bb649fee3c0da47126.png"
+                },
+                "colors": {
+                    "activeLip": "1588bf",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-あたらしい-スポーツ",
+                    "story_revision": 81,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-ルーシーと-きょうりゅう",
+                "isMultipart": false,
+                "title": "Lucy and the Dinosaurs",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/f6ce899637bb8181ee5e78382fdf71a0f01e4f95.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/b6b78e654f7e8addad3330aa167e07933b067cab.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/4b5248eb7a7d383bced44f3b90237cc9586bb2f7.png"
+                },
+                "colors": {
+                    "activeLip": "b460ea",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-ルーシーと-きょうりゅう",
+                    "story_revision": 93,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            },
+            {
+                "isVideo": false,
+                "id": "ja-en-かぎは-どこ",
+                "isMultipart": false,
+                "title": "Where Are My Keys?",
+                "subtitle": "+16 XP",
+                "state": "LOCKED",
+                "currentMode": "READ",
+                "eligibleModes": [
+                    "READ",
+                    "LISTEN"
+                ],
+                "xpToAward": 16,
+                "illustrationUrls": {
+                    "active": "https://stories-cdn.duolingo.com/image/1afd1974b5fb720f70687c6b16146c66201f45ba.png",
+                    "gilded": "https://stories-cdn.duolingo.com/image/d0b243d09f79b547c679de4421eb2bb7c476572c.png",
+                    "locked": "https://stories-cdn.duolingo.com/image/0b53ebc25e8a8b2b2bd383224c3d45e8fd1da74f.png"
+                },
+                "colors": {
+                    "activeLip": "6b42b0",
+                    "gildedLip": "ffb100"
+                },
+                "setLocked": true,
+                "completed": false,
+                "selectablePopoverModesWithXP": {
+                    "READ": 16
+                },
+                "trackingProperties": {
+                    "story_id": "ja-en-かぎは-どこ",
+                    "story_revision": 91,
+                    "story_language": "ja",
+                    "story_set_number": 3,
+                    "already_completed": false,
+                    "locked": true,
+                    "multipart": false,
+                    "cefr_level": "A1.1",
+                    "session_cefr_level_section": "A1.1",
+                    "session_cefr_level": "A1"
+                }
+            }
+        ]
+    ],
+    "newStoryIds": [],
+    "hasLevelsExperience": true
+}
+@endjson

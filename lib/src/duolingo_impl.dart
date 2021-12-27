@@ -6,6 +6,7 @@
 import 'package:cache_storage/cache_storage.dart';
 
 // Project imports:
+import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/request/activity_request.dart';
@@ -19,6 +20,7 @@ import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/purchase_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
+import 'package:duolingo4d/src/request/stories_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
@@ -34,6 +36,7 @@ import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
+import 'package:duolingo4d/src/response/stories/stories_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
@@ -162,6 +165,18 @@ class DuolingoImpl implements Duolingo {
       await AlphabetsRequest.from(
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
+      ).send();
+
+  @override
+  Future<StoriesResponse> stories({
+    required String fromLanguage,
+    required String learningLanguage,
+    IllustrationFormat format = IllustrationFormat.svg,
+  }) async =>
+      await StoriesRequest.from(
+        fromLanguage: fromLanguage,
+        learningLanguage: learningLanguage,
+        format: format,
       ).send();
 
   @override
@@ -394,6 +409,38 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<StoriesResponse> cachedStories({
+    required String fromLanguage,
+    required String learningLanguage,
+    IllustrationFormat format = IllustrationFormat.svg,
+  }) async {
+    final cacheSubKeys = [fromLanguage, learningLanguage, format.name];
+    if (_cacheStorage.has(
+      key: Resource.stories.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: Resource.stories.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await stories(
+      fromLanguage: fromLanguage,
+      learningLanguage: learningLanguage,
+      format: format,
+    );
+
+    _cacheStorage.save(
+      key: Resource.stories.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -438,4 +485,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedAlphabets() =>
       _cacheStorage.deleteBy(key: Resource.alphabets.name);
+
+  @override
+  void cleanCachedStories() =>
+      _cacheStorage.deleteBy(key: Resource.stories.name);
 }

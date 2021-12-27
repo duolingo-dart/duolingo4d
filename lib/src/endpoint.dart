@@ -14,6 +14,9 @@ enum Endpoint {
 
   /// Leaderboard
   leaderboard,
+
+  /// Story
+  story,
 }
 
 extension EndpointFeature on Endpoint {
@@ -27,6 +30,8 @@ extension EndpointFeature on Endpoint {
         return 'https://d2.duolingo.com';
       case Endpoint.leaderboard:
         return 'https://duolingo-leaderboards-prod.duolingo.com';
+      case Endpoint.story:
+        return 'https://stories.duolingo.com/';
     }
   }
 }

@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/activity/activity_response.dart';
@@ -15,6 +16,7 @@ import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
+import 'package:duolingo4d/src/response/stories/stories_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
@@ -331,6 +333,12 @@ abstract class Duolingo {
     required String learningLanguage,
   });
 
+  Future<StoriesResponse> stories({
+    required String fromLanguage,
+    required String learningLanguage,
+    IllustrationFormat format = IllustrationFormat.svg,
+  });
+
   Future<ManifestResponse> cachedManifest();
 
   /// Returns cached metadata about the configuration of the Duolingo service.
@@ -611,6 +619,12 @@ abstract class Duolingo {
     required String learningLanguage,
   });
 
+  Future<StoriesResponse> cachedStories({
+    required String fromLanguage,
+    required String learningLanguage,
+    IllustrationFormat format = IllustrationFormat.svg,
+  });
+
   /// Deletes all cached response objects.
   void cleanCache();
 
@@ -646,4 +660,7 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedAlphabets] method.
   void cleanCachedAlphabets();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedStories] method.
+  void cleanCachedStories();
 }

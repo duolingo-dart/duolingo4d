@@ -44,6 +44,9 @@ enum Resource {
 
   /// Alphabets API
   alphabets,
+
+  /// Stories API
+  stories,
 }
 
 extension ReourceFeature on Resource {
@@ -76,6 +79,8 @@ extension ReourceFeature on Resource {
         return '2017-06-30/shop-items';
       case Resource.alphabets:
         return '2017-06-30/alphabets/courses';
+      case Resource.stories:
+        return 'api2/stories';
     }
   }
 }
