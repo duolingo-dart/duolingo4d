@@ -5,6 +5,7 @@
 ### New Features
 
 - Added a feature that allows you to get alphabets information.
+- Added a feature that allows you to get stories information.
 
 ## 0.2.0
 
