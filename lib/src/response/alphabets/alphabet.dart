@@ -15,7 +15,7 @@ class Alphabet {
     required this.name,
     required this.title,
     required this.subtitle,
-    required this.alphabetGroups,
+    required this.groups,
   });
 
   /// The id
@@ -31,11 +31,11 @@ class Alphabet {
   final String subtitle;
 
   /// The alphabet groups
-  final List<AlphabetGroup> alphabetGroups;
+  final List<AlphabetGroup> groups;
 
   @override
   String toString() {
-    return 'Alphabet(id: $id, name: $name, title: $title, subtitle: $subtitle, alphabetGroups: $alphabetGroups)';
+    return 'Alphabet(id: $id, name: $name, title: $title, subtitle: $subtitle, groups: $groups)';
   }
 
   @override
@@ -48,7 +48,7 @@ class Alphabet {
         other.name == name &&
         other.title == title &&
         other.subtitle == subtitle &&
-        listEquals(other.alphabetGroups, alphabetGroups);
+        listEquals(other.groups, groups);
   }
 
   @override
@@ -57,6 +57,6 @@ class Alphabet {
         name.hashCode ^
         title.hashCode ^
         subtitle.hashCode ^
-        alphabetGroups.hashCode;
+        groups.hashCode;
   }
 }

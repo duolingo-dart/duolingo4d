@@ -48,7 +48,7 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
           name: json.getString(key: 'name'),
           title: json.getString(key: 'title'),
           subtitle: json.getString(key: 'subtitle'),
-          alphabetGroups: _buildAlphabetGroups(
+          groups: _buildAlphabetGroups(
             jsonList: json.getJsonList(key: 'groups'),
           ),
         ),

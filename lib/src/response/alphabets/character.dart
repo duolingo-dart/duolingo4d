@@ -23,6 +23,12 @@ class Character {
   /// The proficiency
   final double proficiency;
 
+  /// Returns true if this character is empty, otherwise false.
+  bool get isEmpty => value.isEmpty;
+
+  /// Returns true if this character is not empty, otherwise false.
+  bool get isNotEmpty => !isEmpty;
+
   @override
   String toString() {
     return 'Character(value: $value, transliteration: $transliteration, ttsUrl: $ttsUrl, proficiency: $proficiency)';

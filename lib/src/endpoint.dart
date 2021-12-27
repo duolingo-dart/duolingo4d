@@ -22,7 +22,7 @@ extension EndpointFeature on Endpoint {
       case Endpoint.base:
         return 'https://www.duolingo.com';
       case Endpoint.baseProd:
-        return 'https://www-prod.duolingo.com/';
+        return 'https://www-prod.duolingo.com';
       case Endpoint.dictionary:
         return 'https://d2.duolingo.com';
       case Endpoint.leaderboard:
