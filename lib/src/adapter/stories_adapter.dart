@@ -117,7 +117,7 @@ class StoriesAdapter extends Adapter<StoriesResponse> {
       if (state.name == key) {
         return Illustration.from(
           state: state,
-          url: json.getString(key: 'key'),
+          url: json.getString(key: key),
         );
       }
     }

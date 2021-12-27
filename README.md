@@ -30,6 +30,7 @@
     - [1.3.12. Shop Items API](#1312-shop-items-api)
     - [1.3.13. Purchase API](#1313-purchase-api)
     - [1.3.14. Alphabets API](#1314-alphabets-api)
+    - [1.3.15. Alphabets API](#1315-alphabets-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -62,6 +63,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
 | **Purchase**        |      ✅       | You can purchase items sold in Duoligno by spending Lingots or Gems.                                               |
 | **Alphabets**       |      ✅       | You can get alphabet information for the learning language.                                                        |
+| **Stories**         |      ✅       | You can get story information for the learning language.                                                           |
 
 ## 1.2. Introduction
 
@@ -591,6 +593,39 @@ void main() async {
         print(character.proficiency);
       }
     }
+  }
+}
+```
+
+### 1.3.15. Alphabets API
+
+| Auth Required |                                                                                                      Method                                                                                                       |                                                   JSON                                                   |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ✅       | [stories({required String fromLanguage, required String learningLanguage, IllustrationFormat format = IllustrationFormat.svg})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/stories.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/15_stories/response.json) |
+
+With Stories API, you can get story information for the learning language.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final storiesResponse = await duolingo.stories(
+    fromLanguage: 'en',
+    learningLanguage: 'ja',
+    // You can select format in SVG, PNG and PDF.
+    // The default is SVG.
+    format: IllustrationFormat.png,
+  );
+
+  print(storiesResponse);
+
+  for (final story in storiesResponse.stories) {
+    print(story);
   }
 }
 ```

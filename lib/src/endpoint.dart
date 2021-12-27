@@ -31,7 +31,7 @@ extension EndpointFeature on Endpoint {
       case Endpoint.leaderboard:
         return 'https://duolingo-leaderboards-prod.duolingo.com';
       case Endpoint.story:
-        return 'https://stories.duolingo.com/';
+        return 'https://stories.duolingo.com';
     }
   }
 }
