@@ -3,11 +3,11 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
 import 'package:http/http.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
+import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
 
 class UnfollowAdapter extends Adapter<UnfollowResponse> {
   /// Returns the new instance of [FollowAdapter].

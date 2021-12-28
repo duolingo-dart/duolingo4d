@@ -6,9 +6,9 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/response/subscriptions/friend.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
+import 'package:duolingo4d/src/response/subscriptions/friend.dart';
 
 export 'package:duolingo4d/src/response/subscriptions/friend.dart';
 
