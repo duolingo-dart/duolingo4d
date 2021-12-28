@@ -1,0 +1,136 @@
+{
+    "achievements": [
+        {
+            "count": 0,
+            "name": "conqueror",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": false,
+            "tier": 0,
+            "tierCounts": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "count": 2,
+            "name": "overtime",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 1,
+            "tierCounts": [
+                2
+            ]
+        },
+        {
+            "count": 17,
+            "name": "regal",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 3,
+            "tierCounts": [
+                3,
+                7,
+                12,
+                18,
+                25,
+                35,
+                50,
+                65,
+                80,
+                100
+            ]
+        },
+        {
+            "count": 389,
+            "name": "sage",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 2,
+            "tierCounts": [
+                100,
+                250,
+                500,
+                1000,
+                2000,
+                4000,
+                7500,
+                12500,
+                20000,
+                30000
+            ]
+        },
+        {
+            "count": 385,
+            "name": "scholar",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 5,
+            "tierCounts": [
+                50,
+                100,
+                175,
+                250,
+                350,
+                500,
+                750,
+                1000,
+                1500,
+                2000
+            ]
+        },
+        {
+            "count": 14,
+            "name": "sharpshooter",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 2,
+            "tierCounts": [
+                1,
+                5,
+                20,
+                50,
+                100
+            ]
+        },
+        {
+            "count": 1,
+            "name": "strategist",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": true,
+            "tier": 1,
+            "tierCounts": [
+                1
+            ]
+        },
+        {
+            "count": 2,
+            "name": "wildfire",
+            "noProgressBar": false,
+            "rewards": {},
+            "shouldShowUnlock": false,
+            "tier": 0,
+            "tierCounts": [
+                3,
+                7,
+                14,
+                30,
+                50,
+                75,
+                125,
+                180,
+                250,
+                365
+            ]
+        }
+    ]
+}
