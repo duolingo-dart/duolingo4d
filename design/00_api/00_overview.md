@@ -19,3 +19,4 @@
 | Purchase        | <https://www.duolingo.com/2017-06-30/users>                                                               | /{userId}/shop-items                                        | itemName, learningLanguage       | YES           |
 | Alphabets       | <https://www-prod.duolingo.com/2017-06-30/alphabets/courses>                                              | /ja/en/                                                     | -                                | YES           |
 | Stories         | <https://stories.duolingo.com/api2/stories>                                                               | ?fromLanguage=en&learningLanguage=ja&illustrationFormat=png | -                                | YES           |
+| Achievements    | <https://duolingo-achievements-prod.duolingo.com/users>                                                   | /{userId}/achievements?fromLanguage=en&learningLanguage=ja  | -                                | YES           |

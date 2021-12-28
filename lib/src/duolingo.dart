@@ -6,6 +6,7 @@
 import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
+import 'package:duolingo4d/src/response/achievements/achievements_response.dart';
 import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
@@ -351,6 +352,12 @@ abstract class Duolingo {
     required String targetUserId,
   });
 
+  Future<AchievementsResponse> achievements({
+    required String userId,
+    required String fromLanguage,
+    required String learningLanguage,
+  });
+
   Future<ManifestResponse> cachedManifest();
 
   /// Returns cached metadata about the configuration of the Duolingo service.
@@ -637,6 +644,12 @@ abstract class Duolingo {
     IllustrationFormat format = IllustrationFormat.svg,
   });
 
+  Future<AchievementsResponse> cachedAchievements({
+    required String userId,
+    required String fromLanguage,
+    required String learningLanguage,
+  });
+
   /// Deletes all cached response objects.
   void cleanCache();
 
@@ -675,4 +688,7 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedStories] method.
   void cleanCachedStories();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedAchievements] method.
+  void cleanCachedAchievements();
 }

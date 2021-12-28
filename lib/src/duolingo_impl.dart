@@ -9,6 +9,7 @@ import 'package:cache_storage/cache_storage.dart';
 import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
+import 'package:duolingo4d/src/request/achievements_request.dart';
 import 'package:duolingo4d/src/request/activity_request.dart';
 import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
@@ -28,6 +29,7 @@ import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
 import 'package:duolingo4d/src/resource.dart';
+import 'package:duolingo4d/src/response/achievements/achievements_response.dart';
 import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
@@ -201,6 +203,18 @@ class DuolingoImpl implements Duolingo {
       await UnfollowRequest.from(
         userId: userId,
         targetUserId: targetUserId,
+      ).send();
+
+  @override
+  Future<AchievementsResponse> achievements({
+    required String userId,
+    required String fromLanguage,
+    required String learningLanguage,
+  }) async =>
+      await AchievementsRequest.from(
+        userId: userId,
+        fromLanguage: fromLanguage,
+        learningLanguage: learningLanguage,
       ).send();
 
   @override
@@ -465,6 +479,43 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<AchievementsResponse> cachedAchievements({
+    required String userId,
+    required String fromLanguage,
+    required String learningLanguage,
+  }) async {
+    final cacheSubKeys = [
+      userId,
+      fromLanguage,
+      learningLanguage,
+    ];
+
+    if (_cacheStorage.has(
+      key: Resource.achievements.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: Resource.achievements.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await achievements(
+      userId: userId,
+      fromLanguage: fromLanguage,
+      learningLanguage: learningLanguage,
+    );
+
+    _cacheStorage.save(
+      key: Resource.achievements.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -513,4 +564,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedStories() =>
       _cacheStorage.deleteBy(key: Resource.stories.name);
+
+  @override
+  void cleanCachedAchievements() =>
+      _cacheStorage.deleteBy(key: Resource.achievements.name);
 }

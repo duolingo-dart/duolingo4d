@@ -24,3 +24,4 @@ export 'src/response/purchase/purchase_response.dart';
 export 'src/response/leaderboard/leaderboard_response.dart';
 export 'src/response/alphabets/alphabets_response.dart';
 export 'src/response/stories/stories_response.dart';
+export 'package:duolingo4d/src/response/achievements/achievements_response.dart';

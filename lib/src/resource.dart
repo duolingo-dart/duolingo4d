@@ -47,6 +47,9 @@ enum Resource {
 
   /// Stories API
   stories,
+
+  /// Achievements API
+  achievements,
 }
 
 extension ReourceFeature on Resource {
@@ -81,6 +84,8 @@ extension ReourceFeature on Resource {
         return '2017-06-30/alphabets/courses';
       case Resource.stories:
         return 'api2/stories';
+      case Resource.achievements:
+        return 'users';
     }
   }
 }
