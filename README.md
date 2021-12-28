@@ -63,7 +63,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 | **Subscriptions**   |      ✅       | You can get information on all friends associated with a user id.                                                  |
 | **Follow**          |      ✅       | You can follow the account associated with the user ID specified in the argument.                                  |
-| **Unfollow**        |      ✅       | you can unfollow the account associated with the user ID specified in the argument.                                |
+| **Unfollow**        |      ✅       | You can unfollow the account associated with the user ID specified in the argument.                                |
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
 | **Purchase**        |      ✅       | You can purchase items sold in Duoligno by spending Lingots or Gems.                                               |
 | **Alphabets**       |      ✅       | You can get alphabet information for the learning language.                                                        |
