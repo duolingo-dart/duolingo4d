@@ -9,6 +9,10 @@
 - Added a feature that allows you to follow user.
 - Added a feature that allows you to unfollow user.
 
+### Destructive changes
+
+- Changed the name of `Friends API` to `Subscriptions API`. Due to this change, there are some changes in the name of the response class, but the content of the response is unchanged.
+
 ## 0.2.0
 
 ### New Features
