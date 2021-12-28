@@ -33,6 +33,7 @@
     - [1.3.15. Purchase API](#1315-purchase-api)
     - [1.3.16. Alphabets API](#1316-alphabets-api)
     - [1.3.17. Stories API](#1317-stories-api)
+    - [1.3.18. Achievements API](#1318-achievements-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -68,6 +69,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Purchase**        |      ✅       | You can purchase items sold in Duoligno by spending Lingots or Gems.                                               |
 | **Alphabets**       |      ✅       | You can get alphabet information for the learning language.                                                        |
 | **Stories**         |      ✅       | You can get story information for the learning language.                                                           |
+| **Achievements**    |      ✅       | You can get the achievement data that the user has achieved.                                                       |
 
 ## 1.2. Introduction
 
@@ -682,6 +684,37 @@ void main() async {
 
   for (final story in storiesResponse.stories) {
     print(story);
+  }
+}
+```
+
+### 1.3.18. Achievements API
+
+| Auth Required |                                                                                             Method                                                                                              |                                                    JSON                                                    |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+|      ✅       | [achievements({required String userId, required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/achievements.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/achievements/response.json) |
+
+From Achievements API, you can get the achievement data that the user has achieved.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final achievementsResponse = await duolingo.achievements(
+    userId: authResponse.userId,
+    fromLanguage: 'en',
+    learningLanguage: 'ja',
+  );
+
+  print(achievementsResponse);
+
+  for (final achievement in achievementsResponse.achievements) {
+    print(achievement);
   }
 }
 ```

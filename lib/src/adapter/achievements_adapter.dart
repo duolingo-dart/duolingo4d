@@ -45,7 +45,7 @@ class AchievementsAdapter extends Adapter<AchievementsResponse> {
         Achievement.from(
           name: json.getString(key: 'name'),
           point: json.getInt(key: 'count'),
-          level: json.getInt(key: 'tier'),
+          level: json.getInt(key: 'tier') + 1,
           levelThresholds: json.getIntValues(key: 'tierCounts'),
         ),
       );
