@@ -8,26 +8,26 @@ import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 
-class FriendsAdapter extends Adapter<FriendsResponse> {
-  /// Returns the new instance of [FriendsAdapter].
-  FriendsAdapter.newInstance();
+class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
+  /// Returns the new instance of [SubscriptionsAdapter].
+  SubscriptionsAdapter.newInstance();
 
   @override
-  FriendsResponse convert({
+  SubscriptionsResponse convert({
     required Response response,
   }) =>
-      _buildFriendsResponse(
+      _buildSubscriptionsResponse(
         response: response,
         json: super.jsonDecode(response: response),
       );
 
-  FriendsResponse _buildFriendsResponse({
+  SubscriptionsResponse _buildSubscriptionsResponse({
     required Response response,
     required JsonResponse json,
   }) =>
-      FriendsResponse.from(
+      SubscriptionsResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,

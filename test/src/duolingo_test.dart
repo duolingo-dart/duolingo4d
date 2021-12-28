@@ -35,7 +35,7 @@ void main() async {
   _testSwitchLanguageApi();
   _testActivity();
   _testDictionary();
-  _testFriends();
+  _testSubscriptions();
   _testShopItems();
 
   _testCachedVersionInfoApi();
@@ -180,10 +180,10 @@ void _testDictionary() {
   });
 }
 
-void _testFriends() {
-  test('Test Friends API.', () async {
+void _testSubscriptions() {
+  test('Test Subscriptions API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.friends(
+    final response = await duolingo.subscriptions(
       userId: '557897808',
     );
 

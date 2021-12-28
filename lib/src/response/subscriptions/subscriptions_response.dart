@@ -6,15 +6,15 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/response/friends/friend.dart';
+import 'package:duolingo4d/src/response/subscriptions/friend.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
-export 'package:duolingo4d/src/response/friends/friend.dart';
+export 'package:duolingo4d/src/response/subscriptions/friend.dart';
 
-class FriendsResponse extends Response {
-  /// Returns the new instance of [FriendsResponse] based on arguments.
-  FriendsResponse.from({
+class SubscriptionsResponse extends Response {
+  /// Returns the new instance of [SubscriptionsResponse] based on arguments.
+  SubscriptionsResponse.from({
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,
@@ -31,14 +31,14 @@ class FriendsResponse extends Response {
   final List<Friend> friends;
 
   @override
-  String toString() => 'FriendsResponse(friends: $friends)';
+  String toString() => 'SubscriptionsResponse(friends: $friends)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
 
-    return other is FriendsResponse && listEquals(other.friends, friends);
+    return other is SubscriptionsResponse && listEquals(other.friends, friends);
   }
 
   @override

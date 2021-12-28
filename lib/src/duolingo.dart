@@ -10,13 +10,15 @@ import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/follow_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/stories/stories_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
@@ -316,7 +318,7 @@ abstract class Duolingo {
     required String wordId,
   });
 
-  Future<FriendsResponse> friends({
+  Future<SubscriptionsResponse> subscriptions({
     required String userId,
   });
 
@@ -337,6 +339,16 @@ abstract class Duolingo {
     required String fromLanguage,
     required String learningLanguage,
     IllustrationFormat format = IllustrationFormat.svg,
+  });
+
+  Future<FollowResponse> follow({
+    required String userId,
+    required String targetUserId,
+  });
+
+  Future<UnfollowResponse> unfollow({
+    required String userId,
+    required String targetUserId,
   });
 
   Future<ManifestResponse> cachedManifest();
@@ -608,7 +620,7 @@ abstract class Duolingo {
     required String wordId,
   });
 
-  Future<FriendsResponse> cachedFriends({
+  Future<SubscriptionsResponse> cachedSubscriptions({
     required String userId,
   });
 
@@ -652,8 +664,8 @@ abstract class Duolingo {
   /// Deletes the cached data of the response object that was cached by calling the [cachedDictionary] method.
   void cleanCachedDictionary();
 
-  /// Deletes the cached data of the response object that was cached by calling the [cachedFriends] method.
-  void cleanCachedFriends();
+  /// Deletes the cached data of the response object that was cached by calling the [cachedSubscriptions] method.
+  void cleanCachedSubscriptions();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedShopItems] method.
   void cleanCachedShopItems();

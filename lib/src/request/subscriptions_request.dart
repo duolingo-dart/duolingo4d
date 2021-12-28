@@ -6,30 +6,30 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/friends_adapter.dart';
+import 'package:duolingo4d/src/adapter/subscriptions_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 
-class FriendsRequest extends Request<FriendsResponse> {
-  /// Returns the new instance of [FriendsRequest] based on arguments.
-  FriendsRequest.from({
+class SubscriptionsRequest extends Request<SubscriptionsResponse> {
+  /// Returns the new instance of [SubscriptionsRequest] based on arguments.
+  SubscriptionsRequest.from({
     required this.userId,
   });
 
   /// The response adapter
-  static final _adapter = FriendsAdapter.newInstance();
+  static final _adapter = SubscriptionsAdapter.newInstance();
 
   /// The user id
   final String userId;
 
   @override
-  Future<FriendsResponse> send() async => _adapter.convert(
+  Future<SubscriptionsResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
-            '${Endpoint.base.url}/${Resource.friends.url}/$userId/subscriptions',
+            '${Endpoint.base.url}/${Resource.subscriptions.url}/$userId/subscriptions',
           ),
           headers: InternalSession.instance.headers,
         ),

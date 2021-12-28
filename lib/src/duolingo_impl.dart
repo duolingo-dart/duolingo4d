@@ -13,7 +13,8 @@ import 'package:duolingo4d/src/request/activity_request.dart';
 import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
-import 'package:duolingo4d/src/request/friends_request.dart';
+import 'package:duolingo4d/src/request/follow_request.dart';
+import 'package:duolingo4d/src/request/subscriptions_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
@@ -22,6 +23,7 @@ import 'package:duolingo4d/src/request/purchase_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/stories_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
+import 'package:duolingo4d/src/request/unfollow_request.dart';
 import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
@@ -30,13 +32,15 @@ import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
-import 'package:duolingo4d/src/response/friends/friends_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/follow_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/stories/stories_response.dart';
+import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
 import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
 import 'package:duolingo4d/src/response/user/user_response.dart';
 import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
@@ -136,10 +140,10 @@ class DuolingoImpl implements Duolingo {
       await DictionaryRequest.from(wordId: wordId).send();
 
   @override
-  Future<FriendsResponse> friends({
+  Future<SubscriptionsResponse> subscriptions({
     required String userId,
   }) async =>
-      await FriendsRequest.from(userId: userId).send();
+      await SubscriptionsRequest.from(userId: userId).send();
 
   @override
   Future<ShopItemsResponse> shopItems() async =>
@@ -177,6 +181,26 @@ class DuolingoImpl implements Duolingo {
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
         format: format,
+      ).send();
+
+  @override
+  Future<FollowResponse> follow({
+    required String userId,
+    required String targetUserId,
+  }) async =>
+      await FollowRequest.from(
+        userId: userId,
+        targetUserId: targetUserId,
+      ).send();
+
+  @override
+  Future<UnfollowResponse> unfollow({
+    required String userId,
+    required String targetUserId,
+  }) async =>
+      await UnfollowRequest.from(
+        userId: userId,
+        targetUserId: targetUserId,
       ).send();
 
   @override
@@ -341,24 +365,24 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<FriendsResponse> cachedFriends({
+  Future<SubscriptionsResponse> cachedSubscriptions({
     required String userId,
   }) async {
     final cacheSubKeys = [userId];
     if (_cacheStorage.has(
-      key: Resource.friends.name,
+      key: Resource.subscriptions.name,
       subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
-        key: Resource.friends.name,
+        key: Resource.subscriptions.name,
         subKeys: cacheSubKeys,
       );
     }
 
-    final response = await friends(userId: userId);
+    final response = await subscriptions(userId: userId);
 
     _cacheStorage.save(
-      key: Resource.friends.name,
+      key: Resource.subscriptions.name,
       subKeys: cacheSubKeys,
       value: response,
     );
@@ -475,8 +499,8 @@ class DuolingoImpl implements Duolingo {
       _cacheStorage.deleteBy(key: Resource.dictionary.name);
 
   @override
-  void cleanCachedFriends() =>
-      _cacheStorage.deleteBy(key: Resource.friends.name);
+  void cleanCachedSubscriptions() =>
+      _cacheStorage.deleteBy(key: Resource.subscriptions.name);
 
   @override
   void cleanCachedShopItems() =>

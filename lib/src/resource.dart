@@ -33,8 +33,8 @@ enum Resource {
   /// Dictionary API
   dictionary,
 
-  /// Friends API
-  friends,
+  /// Subscriptions API
+  subscriptions,
 
   /// Shop Items API
   shopItems,
@@ -60,7 +60,7 @@ extension ReourceFeature on Resource {
       case Resource.auth:
         return 'login';
       case Resource.user:
-      case Resource.friends:
+      case Resource.subscriptions:
       case Resource.purchase:
         return '2017-06-30/users';
       case Resource.overview:

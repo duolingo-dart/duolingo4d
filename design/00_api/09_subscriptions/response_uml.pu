@@ -1,4 +1,4 @@
-@startjson "Friends"
+@startjson "Subscriptions"
 {
     "nextCursor": null,
     "totalSubscriptions": 2,
