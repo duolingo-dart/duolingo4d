@@ -690,9 +690,9 @@ void main() async {
 
 ### 1.3.18. Achievements API
 
-| Auth Required |                                                                                             Method                                                                                              |                                                    JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-|      ✅       | [achievements({required String userId, required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/achievements.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/achievements/response.json) |
+| Auth Required |                                                                                             Method                                                                                              |                                                     JSON                                                      |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [achievements({required String userId, required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/achievements.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/16_achievements/response.json) |
 
 From Achievements API, you can get the achievement data that the user has achieved.
 
