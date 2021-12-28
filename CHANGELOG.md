@@ -6,6 +6,8 @@
 
 - Added a feature that allows you to get alphabets information.
 - Added a feature that allows you to get stories information.
+- Added a feature that allows you to follow user.
+- Added a feature that allows you to unfollow user.
 
 ## 0.2.0
 
