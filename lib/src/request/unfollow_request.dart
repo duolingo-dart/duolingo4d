@@ -2,6 +2,8 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'dart:convert';
+
 import 'package:duolingo4d/src/adapter/unfollow_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
@@ -33,6 +35,12 @@ class UnfollowRequest extends Request<UnfollowResponse> {
             '${Endpoint.base.url}/${Resource.subscriptions.url}/$userId/subscriptions/$targetUserId',
           ),
           headers: InternalSession.instance.headers,
+          body: json.encode(
+            {
+              'csrfToken': InternalSession
+                  .instance.requestHeader.cookie.csrfTokens[1].value,
+            },
+          ),
         ),
       );
 }

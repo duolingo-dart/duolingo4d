@@ -26,11 +26,13 @@
     - [1.3.8. Activity API](#138-activity-api)
     - [1.3.9. Leaderboard API](#139-leaderboard-api)
     - [1.3.10. Dictionary API](#1310-dictionary-api)
-    - [1.3.11. Friends API](#1311-friends-api)
-    - [1.3.12. Shop Items API](#1312-shop-items-api)
-    - [1.3.13. Purchase API](#1313-purchase-api)
-    - [1.3.14. Alphabets API](#1314-alphabets-api)
-    - [1.3.15. Stories API](#1315-stories-api)
+    - [1.3.11. Subscriptions API](#1311-subscriptions-api)
+    - [1.3.12. Follow API](#1312-follow-api)
+    - [1.3.13. Unfollow API](#1313-unfollow-api)
+    - [1.3.14. Shop Items API](#1314-shop-items-api)
+    - [1.3.15. Purchase API](#1315-purchase-api)
+    - [1.3.16. Alphabets API](#1316-alphabets-api)
+    - [1.3.17. Stories API](#1317-stories-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -59,7 +61,9 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Activity**        |      ✅       | You can get the activity of you and your friends in a ranking format.                                              |
 | **Leaderboard**     |      ✅       | You can get the information of leaderboard.                                                                        |
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
-| **Friends**         |      ✅       | You can get information on all friends associated with a user id.                                                  |
+| **Subscriptions**   |      ✅       | You can get information on all friends associated with a user id.                                                  |
+| **Follow**          |      ✅       | You can follow the account associated with the user ID specified in the argument.                                  |
+| **Unfollow**        |      ✅       | you can unfollow the account associated with the user ID specified in the argument.                                |
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
 | **Purchase**        |      ✅       | You can purchase items sold in Duoligno by spending Lingots or Gems.                                               |
 | **Alphabets**       |      ✅       | You can get alphabet information for the learning language.                                                        |
@@ -464,13 +468,13 @@ void main() async {
 }
 ```
 
-### 1.3.11. Friends API
+### 1.3.11. Subscriptions API
 
-| Auth Required |                                                        Method                                                         |                                                   JSON                                                   |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-|      ✅       | [friends({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/friends.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/09_friends/response.json) |
+| Auth Required |                                                              Method                                                               |                                                      JSON                                                      |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [subscriptions({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscriptions.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/09_subscriptions/response.json) |
 
-From Friends API, you can get information on all friends associated with a user id.
+From Subscriptions API, you can get information on all friends associated with a user id.
 
 ```dart
 void main() async {
@@ -481,16 +485,68 @@ void main() async {
     password: 'test_password',
   );
 
-  final friendsResponse = await duolingo.friends(userId: 'xxxxxx');
-  print(friendsResponse);
+  final subscriptionsResponse = await duolingo.subscriptions(userId: 'xxxxxx');
+  print(subscriptionsResponse);
 
-  for (final friend in friendsResponse.friends) {
+  for (final friend in subscriptionsResponse.friends) {
     print(friend);
   }
 }
 ```
 
-### 1.3.12. Shop Items API
+### 1.3.12. Follow API
+
+| Auth Required |                                                                      Method                                                                       |
+| :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [follow({required String userId, required String targetUserId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/follow.html) |
+
+With Follow API, you can follow the account associated with the user ID specified in the argument.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final followResponse = await duolingo.follow(
+    userId: authResponse.userId,
+    targetUserId: 'user_id_to_follow',
+  );
+
+  print(followResponse);
+}
+```
+
+### 1.3.13. Unfollow API
+
+| Auth Required |                                                                        Method                                                                         |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [unfollow({required String userId, required String targetUserId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/unfollow.html) |
+
+With Unfollow API, you can unfollow the account associated with the user ID specified in the argument.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final unfollowResponse = await duolingo.unfollow(
+    userId: authResponse.userId,
+    targetUserId: 'user_id_to_unfollow',
+  );
+
+  print(unfollowResponse);
+}
+```
+
+### 1.3.14. Shop Items API
 
 | Auth Required |                                              Method                                               |                                                    JSON                                                     |
 | :-----------: | :-----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
@@ -515,7 +571,7 @@ void main() async {
 }
 ```
 
-### 1.3.13. Purchase API
+### 1.3.15. Purchase API
 
 | Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
@@ -550,7 +606,7 @@ void main() async {
 }
 ```
 
-### 1.3.14. Alphabets API
+### 1.3.16. Alphabets API
 
 | Auth Required |                                                                              Method                                                                               |                                                    JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
@@ -597,7 +653,7 @@ void main() async {
 }
 ```
 
-### 1.3.15. Stories API
+### 1.3.17. Stories API
 
 | Auth Required |                                                                                                      Method                                                                                                       |                                                   JSON                                                   |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
