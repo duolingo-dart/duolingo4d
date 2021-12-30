@@ -1,0 +1,414 @@
+@startjson "Forum Topics"
+[
+    {
+        "display_name": "Educators",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": null,
+        "language_string": null,
+        "name": "Educators",
+        "subscribed": false,
+        "topic_id": 909
+    },
+    {
+        "display_name": "General",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": null,
+        "language_string": null,
+        "name": "Duolingo",
+        "subscribed": true,
+        "topic_id": 1
+    },
+    {
+        "display_name": "Troubleshooting",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": null,
+        "language_string": null,
+        "name": "Troubleshooting",
+        "subscribed": false,
+        "topic_id": 647
+    },
+    {
+        "display_name": "Arabic",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ar",
+        "language_string": "Arabic",
+        "name": "Arabic",
+        "subscribed": false,
+        "topic_id": 966
+    },
+    {
+        "display_name": "Czech",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "cs",
+        "language_string": "Czech",
+        "name": "Czech",
+        "subscribed": false,
+        "topic_id": 949
+    },
+    {
+        "display_name": "Welsh",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "cy",
+        "language_string": "Welsh",
+        "name": "Welsh",
+        "subscribed": false,
+        "topic_id": 924
+    },
+    {
+        "display_name": "Danish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "da",
+        "language_string": "Danish",
+        "name": "Danish",
+        "subscribed": false,
+        "topic_id": 902
+    },
+    {
+        "display_name": "German",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "de",
+        "language_string": "German",
+        "name": "German",
+        "subscribed": false,
+        "topic_id": 67
+    },
+    {
+        "display_name": "Dutch",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "dn",
+        "language_string": "Dutch",
+        "name": "Dutch",
+        "subscribed": false,
+        "topic_id": 897
+    },
+    {
+        "display_name": "Greek",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "el",
+        "language_string": "Greek",
+        "name": "Greek",
+        "subscribed": false,
+        "topic_id": 936
+    },
+    {
+        "display_name": "Esperanto",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "eo",
+        "language_string": "Esperanto",
+        "name": "Esperanto",
+        "subscribed": false,
+        "topic_id": 915
+    },
+    {
+        "display_name": "Spanish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "es",
+        "language_string": "Spanish",
+        "name": "Spanish",
+        "subscribed": false,
+        "topic_id": 2
+    },
+    {
+        "display_name": "Finnish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "fi",
+        "language_string": "Finnish",
+        "name": "Finnish",
+        "subscribed": false,
+        "topic_id": 972
+    },
+    {
+        "display_name": "French",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "fr",
+        "language_string": "French",
+        "name": "French",
+        "subscribed": false,
+        "topic_id": 147
+    },
+    {
+        "display_name": "Irish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ga",
+        "language_string": "Irish",
+        "name": "Irish",
+        "subscribed": false,
+        "topic_id": 901
+    },
+    {
+        "display_name": "Scottish Gaelic",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "gd",
+        "language_string": "Scottish Gaelic",
+        "name": "Scottish Gaelic",
+        "subscribed": false,
+        "topic_id": 969
+    },
+    {
+        "display_name": "Hebrew",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "he",
+        "language_string": "Hebrew",
+        "name": "Hebrew",
+        "subscribed": false,
+        "topic_id": 932
+    },
+    {
+        "display_name": "Hindi",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "hi",
+        "language_string": "Hindi",
+        "name": "Hindi",
+        "subscribed": false,
+        "topic_id": 930
+    },
+    {
+        "display_name": "Hungarian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "hu",
+        "language_string": "Hungarian",
+        "name": "Hungarian",
+        "subscribed": false,
+        "topic_id": 933
+    },
+    {
+        "display_name": "High Valyrian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "hv",
+        "language_string": "High Valyrian",
+        "name": "High Valyrian",
+        "subscribed": false,
+        "topic_id": 948
+    },
+    {
+        "display_name": "Hawaiian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "hw",
+        "language_string": "Hawaiian",
+        "name": "Hawaiian",
+        "subscribed": false,
+        "topic_id": 960
+    },
+    {
+        "display_name": "Indonesian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "id",
+        "language_string": "Indonesian",
+        "name": "Indonesian",
+        "subscribed": false,
+        "topic_id": 958
+    },
+    {
+        "display_name": "Italian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "it",
+        "language_string": "Italian",
+        "name": "Italian",
+        "subscribed": false,
+        "topic_id": 519
+    },
+    {
+        "display_name": "Japanese",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ja",
+        "language_string": "Japanese",
+        "name": "Japanese",
+        "subscribed": true,
+        "topic_id": 946
+    },
+    {
+        "display_name": "Klingon",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "kl",
+        "language_string": "Klingon",
+        "name": "Klingon",
+        "subscribed": true,
+        "topic_id": 953
+    },
+    {
+        "display_name": "Korean",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ko",
+        "language_string": "Korean",
+        "name": "Korean",
+        "subscribed": false,
+        "topic_id": 950
+    },
+    {
+        "display_name": "Latin",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "la",
+        "language_string": "Latin",
+        "name": "Latin",
+        "subscribed": false,
+        "topic_id": 967
+    },
+    {
+        "display_name": "Norwegian (Bokmål)",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "nb",
+        "language_string": "Norwegian (Bokmål)",
+        "name": "Norwegian (Bokmål)",
+        "subscribed": false,
+        "topic_id": 914
+    },
+    {
+        "display_name": "Navajo",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "nv",
+        "language_string": "Navajo",
+        "name": "Navajo",
+        "subscribed": false,
+        "topic_id": 961
+    },
+    {
+        "display_name": "Polish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "pl",
+        "language_string": "Polish",
+        "name": "Polish",
+        "subscribed": false,
+        "topic_id": 922
+    },
+    {
+        "display_name": "Portuguese",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "pt",
+        "language_string": "Portuguese",
+        "name": "Portuguese",
+        "subscribed": false,
+        "topic_id": 328
+    },
+    {
+        "display_name": "Romanian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ro",
+        "language_string": "Romanian",
+        "name": "Romanian",
+        "subscribed": false,
+        "topic_id": 938
+    },
+    {
+        "display_name": "Russian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "ru",
+        "language_string": "Russian",
+        "name": "Russian",
+        "subscribed": false,
+        "topic_id": 920
+    },
+    {
+        "display_name": "Swedish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "sv",
+        "language_string": "Swedish",
+        "name": "Swedish",
+        "subscribed": false,
+        "topic_id": 908
+    },
+    {
+        "display_name": "Swahili",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "sw",
+        "language_string": "Swahili",
+        "name": "Swahili",
+        "subscribed": false,
+        "topic_id": 942
+    },
+    {
+        "display_name": "Turkish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "tr",
+        "language_string": "Turkish",
+        "name": "Turkish",
+        "subscribed": false,
+        "topic_id": 912
+    },
+    {
+        "display_name": "Ukrainian",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "uk",
+        "language_string": "Ukrainian",
+        "name": "Ukrainian",
+        "subscribed": false,
+        "topic_id": 913
+    },
+    {
+        "display_name": "Vietnamese",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "vi",
+        "language_string": "Vietnamese",
+        "name": "Vietnamese",
+        "subscribed": false,
+        "topic_id": 931
+    },
+    {
+        "display_name": "Yiddish",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "yi",
+        "language_string": "Yiddish",
+        "name": "Yiddish",
+        "subscribed": false,
+        "topic_id": 979
+    },
+    {
+        "display_name": "Chinese",
+        "from_language_abbrev": "en",
+        "from_language_string": "English",
+        "language_abbrev": "zs",
+        "language_string": "Chinese",
+        "name": "Chinese",
+        "subscribed": false,
+        "topic_id": 951
+    },
+    {
+        "display_name": "English",
+        "from_language_abbrev": "ja",
+        "from_language_string": "Japanese",
+        "language_abbrev": "en",
+        "language_string": "English",
+        "name": "English",
+        "subscribed": true,
+        "topic_id": 839
+    }
+]
+@endjson

@@ -20,3 +20,4 @@
 | Alphabets       | <https://www-prod.duolingo.com/2017-06-30/alphabets/courses>                                              | /ja/en/                                                     | -                                | YES           |
 | Stories         | <https://stories.duolingo.com/api2/stories>                                                               | ?fromLanguage=en&learningLanguage=ja&illustrationFormat=png | -                                | YES           |
 | Achievements    | <https://duolingo-achievements-prod.duolingo.com/users>                                                   | /{userId}/achievements?fromLanguage=en&learningLanguage=ja  | -                                | YES           |
+| Forum Topics    | <https://forum-api.duolingo.com/api/1/topics/list/users>                                                  | -                                                           | -                                | YES           |
