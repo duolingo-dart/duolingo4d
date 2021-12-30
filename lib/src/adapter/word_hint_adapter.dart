@@ -28,113 +28,105 @@ class WordHintAdapter extends Adapter<WordHintResponse> {
   /// Returns [WordHintResponse] based on [response] and [json].
   WordHintResponse _buildWordHintResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       WordHintResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         tokens: _buildHintTokens(
-          jsonList: json.getJsonList(key: 'tokens'),
+          jsonArray: json.getArray(key: 'tokens'),
         ),
       );
 
   /// Returns [HintToken] list based on [jsonList].
   List<HintToken> _buildHintTokens({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final hintTokens = <HintToken>[];
-
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       final value = json.getString(key: 'value');
 
-      if (value.trim().isEmpty) {
-        continue;
-      }
-
-      hintTokens.add(
-        HintToken.from(
-          index: json.getInt(key: 'index'),
-          value: value,
-          table: _buildHintTable(
-            json: json.getJson(key: 'hint_table'),
+      if (value.trim().isNotEmpty) {
+        hintTokens.add(
+          HintToken.from(
+            index: json.getInt(key: 'index'),
+            value: value,
+            table: _buildHintTable(
+              json: json.get(key: 'hint_table'),
+            ),
           ),
-        ),
-      );
-    }
+        );
+      }
+    });
 
     return hintTokens;
   }
 
   /// Returns [HintTable] based on [json].
   HintTable _buildHintTable({
-    required JsonResponse json,
+    required Json json,
   }) =>
       HintTable.from(
         headers: _buildHintHeaders(
-          jsonList: json.getJsonList(key: 'headers'),
+          jsonArray: json.getArray(key: 'headers'),
         ),
         rows: _buildHintRows(
-          jsonList: json.getJsonList(key: 'rows'),
+          jsonArray: json.getArray(key: 'rows'),
         ),
         references: json.getIntValues(key: 'references'),
       );
 
   /// Returns [HintHeader] list based on [jsonList].
   List<HintHeader> _buildHintHeaders({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final hintHeaders = <HintHeader>[];
-
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       hintHeaders.add(
         HintHeader.from(
           token: json.getString(key: 'token'),
           selected: json.getBool(key: 'selected'),
         ),
       );
-    }
+    });
 
     return hintHeaders;
   }
 
   /// Returns [HintRow] list based on [jsonList].
   List<HintRow> _buildHintRows({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final hintRows = <HintRow>[];
-
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       hintRows.add(
         HintRow.from(
           cells: _buildHintCells(
-            jsonList: json.getJsonList(key: 'cells'),
+            jsonArray: json.getArray(key: 'cells'),
           ),
         ),
       );
-    }
+    });
 
     return hintRows;
   }
 
   /// Returns [HintCell] list based on [jsonList].
   List<HintCell> _buildHintCells({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final hintCells = <HintCell>[];
-
-    for (final json in jsonList) {
-      if (json.isEmpty) {
-        continue;
+    jsonArray.forEach((json) {
+      if (json.isNotEmpty) {
+        hintCells.add(
+          HintCell.from(
+            hint: json.getString(key: 'hint'),
+            span: json.getInt(key: 'colspan'),
+          ),
+        );
       }
-
-      hintCells.add(
-        HintCell.from(
-          hint: json.getString(key: 'hint'),
-          span: json.getInt(key: 'colspan'),
-        ),
-      );
-    }
+    });
 
     return hintCells;
   }

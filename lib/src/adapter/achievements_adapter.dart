@@ -25,22 +25,24 @@ class AchievementsAdapter extends Adapter<AchievementsResponse> {
 
   AchievementsResponse _buildAchievementsResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       AchievementsResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         achievements: _buildAchievement(
-          jsonList: json.getJsonList(
+          jsonArray: json.getArray(
             key: 'achievements',
           ),
         ),
       );
 
-  List<Achievement> _buildAchievement({required List<JsonResponse> jsonList}) {
+  List<Achievement> _buildAchievement({
+    required JsonArray jsonArray,
+  }) {
     final achievements = <Achievement>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       achievements.add(
         Achievement.from(
           name: json.getString(key: 'name'),
@@ -49,7 +51,7 @@ class AchievementsAdapter extends Adapter<AchievementsResponse> {
           levelThresholds: json.getIntValues(key: 'tierCounts'),
         ),
       );
-    }
+    });
 
     return achievements;
   }

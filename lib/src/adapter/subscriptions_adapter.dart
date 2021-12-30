@@ -25,22 +25,22 @@ class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
 
   SubscriptionsResponse _buildSubscriptionsResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       SubscriptionsResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         friends: _buildFriends(
-          jsonList: json.getJsonList(key: 'subscriptions'),
+          jsonArray: json.getArray(key: 'subscriptions'),
         ),
       );
 
   List<Friend> _buildFriends({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final friends = <Friend>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       friends.add(
         Friend.from(
           id: '${json.getInt(key: 'id')}',
@@ -53,7 +53,7 @@ class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
           hasPlus: json.getBool(key: 'hasPlus'),
         ),
       );
-    }
+    });
 
     return friends;
   }

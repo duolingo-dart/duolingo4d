@@ -27,17 +27,31 @@ abstract class Adapter<R extends Response> {
     required http.Response response,
   });
 
-  JsonResponse jsonDecode({
+  Json jsonDecode({
     required http.Response response,
   }) {
     if (response.statusCode != 200) {
-      return JsonResponse.fromMap(value: {});
+      return Json.empty();
     }
 
     try {
-      return JsonResponse.fromBytes(value: response.bodyBytes);
+      return Json.from(response: response);
     } on FormatException {
-      return JsonResponse.fromMap(value: {});
+      return Json.empty();
+    }
+  }
+
+  JsonArray jsonArrayDecode({
+    required http.Response response,
+  }) {
+    if (response.statusCode != 200) {
+      return JsonArray.empty();
+    }
+
+    try {
+      return JsonArray.from(response: response);
+    } on FormatException {
+      return JsonArray.empty();
     }
   }
 }

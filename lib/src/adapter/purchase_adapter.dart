@@ -27,7 +27,7 @@ class PurchaseAdapter extends Adapter<PurchaseResponse> {
 /// Returns [PurchaseResponse] based on [response] and [json].
 PurchaseResponse _buildPurchaseResponse({
   required Response response,
-  required JsonResponse json,
+  required Json json,
 }) =>
     PurchaseResponse.from(
       statusCode: response.statusCode,
@@ -36,7 +36,7 @@ PurchaseResponse _buildPurchaseResponse({
       invoice: _buildInvoice(json: json),
     );
 
-Invoice? _buildInvoice({required JsonResponse json}) {
+Invoice? _buildInvoice({required Json json}) {
   if (json.isEmpty) {
     return null;
   }

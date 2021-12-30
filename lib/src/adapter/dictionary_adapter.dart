@@ -25,7 +25,7 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
 
   DictionaryResponse _buildDictionaryResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       DictionaryResponse.from(
         statusCode: response.statusCode,
@@ -44,23 +44,23 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
         ttsUrl: json.getString(key: 'tts'),
         canonicalUrl: json.getString(key: 'canonical_path'),
         alternativeForms: _buildAlternativeForms(
-          jsonList: json.getJsonList(key: 'alternative_forms'),
+          jsonArray: json.getArray(key: 'alternative_forms'),
         ),
         relatedLexemes: _buildLexemes(
-          jsonList: json.getJsonList(key: 'related_lexemes'),
+          jsonArray: json.getArray(key: 'related_lexemes'),
         ),
         relatedDiscussions: _buildDiscussions(
-          jsonList: json.getJsonList(key: 'related_discussions'),
+          jsonArray: json.getArray(key: 'related_discussions'),
         ),
         isGeneric: json.getBool(key: 'is_generic'),
         hasTts: json.getBool(key: 'has_tts'),
       );
 
   List<AlternativeForm> _buildAlternativeForms({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final alternativeForms = <AlternativeForm>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       alternativeForms.add(
         AlternativeForm.from(
           word: json.getString(key: 'word'),
@@ -73,23 +73,23 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
           link: json.getString(key: 'link'),
           ttsUrl: json.getString(key: 'tts'),
           discussion: _buildDiscussion(
-            json: json.getJson(key: 'discussion'),
+            json: json.get(key: 'discussion'),
           ),
           isMatched: json.getBool(key: 'word_value_matched'),
           isInvalid: json.getBool(key: 'invalid'),
           isHighlighted: json.getBool(key: 'highlighted'),
         ),
       );
-    }
+    });
 
     return alternativeForms;
   }
 
   List<Lexeme> _buildLexemes({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final lexemes = <Lexeme>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       lexemes.add(
         Lexeme.from(
           url: json.getString(key: 'url'),
@@ -98,26 +98,26 @@ class DictionaryAdapter extends Adapter<DictionaryResponse> {
           ),
         ),
       );
-    }
+    });
 
     return lexemes;
   }
 
   List<Discussion> _buildDiscussions({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final discussions = <Discussion>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       discussions.add(
         _buildDiscussion(json: json),
       );
-    }
+    });
 
     return discussions;
   }
 
   Discussion _buildDiscussion({
-    required JsonResponse json,
+    required Json json,
   }) =>
       Discussion.from(
         url: json.getString(key: 'url'),

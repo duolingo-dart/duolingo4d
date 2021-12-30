@@ -26,7 +26,7 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
   /// Returns [ManifestResponse] based on [response] and [json].
   ManifestResponse _buildManifestResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       ManifestResponse.from(
         statusCode: response.statusCode,
@@ -34,15 +34,17 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
         headers: response.headers,
         name: json.getString(key: 'name'),
         icons: _buildIcons(
-          jsonList: json.getJsonList(key: 'icons'),
+          jsonArray: json.getArray(key: 'icons'),
         ),
         backgroundColor: json.getString(key: 'background_color'),
         themeColor: json.getString(key: 'theme_color'),
       );
 
-  List<Icon> _buildIcons({required List<JsonResponse> jsonList}) {
+  List<Icon> _buildIcons({
+    required JsonArray jsonArray,
+  }) {
     final icons = <Icon>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       icons.add(
         Icon.from(
           src: json.getString(key: 'src'),
@@ -52,7 +54,7 @@ class ManifestAdapter extends Adapter<ManifestResponse> {
           ),
         ),
       );
-    }
+    });
 
     return icons;
   }

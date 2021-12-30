@@ -28,7 +28,7 @@ class UserAdapter extends Adapter<UserResponse> {
   /// Returns [UserResponse] based on [response] and [json].
   UserResponse _buildUserResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       UserResponse.from(
         statusCode: response.statusCode,
@@ -49,22 +49,22 @@ class UserAdapter extends Adapter<UserResponse> {
         fromLanguage: json.getString(key: 'fromLanguage'),
         learningLanguage: json.getString(key: 'learningLanguage'),
         trackingProperty: _buildTrackingProperty(
-          json: json.getJson(key: 'trackingProperties'),
+          json: json.get(key: 'trackingProperties'),
         ),
         xpConfiguration: _buildXpConfiguration(
-          json: json.getJson(key: 'xpConfig'),
+          json: json.get(key: 'xpConfig'),
         ),
         gemsConfiguration: _buildGemsConfiguration(
-          json: json.getJson(key: 'gemsConfig'),
+          json: json.get(key: 'gemsConfig'),
         ),
         courses: _buildCourses(
-          jsonList: json.getJsonList(key: 'courses'),
+          jsonArray: json.getArray(key: 'courses'),
         ),
         currentCourse: _buildCurrentCourse(
-          json: json.getJson(key: 'currentCourse'),
+          json: json.get(key: 'currentCourse'),
         ),
         lastStreak: _buildLastStreak(
-          json: json.getJson(key: 'lastStreak'),
+          json: json.get(key: 'lastStreak'),
         ),
         xpGoalMetToday: json.getBool(key: 'xpGoalMetToday'),
         xpGoal: json.getInt(key: 'xpGoal'),
@@ -80,7 +80,7 @@ class UserAdapter extends Adapter<UserResponse> {
         plusStatus: json.getString(key: 'plusStatus'),
         hasPlus: json.getBool(key: 'hasPlus'),
         practiceReminderSettings: _buildPracticeReminderSettings(
-          json: json.getJson(key: 'practiceReminderSettings'),
+          json: json.get(key: 'practiceReminderSettings'),
         ),
         createdAt: DateTime.fromMillisecondsSinceEpoch(
           json.getInt(key: 'creationDate'),
@@ -88,7 +88,7 @@ class UserAdapter extends Adapter<UserResponse> {
       );
 
   TrackingProperty _buildTrackingProperty({
-    required JsonResponse json,
+    required Json json,
   }) =>
       TrackingProperty.from(
         userId: json.getInt(key: 'user_id').toString(),
@@ -133,7 +133,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [XpConfiguration] based on [json].
   XpConfiguration _buildXpConfiguration({
-    required JsonResponse json,
+    required Json json,
   }) =>
       XpConfiguration.from(
         maxSkillTestXp: json.getInt(key: 'maxSkillTestXp'),
@@ -143,7 +143,7 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [GemsConfiguration] based on [json].
   GemsConfiguration _buildGemsConfiguration({
-    required JsonResponse json,
+    required Json json,
   }) =>
       GemsConfiguration.from(
         gems: json.getInt(key: 'gems'),
@@ -153,11 +153,10 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [Course] list based on [jsonList].
   List<Course> _buildCourses({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final courses = <Course>[];
-
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       courses.add(
         Course.from(
           id: json.getString(key: 'id'),
@@ -168,14 +167,14 @@ class UserAdapter extends Adapter<UserResponse> {
           crowns: json.getInt(key: 'crowns'),
         ),
       );
-    }
+    });
 
     return courses;
   }
 
   /// Returns [CurrentCourse] based on [json].
   CurrentCourse _buildCurrentCourse({
-    required JsonResponse json,
+    required Json json,
   }) =>
       CurrentCourse.from(
         id: json.getString(key: 'id'),
@@ -189,17 +188,16 @@ class UserAdapter extends Adapter<UserResponse> {
         crowns: json.getInt(key: 'crowns'),
         extraCrowns: json.getInt(key: 'extraCrowns'),
         skills: _buildSkills(
-          jsonList: json.getJsonList(key: 'skills'),
+          jsonArray: json.getArray(key: 'skills'),
         ),
       );
 
   /// Returns [Skill] list based on [jsonList].
   List<Skill> _buildSkills({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final skills = <Skill>[];
-
-    for (final json in jsonList) {
+    jsonArray.toFlat().forEach((json) {
       skills.add(
         Skill.from(
           id: json.getString(key: 'id'),
@@ -220,14 +218,14 @@ class UserAdapter extends Adapter<UserResponse> {
           hasFinalLevel: json.getBool(key: 'hasFinalLevel'),
         ),
       );
-    }
+    });
 
     return skills;
   }
 
   /// Returns [LastStreak] based on [json].
   LastStreak _buildLastStreak({
-    required JsonResponse json,
+    required Json json,
   }) =>
       LastStreak.from(
         daysAgo: json.getInt(key: 'daysAgo'),
@@ -238,12 +236,12 @@ class UserAdapter extends Adapter<UserResponse> {
 
   /// Returns [PracticeReminderSetting] list based on [json].
   List<PracticeReminderSetting> _buildPracticeReminderSettings({
-    required JsonResponse json,
+    required Json json,
   }) {
     final practiceReminderSettings = <PracticeReminderSetting>[];
 
     for (final key in json.keySet) {
-      final childJson = json.getJson(key: key);
+      final childJson = json.get(key: key);
       practiceReminderSettings.add(
         PracticeReminderSetting.from(
           learningLanguage: key,

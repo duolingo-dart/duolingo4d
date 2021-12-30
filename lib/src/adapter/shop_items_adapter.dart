@@ -25,22 +25,22 @@ class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
 
   ShopItemsResponse _buildShopItemsResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       ShopItemsResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         products: _buildProducts(
-          jsonList: json.getJsonList(key: 'shopItems'),
+          jsonArray: json.getArray(key: 'shopItems'),
         ),
       );
 
   List<Product> _buildProducts({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final products = <Product>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       products.add(
         Product.from(
           id: json.getString(key: 'id'),
@@ -51,7 +51,7 @@ class ShopItemsAdapter extends Adapter<ShopItemsResponse> {
           currency: json.getString(key: 'currencyType'),
         ),
       );
-    }
+    });
 
     return products;
   }

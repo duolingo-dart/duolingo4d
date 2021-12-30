@@ -28,7 +28,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
   /// Returns [VersionInfoResponse] based on [response] and [json].
   VersionInfoResponse _buildVersionInfoResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       VersionInfoResponse.from(
         statusCode: response.statusCode,
@@ -44,31 +44,31 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
         ttsBaseUrl: json.getString(key: 'tts_base_url'),
         dictBaseUrl: json.getString(key: 'dict_base_url'),
         ttsVoiceConfiguration: _buildTtsVoiceConfiguration(
-          json: json.getJson(key: 'tts_voice_configuration'),
+          json: json.get(key: 'tts_voice_configuration'),
         ),
         supportedDirections: _buildSupportedDirections(
-          json: json.getJson(key: 'supported_directions'),
+          json: json.get(key: 'supported_directions'),
         ),
       );
 
   /// Returns [TtsVoiceConfiguration] based on [json].
   TtsVoiceConfiguration _buildTtsVoiceConfiguration({
-    required JsonResponse json,
+    required Json json,
   }) {
     return TtsVoiceConfiguration.from(
       path: json.getString(key: 'path'),
       multiVoiceDirections: _buildMultiVoiceDirections(
-        json: json.getJson(key: 'multi_voices'),
+        json: json.get(key: 'multi_voices'),
       ),
       voiceDirections: _buildVoiceDirections(
-        json: json.getJson(key: 'voices'),
+        json: json.get(key: 'voices'),
       ),
     );
   }
 
   /// Returns [MultiVoiceDirection] list based on [json].
   List<MultiVoiceDirection> _buildMultiVoiceDirections({
-    required JsonResponse json,
+    required Json json,
   }) {
     final multiVoiceDirections = <MultiVoiceDirection>[];
 
@@ -86,7 +86,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [VoiceDirection] list based on [json].
   List<VoiceDirection> _buildVoiceDirections({
-    required JsonResponse json,
+    required Json json,
   }) {
     final voiceDirections = <VoiceDirection>[];
 
@@ -104,7 +104,7 @@ class VersionInfoAdapter extends Adapter<VersionInfoResponse> {
 
   /// Returns [SupportedDirection] list based on [json].
   List<SupportedDirection> _buildSupportedDirections({
-    required JsonResponse json,
+    required Json json,
   }) {
     final supportedDirections = <SupportedDirection>[];
 

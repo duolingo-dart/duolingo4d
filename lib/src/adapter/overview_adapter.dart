@@ -28,7 +28,7 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
   /// Returns [OverviewResponse] based on [response] and [json].
   OverviewResponse _buildOverviewResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       OverviewResponse.from(
         statusCode: response.statusCode,
@@ -38,17 +38,16 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
         fromLanguage: json.getString(key: 'from_language'),
         learningLanguage: json.getString(key: 'learning_language'),
         vocabularies: _buildVocabularies(
-          jsonList: json.getJsonList(key: 'vocab_overview'),
+          jsonArray: json.getArray(key: 'vocab_overview'),
         ),
       );
 
   /// Returns [Vocabulary] list based on [jsonList].
   List<Vocabulary> _buildVocabularies({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final vocabularies = <Vocabulary>[];
-
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       vocabularies.add(
         Vocabulary.from(
           id: json.getString(key: 'id'),
@@ -67,7 +66,7 @@ class OverviewAdapter extends Adapter<OverviewResponse> {
           lastPracticedMs: json.getInt(key: 'last_practiced_ms'),
         ),
       );
-    }
+    });
 
     return vocabularies;
   }

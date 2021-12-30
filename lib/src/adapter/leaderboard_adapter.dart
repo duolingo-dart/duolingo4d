@@ -25,25 +25,25 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
 
   LeaderboardResponse _buildLeaderboardResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       LeaderboardResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         activeThread: _buildActiveThread(
-          json: json.getJson(key: 'active'),
+          json: json.get(key: 'active'),
         ),
       );
 
   ActiveThread _buildActiveThread({
-    required JsonResponse json,
+    required Json json,
   }) =>
       ActiveThread.from(
         id: '${json.getInt(key: 'user_id')}',
         xp: json.getDouble(key: 'score').toInt(),
         cohort: _buildCohort(
-          json: json.getJson(key: 'cohort'),
+          json: json.get(key: 'cohort'),
         ),
         hasWon: json.getBool(key: 'is_winner'),
         hasLost: json.getBool(key: 'is_loser'),
@@ -52,21 +52,21 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
       );
 
   Cohort _buildCohort({
-    required JsonResponse json,
+    required Json json,
   }) =>
       Cohort.from(
         id: json.getString(key: 'cohort_id'),
         ranks: _buildRanks(
-          jsonList: json.getJsonList(key: 'rankings'),
+          jsonArray: json.getArray(key: 'rankings'),
         ),
         tier: json.getInt(key: 'tier'),
       );
 
   List<Rank> _buildRanks({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final ranks = <Rank>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       ranks.add(
         Rank.from(
           userId: '${json.getInt(key: 'user_id')}',
@@ -79,7 +79,7 @@ class LeaderboardAdapter extends Adapter<LeaderboardResponse> {
           ),
         ),
       );
-    }
+    });
 
     return ranks;
   }

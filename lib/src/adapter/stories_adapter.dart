@@ -25,22 +25,22 @@ class StoriesAdapter extends Adapter<StoriesResponse> {
 
   StoriesResponse _buildStoriesResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       StoriesResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         stories: _buildStories(
-          jsonList: json.getJsonList(key: 'sets'),
+          jsonArray: json.getArray(key: 'sets'),
         ),
       );
 
   List<Story> _buildStories({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final stories = <Story>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       final state = _getStoryState(
         code: json.getString(key: 'state').toLowerCase(),
       );
@@ -59,7 +59,7 @@ class StoriesAdapter extends Adapter<StoriesResponse> {
           ),
           illustration: _buildIllustrations(
             state: state,
-            json: json.getJson(key: 'illustrationUrls'),
+            json: json.get(key: 'illustrationUrls'),
           ),
           awardXp: json.getInt(key: 'xpToAward'),
           isCompleted: json.getBool(key: 'completed'),
@@ -67,7 +67,7 @@ class StoriesAdapter extends Adapter<StoriesResponse> {
           isMultipart: json.getBool(key: 'isMultipart'),
         ),
       );
-    }
+    });
 
     return stories;
   }
@@ -111,7 +111,7 @@ class StoriesAdapter extends Adapter<StoriesResponse> {
 
   Illustration _buildIllustrations({
     required StoryState state,
-    required JsonResponse json,
+    required Json json,
   }) {
     for (final key in json.keySet) {
       if (state.name == key) {

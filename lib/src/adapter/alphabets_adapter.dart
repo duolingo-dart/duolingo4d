@@ -26,22 +26,22 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
   /// Returns [AlphabetsResponse] based on [response] and [json].
   AlphabetsResponse _buildAuthResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       AlphabetsResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
         alphabets: _buildAlphabets(
-          jsonList: json.getJsonList(key: 'alphabets'),
+          jsonArray: json.getArray(key: 'alphabets'),
         ),
       );
 
   List<Alphabet> _buildAlphabets({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final alphabets = <Alphabet>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       alphabets.add(
         Alphabet.from(
           id: json.getString(key: 'id'),
@@ -49,40 +49,40 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
           title: json.getString(key: 'title'),
           subtitle: json.getString(key: 'subtitle'),
           groups: _buildAlphabetGroups(
-            jsonList: json.getJsonList(key: 'groups'),
+            jsonArray: json.getArray(key: 'groups'),
           ),
         ),
       );
-    }
+    });
 
     return alphabets;
   }
 
   List<AlphabetGroup> _buildAlphabetGroups({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final alphabetGroups = <AlphabetGroup>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       alphabetGroups.add(
         AlphabetGroup.from(
           name: json.getString(key: 'id'),
           title: json.getString(key: 'title'),
           subtitle: json.getString(key: 'subtitle'),
           characters: _buildCharacters(
-            jsonList: json.getJsonList(key: 'characters'),
+            jsonArray: json.getArray(key: 'characters'),
           ),
         ),
       );
-    }
+    });
 
     return alphabetGroups;
   }
 
   List<Character> _buildCharacters({
-    required List<JsonResponse> jsonList,
+    required JsonArray jsonArray,
   }) {
     final characters = <Character>[];
-    for (final json in jsonList) {
+    jsonArray.forEach((json) {
       characters.add(
         Character.from(
           value: json.getString(key: 'character'),
@@ -91,7 +91,7 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
           proficiency: json.getDouble(key: 'strength'),
         ),
       );
-    }
+    });
 
     return characters;
   }

@@ -28,19 +28,19 @@ class ActivityAdapter extends Adapter<ActivityResponse> {
   /// Returns [ActivityResponse] based on [response] and [json].
   ActivityResponse _buildActivityResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       ActivityResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        ranking: _buildRanking(json: json.getJson(key: 'ranking')),
+        ranking: _buildRanking(json: json.get(key: 'ranking')),
         userIds: json.getStringValues(key: 'user_ids_ranked'),
       );
 
   /// Returns [Ranking] based on [json].
   Ranking _buildRanking({
-    required JsonResponse json,
+    required Json json,
   }) =>
       Ranking.from(
         scores: _buildScores(json: json),
@@ -48,7 +48,7 @@ class ActivityAdapter extends Adapter<ActivityResponse> {
 
   /// Returns list of [Score] based on [json].
   List<Score> _buildScores({
-    required JsonResponse json,
+    required Json json,
   }) {
     final items = <Score>[];
     for (final key in json.keySet) {

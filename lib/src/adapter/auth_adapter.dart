@@ -28,7 +28,7 @@ class AuthAdapter extends Adapter<AuthResponse> {
   /// Returns [AuthResponse] based on [response] and [json].
   AuthResponse _buildAuthResponse({
     required Response response,
-    required JsonResponse json,
+    required Json json,
   }) =>
       AuthResponse.from(
         statusCode: response.statusCode,
@@ -44,7 +44,7 @@ class AuthAdapter extends Adapter<AuthResponse> {
   /// Returns an object representing the authentication error
   /// if an authentication error exists, otherwise null.
   AuthError? _checkAuthError({
-    required JsonResponse json,
+    required Json json,
   }) {
     if (!json.containsKey(key: 'failure')) {
       return null;
