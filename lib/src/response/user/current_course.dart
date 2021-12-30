@@ -2,15 +2,12 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Package imports:
-import 'package:collection/collection.dart';
-
 // Project imports:
-import 'package:duolingo4d/src/response/user/skill.dart';
+import 'package:duolingo4d/src/response/user/skill_book.dart';
 
 /// This class represents the course that the user is currently selecting.
 ///
-/// Skill information is included as [skills] in this current course information.
+/// Skill information is included as [skillBook] in this current course information.
 class CurrentCourse {
   /// Returns the new instance of [CurrentCourse] based on arguments.
   CurrentCourse.from({
@@ -24,7 +21,7 @@ class CurrentCourse {
     required this.xp,
     required this.crowns,
     required this.extraCrowns,
-    required this.skills,
+    required this.skillBook,
   });
 
   /// The id
@@ -57,18 +54,17 @@ class CurrentCourse {
   /// The extra crowns
   final int extraCrowns;
 
-  /// The skills
-  final List<Skill> skills;
+  /// The skill book
+  final SkillBook skillBook;
 
   @override
   String toString() {
-    return 'CurrentCourse(id: $id, title: $title, fromLanguage: $fromLanguage, leraningLanguage: $leraningLanguage, numberOfLearnedWords: $numberOfLearnedWords, numberOfWords: $numberOfWords, numberOfSentences: $numberOfSentences, xp: $xp, crowns: $crowns, extraCrowns: $extraCrowns, skills: $skills)';
+    return 'CurrentCourse(id: $id, title: $title, fromLanguage: $fromLanguage, leraningLanguage: $leraningLanguage, numberOfLearnedWords: $numberOfLearnedWords, numberOfWords: $numberOfWords, numberOfSentences: $numberOfSentences, xp: $xp, crowns: $crowns, extraCrowns: $extraCrowns, skillBook: $skillBook)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    final listEquals = const DeepCollectionEquality().equals;
 
     return other is CurrentCourse &&
         other.id == id &&
@@ -81,7 +77,7 @@ class CurrentCourse {
         other.xp == xp &&
         other.crowns == crowns &&
         other.extraCrowns == extraCrowns &&
-        listEquals(other.skills, skills);
+        other.skillBook == skillBook;
   }
 
   @override
@@ -96,6 +92,6 @@ class CurrentCourse {
         xp.hashCode ^
         crowns.hashCode ^
         extraCrowns.hashCode ^
-        skills.hashCode;
+        skillBook.hashCode;
   }
 }

@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
+import 'package:duolingo4d/src/response/user/skill_book.dart';
+import 'package:duolingo4d/src/response/user/skill_chapter.dart';
 import 'package:http/http.dart';
 import 'package:json_response/json_response.dart';
 
@@ -25,7 +27,6 @@ class UserAdapter extends Adapter<UserResponse> {
         json: super.jsonDecode(response: response),
       );
 
-  /// Returns [UserResponse] based on [response] and [json].
   UserResponse _buildUserResponse({
     required Response response,
     required Json json,
@@ -131,7 +132,6 @@ class UserAdapter extends Adapter<UserResponse> {
         achievements: json.getStringValues(key: 'achievements'),
       );
 
-  /// Returns [XpConfiguration] based on [json].
   XpConfiguration _buildXpConfiguration({
     required Json json,
   }) =>
@@ -141,7 +141,6 @@ class UserAdapter extends Adapter<UserResponse> {
         maxCheckpointTestXp: json.getInt(key: 'maxCheckpointTestXp'),
       );
 
-  /// Returns [GemsConfiguration] based on [json].
   GemsConfiguration _buildGemsConfiguration({
     required Json json,
   }) =>
@@ -151,7 +150,6 @@ class UserAdapter extends Adapter<UserResponse> {
         useGems: json.getBool(key: 'useGems'),
       );
 
-  /// Returns [Course] list based on [jsonList].
   List<Course> _buildCourses({
     required JsonArray jsonArray,
   }) {
@@ -172,7 +170,6 @@ class UserAdapter extends Adapter<UserResponse> {
     return courses;
   }
 
-  /// Returns [CurrentCourse] based on [json].
   CurrentCourse _buildCurrentCourse({
     required Json json,
   }) =>
@@ -187,17 +184,38 @@ class UserAdapter extends Adapter<UserResponse> {
         xp: json.getInt(key: 'xp'),
         crowns: json.getInt(key: 'crowns'),
         extraCrowns: json.getInt(key: 'extraCrowns'),
-        skills: _buildSkills(
+        skillBook: _buildSkillBook(
           jsonArray: json.getArray(key: 'skills'),
         ),
       );
 
-  /// Returns [Skill] list based on [jsonList].
+  SkillBook _buildSkillBook({
+    required JsonArray jsonArray,
+  }) =>
+      SkillBook.from(
+        chapters: _buildSkillChapters(jsonArray: jsonArray),
+      );
+
+  List<SkillChapter> _buildSkillChapters({
+    required JsonArray jsonArray,
+  }) {
+    final skillChapters = <SkillChapter>[];
+    jsonArray.forEachArray((jsonArray) {
+      skillChapters.add(
+        SkillChapter.from(
+          contents: _buildSkills(jsonArray: jsonArray),
+        ),
+      );
+    });
+
+    return skillChapters;
+  }
+
   List<Skill> _buildSkills({
     required JsonArray jsonArray,
   }) {
     final skills = <Skill>[];
-    jsonArray.toFlat().forEach((json) {
+    jsonArray.forEach((json) {
       skills.add(
         Skill.from(
           id: json.getString(key: 'id'),
@@ -223,7 +241,6 @@ class UserAdapter extends Adapter<UserResponse> {
     return skills;
   }
 
-  /// Returns [LastStreak] based on [json].
   LastStreak _buildLastStreak({
     required Json json,
   }) =>
@@ -234,7 +251,6 @@ class UserAdapter extends Adapter<UserResponse> {
         ),
       );
 
-  /// Returns [PracticeReminderSetting] list based on [json].
   List<PracticeReminderSetting> _buildPracticeReminderSettings({
     required Json json,
   }) {

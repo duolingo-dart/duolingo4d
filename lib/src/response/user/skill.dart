@@ -33,7 +33,6 @@
 ///  }
 ///}
 ///```
-
 class Skill {
   /// Returns the new instance of [Skill] based on arguments.
   Skill.from({

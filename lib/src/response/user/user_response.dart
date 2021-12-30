@@ -51,11 +51,23 @@ export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 ///    print(course.xp);
 ///  }
 ///
-///  for (final skill in userResponse.currentCourse.skills) {
+///  final skillBook = userResponse.currentCourse.skillBook;
+///
+///  for (final chapter in skillBook.chapters) {
+///    for (final content in chapter.contents) {
+///      if (content.isAccessible) {
+///        print(content.name);
+///        print(content.proficiency);
+///        print(content.tipsAndNotes);
+///      }
+///    }
+///  }
+///
+///  for (final skill in skillBook.toFlat()) {
 ///    if (skill.isAccessible) {
-///       print(skill.name);
-///       print(skill.proficiency);
-///       print(skill.tipsAndNotes);
+///      print(skill.name);
+///      print(skill.proficiency);
+///      print(skill.tipsAndNotes);
 ///    }
 ///  }
 ///}

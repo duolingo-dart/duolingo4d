@@ -101,7 +101,7 @@ void _testUserApi() {
     expect(response.username, 'duovoc_tes');
     expect(response.name, 'Duolingo4D');
     expect(response.courses.isNotEmpty, true);
-    expect(response.currentCourse.skills.isNotEmpty, true);
+    expect(response.currentCourse.skillBook.isNotEmpty, true);
   });
 }
 
@@ -260,7 +260,7 @@ void _testCachedUserApi() {
     expect(response.username, 'duovoc_tes');
     expect(response.name, 'Duolingo4D');
     expect(response.courses.isNotEmpty, true);
-    expect(response.currentCourse.skills.isNotEmpty, true);
+    expect(response.currentCourse.skillBook.isNotEmpty, true);
 
     final cachedResponse = await duolingo.cachedUser(userId: '557897808');
     expect(response == cachedResponse, true);
@@ -273,7 +273,7 @@ void _testCachedUserApi() {
     expect(cachedResponse.username, 'duovoc_tes');
     expect(cachedResponse.name, 'Duolingo4D');
     expect(cachedResponse.courses.isNotEmpty, true);
-    expect(cachedResponse.currentCourse.skills.isNotEmpty, true);
+    expect(cachedResponse.currentCourse.skillBook.isNotEmpty, true);
   });
 }
 
