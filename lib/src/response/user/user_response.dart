@@ -51,6 +51,7 @@ export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 ///    print(course.xp);
 ///  }
 ///
+///  // Skill information is stored in a hierarchical structure.
 ///  final skillBook = userResponse.currentCourse.skillBook;
 ///
 ///  for (final chapter in skillBook.chapters) {
@@ -63,6 +64,11 @@ export 'package:duolingo4d/src/response/user/xp_configuration.dart';
 ///    }
 ///  }
 ///
+///  // If you don't like the nested structure,
+///  // you can use the toFlat method to make the structure flat.
+///  //
+///  // If you use the toFlat method, all the skill information that
+///  // exists in SkillBook will be returned as a new list.
 ///  for (final skill in skillBook.toFlat()) {
 ///    if (skill.isAccessible) {
 ///      print(skill.name);

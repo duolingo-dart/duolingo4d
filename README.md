@@ -258,7 +258,25 @@ void main() async {
     print(course.xp);
   }
 
-  for (final skill in userResponse.currentCourse.skills) {
+  // Skill information is stored in a hierarchical structure.
+  final skillBook = userResponse.currentCourse.skillBook;
+
+  for (final chapter in skillBook.chapters) {
+    for (final content in chapter.contents) {
+      if (content.isAccessible) {
+        print(content.name);
+        print(content.proficiency);
+        print(content.tipsAndNotes);
+      }
+    }
+  }
+
+  // If you don't like the nested structure,
+  // you can use the toFlat method to make the structure flat.
+  //
+  // If you use the toFlat method, all the skill information that
+  // exists in SkillBook will be returned as a new list.
+  for (final skill in skillBook.toFlat()) {
     if (skill.isAccessible) {
       print(skill.name);
       print(skill.proficiency);
