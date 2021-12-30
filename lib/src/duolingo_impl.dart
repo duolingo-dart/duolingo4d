@@ -15,6 +15,7 @@ import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/follow_request.dart';
+import 'package:duolingo4d/src/request/forum_topics_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
@@ -34,6 +35,7 @@ import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
+import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
@@ -216,6 +218,10 @@ class DuolingoImpl implements Duolingo {
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
       ).send();
+
+  @override
+  Future<ForumTopicsResponse> forumTopics() async =>
+      ForumTopicsRequest.newInstance().send();
 
   @override
   Future<ManifestResponse> cachedManifest() async {
@@ -516,6 +522,22 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<ForumTopicsResponse> cachedForumTopics() async {
+    if (_cacheStorage.has(key: Resource.forumTopics.name)) {
+      return _cacheStorage.match(key: Resource.forumTopics.name);
+    }
+
+    final response = await forumTopics();
+
+    _cacheStorage.save(
+      key: Resource.forumTopics.name,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -568,4 +590,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedAchievements() =>
       _cacheStorage.deleteBy(key: Resource.achievements.name);
+
+  @override
+  void cleanCachedForumTopics() =>
+      _cacheStorage.deleteBy(key: Resource.forumTopics.name);
 }

@@ -50,6 +50,9 @@ enum Resource {
 
   /// Achievements API
   achievements,
+
+  /// Forum Topics API
+  forumTopics,
 }
 
 extension ReourceFeature on Resource {
@@ -86,6 +89,8 @@ extension ReourceFeature on Resource {
         return 'api2/stories';
       case Resource.achievements:
         return 'users';
+      case Resource.forumTopics:
+        return 'api/1/topics/list';
     }
   }
 }

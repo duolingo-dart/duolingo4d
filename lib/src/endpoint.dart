@@ -20,6 +20,9 @@ enum Endpoint {
 
   /// Achievement
   achievement,
+
+  /// Forum
+  forum,
 }
 
 extension EndpointFeature on Endpoint {
@@ -36,7 +39,9 @@ extension EndpointFeature on Endpoint {
       case Endpoint.story:
         return 'https://stories.duolingo.com';
       case Endpoint.achievement:
-        return 'https://duolingo-achievements-prod.duolingo.com/';
+        return 'https://duolingo-achievements-prod.duolingo.com';
+      case Endpoint.forum:
+        return 'https://forum-api.duolingo.com';
     }
   }
 }

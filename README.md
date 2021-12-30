@@ -34,6 +34,7 @@
     - [1.3.16. Alphabets API](#1316-alphabets-api)
     - [1.3.17. Stories API](#1317-stories-api)
     - [1.3.18. Achievements API](#1318-achievements-api)
+    - [1.3.19. Forum Topics API](#1319-forum-topics-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -70,6 +71,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Alphabets**       |      ✅       | You can get alphabet information for the learning language.                                                        |
 | **Stories**         |      ✅       | You can get story information for the learning language.                                                           |
 | **Achievements**    |      ✅       | You can get the achievement data that the user has achieved.                                                       |
+| **Forum Topics**    |      ✅       | You can get a list of forum topics related to the language you are currently learning.                             |
 
 ## 1.2. Introduction
 
@@ -715,6 +717,32 @@ void main() async {
 
   for (final achievement in achievementsResponse.achievements) {
     print(achievement);
+  }
+}
+```
+
+### 1.3.19. Forum Topics API
+
+| Auth Required |                                                Method                                                 |                                                     JSON                                                      |
+| :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumTopics()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopics.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/17_forum_topics/response.json) |
+
+From Achievements API, you can get a list of forum topics related to the language you are currently learning.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final forumTopicsResponse = await duolingo.forumTopics();
+  print(forumTopicsResponse);
+
+  for (final forumTopic in forumTopicsResponse.forumTopics) {
+    print(forumTopic);
   }
 }
 ```

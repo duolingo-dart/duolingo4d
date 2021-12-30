@@ -19,8 +19,8 @@ void main() async {
   // You can authenticate user with this api.
   // You can use registered email address as a username.
   final authResponse = await duolingo.authenticate(
-    username: 'test_username',
-    password: 'test_password',
+    username: 'duovoc_tes',
+    password: 'test_duolingo4d',
   );
 
   if (authResponse.status.isNotOk) {
@@ -39,5 +39,12 @@ void main() async {
     authError.isInvalidUser; // Returns true if user is invalid.
     authError.isInvalidPassword; // Returns true if password is invalid.
     return;
+  }
+
+  final response = await duolingo.forumTopics();
+  print(response);
+
+  for (final forumTopic in response.forumTopics) {
+    print(forumTopic);
   }
 }
