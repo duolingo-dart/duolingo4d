@@ -11,6 +11,8 @@ import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
 export 'package:duolingo4d/src/response/alphabets/alphabet.dart';
+export 'package:duolingo4d/src/response/alphabets/character_book.dart';
+export 'package:duolingo4d/src/response/alphabets/character_chapter.dart';
 export 'package:duolingo4d/src/response/alphabets/alphabet_group.dart';
 export 'package:duolingo4d/src/response/alphabets/character.dart';
 

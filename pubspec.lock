@@ -161,7 +161,7 @@ packages:
       name: json_response
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.0"
+    version: "2.3.0"
   lints:
     dependency: transitive
     description:
@@ -225,6 +225,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.11.1"
+  petitparser:
+    dependency: transitive
+    description:
+      name: petitparser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.4.0"
   pool:
     dependency: transitive
     description:
@@ -393,6 +400,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.7.5"
+  xml:
+    dependency: transitive
+    description:
+      name: xml
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.3.1"
+  xml2json:
+    dependency: transitive
+    description:
+      name: xml2json
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.3.2"
   yaml:
     dependency: transitive
     description:

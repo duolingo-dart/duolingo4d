@@ -2,11 +2,7 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// Package imports:
-import 'package:collection/collection.dart';
-
-// Project imports:
-import 'package:duolingo4d/src/response/alphabets/character.dart';
+import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 
 class AlphabetGroup {
   /// Returns the new instance of [AlphabetGroup] based on arguments.
@@ -14,7 +10,7 @@ class AlphabetGroup {
     required this.name,
     required this.title,
     required this.subtitle,
-    required this.characters,
+    required this.characterBook,
   });
 
   /// The name
@@ -26,24 +22,23 @@ class AlphabetGroup {
   /// The subtitle
   final String subtitle;
 
-  /// The characters
-  final List<Character> characters;
+  /// The character book
+  final CharacterBook characterBook;
 
   @override
   String toString() {
-    return 'AlphabetGroup(name: $name, title: $title, subtitle: $subtitle, characters: $characters)';
+    return 'AlphabetGroup(name: $name, title: $title, subtitle: $subtitle, characterBook: $characterBook)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-    final listEquals = const DeepCollectionEquality().equals;
 
     return other is AlphabetGroup &&
         other.name == name &&
         other.title == title &&
         other.subtitle == subtitle &&
-        listEquals(other.characters, characters);
+        other.characterBook == characterBook;
   }
 
   @override
@@ -51,6 +46,6 @@ class AlphabetGroup {
     return name.hashCode ^
         title.hashCode ^
         subtitle.hashCode ^
-        characters.hashCode;
+        characterBook.hashCode;
   }
 }

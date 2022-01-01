@@ -3,8 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/user/skill_book.dart';
-import 'package:duolingo4d/src/response/user/skill_chapter.dart';
 import 'package:http/http.dart';
 import 'package:json_response/json_response.dart';
 

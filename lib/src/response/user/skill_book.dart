@@ -5,8 +5,6 @@
 import 'package:collection/collection.dart';
 import 'package:duolingo4d/duolingo4d.dart';
 
-import 'package:duolingo4d/src/response/user/skill_chapter.dart';
-
 class SkillBook {
   /// Returns the new instance of [SkillBook] based on arguments.
   SkillBook.from({
@@ -20,7 +18,7 @@ class SkillBook {
   String toString() => 'SkillBook(chapters: $chapters)';
 
   /// Returns all skills in this skill book.
-  List<Skill> toFlat() {
+  List<Skill> flatten() {
     final skills = <Skill>[];
     for (final chapter in chapters) {
       for (final content in chapter.contents) {

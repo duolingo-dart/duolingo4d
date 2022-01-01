@@ -21,6 +21,8 @@ export 'package:duolingo4d/src/response/user/current_course.dart';
 export 'package:duolingo4d/src/response/user/gems_configuration.dart';
 export 'package:duolingo4d/src/response/user/last_streak.dart';
 export 'package:duolingo4d/src/response/user/practice_reminder_setting.dart';
+export 'package:duolingo4d/src/response/user/skill_book.dart';
+export 'package:duolingo4d/src/response/user/skill_chapter.dart';
 export 'package:duolingo4d/src/response/user/skill.dart';
 export 'package:duolingo4d/src/response/user/tracking_property.dart';
 export 'package:duolingo4d/src/response/user/xp_configuration.dart';

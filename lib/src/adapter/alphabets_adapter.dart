@@ -68,7 +68,7 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
           name: json.getString(key: 'id'),
           title: json.getString(key: 'title'),
           subtitle: json.getString(key: 'subtitle'),
-          characters: _buildCharacters(
+          characterBook: _buildCharacterBook(
             jsonArray: json.getArray(key: 'characters'),
           ),
         ),
@@ -76,6 +76,32 @@ class AlphabetsAdapter extends Adapter<AlphabetsResponse> {
     });
 
     return alphabetGroups;
+  }
+
+  CharacterBook _buildCharacterBook({
+    required JsonArray jsonArray,
+  }) =>
+      CharacterBook.from(
+        chapters: _buildCharacterChapters(
+          jsonArray: jsonArray,
+        ),
+      );
+
+  List<CharacterChapter> _buildCharacterChapters({
+    required JsonArray jsonArray,
+  }) {
+    final characterChapters = <CharacterChapter>[];
+    jsonArray.forEachArray((jsonArray) {
+      characterChapters.add(
+        CharacterChapter.from(
+          contents: _buildCharacters(
+            jsonArray: jsonArray,
+          ),
+        ),
+      );
+    });
+
+    return characterChapters;
   }
 
   List<Character> _buildCharacters({
