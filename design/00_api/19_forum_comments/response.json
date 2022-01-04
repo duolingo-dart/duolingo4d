@@ -1,0 +1,865 @@
+{
+    "admin_user": false,
+    "all_topics": [
+        {
+            "id": 1,
+            "name": "Duolingo"
+        },
+        {
+            "id": 647,
+            "name": "Troubleshooting"
+        },
+        {
+            "id": 2,
+            "name": "Spanish"
+        },
+        {
+            "id": 67,
+            "name": "German"
+        },
+        {
+            "id": 147,
+            "name": "French"
+        },
+        {
+            "id": 328,
+            "name": "Portuguese"
+        },
+        {
+            "id": 519,
+            "name": "Italian"
+        },
+        {
+            "id": 897,
+            "name": "Dutch"
+        },
+        {
+            "id": 901,
+            "name": "Irish"
+        },
+        {
+            "id": 902,
+            "name": "Danish"
+        },
+        {
+            "id": 908,
+            "name": "Swedish"
+        },
+        {
+            "id": 909,
+            "name": "Educators"
+        },
+        {
+            "id": 912,
+            "name": "Turkish"
+        },
+        {
+            "id": 913,
+            "name": "Ukrainian"
+        },
+        {
+            "id": 914,
+            "name": "Norwegian (Bokmål)"
+        },
+        {
+            "id": 915,
+            "name": "Esperanto"
+        },
+        {
+            "id": 920,
+            "name": "Russian"
+        },
+        {
+            "id": 922,
+            "name": "Polish"
+        },
+        {
+            "id": 924,
+            "name": "Welsh"
+        },
+        {
+            "id": 930,
+            "name": "Hindi"
+        },
+        {
+            "id": 931,
+            "name": "Vietnamese"
+        },
+        {
+            "id": 932,
+            "name": "Hebrew"
+        },
+        {
+            "id": 933,
+            "name": "Hungarian"
+        },
+        {
+            "id": 936,
+            "name": "Greek"
+        },
+        {
+            "id": 938,
+            "name": "Romanian"
+        },
+        {
+            "id": 942,
+            "name": "Swahili"
+        },
+        {
+            "id": 946,
+            "name": "Japanese"
+        },
+        {
+            "id": 948,
+            "name": "High Valyrian"
+        },
+        {
+            "id": 949,
+            "name": "Czech"
+        },
+        {
+            "id": 950,
+            "name": "Korean"
+        },
+        {
+            "id": 951,
+            "name": "Chinese"
+        },
+        {
+            "id": 953,
+            "name": "Klingon"
+        },
+        {
+            "id": 958,
+            "name": "Indonesian"
+        },
+        {
+            "id": 960,
+            "name": "Hawaiian"
+        },
+        {
+            "id": 961,
+            "name": "Navajo"
+        },
+        {
+            "id": 966,
+            "name": "Arabic"
+        },
+        {
+            "id": 967,
+            "name": "Latin"
+        },
+        {
+            "id": 969,
+            "name": "Scottish Gaelic"
+        },
+        {
+            "id": 972,
+            "name": "Finnish"
+        },
+        {
+            "id": 979,
+            "name": "Yiddish"
+        }
+    ],
+    "backend_latency_ms": 159,
+    "canonical_url": "https://forum.duolingo.com/comment/1678438/The-boys-that-were-eating-in-the-restaurant-were-my-friends",
+    "category": "general",
+    "comments": [
+        {
+            "admin_user": false,
+            "comments": [
+                {
+                    "admin_user": false,
+                    "comments": [],
+                    "datetime_string": "2014-07-16T21:54:53Z",
+                    "deletable": false,
+                    "deleted": false,
+                    "depth": true,
+                    "editable": false,
+                    "frozen": null,
+                    "id": 3734172,
+                    "love": null,
+                    "marked_down_message": "<p>fueron y eran tiene el mismo significado , yo tuve el mismo 'error'.</p>",
+                    "message": "fueron y eran tiene el mismo significado , yo tuve el mismo 'error'.",
+                    "mod_user": false,
+                    "num_comments": 0,
+                    "removed": null,
+                    "replyable": true,
+                    "undeletable": false,
+                    "user": {
+                        "admin": false,
+                        "ambassador": {},
+                        "avatar": "//duolingo-images.s3.amazonaws.com/avatars/2804029/E1UPXc-ZXj",
+                        "flair": {
+                            "is_plus": false,
+                            "level_data": [
+                                {
+                                    "language": "en",
+                                    "level": 14
+                                },
+                                {
+                                    "language": "fr",
+                                    "level": 8
+                                },
+                                {
+                                    "language": "it",
+                                    "level": 2
+                                }
+                            ],
+                            "streak": 0
+                        },
+                        "has_plus": false,
+                        "id": 2804029,
+                        "mod": false,
+                        "username": "nihilo2"
+                    },
+                    "user_downvoted": false,
+                    "user_upvoted": false,
+                    "votes": 0
+                },
+                {
+                    "admin_user": false,
+                    "comments": [],
+                    "datetime_string": "2015-08-19T23:57:06Z",
+                    "deletable": false,
+                    "deleted": false,
+                    "depth": true,
+                    "editable": false,
+                    "frozen": null,
+                    "id": 10101600,
+                    "love": null,
+                    "marked_down_message": "<p>es lo mismo a mi la pone mala :(</p>",
+                    "message": "es lo mismo a mi la pone mala :(",
+                    "mod_user": false,
+                    "num_comments": 0,
+                    "removed": null,
+                    "replyable": true,
+                    "undeletable": false,
+                    "user": {
+                        "admin": false,
+                        "ambassador": {},
+                        "avatar": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                        "flair": {
+                            "is_plus": false,
+                            "level_data": [
+                                {
+                                    "language": "en",
+                                    "level": 10
+                                },
+                                {
+                                    "language": "de",
+                                    "level": 7
+                                }
+                            ],
+                            "streak": 0
+                        },
+                        "has_plus": false,
+                        "id": 79659949,
+                        "mod": false,
+                        "username": "DenisseMarlene."
+                    },
+                    "user_downvoted": false,
+                    "user_upvoted": false,
+                    "votes": 0
+                }
+            ],
+            "datetime_string": "2014-06-05T15:43:08Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 3256331,
+            "love": null,
+            "marked_down_message": "<p>\"Los niños que estuvieron comiendo en el restaurante fueron mis amigos\" me dice incorrecta</p>",
+            "message": "\"Los niños que estuvieron comiendo en el restaurante fueron mis amigos\" me dice incorrecta",
+            "mod_user": false,
+            "num_comments": 2,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/32751904/-txYmaOMwO",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 16
+                        },
+                        {
+                            "language": "de",
+                            "level": 4
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 32751904,
+                "mod": false,
+                "username": "MA.Dominguez"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 5
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2018-06-13T02:30:13Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 27624965,
+            "love": 1,
+            "marked_down_message": "<p>Notice that the Spanish uses the \"imperfect tense\" and not the \"simple past (preterite)\" tense-- Although this section is supposed to be about the \"past tense\". \nThis English is strange.   If they \"were my friends\", the \"were\" is past tense (preterite) and they are no longer \"my friends\".</p>\n<p>To be in the imperfect tense, it needs some \"imperfect markers\" or \"triggers\".</p>\n<p>Imperfect markers (triggers) include phrases such as \"used to be\", \"would\", or use of the \"past progressive\" interrupted by a preterite  (estaba cocinando cuando entré a casa -- I was cooking when he entered the house). </p>\n<p>Other triggers include phrases such as \"a menudo\", \"a veces\", generalmente\", \"siempre\".</p>\n<p>If those boys are still my friends, I would say \"those who were eating [last night] ARE my friends.\"</p>\n<p>If I say \"they WERE my friends\", that implies that they are no longer my friends. </p>\n<p>Thus, the first part of the sentence \"that were eating\" is OK as IMPERFECT tense.  But the second part should be PRESENT tense (ARE my friends), I suggest. </p>\n<p>See these on the imperfect tense:  <a class=\"blue-link\" href=\"HTTP://STUDYSPANISH.COM/GRAMMAR/LESSONS/IMP3\" target=\"_blank\">HTTP://STUDYSPANISH.COM/GRAMMAR/LESSONS/IMP3</a>\n<a class=\"blue-link\" href=\"http://www.spanishdict.com/guide/spanish-imperfect-tense-forms\" target=\"_blank\">http://www.spanishdict.com/guide/spanish-imperfect-tense-forms</a>\n<a class=\"blue-link\" href=\"http://www.studyspanish.com/verbs/lessons/impreg.htm\" target=\"_blank\">http://www.studyspanish.com/verbs/lessons/impreg.htm</a>\n <a class=\"blue-link\" href=\"http://www.spanish411.net/Spanish-Using-Imperfect-Preterite.asp\" target=\"_blank\">http://www.spanish411.net/Spanish-Using-Imperfect-Preterite.asp</a>\n<a class=\"blue-link\" href=\"http://users.ipfw.edu/JEHLE/COURSES/PRETIMP.HTM\" target=\"_blank\">http://users.ipfw.edu/JEHLE/COURSES/PRETIMP.HTM</a>\n<a class=\"blue-link\" href=\"https://www.myenglishteacher.eu/blog/imperfect-tense/\" target=\"_blank\">https://www.myenglishteacher.eu/blog/imperfect-tense/</a>\n<a class=\"blue-link\" href=\"http://josecarilloforum.com/forum/index.php?topic=6942.0\" target=\"_blank\">http://josecarilloforum.com/forum/index.php?topic=6942.0</a></p>",
+            "message": "Notice that the Spanish uses the \"imperfect tense\" and not the \"simple past (preterite)\" tense-- Although this section is supposed to be about the \"past tense\". \nThis English is strange.   If they \"were my friends\", the \"were\" is past tense (preterite) and they are no longer \"my friends\".\n\nTo be in the imperfect tense, it needs some \"imperfect markers\" or \"triggers\".\n\nImperfect markers (triggers) include phrases such as \"used to be\", \"would\", or use of the \"past progressive\" interrupted by a preterite  (estaba cocinando cuando entré a casa -- I was cooking when he entered the house). \n\nOther triggers include phrases such as \"a menudo\", \"a veces\", generalmente\", \"siempre\".\n\nIf those boys are still my friends, I would say \"those who were eating [last night] ARE my friends.\"\n\nIf I say \"they WERE my friends\", that implies that they are no longer my friends. \n\nThus, the first part of the sentence \"that were eating\" is OK as IMPERFECT tense.  But the second part should be PRESENT tense (ARE my friends), I suggest. \n\nSee these on the imperfect tense:  HTTP://STUDYSPANISH.COM/GRAMMAR/LESSONS/IMP3\nhttp://www.spanishdict.com/guide/spanish-imperfect-tense-forms\nhttp://www.studyspanish.com/verbs/lessons/impreg.htm\n http://www.spanish411.net/Spanish-Using-Imperfect-Preterite.asp\nhttp://users.ipfw.edu/JEHLE/COURSES/PRETIMP.HTM\nhttps://www.myenglishteacher.eu/blog/imperfect-tense/\nhttp://josecarilloforum.com/forum/index.php?topic=6942.0\n",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/146101015/hyJkY1hTK_",
+                "flair": {
+                    "is_plus": true,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 25
+                        },
+                        {
+                            "language": "es",
+                            "level": 25
+                        },
+                        {
+                            "language": "de",
+                            "level": 11
+                        },
+                        {
+                            "language": "la",
+                            "level": 9
+                        },
+                        {
+                            "language": "cs",
+                            "level": 9
+                        }
+                    ],
+                    "streak": 1895
+                },
+                "has_plus": true,
+                "id": 146101015,
+                "mod": false,
+                "username": "SGuthrie0"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 1
+        },
+        {
+            "admin_user": false,
+            "comments": [
+                {
+                    "admin_user": false,
+                    "comments": [],
+                    "datetime_string": "2014-02-05T00:38:04Z",
+                    "deletable": false,
+                    "deleted": false,
+                    "depth": true,
+                    "editable": false,
+                    "frozen": null,
+                    "id": 1695516,
+                    "love": null,
+                    "marked_down_message": "<p>Esa es la palabra que aparece aquí en la respuesta correcta ...</p>",
+                    "message": "Esa es la palabra que aparece aquí en la respuesta correcta ...",
+                    "mod_user": false,
+                    "num_comments": 0,
+                    "removed": null,
+                    "replyable": true,
+                    "undeletable": false,
+                    "user": {
+                        "admin": false,
+                        "ambassador": {
+                            "level": 1,
+                            "types": [
+                                "MODERATOR"
+                            ]
+                        },
+                        "avatar": "//duolingo-images.s3.amazonaws.com/avatars/361711/ERw9Z3NtWH",
+                        "flair": {
+                            "is_plus": false,
+                            "level_data": [
+                                {
+                                    "language": "es",
+                                    "level": 25
+                                },
+                                {
+                                    "language": "pt",
+                                    "level": 25
+                                },
+                                {
+                                    "language": "en",
+                                    "level": 23
+                                },
+                                {
+                                    "language": "ro",
+                                    "level": 16
+                                },
+                                {
+                                    "language": "ca",
+                                    "level": 16
+                                }
+                            ],
+                            "streak": 0
+                        },
+                        "has_plus": false,
+                        "id": 361711,
+                        "mod": false,
+                        "username": "ceaer"
+                    },
+                    "user_downvoted": false,
+                    "user_upvoted": false,
+                    "votes": 1
+                }
+            ],
+            "datetime_string": "2014-02-03T22:02:52Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 1678439,
+            "love": null,
+            "marked_down_message": "<p>La palabra \"restaurante\" está en el diccionario de la RAE. Debió ser considerada como válida</p>",
+            "message": "La palabra \"restaurante\" está en el diccionario de la RAE. Debió ser considerada como válida",
+            "mod_user": false,
+            "num_comments": 1,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/16297413/PlhCYrs6Gl",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 14
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 16297413,
+                "mod": false,
+                "username": "juliocesar870"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2014-04-21T01:23:06Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 2683780,
+            "love": null,
+            "marked_down_message": "<p>algunas veces la traductora cuando usa were emplea estuvieron y en otra estaba,  la traductora me puede explicr por que: por el agunas respuestas puse estabas y me la dio como mala, de la misma manera  cuando ponia estuvieron me la daba como mala.</p>",
+            "message": "algunas veces la traductora cuando usa were emplea estuvieron y en otra estaba,  la traductora me puede explicr por que: por el agunas respuestas puse estabas y me la dio como mala, de la misma manera  cuando ponia estuvieron me la daba como mala.",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/693495/kN7HSrogb8",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 25
+                        },
+                        {
+                            "language": "it",
+                            "level": 8
+                        },
+                        {
+                            "language": "de",
+                            "level": 3
+                        }
+                    ],
+                    "streak": 33
+                },
+                "has_plus": false,
+                "id": 693495,
+                "mod": false,
+                "username": "akiles"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2014-10-17T10:59:41Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 5047824,
+            "love": null,
+            "marked_down_message": "<p>No me gusta nada cómo se corrige. A veces cometes errores en la escritura con el teclado y toman la frase como mal.</p>",
+            "message": "No me gusta nada cómo se corrige. A veces cometes errores en la escritura con el teclado y toman la frase como mal.",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 11
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 42616327,
+                "mod": false,
+                "username": "MonPereda"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2019-01-14T13:26:05Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 30369663,
+            "love": null,
+            "marked_down_message": "<p>The boys WHO were eating AT the restaurant were my friends.</p>",
+            "message": "The boys WHO were eating AT the restaurant were my friends.",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/10485195/dtfSPtIpIS",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 25
+                        },
+                        {
+                            "language": "es",
+                            "level": 2
+                        }
+                    ],
+                    "streak": 1508
+                },
+                "has_plus": false,
+                "id": 10485195,
+                "mod": false,
+                "username": "AbelRgAl"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2019-06-23T21:23:27Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 32796129,
+            "love": null,
+            "marked_down_message": "<p>Es correcta y aparece incorrecta</p>",
+            "message": "Es correcta y aparece incorrecta",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/146785667/RmqtQE-96E",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 14
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 146785667,
+                "mod": false,
+                "username": "marlenne621973"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2019-11-30T14:51:46Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 35323265,
+            "love": null,
+            "marked_down_message": "<p>Ok</p>",
+            "message": "Ok",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/199027629/GyaxPl7lvw",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 25
+                        },
+                        {
+                            "language": "it",
+                            "level": 6
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 199027629,
+                "mod": false,
+                "username": "LilianGarc344470"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2020-01-07T00:06:25Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 35918824,
+            "love": null,
+            "marked_down_message": "<p>Mi respuesta fue correcta y la canceló</p>",
+            "message": "Mi respuesta fue correcta y la canceló",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/391418095/inuugRjRg5",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 25
+                        },
+                        {
+                            "language": "pt",
+                            "level": 2
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 391418095,
+                "mod": false,
+                "username": "Javier444177"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        },
+        {
+            "admin_user": false,
+            "comments": [],
+            "datetime_string": "2020-03-26T05:33:27Z",
+            "deletable": false,
+            "deleted": false,
+            "depth": true,
+            "editable": false,
+            "frozen": null,
+            "id": 37291080,
+            "love": null,
+            "marked_down_message": "<p>Los niños que estaban comiendo en el restaurante fueron mis amigos </p>",
+            "message": "Los niños que estaban comiendo en el restaurante fueron mis amigos ",
+            "mod_user": false,
+            "num_comments": 0,
+            "removed": null,
+            "replyable": true,
+            "undeletable": false,
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/156184154/3HcvmE5eZA",
+                "flair": {
+                    "is_plus": false,
+                    "level_data": [
+                        {
+                            "language": "en",
+                            "level": 20
+                        }
+                    ],
+                    "streak": 0
+                },
+                "has_plus": false,
+                "id": 156184154,
+                "mod": false,
+                "username": "Asaadch18"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 0
+        }
+    ],
+    "datetime_string": "2014-02-03T22:02:52Z",
+    "deletable": false,
+    "deleted": false,
+    "depth": true,
+    "editable": false,
+    "followers": [],
+    "frozen": null,
+    "id": 1678438,
+    "is_forward": true,
+    "ldc_sentence_id": "d281d61d85cc459b150a8b3be7e5302f",
+    "love": null,
+    "make_sticky": false,
+    "marked_down_message": "",
+    "message": "",
+    "mod_user": false,
+    "num_comments": 13,
+    "parents": [
+        {
+            "from_language_abbrev": "es",
+            "from_language_name": "Spanish",
+            "id": 217,
+            "learning_language_abbrev": "en",
+            "name": "English"
+        }
+    ],
+    "read_from_cache": true,
+    "removed": null,
+    "replyable": true,
+    "root": {
+        "from_language_abbrev": "es",
+        "from_language_name": "Spanish",
+        "id": 217,
+        "learning_language_abbrev": "en",
+        "name": "English"
+    },
+    "sentence_comment": true,
+    "sentence_id": "d281d61d85cc459b150a8b3be7e5302f",
+    "sentence_language": "en",
+    "show_tts": true,
+    "sticky": false,
+    "title": "\"The boys that were eating in the restaurant were my friends.\"",
+    "topic": {
+        "from_language_abbrev": "es",
+        "from_language_name": "Spanish",
+        "id": 217,
+        "learning_language_abbrev": "en",
+        "name": "English"
+    },
+    "translation": "Los niños que estaban comiendo en el restaurante eran mis amigos.",
+    "translation_id": "830f926547be5049148df9b6bab3531b",
+    "translation_language": "es",
+    "tts_url": "https://d1vq87e9lcf771.cloudfront.net/harrison/47dcc7a09beced611f0b0c45360e185c",
+    "undeletable": false,
+    "user": {
+        "admin": false,
+        "ambassador": {},
+        "avatar": "//duolingo-images.s3.amazonaws.com/avatars/16297413/PlhCYrs6Gl",
+        "flair": {
+            "is_plus": false,
+            "level_data": [
+                {
+                    "language": "en",
+                    "level": 14
+                }
+            ],
+            "streak": 0
+        },
+        "has_plus": false,
+        "id": 16297413,
+        "mod": false,
+        "username": "juliocesar870"
+    },
+    "user_downvoted": false,
+    "user_upvoted": false,
+    "votes": 1,
+    "watching": false,
+    "word_to_dictionary_url": {
+        "boys": "/dictionary/English/boys/3661b40f90fb5659dfaa40c27931e375",
+        "eating": "/dictionary/English/eating/7986061c4b902d9513ffb36ec759a61f",
+        "friends": "/dictionary/English/friends/026d84d7eb076735cbc730016edde506",
+        "in": "/dictionary/English/in/25d831f141df74490bba8048cf58d059",
+        "my": "/dictionary/English/my/c6e5a0d61dfd95e33a32edaae74e347c",
+        "restaurant": "/dictionary/English/restaurant/b0069901ca7a9cf27c8418c0a23d5427",
+        "that": "/dictionary/English/that/1e647900d8fa7af8417f0b93eee9f888",
+        "the": "/dictionary/English/the/021e6148baa9615466a135e17e1b77b7",
+        "were": "/dictionary/English/were/80531234d80fa81490f7f1ddd4121d6d"
+    }
+}

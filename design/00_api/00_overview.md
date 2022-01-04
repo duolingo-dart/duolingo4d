@@ -22,3 +22,4 @@
 | Achievements    | <https://duolingo-achievements-prod.duolingo.com/users>                                                   | /{userId}/achievements?fromLanguage=en&learningLanguage=ja  | -                                | YES           |
 | Forum Topics    | <https://forum-api.duolingo.com/api/1/topics/list/users>                                                  | -                                                           | -                                | YES           |
 | Forum Topic     | <https://forum-api.duolingo.com/topics>                                                                   | /{topicId}                                                  | -                                | YES           |
+| Forum Comments  | <https://forum-api.duolingo.com/comments>                                                                 | /{commentId}                                                | -                                | YES           |
