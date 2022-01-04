@@ -1,5 +1,13 @@
 # Release Note
 
+## 0.4.0
+
+### New Features
+
+- Added a feature that allows you to get achievements information.
+- Added a feature that allows you to get forum topics information.
+- Added a feature that allows you to get forum topic information.
+
 ## 0.3.0
 
 ### New Features

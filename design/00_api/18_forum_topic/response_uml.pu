@@ -1,0 +1,807 @@
+@startjson "Forum Topic"
+{
+    "admin_user": false,
+    "backend_latency_ms": 411,
+    "comments": [
+        {
+            "datetime_string": "2021-12-13T17:53:07Z",
+            "frozen": null,
+            "id": 54486643,
+            "love": 1,
+            "num_comments": 7,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": true,
+            "title": "Join our Duolingo Teachers and Educators Network!",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": true,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/2952393/MV5wtvCRru",
+                "flair": null,
+                "fullname": "vivisaurus",
+                "has_plus": false,
+                "id": 2952393,
+                "mod": false,
+                "username": "vivisaurus"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 18
+        },
+        {
+            "datetime_string": "2021-12-22T17:28:09Z",
+            "frozen": null,
+            "id": 54712109,
+            "love": 16,
+            "num_comments": 1,
+            "old_comment": false,
+            "replyable": true,
+            "sticky": false,
+            "title": "Attention Hosts!  Let's collect here a list of tips and tricks for online teaching",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {
+                    "level": 2,
+                    "types": [
+                        "TEACHER"
+                    ]
+                },
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/115730249/T0eZERzpYp",
+                "flair": null,
+                "fullname": "Madame Sensei",
+                "has_plus": false,
+                "id": 115730249,
+                "mod": false,
+                "username": "MadameSensei"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 7
+        },
+        {
+            "datetime_string": "2021-12-17T21:55:27Z",
+            "frozen": null,
+            "id": 54598083,
+            "love": null,
+            "num_comments": 2,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "XP Assignment XP Not Matching Filtered XP Earned",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/248217781/rymV634BlS",
+                "flair": null,
+                "fullname": "Señor Alton",
+                "has_plus": false,
+                "id": 248217781,
+                "mod": false,
+                "username": "SenorAlton"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 2
+        },
+        {
+            "datetime_string": "2021-12-15T03:42:47Z",
+            "frozen": null,
+            "id": 54524971,
+            "love": 1,
+            "num_comments": 3,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Look no Feather!  New video tutorials available ",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {
+                    "level": 2,
+                    "types": [
+                        "TEACHER"
+                    ]
+                },
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/115730249/T0eZERzpYp",
+                "flair": null,
+                "fullname": "Madame Sensei",
+                "has_plus": false,
+                "id": 115730249,
+                "mod": false,
+                "username": "MadameSensei"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 7
+        },
+        {
+            "datetime_string": "2021-12-14T16:32:50Z",
+            "frozen": null,
+            "id": 54511796,
+            "love": null,
+            "num_comments": 0,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Couse Progress Gone in New Version?? ",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                "flair": null,
+                "fullname": "Antonietta",
+                "has_plus": false,
+                "id": 21427668,
+                "mod": false,
+                "username": "agriesch"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 2
+        },
+        {
+            "datetime_string": "2021-12-14T03:36:57Z",
+            "frozen": null,
+            "id": 54497427,
+            "love": null,
+            "num_comments": 1,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Duolingo Schools",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/828840469/l_JdEzWOMA",
+                "flair": null,
+                "fullname": "Greta Chandler",
+                "has_plus": false,
+                "id": 828840469,
+                "mod": false,
+                "username": "GretaChand"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 1
+        },
+        {
+            "datetime_string": "2021-12-06T16:56:16Z",
+            "frozen": null,
+            "id": 54310662,
+            "love": null,
+            "num_comments": 2,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "the xp's are not the same for the same date range between the old format and the new\n",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/23106677/-vpe_q88vj",
+                "flair": null,
+                "fullname": "Susan McGee",
+                "has_plus": false,
+                "id": 23106677,
+                "mod": false,
+                "username": "semcgee"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 2
+        },
+        {
+            "datetime_string": "2021-12-02T19:49:55Z",
+            "frozen": null,
+            "id": 54212625,
+            "love": null,
+            "num_comments": 4,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "5 lifes into unlimited",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                "flair": null,
+                "fullname": "Stana",
+                "has_plus": false,
+                "id": 253945429,
+                "mod": false,
+                "username": "Stana632285"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 3
+        },
+        {
+            "datetime_string": "2021-12-01T18:25:13Z",
+            "frozen": null,
+            "id": 54183545,
+            "love": null,
+            "num_comments": 3,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Activity log not showing activity/No e-mail sent for stories assigned",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/134666895/F7CxUR5ME1",
+                "flair": null,
+                "fullname": "Kirstin Fallang",
+                "has_plus": false,
+                "id": 134666895,
+                "mod": false,
+                "username": "MadameFallang"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 5
+        },
+        {
+            "datetime_string": "2021-12-01T08:12:52Z",
+            "frozen": null,
+            "id": 54170410,
+            "love": 1,
+            "num_comments": 3,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Assign a Story",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/311255513/6mLC1uf4_O",
+                "flair": null,
+                "fullname": "ShaynaC",
+                "has_plus": false,
+                "id": 311255513,
+                "mod": false,
+                "username": "ShaynaFaithC"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 6
+        },
+        {
+            "datetime_string": "2021-11-19T17:10:48Z",
+            "frozen": null,
+            "id": 53869960,
+            "love": 1,
+            "num_comments": 1,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Program is granting credit to students who have not completed the work.",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/554388693/WbZOTkFOpQ",
+                "flair": null,
+                "fullname": "Willie Louviere",
+                "has_plus": false,
+                "id": 554388693,
+                "mod": false,
+                "username": "SraLou"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 2
+        },
+        {
+            "datetime_string": "2021-11-15T23:32:40Z",
+            "frozen": null,
+            "id": 53766893,
+            "love": null,
+            "num_comments": 2,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Some students XP points from custom dates don't show",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//duolingo-images.s3.amazonaws.com/avatars/811484357/b4IbRpX5Vi",
+                "flair": null,
+                "fullname": "Lena Flagel",
+                "has_plus": false,
+                "id": 811484357,
+                "mod": false,
+                "username": "LenaFlagel"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 1
+        },
+        {
+            "datetime_string": "2021-11-12T21:59:33Z",
+            "frozen": null,
+            "id": 53686349,
+            "love": null,
+            "num_comments": 5,
+            "old_comment": true,
+            "replyable": true,
+            "sticky": false,
+            "title": "Placement test results disappeared",
+            "topic": {
+                "from_language_abbrev": "en",
+                "from_language_name": "English",
+                "id": 909,
+                "name": "Educators"
+            },
+            "user": {
+                "admin": false,
+                "ambassador": {},
+                "avatar": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+                "flair": null,
+                "fullname": null,
+                "has_plus": false,
+                "id": 813442437,
+                "mod": false,
+                "username": "yBvOhSz9"
+            },
+            "user_downvoted": false,
+            "user_upvoted": false,
+            "votes": 1
+        }
+    ],
+    "created": "2012-06-06 23:14:10",
+    "description": null,
+    "from_language": "en",
+    "id": 909,
+    "included_topics": [
+        909
+    ],
+    "js_version": null,
+    "learning_language": null,
+    "learning_language_string": null,
+    "mod_user": false,
+    "more_comments": true,
+    "name": "Educators",
+    "parents": [
+        {
+            "id": 1,
+            "name": "Duolingo"
+        },
+        {
+            "id": 1,
+            "name": "Duolingo"
+        }
+    ],
+    "skill_name": null,
+    "subscribed": false,
+    "subscriptions": [
+        {
+            "display_name": "General",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "language_abbrev": null,
+            "language_string": null,
+            "name": "Duolingo",
+            "topic_id": 1
+        },
+        {
+            "display_name": "English",
+            "from_language_abbrev": "ja",
+            "from_language_string": "Japanese",
+            "language_abbrev": "en",
+            "language_string": "English",
+            "name": "English",
+            "topic_id": 839
+        },
+        {
+            "display_name": "Japanese",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "language_abbrev": "ja",
+            "language_string": "Japanese",
+            "name": "Japanese",
+            "topic_id": 946
+        },
+        {
+            "display_name": "Klingon",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "language_abbrev": "kl",
+            "language_string": "Klingon",
+            "name": "Klingon",
+            "topic_id": 953
+        }
+    ],
+    "subtopics": [
+        {
+            "display_name": "General",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 1,
+            "language_abbrev": null,
+            "name": "Duolingo"
+        },
+        {
+            "display_name": "Troubleshooting",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 647,
+            "language_abbrev": null,
+            "name": "Troubleshooting"
+        },
+        {
+            "display_name": "Spanish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 2,
+            "language_abbrev": "es",
+            "name": "Spanish"
+        },
+        {
+            "display_name": "German",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 67,
+            "language_abbrev": "de",
+            "name": "German"
+        },
+        {
+            "display_name": "French",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 147,
+            "language_abbrev": "fr",
+            "name": "French"
+        },
+        {
+            "display_name": "Portuguese",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 328,
+            "language_abbrev": "pt",
+            "name": "Portuguese"
+        },
+        {
+            "display_name": "Italian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 519,
+            "language_abbrev": "it",
+            "name": "Italian"
+        },
+        {
+            "display_name": "Dutch",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 897,
+            "language_abbrev": "dn",
+            "name": "Dutch"
+        },
+        {
+            "display_name": "Irish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 901,
+            "language_abbrev": "ga",
+            "name": "Irish"
+        },
+        {
+            "display_name": "Danish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 902,
+            "language_abbrev": "da",
+            "name": "Danish"
+        },
+        {
+            "display_name": "Swedish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 908,
+            "language_abbrev": "sv",
+            "name": "Swedish"
+        },
+        {
+            "display_name": "Educators",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 909,
+            "language_abbrev": null,
+            "name": "Educators"
+        },
+        {
+            "display_name": "Turkish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 912,
+            "language_abbrev": "tr",
+            "name": "Turkish"
+        },
+        {
+            "display_name": "Ukrainian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 913,
+            "language_abbrev": "uk",
+            "name": "Ukrainian"
+        },
+        {
+            "display_name": "Norwegian (Bokmål)",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 914,
+            "language_abbrev": "nb",
+            "name": "Norwegian (Bokmål)"
+        },
+        {
+            "display_name": "Esperanto",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 915,
+            "language_abbrev": "eo",
+            "name": "Esperanto"
+        },
+        {
+            "display_name": "Russian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 920,
+            "language_abbrev": "ru",
+            "name": "Russian"
+        },
+        {
+            "display_name": "Polish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 922,
+            "language_abbrev": "pl",
+            "name": "Polish"
+        },
+        {
+            "display_name": "Welsh",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 924,
+            "language_abbrev": "cy",
+            "name": "Welsh"
+        },
+        {
+            "display_name": "Hindi",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 930,
+            "language_abbrev": "hi",
+            "name": "Hindi"
+        },
+        {
+            "display_name": "Vietnamese",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 931,
+            "language_abbrev": "vi",
+            "name": "Vietnamese"
+        },
+        {
+            "display_name": "Hebrew",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 932,
+            "language_abbrev": "he",
+            "name": "Hebrew"
+        },
+        {
+            "display_name": "Hungarian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 933,
+            "language_abbrev": "hu",
+            "name": "Hungarian"
+        },
+        {
+            "display_name": "Greek",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 936,
+            "language_abbrev": "el",
+            "name": "Greek"
+        },
+        {
+            "display_name": "Romanian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 938,
+            "language_abbrev": "ro",
+            "name": "Romanian"
+        },
+        {
+            "display_name": "Swahili",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 942,
+            "language_abbrev": "sw",
+            "name": "Swahili"
+        },
+        {
+            "display_name": "Japanese",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 946,
+            "language_abbrev": "ja",
+            "name": "Japanese"
+        },
+        {
+            "display_name": "High Valyrian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 948,
+            "language_abbrev": "hv",
+            "name": "High Valyrian"
+        },
+        {
+            "display_name": "Czech",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 949,
+            "language_abbrev": "cs",
+            "name": "Czech"
+        },
+        {
+            "display_name": "Korean",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 950,
+            "language_abbrev": "ko",
+            "name": "Korean"
+        },
+        {
+            "display_name": "Chinese",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 951,
+            "language_abbrev": "zs",
+            "name": "Chinese"
+        },
+        {
+            "display_name": "Klingon",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 953,
+            "language_abbrev": "kl",
+            "name": "Klingon"
+        },
+        {
+            "display_name": "Indonesian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 958,
+            "language_abbrev": "id",
+            "name": "Indonesian"
+        },
+        {
+            "display_name": "Hawaiian",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 960,
+            "language_abbrev": "hw",
+            "name": "Hawaiian"
+        },
+        {
+            "display_name": "Navajo",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 961,
+            "language_abbrev": "nv",
+            "name": "Navajo"
+        },
+        {
+            "display_name": "Arabic",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 966,
+            "language_abbrev": "ar",
+            "name": "Arabic"
+        },
+        {
+            "display_name": "Latin",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 967,
+            "language_abbrev": "la",
+            "name": "Latin"
+        },
+        {
+            "display_name": "Scottish Gaelic",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 969,
+            "language_abbrev": "gd",
+            "name": "Scottish Gaelic"
+        },
+        {
+            "display_name": "Finnish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 972,
+            "language_abbrev": "fi",
+            "name": "Finnish"
+        },
+        {
+            "display_name": "Yiddish",
+            "from_language_abbrev": "en",
+            "from_language_string": "English",
+            "id": 979,
+            "language_abbrev": "yi",
+            "name": "Yiddish"
+        }
+    ],
+    "troubleshooting_id": 647
+}
+@endjson
