@@ -1,10 +1,13 @@
+// Package imports:
+import 'package:http/http.dart' as http;
+
+// Project imports:
 import 'package:duolingo4d/src/adapter/forum_topics_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
-import 'package:http/http.dart' as http;
 
 class ForumTopicsRequest extends Request<ForumTopicsResponse> {
   /// Returns the new instance of [OverviewRequest].

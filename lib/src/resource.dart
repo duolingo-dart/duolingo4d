@@ -53,6 +53,9 @@ enum Resource {
 
   /// Forum Topics API
   forumTopics,
+
+  /// Forum Topic API
+  forumTopic,
 }
 
 extension ReourceFeature on Resource {
@@ -91,6 +94,8 @@ extension ReourceFeature on Resource {
         return 'users';
       case Resource.forumTopics:
         return 'api/1/topics/list';
+      case Resource.forumTopic:
+        return 'topics';
     }
   }
 }

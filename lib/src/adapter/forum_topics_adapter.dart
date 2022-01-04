@@ -2,11 +2,14 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// Package imports:
+import 'package:http/http.dart';
+import 'package:json_response/json_response.dart';
+
+// Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/forumtopics/forum_topic.dart';
 import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
-import 'package:http/http.dart';
-import 'package:json_response/json_response.dart';
 
 class ForumTopicsAdapter extends Adapter<ForumTopicsResponse> {
   /// Returns the new instance of [ForumTopicsAdapter].

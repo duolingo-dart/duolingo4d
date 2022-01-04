@@ -15,6 +15,7 @@ import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/follow_request.dart';
+import 'package:duolingo4d/src/request/forum_topic_request.dart';
 import 'package:duolingo4d/src/request/forum_topics_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/leaderboard_request.dart';
@@ -35,6 +36,7 @@ import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
+import 'package:duolingo4d/src/response/forumtopic/forum_topic_response.dart';
 import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
@@ -222,6 +224,12 @@ class DuolingoImpl implements Duolingo {
   @override
   Future<ForumTopicsResponse> forumTopics() async =>
       ForumTopicsRequest.newInstance().send();
+
+  @override
+  Future<ForumTopicResponse> forumTopic({
+    required int topicId,
+  }) async =>
+      await ForumTopicRequest.from(topicId: topicId).send();
 
   @override
   Future<ManifestResponse> cachedManifest() async {
@@ -538,6 +546,32 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<ForumTopicResponse> cachedForumTopic({
+    required int topicId,
+  }) async {
+    final cacheSubKeys = ['$topicId'];
+    if (_cacheStorage.has(
+      key: Resource.forumTopic.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: Resource.forumTopic.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await forumTopic(topicId: topicId);
+
+    _cacheStorage.save(
+      key: Resource.forumTopic.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -594,4 +628,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedForumTopics() =>
       _cacheStorage.deleteBy(key: Resource.forumTopics.name);
+
+  @override
+  void cleanCachedForumTopic() =>
+      _cacheStorage.deleteBy(key: Resource.forumTopic.name);
 }
