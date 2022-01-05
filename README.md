@@ -40,7 +40,7 @@
     - [1.3.17. Achievements API](#1317-achievements-api)
     - [1.3.18. Forum Topics API](#1318-forum-topics-api)
     - [1.3.19. Forum Topic API](#1319-forum-topic-api)
-    - [1.3.20. Forum Topic API](#1320-forum-topic-api)
+    - [1.3.20. Forum Comments API](#1320-forum-comments-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -767,7 +767,7 @@ void main() async {
 }
 ```
 
-### 1.3.20. Forum Topic API
+### 1.3.20. Forum Comments API
 
 | Auth Required |                                                              Method                                                               |                                                      JSON                                                       |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
