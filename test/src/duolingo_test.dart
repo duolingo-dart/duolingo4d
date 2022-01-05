@@ -33,7 +33,6 @@ void main() async {
   _testOverviewApi();
   _testWordHintApi();
   _testSwitchLanguageApi();
-  _testActivity();
   _testDictionary();
   _testSubscriptions();
   _testShopItems();
@@ -42,7 +41,6 @@ void main() async {
   _testCachedUserApi();
   _testCachedOverviewApi();
   _testCachedWordHintApi();
-  _testCachedActivity();
   _testCachedDictionary();
 
   //! Test the authentication API last,
@@ -150,20 +148,6 @@ void _testSwitchLanguageApi() {
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
-  });
-}
-
-void _testActivity() {
-  test('Test Activity API.', () async {
-    final duolingo = Duolingo.instance;
-    final response = await duolingo.activity();
-
-    expect(response.status.code, 200);
-    expect(response.status.reasonPhrase, 'OK');
-    expect(response.headers.isNotEmpty, true);
-
-    expect(response.ranking.scores.isNotEmpty, true);
-    expect(response.userIds.isNotEmpty, true);
   });
 }
 
@@ -335,30 +319,6 @@ void _testCachedWordHintApi() {
     expect(response.tokens[0].table.rows.isNotEmpty, true);
     expect(response.tokens[0].table.rows[0].cells.isNotEmpty, true);
     expect(response.tokens[0].table.references.isNotEmpty, true);
-  });
-}
-
-void _testCachedActivity() {
-  test('Test Activity API.', () async {
-    final duolingo = Duolingo.instance;
-    final response = await duolingo.cachedActivity();
-
-    expect(response.status.code, 200);
-    expect(response.status.reasonPhrase, 'OK');
-    expect(response.headers.isNotEmpty, true);
-
-    expect(response.ranking.scores.isNotEmpty, true);
-    expect(response.userIds.isNotEmpty, true);
-
-    final cachedResponse = await duolingo.cachedActivity();
-    expect(response == cachedResponse, true);
-
-    expect(cachedResponse.status.code, 200);
-    expect(cachedResponse.status.reasonPhrase, 'OK');
-    expect(cachedResponse.headers.isNotEmpty, true);
-
-    expect(cachedResponse.ranking.scores.isNotEmpty, true);
-    expect(cachedResponse.userIds.isNotEmpty, true);
   });
 }
 

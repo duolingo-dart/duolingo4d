@@ -16,7 +16,6 @@ export 'src/response/user/user_response.dart';
 export 'src/response/overview/overview_response.dart';
 export 'src/response/wordhint/word_hint_response.dart';
 export 'src/response/switchlanguage/switch_language_response.dart';
-export 'src/response/activity/activity_response.dart';
 export 'src/response/dictionary/dictionary_response.dart';
 export 'src/response/subscriptions/subscriptions_response.dart';
 export 'src/response/shopitems/shop_items_response.dart';

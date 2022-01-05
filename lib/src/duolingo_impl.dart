@@ -10,7 +10,6 @@ import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/request/achievements_request.dart';
-import 'package:duolingo4d/src/request/activity_request.dart';
 import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
@@ -32,7 +31,6 @@ import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
 import 'package:duolingo4d/src/resource.dart';
 import 'package:duolingo4d/src/response/achievements/achievements_response.dart';
-import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
@@ -128,10 +126,6 @@ class DuolingoImpl implements Duolingo {
         fromLanguage: fromLanguage,
         learningLanguage: learningLanguage,
       ).send();
-
-  @override
-  Future<ActivityResponse> activity() async =>
-      await ActivityRequest.newInstance().send();
 
   @override
   Future<LeaderboardResponse> leaderboard({
@@ -324,18 +318,6 @@ class DuolingoImpl implements Duolingo {
       subKeys: cacheSubKeys,
       value: response,
     );
-
-    return response;
-  }
-
-  @override
-  Future<ActivityResponse> cachedActivity() async {
-    if (_cacheStorage.has(key: Resource.activity.name)) {
-      return _cacheStorage.match(key: Resource.activity.name);
-    }
-
-    final response = await activity();
-    _cacheStorage.save(key: Resource.activity.name, value: response);
 
     return response;
   }
@@ -592,10 +574,6 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedWordHint() =>
       _cacheStorage.deleteBy(key: Resource.wordHint.name);
-
-  @override
-  void cleanCachedActivity() =>
-      _cacheStorage.deleteBy(key: Resource.activity.name);
 
   @override
   void cleanCachedLeaderboard() =>

@@ -7,7 +7,6 @@ import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
 import 'package:duolingo4d/src/response/achievements/achievements_response.dart';
-import 'package:duolingo4d/src/response/activity/activity_response.dart';
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
@@ -259,39 +258,6 @@ abstract class Duolingo {
     required String fromLanguage,
     required String learningLanguage,
   });
-
-  /// Returns the activity information of the authenticated user.
-  ///
-  /// A call to this method will always cause a communication process with the Duolingo API.
-  /// If you want to reuse the cached response object, use [cachedActivity].
-  ///
-  /// ```dart
-  ///void main() async {
-  ///  final duolingo = Duolingo.instance;
-  ///
-  ///  final authResponse = await duolingo.authenticate(
-  ///    username: 'test_username',
-  ///    password: 'test_password',
-  ///  );
-  ///
-  ///  final activityResponse = await duolingo.activity();
-  ///
-  ///  print(activityResponse.ranking);
-  ///  print(activityResponse.userIds);
-  ///
-  ///  final ranking = activityResponse.ranking;
-  ///
-  ///  // You can order ranking by score item.
-  ///  print(ranking.orderByScoreNameDesc());
-  ///  print(ranking.orderByScoreXpDesc());
-  ///
-  ///  for (final score in ranking.scores) {
-  ///    print(score.userId);
-  ///    print(score.xp);
-  ///  }
-  ///}
-  /// ```
-  Future<ActivityResponse> activity();
 
   Future<LeaderboardResponse> leaderboard({
     required String userId,
@@ -573,51 +539,6 @@ abstract class Duolingo {
     required String sentence,
   });
 
-  /// Returns cached leaderboard information of the authenticated user.
-  ///
-  /// The first call to this [cachedLeaderboard] method will always result in a communication with the Duolingo API
-  /// because there is no cached [activityResponse]. In the second and subsequent method calls, the cached [activityResponse]
-  /// from the first method call will be returned.
-  ///
-  /// The type and data structure of the response is consistent with the [leaderboard] method. However, please note that
-  /// the cached data is returned from this method, so unless you explicitly delete this cached object data,
-  /// the cached response object will always be returned.
-  ///
-  /// To delete the explicitly cached [activityResponse], call the [cleanCachedLeaderboard] method.
-  ///
-  /// **_Example:_**
-  ///
-  ///```dart
-  ///void main() async {
-  ///  final duolingo = Duolingo.instance;
-  ///
-  ///  final authResponse = await duolingo.authenticate(
-  ///    username: 'test_username',
-  ///    password: 'test_password',
-  ///  );
-  ///
-  ///  final activityResponse = await duolingo.cachedActivity();
-  ///
-  ///  print(activityResponse.ranking);
-  ///  print(activityResponse.userIds);
-  ///
-  ///  final ranking = activityResponse.ranking;
-  ///
-  ///  // You can order ranking by score item.
-  ///  print(ranking.orderByScoreNameDesc());
-  ///  print(ranking.orderByScoreXpDesc());
-  ///
-  ///  for (final score in ranking.scores) {
-  ///    print(score.userId);
-  ///    print(score.xp);
-  ///  }
-  ///
-  ///  // Delete cache.
-  ///  duolingo.cleanCachedLeaderboard();
-  ///}
-  ///```
-  Future<ActivityResponse> cachedActivity();
-
   Future<LeaderboardResponse> cachedLeaderboard({
     required String userId,
   });
@@ -717,9 +638,6 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedWordHint] method.
   void cleanCachedWordHint();
-
-  /// Deletes the cached data of the response object that was cached by calling the [cachedActivity] method.
-  void cleanCachedActivity();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedLeaderboard] method.
   void cleanCachedLeaderboard();

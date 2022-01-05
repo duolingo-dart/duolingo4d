@@ -24,9 +24,6 @@ enum Resource {
   /// Switch Language API
   switchLanguage,
 
-  /// Activity API
-  activity,
-
   /// Leaderboard API
   leaderboard,
 
@@ -81,8 +78,6 @@ extension ReourceFeature on Resource {
         return 'words/hints';
       case Resource.switchLanguage:
         return 'switch_language';
-      case Resource.activity:
-        return 'friendships/leaderboard_activity';
       case Resource.leaderboard:
         return 'leaderboards/7d9f5dd1-8423-491a-91f2-2532052038ce/users';
       case Resource.dictionary:

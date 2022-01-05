@@ -88,20 +88,6 @@ void main() async {
   print(switchLanguageResponse.status.code);
   print(switchLanguageResponse.status.reasonPhrase);
 
-  final activityResponse = await duolingo.activity();
-
-  print(activityResponse.ranking);
-  print(activityResponse.userIds);
-
-  final ranking = activityResponse.ranking;
-  print(ranking.orderByScoreNameDesc());
-  print(ranking.orderByScoreXpDesc());
-
-  for (final score in ranking.scores) {
-    print(score.userId);
-    print(score.xp);
-  }
-
   final dictionaryResponse = await duolingo.dictionary(
     wordId: 'cbdb71cdcf9e4715771206e1c0b0b94c',
   );
