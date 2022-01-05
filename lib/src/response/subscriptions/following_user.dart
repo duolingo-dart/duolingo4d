@@ -2,9 +2,9 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-class Friend {
-  /// Returns the new instance of [Friend] based on arguments.
-  Friend.from({
+class FollowingUser {
+  /// Returns the new instance of [FollowingUser] based on arguments.
+  FollowingUser.from({
     required this.id,
     required this.username,
     required this.name,
@@ -41,14 +41,14 @@ class Friend {
 
   @override
   String toString() {
-    return 'Friend(id: $id, username: $username, name: $name, pictureUrl: $pictureUrl, weeklyXp: $weeklyXp, monthlyXp: $monthlyXp, totalXp: $totalXp, hasPlus: $hasPlus)';
+    return 'FollowingUser(id: $id, username: $username, name: $name, pictureUrl: $pictureUrl, weeklyXp: $weeklyXp, monthlyXp: $monthlyXp, totalXp: $totalXp, hasPlus: $hasPlus)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is Friend &&
+    return other is FollowingUser &&
         other.id == id &&
         other.username == username &&
         other.name == name &&

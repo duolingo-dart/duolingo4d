@@ -175,16 +175,16 @@ void _testSubscriptions() {
     expect(response.status.reasonPhrase, 'OK');
     expect(response.headers.isNotEmpty, true);
 
-    expect(response.friends.isNotEmpty, true);
+    expect(response.followingUsers.isNotEmpty, true);
 
-    for (final friend in response.friends) {
-      expect(friend.id.isNotEmpty, true);
-      expect(friend.username.isNotEmpty, true);
-      expect(friend.name.isNotEmpty, true);
-      expect(friend.pictureUrl.isNotEmpty, true);
-      expect(friend.weeklyXp > -1, true);
-      expect(friend.monthlyXp > -1, true);
-      expect(friend.totalXp > -1, true);
+    for (final followingUser in response.followingUsers) {
+      expect(followingUser.id.isNotEmpty, true);
+      expect(followingUser.username.isNotEmpty, true);
+      expect(followingUser.name.isNotEmpty, true);
+      expect(followingUser.pictureUrl.isNotEmpty, true);
+      expect(followingUser.weeklyXp > -1, true);
+      expect(followingUser.monthlyXp > -1, true);
+      expect(followingUser.totalXp > -1, true);
     }
   });
 }

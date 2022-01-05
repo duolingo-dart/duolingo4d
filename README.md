@@ -482,8 +482,8 @@ void main() async {
   final subscriptionsResponse = await duolingo.subscriptions(userId: 'xxxxxx');
   print(subscriptionsResponse);
 
-  for (final friend in subscriptionsResponse.friends) {
-    print(friend);
+  for (final followingUser in subscriptionsResponse.followingUsers) {
+    print(followingUser);
   }
 }
 ```
@@ -773,7 +773,7 @@ void main() async {
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
 |      ✅       | [forumComments({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/19_forum_comments/response.json) |
 
-From Achievements API, you can get forum comments related to the language you are currently learning and comment id.
+From Forum Comments API, you can get forum comments related to the language you are currently learning and comment id.
 
 ```dart
 void main() async {

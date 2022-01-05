@@ -31,18 +31,18 @@ class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        friends: _buildFriends(
+        followingUsers: _buildFollowingUsers(
           jsonArray: json.getArray(key: 'subscriptions'),
         ),
       );
 
-  List<Friend> _buildFriends({
+  List<FollowingUser> _buildFollowingUsers({
     required JsonArray jsonArray,
   }) {
-    final friends = <Friend>[];
+    final followingUsers = <FollowingUser>[];
     jsonArray.forEach((json) {
-      friends.add(
-        Friend.from(
+      followingUsers.add(
+        FollowingUser.from(
           id: '${json.getInt(key: 'id')}',
           username: json.getString(key: 'username'),
           name: json.getString(key: 'name'),
@@ -55,6 +55,6 @@ class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
       );
     });
 
-    return friends;
+    return followingUsers;
   }
 }

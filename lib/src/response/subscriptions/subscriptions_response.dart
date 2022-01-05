@@ -8,9 +8,9 @@ import 'package:collection/collection.dart';
 // Project imports:
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
-import 'package:duolingo4d/src/response/subscriptions/friend.dart';
+import 'package:duolingo4d/src/response/subscriptions/following_user.dart';
 
-export 'package:duolingo4d/src/response/subscriptions/friend.dart';
+export 'package:duolingo4d/src/response/subscriptions/following_user.dart';
 
 class SubscriptionsResponse extends Response {
   /// Returns the new instance of [SubscriptionsResponse] based on arguments.
@@ -18,7 +18,7 @@ class SubscriptionsResponse extends Response {
     required int statusCode,
     required String reasonPhrase,
     required Map<String, String> headers,
-    required this.friends,
+    required this.followingUsers,
   }) : super.from(
           status: Status.from(
             code: statusCode,
@@ -27,20 +27,21 @@ class SubscriptionsResponse extends Response {
           headers: headers,
         );
 
-  /// The friends
-  final List<Friend> friends;
+  /// The following users
+  final List<FollowingUser> followingUsers;
 
   @override
-  String toString() => 'SubscriptionsResponse(friends: $friends)';
+  String toString() => 'SubscriptionsResponse(followingUsers: $followingUsers)';
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     final listEquals = const DeepCollectionEquality().equals;
 
-    return other is SubscriptionsResponse && listEquals(other.friends, friends);
+    return other is SubscriptionsResponse &&
+        listEquals(other.followingUsers, followingUsers);
   }
 
   @override
-  int get hashCode => friends.hashCode;
+  int get hashCode => followingUsers.hashCode;
 }
