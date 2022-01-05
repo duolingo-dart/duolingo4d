@@ -40,6 +40,7 @@
     - [1.3.17. Achievements API](#1317-achievements-api)
     - [1.3.18. Forum Topics API](#1318-forum-topics-api)
     - [1.3.19. Forum Topic API](#1319-forum-topic-api)
+    - [1.3.20. Forum Topic API](#1320-forum-topic-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -77,6 +78,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Achievements**    |      ✅       | You can get the achievement data that the user has achieved.                                                       |
 | **Forum Topics**    |      ✅       | You can get a list of forum topics related to the language you are currently learning.                             |
 | **Forum Topic**     |      ✅       | You can get a forum topic related to the language you are currently learning and topic id.                         |
+| **Forum Comments**  |      ✅       | You can get forum comments related to the language you are currently learning and comment id.                      |
 
 ## 1.2. Introduction
 
@@ -715,7 +717,7 @@ void main() async {
 | :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
 |      ✅       | [forumTopics()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopics.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/17_forum_topics/response.json) |
 
-From Achievements API, you can get a list of forum topics related to the language you are currently learning.
+From Forum Topics API, you can get a list of forum topics related to the language you are currently learning.
 
 ```dart
 void main() async {
@@ -741,7 +743,7 @@ void main() async {
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
 |      ✅       | [forumTopic({required int topicId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopic.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/18_forum_topic/response.json) |
 
-From Achievements API, you can get a forum topic related to the language you are currently learning and topic id.
+From Forum Topic API, you can get a forum topic related to the language you are currently learning and topic id.
 
 ```dart
 void main() async {
@@ -761,6 +763,45 @@ void main() async {
 
   for (final subtopic in forumTopicResponse.subtopics) {
     print(subtopic);
+  }
+}
+```
+
+### 1.3.20. Forum Topic API
+
+| Auth Required |                                                              Method                                                               |                                                      JSON                                                       |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumComments({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/19_forum_comments/response.json) |
+
+From Achievements API, you can get forum comments related to the language you are currently learning and comment id.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final forumCommentsResponse = await duolingo.forumComments(
+    commentId: 1678438,
+  );
+
+  print(forumCommentsResponse);
+
+  for (final comment in forumCommentsResponse.comments) {
+    // This indicates a comment on a comment.
+    print(comment);
+
+    for (final nestedComment in comment.comments) {
+      print(nestedComment);
+    }
+  }
+
+  for (final dictionaryPath in forumCommentsResponse.dictionaryPaths) {
+    print(dictionaryPath.word);
+    print(dictionaryPath.url);
   }
 }
 ```
