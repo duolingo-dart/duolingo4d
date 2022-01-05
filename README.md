@@ -147,9 +147,9 @@ void main() async {
 
 ### 1.3.1. Manifest
 
-| Auth Required |                                             Method                                              |                                                   JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ❌       | [manifest()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/manifest.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/10_manifest/response.json) |
+| Auth Required |                                             Method                                              |                                                   JSON                                                   |
+| :-----------: | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ❌       | [manifest()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/manifest.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/10_manifest/response.json) |
 
 You can get the manifest information of Duolingo.
 
@@ -166,9 +166,9 @@ void main() async {
 
 ### 1.3.2. Version Info API
 
-| Auth Required |                                                Method                                                 |                                                     JSON                                                      |
-| :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|      ❌       | [versionInfo()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/versionInfo.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/01_version_info/response.json) |
+| Auth Required |                                                Method                                                 |                                                     JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|      ❌       | [versionInfo()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/versionInfo.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/01_version_info/response.json) |
 
 The Version Info API allows you to fetch metadata about the configuration of Duolingo services.</br>
 This metadata includes the TTS data used to play back the audio of the words, as well as mapping information for the languages supported by Duolingo.
@@ -189,9 +189,9 @@ void main() async {
 
 ### 1.3.3. Authentication API
 
-| Auth Required |                                                                           Method                                                                            |                                                      JSON                                                      |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|      ❌       | [authenticate({required String username, required String password})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/authenticate.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/02_login/response_success.json) |
+| Auth Required |                                                                           Method                                                                            |                                                     JSON                                                      |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ❌       | [authenticate({required String username, required String password})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/authenticate.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/02_login/response_success.json) |
 
 You can use username and password to authenticate user registered with Duolingo. The registered e-mail address can be used for authentication in addition to the username.
 
@@ -236,9 +236,9 @@ void main() async {
 
 ### 1.3.4. User API
 
-| Auth Required |                                                     Method                                                      |                                                  JSON                                                  |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------: |
-|      ✅       | [user({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/user.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/03_users/response.json) |
+| Auth Required |                                                     Method                                                      |                                                 JSON                                                  |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------: |
+|      ✅       | [user({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/user.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/03_users/response.json) |
 
 From the User API, you can get detailed user information associated with the user ID.
 
@@ -297,9 +297,9 @@ void main() async {
 
 ### 1.3.5. Overview API
 
-| Auth Required |                                             Method                                              |                                                   JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [overview()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/overview.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/04_overview/response.json) |
+| Auth Required |                                             Method                                              |                                                   JSON                                                   |
+| :-----------: | :---------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ✅       | [overview()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/overview.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/04_overview/response.json) |
 
 From the Overview API, you can fetch information about all the words you have learned in the course you have selected. The details that can be retrieved about a word will vary depending on the course and word.
 
@@ -324,9 +324,9 @@ void main() async {
 
 ### 1.3.6. Word Hint API
 
-| Auth Required |                                                                                          Method                                                                                           |                                                   JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [wordHint({required String fromLanguage, required String learningLanguage, required String sentence})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/wordHint.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/05_hints/response_ja.json) |
+| Auth Required |                                                                                          Method                                                                                           |                                                   JSON                                                   |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ✅       | [wordHint({required String fromLanguage, required String learningLanguage, required String sentence})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/wordHint.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/05_hints/response_ja.json) |
 
 You can fetch hint information for any word or sentence from the Word Hint API. Since the hint information is hint data managed by Duolingo, the accuracy of the translation data cannot be guaranteed.
 
@@ -395,9 +395,9 @@ void main() async {
 
 ### 1.3.8. Leaderboard API
 
-| Auth Required |                                                            Method                                                             |                                                     JSON                                                     |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [leaderboard({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/leaderboard.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/13_leaderboard/response.json) |
+| Auth Required |                                                            Method                                                             |                                                    JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|      ✅       | [leaderboard({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/leaderboard.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/13_leaderboard/response.json) |
 
 The Leaderboard API allows you to get information about leaderboard on Duolingo.
 
@@ -427,9 +427,9 @@ void main() async {
 
 ### 1.3.9. Dictionary API
 
-| Auth Required |                                                           Method                                                            |                                                      JSON                                                      |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|      ✅       | [dictionary({required String wordId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/dictionary.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/08_dictionary/response_en.json) |
+| Auth Required |                                                           Method                                                            |                                                     JSON                                                      |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [dictionary({required String wordId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/dictionary.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/08_dictionary/response_en.json) |
 
 Dictionary API allows you to get detailed information including discussion information associated with a particular word, URL to audio data, and sample sentences.
 
@@ -466,9 +466,9 @@ void main() async {
 
 ### 1.3.10. Subscriptions API
 
-| Auth Required |                                                              Method                                                               |                                                      JSON                                                      |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|      ✅       | [subscriptions({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscriptions.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/09_subscriptions/response.json) |
+| Auth Required |                                                              Method                                                               |                                                     JSON                                                      |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [subscriptions({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscriptions.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/09_subscriptions/response.json) |
 
 From Subscriptions API, you can get information about all following users associated with a user id.
 
@@ -492,9 +492,9 @@ void main() async {
 
 ### 1.3.11. Subscribers API
 
-| Auth Required |                                                            Method                                                             |                                                     JSON                                                     |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [subscribers({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscribers.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/20_subscribers/response.json) |
+| Auth Required |                                                            Method                                                             |                                                    JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|      ✅       | [subscribers({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscribers.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/20_subscribers/response.json) |
 
 From Subscribers API, you can get information about all followers associated with a user id.
 
@@ -573,9 +573,9 @@ void main() async {
 
 ### 1.3.14. Shop Items API
 
-| Auth Required |                                              Method                                               |                                                    JSON                                                     |
-| :-----------: | :-----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
-|      ✅       | [shopItems()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/shopItems.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/11_shop_items/response.json) |
+| Auth Required |                                              Method                                               |                                                    JSON                                                    |
+| :-----------: | :-----------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
+|      ✅       | [shopItems()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/shopItems.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/11_shop_items/response.json) |
 
 From Shop Items API, you can get a list of items that can be purchased in Duolingo.
 
@@ -598,9 +598,9 @@ void main() async {
 
 ### 1.3.15. Purchase API
 
-| Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [purchase({required String itemId, required String userId, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/purchase.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/12_purchase/response.json) |
+| Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                   |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
+|      ✅       | [purchase({required String itemId, required String userId, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/purchase.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/12_purchase/response.json) |
 
 With Purchase API, you can purchase items sold in Duoligno by spending Lingots or Gems.
 
@@ -633,9 +633,9 @@ void main() async {
 
 ### 1.3.16. Alphabets API
 
-| Auth Required |                                                                              Method                                                                               |                                                    JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
-|      ✅       | [alphabets({required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/alphabets.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/14_alphabets/response.json) |
+| Auth Required |                                                                              Method                                                                               |                                                   JSON                                                    |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
+|      ✅       | [alphabets({required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/alphabets.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/14_alphabets/response.json) |
 
 With Alphabets API, you can get alphabet information for the learning language.
 
@@ -680,9 +680,9 @@ void main() async {
 
 ### 1.3.17. Stories API
 
-| Auth Required |                                                                                                      Method                                                                                                       |                                                   JSON                                                   |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
-|      ✅       | [stories({required String fromLanguage, required String learningLanguage, IllustrationFormat format = IllustrationFormat.svg})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/stories.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/15_stories/response.json) |
+| Auth Required |                                                                                                      Method                                                                                                       |                                                  JSON                                                   |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------: |
+|      ✅       | [stories({required String fromLanguage, required String learningLanguage, IllustrationFormat format = IllustrationFormat.svg})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/stories.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/15_stories/response.json) |
 
 With Stories API, you can get story information for the learning language.
 
@@ -713,9 +713,9 @@ void main() async {
 
 ### 1.3.18. Achievements API
 
-| Auth Required |                                                                                             Method                                                                                              |                                                     JSON                                                      |
-| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [achievements({required String userId, required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/achievements.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/16_achievements/response.json) |
+| Auth Required |                                                                                             Method                                                                                              |                                                     JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [achievements({required String userId, required String fromLanguage, required String learningLanguage})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/achievements.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/16_achievements/response.json) |
 
 From Achievements API, you can get the achievement data that the user has achieved.
 
@@ -744,9 +744,9 @@ void main() async {
 
 ### 1.3.19. Forum Topics API
 
-| Auth Required |                                                Method                                                 |                                                     JSON                                                      |
-| :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [forumTopics()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopics.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/17_forum_topics/response.json) |
+| Auth Required |                                                Method                                                 |                                                     JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumTopics()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopics.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/17_forum_topics/response.json) |
 
 From Forum Topics API, you can get a list of forum topics related to the language you are currently learning.
 
@@ -770,9 +770,9 @@ void main() async {
 
 ### 1.3.20. Forum Topic API
 
-| Auth Required |                                                          Method                                                           |                                                     JSON                                                     |
-| :-----------: | :-----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
-|      ✅       | [forumTopic({required int topicId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopic.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/18_forum_topic/response.json) |
+| Auth Required |                                                          Method                                                           |                                                    JSON                                                     |
+| :-----------: | :-----------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumTopic({required int topicId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumTopic.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/18_forum_topic/response.json) |
 
 From Forum Topic API, you can get a forum topic related to the language you are currently learning and topic id.
 
@@ -800,9 +800,9 @@ void main() async {
 
 ### 1.3.21. Forum Comments API
 
-| Auth Required |                                                              Method                                                               |                                                      JSON                                                       |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
-|      ✅       | [forumComments({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/19_forum_comments/response.json) |
+| Auth Required |                                                              Method                                                               |                                                      JSON                                                      |
+| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumComments({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/19_forum_comments/response.json) |
 
 From Forum Comments API, you can get forum comments related to the language you are currently learning and comment id.
 

@@ -1,5 +1,9 @@
 # Release Note
 
+## 0.4.1
+
+- Fixed README.
+
 ## 0.4.0
 
 ### New Features
