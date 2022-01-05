@@ -11,6 +11,8 @@ import 'package:duolingo4d/src/response/forum/topic/subtopic.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
+export 'package:duolingo4d/src/response/forum/topic/subtopic.dart';
+
 class ForumTopicResponse extends Response {
   /// Returns the new instance of [ForumTopicResponse] based on arguments.
   ForumTopicResponse.from({

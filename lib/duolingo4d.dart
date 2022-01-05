@@ -22,6 +22,4 @@ export 'src/response/shopitems/shop_items_response.dart';
 export 'src/response/purchase/purchase_response.dart';
 export 'src/response/leaderboard/leaderboard_response.dart';
 export 'src/response/alphabets/alphabets_response.dart';
-export 'src/response/forum/topics/forum_topics_response.dart';
-export 'src/response/forum/topic/forum_topic_response.dart';
-export 'src/response/forum/comments/forum_comments_response.dart';
+export 'src/response/forum/exporter.dart';

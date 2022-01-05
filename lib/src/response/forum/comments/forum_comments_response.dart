@@ -13,6 +13,9 @@ import 'package:duolingo4d/src/response/forum/user.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 
+export 'package:duolingo4d/src/response/forum/comments/dictionary_path.dart';
+export 'package:duolingo4d/src/response/forum/comments/topic.dart';
+
 class ForumCommentsResponse extends Response {
   /// Returns the new instance of [ForumCommentsResponse] based on arguments.
   ForumCommentsResponse.from({

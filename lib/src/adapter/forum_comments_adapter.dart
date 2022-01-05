@@ -9,9 +9,7 @@ import 'package:json_response/json_response.dart';
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/forum/comment.dart';
-import 'package:duolingo4d/src/response/forum/comments/dictionary_path.dart';
 import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
-import 'package:duolingo4d/src/response/forum/comments/topic.dart';
 import 'package:duolingo4d/src/response/forum/user.dart';
 
 class ForumCommentsAdapter extends Adapter<ForumCommentsResponse> {

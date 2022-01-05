@@ -10,7 +10,6 @@ import 'package:json_response/json_response.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/forum/comment.dart';
 import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
-import 'package:duolingo4d/src/response/forum/topic/subtopic.dart';
 import 'package:duolingo4d/src/response/forum/user.dart';
 
 class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
