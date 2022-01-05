@@ -18,6 +18,7 @@ export 'src/response/wordhint/word_hint_response.dart';
 export 'src/response/switchlanguage/switch_language_response.dart';
 export 'src/response/dictionary/dictionary_response.dart';
 export 'src/response/subscriptions/subscriptions_response.dart';
+export 'src/response/subscribers/subscribers_response.dart';
 export 'src/response/shopitems/shop_items_response.dart';
 export 'src/response/purchase/purchase_response.dart';
 export 'src/response/leaderboard/leaderboard_response.dart';

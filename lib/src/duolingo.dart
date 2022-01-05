@@ -19,6 +19,7 @@ import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/stories/stories_response.dart';
+import 'package:duolingo4d/src/response/subscribers/subscribers_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/follow_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
@@ -307,6 +308,10 @@ abstract class Duolingo {
   });
 
   Future<SubscriptionsResponse> subscriptions({
+    required String userId,
+  });
+
+  Future<SubscribersResponse> subscribers({
     required String userId,
   });
 
@@ -601,6 +606,10 @@ abstract class Duolingo {
     required String userId,
   });
 
+  Future<SubscribersResponse> cachedSubscribers({
+    required String userId,
+  });
+
   Future<ShopItemsResponse> cachedShopItems();
 
   Future<AlphabetsResponse> cachedAlphabets({
@@ -656,6 +665,9 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedSubscriptions] method.
   void cleanCachedSubscriptions();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedSubscribers] method.
+  void cleanCachedSubscribers();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedShopItems] method.
   void cleanCachedShopItems();

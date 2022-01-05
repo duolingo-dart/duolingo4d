@@ -31,16 +31,17 @@
     - [1.3.8. Leaderboard API](#138-leaderboard-api)
     - [1.3.9. Dictionary API](#139-dictionary-api)
     - [1.3.10. Subscriptions API](#1310-subscriptions-api)
-    - [1.3.11. Follow API](#1311-follow-api)
-    - [1.3.12. Unfollow API](#1312-unfollow-api)
-    - [1.3.13. Shop Items API](#1313-shop-items-api)
-    - [1.3.14. Purchase API](#1314-purchase-api)
-    - [1.3.15. Alphabets API](#1315-alphabets-api)
-    - [1.3.16. Stories API](#1316-stories-api)
-    - [1.3.17. Achievements API](#1317-achievements-api)
-    - [1.3.18. Forum Topics API](#1318-forum-topics-api)
-    - [1.3.19. Forum Topic API](#1319-forum-topic-api)
-    - [1.3.20. Forum Comments API](#1320-forum-comments-api)
+    - [1.3.11. Subscribers API](#1311-subscribers-api)
+    - [1.3.12. Follow API](#1312-follow-api)
+    - [1.3.13. Unfollow API](#1313-unfollow-api)
+    - [1.3.14. Shop Items API](#1314-shop-items-api)
+    - [1.3.15. Purchase API](#1315-purchase-api)
+    - [1.3.16. Alphabets API](#1316-alphabets-api)
+    - [1.3.17. Stories API](#1317-stories-api)
+    - [1.3.18. Achievements API](#1318-achievements-api)
+    - [1.3.19. Forum Topics API](#1319-forum-topics-api)
+    - [1.3.20. Forum Topic API](#1320-forum-topic-api)
+    - [1.3.21. Forum Comments API](#1321-forum-comments-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -68,7 +69,8 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Switch Language** |      ✅       | You can switch the learning language.                                                                              |
 | **Leaderboard**     |      ✅       | You can get the information of leaderboard.                                                                        |
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
-| **Subscriptions**   |      ✅       | You can get information on all friends associated with a user id.                                                  |
+| **Subscriptions**   |      ✅       | You can get information about all following users associated with a user id.                                       |
+| **Subscribers**     |      ✅       | You can get information about all followers associated with a user id.                                             |
 | **Follow**          |      ✅       | You can follow the account associated with the user ID specified in the argument.                                  |
 | **Unfollow**        |      ✅       | You can unfollow the account associated with the user ID specified in the argument.                                |
 | **Shop Items**      |      ✅       | You can get a list of items that can be purchased in Duolingo.                                                     |
@@ -468,7 +470,7 @@ void main() async {
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
 |      ✅       | [subscriptions({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscriptions.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/09_subscriptions/response.json) |
 
-From Subscriptions API, you can get information on all friends associated with a user id.
+From Subscriptions API, you can get information about all following users associated with a user id.
 
 ```dart
 void main() async {
@@ -488,7 +490,36 @@ void main() async {
 }
 ```
 
-### 1.3.11. Follow API
+### 1.3.11. Subscribers API
+
+| Auth Required |                                                            Method                                                             |                                                     JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [subscribers({required String userId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/subscribers.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/20_subscribers/response.json) |
+
+From Subscribers API, you can get information about all followers associated with a user id.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final subscribersResponse = await duolingo.subscribers(
+    userId: authResponse.userId,
+  );
+
+  print(subscribersResponse);
+
+  for (final follower in subscribersResponse.followers) {
+    print(follower);
+  }
+}
+```
+
+### 1.3.12. Follow API
 
 | Auth Required |                                                                      Method                                                                       |
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -514,7 +545,7 @@ void main() async {
 }
 ```
 
-### 1.3.12. Unfollow API
+### 1.3.13. Unfollow API
 
 | Auth Required |                                                                        Method                                                                         |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -540,7 +571,7 @@ void main() async {
 }
 ```
 
-### 1.3.13. Shop Items API
+### 1.3.14. Shop Items API
 
 | Auth Required |                                              Method                                               |                                                    JSON                                                     |
 | :-----------: | :-----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
@@ -565,7 +596,7 @@ void main() async {
 }
 ```
 
-### 1.3.14. Purchase API
+### 1.3.15. Purchase API
 
 | Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
@@ -600,7 +631,7 @@ void main() async {
 }
 ```
 
-### 1.3.15. Alphabets API
+### 1.3.16. Alphabets API
 
 | Auth Required |                                                                              Method                                                                               |                                                    JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
@@ -647,7 +678,7 @@ void main() async {
 }
 ```
 
-### 1.3.16. Stories API
+### 1.3.17. Stories API
 
 | Auth Required |                                                                                                      Method                                                                                                       |                                                   JSON                                                   |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
@@ -680,7 +711,7 @@ void main() async {
 }
 ```
 
-### 1.3.17. Achievements API
+### 1.3.18. Achievements API
 
 | Auth Required |                                                                                             Method                                                                                              |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -711,7 +742,7 @@ void main() async {
 }
 ```
 
-### 1.3.18. Forum Topics API
+### 1.3.19. Forum Topics API
 
 | Auth Required |                                                Method                                                 |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -737,7 +768,7 @@ void main() async {
 }
 ```
 
-### 1.3.19. Forum Topic API
+### 1.3.20. Forum Topic API
 
 | Auth Required |                                                          Method                                                           |                                                     JSON                                                     |
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
@@ -767,7 +798,7 @@ void main() async {
 }
 ```
 
-### 1.3.20. Forum Comments API
+### 1.3.21. Forum Comments API
 
 | Auth Required |                                                              Method                                                               |                                                      JSON                                                       |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |

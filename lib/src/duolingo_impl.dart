@@ -24,6 +24,7 @@ import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/purchase_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/stories_request.dart';
+import 'package:duolingo4d/src/request/subscribers_request.dart';
 import 'package:duolingo4d/src/request/subscriptions_request.dart';
 import 'package:duolingo4d/src/request/switch_language_request.dart';
 import 'package:duolingo4d/src/request/unfollow_request.dart';
@@ -44,6 +45,7 @@ import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/stories/stories_response.dart';
+import 'package:duolingo4d/src/response/subscribers/subscribers_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/follow_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
 import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
@@ -146,6 +148,12 @@ class DuolingoImpl implements Duolingo {
     required String userId,
   }) async =>
       await SubscriptionsRequest.from(userId: userId).send();
+
+  @override
+  Future<SubscribersResponse> subscribers({
+    required String userId,
+  }) async =>
+      await SubscribersRequest.from(userId: userId).send();
 
   @override
   Future<ShopItemsResponse> shopItems() async =>
@@ -409,6 +417,32 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<SubscribersResponse> cachedSubscribers({
+    required String userId,
+  }) async {
+    final cacheSubKeys = [userId];
+    if (_cacheStorage.has(
+      key: Resource.subscribers.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: Resource.subscribers.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await subscribers(userId: userId);
+
+    _cacheStorage.save(
+      key: Resource.subscribers.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   Future<ShopItemsResponse> cachedShopItems() async {
     if (_cacheStorage.has(key: Resource.shopItems.name)) {
       return _cacheStorage.match(key: Resource.shopItems.name);
@@ -620,6 +654,10 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedSubscriptions() =>
       _cacheStorage.deleteBy(key: Resource.subscriptions.name);
+
+  @override
+  void cleanCachedSubscribers() =>
+      _cacheStorage.deleteBy(key: Resource.subscribers.name);
 
   @override
   void cleanCachedShopItems() =>

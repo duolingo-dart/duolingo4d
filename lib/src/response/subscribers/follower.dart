@@ -1,10 +1,10 @@
-// Copyright (c) 2021, Kato Shinya. All rights reserved.
+// Copyright (c) 2022, Kato Shinya. All rights reserved.
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-class FollowingUser {
-  /// Returns the new instance of [FollowingUser] based on arguments.
-  FollowingUser.from({
+class Follower {
+  /// Returns the new instance of [Follower] based on arguments.
+  Follower.from({
     required this.id,
     required this.name,
     required this.fullname,
@@ -18,7 +18,7 @@ class FollowingUser {
   /// The id
   final String id;
 
-  /// The name
+  /// The usename
   final String name;
 
   /// The fullname
@@ -41,14 +41,14 @@ class FollowingUser {
 
   @override
   String toString() {
-    return 'FollowingUser(id: $id, name: $name, fullname: $fullname, pictureUrl: $pictureUrl, weeklyXp: $weeklyXp, monthlyXp: $monthlyXp, totalXp: $totalXp, hasPlus: $hasPlus)';
+    return 'Follower(id: $id, name: $name, fullname: $fullname, pictureUrl: $pictureUrl, weeklyXp: $weeklyXp, monthlyXp: $monthlyXp, totalXp: $totalXp, hasPlus: $hasPlus)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is FollowingUser &&
+    return other is Follower &&
         other.id == id &&
         other.name == name &&
         other.fullname == fullname &&

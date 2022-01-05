@@ -35,6 +35,7 @@ void main() async {
   _testSwitchLanguageApi();
   _testDictionary();
   _testSubscriptions();
+  _testSubscribers();
   _testShopItems();
 
   _testCachedVersionInfoApi();
@@ -179,13 +180,26 @@ void _testSubscriptions() {
 
     for (final followingUser in response.followingUsers) {
       expect(followingUser.id.isNotEmpty, true);
-      expect(followingUser.username.isNotEmpty, true);
       expect(followingUser.name.isNotEmpty, true);
+      expect(followingUser.fullname.isNotEmpty, true);
       expect(followingUser.pictureUrl.isNotEmpty, true);
       expect(followingUser.weeklyXp > -1, true);
       expect(followingUser.monthlyXp > -1, true);
       expect(followingUser.totalXp > -1, true);
     }
+  });
+}
+
+void _testSubscribers() {
+  test('Test Subscribers API.', () async {
+    final duolingo = Duolingo.instance;
+    final response = await duolingo.subscribers(
+      userId: '557897808',
+    );
+
+    expect(response.status.code, 200);
+    expect(response.status.reasonPhrase, 'OK');
+    expect(response.headers.isNotEmpty, true);
   });
 }
 

@@ -1,4 +1,4 @@
-// Copyright (c) 2021, Kato Shinya. All rights reserved.
+// Copyright (c) 2022, Kato Shinya. All rights reserved.
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
@@ -8,41 +8,41 @@ import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
+import 'package:duolingo4d/src/response/subscribers/subscribers_response.dart';
 
-class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
-  /// Returns the new instance of [SubscriptionsAdapter].
-  SubscriptionsAdapter.newInstance();
+class SubscribersAdapter extends Adapter<SubscribersResponse> {
+  /// Returns the new instance of [SubscribersAdapter].
+  SubscribersAdapter.newInstance();
 
   @override
-  SubscriptionsResponse convert({
+  SubscribersResponse convert({
     required Response response,
   }) =>
-      _buildSubscriptionsResponse(
+      _buildSubscribersResponse(
         response: response,
         json: super.jsonDecode(response: response),
       );
 
-  SubscriptionsResponse _buildSubscriptionsResponse({
+  SubscribersResponse _buildSubscribersResponse({
     required Response response,
     required Json json,
   }) =>
-      SubscriptionsResponse.from(
+      SubscribersResponse.from(
         statusCode: response.statusCode,
         reasonPhrase: response.reasonPhrase ?? '',
         headers: response.headers,
-        followingUsers: _buildFollowingUsers(
-          jsonArray: json.getArray(key: 'subscriptions'),
+        followers: _buildFollowers(
+          jsonArray: json.getArray(key: 'subscribers'),
         ),
       );
 
-  List<FollowingUser> _buildFollowingUsers({
+  List<Follower> _buildFollowers({
     required JsonArray jsonArray,
   }) {
-    final followingUsers = <FollowingUser>[];
+    final followers = <Follower>[];
     jsonArray.forEach((json) {
-      followingUsers.add(
-        FollowingUser.from(
+      followers.add(
+        Follower.from(
           id: '${json.getInt(key: 'id')}',
           name: json.getString(key: 'name'),
           fullname: json.getString(key: 'username'),
@@ -55,6 +55,6 @@ class SubscriptionsAdapter extends Adapter<SubscriptionsResponse> {
       );
     });
 
-    return followingUsers;
+    return followers;
   }
 }

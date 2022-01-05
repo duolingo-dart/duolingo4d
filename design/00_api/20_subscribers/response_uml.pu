@@ -1,0 +1,316 @@
+@startjson "Subscribers"
+{
+    "nextCursor": null,
+    "subscribers": [
+        {
+            "username": "JordanBlossey",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/5750856/c9mlCD8eC5",
+            "name": "Jordan Blossey",
+            "monthlyXp": 506,
+            "weeklyXp": 292,
+            "hasRecentActivity15": false,
+            "totalXp": 17516,
+            "id": 5750856,
+            "hasPlus": false
+        },
+        {
+            "username": "Adriana8Angel",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/22951816/TejEldckBN",
+            "name": "Adriana Araújo",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 12515,
+            "id": 22951816,
+            "hasPlus": false
+        },
+        {
+            "username": "Reabb",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/29873378/WUUktW4Sj7",
+            "name": "Rezz",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 6422,
+            "id": 29873378,
+            "hasPlus": false
+        },
+        {
+            "username": "Cherbonnelmignon",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/129809007/nwG2JEaEYS",
+            "name": "Thomas cherbonnel",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 150,
+            "id": 129809007,
+            "hasPlus": false
+        },
+        {
+            "username": "princessdemonica",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/153559169/QHpkMVAEd6",
+            "name": "Demetria Tvonne Nicholas",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 480,
+            "id": 153559169,
+            "hasPlus": false
+        },
+        {
+            "username": "kazue13",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/113466206/w8d0ZASFkJ",
+            "name": "和江（かずえ）",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 25456,
+            "id": 113466206,
+            "hasPlus": false
+        },
+        {
+            "username": "JairodeLima",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/27159841/rY0YTOvH1d",
+            "name": "Jairo de Lima",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 4087,
+            "id": 27159841,
+            "hasPlus": false
+        },
+        {
+            "username": "eduardoduarte8",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/179076422/cv2CG3lcvQ",
+            "name": "eduardo duarte",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 490,
+            "id": 179076422,
+            "hasPlus": false
+        },
+        {
+            "username": "SanasukeKaneki",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/137323135/oKXQr5xoHA",
+            "name": "エト左志木",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 4929,
+            "id": 137323135,
+            "hasPlus": false
+        },
+        {
+            "username": "Rafouto2004",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/136495374/1QfaWPgsxb",
+            "name": "Raf",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 2280,
+            "id": 136495374,
+            "hasPlus": false
+        },
+        {
+            "username": "cecile.bro2000",
+            "picture": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+            "name": "cecile",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 530,
+            "id": 187496943,
+            "hasPlus": false
+        },
+        {
+            "username": "Iawesome2--GD",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/123703136/RjQYJbwCgs",
+            "name": "Iawesome2 GD",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 8416,
+            "id": 123703136,
+            "hasPlus": false
+        },
+        {
+            "username": "santosh.bharwad",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/229357521/hDQqGVCjdP",
+            "name": "SANTOSH JEEVAN BHARWAD",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 2144,
+            "id": 229357521,
+            "hasPlus": false
+        },
+        {
+            "username": "banair",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/269058647/jA-lAb6rr2",
+            "name": "banair",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 5187,
+            "id": 269058647,
+            "hasPlus": false
+        },
+        {
+            "username": "Nicole_Harris",
+            "picture": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+            "name": "Nicole Harris",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 13,
+            "id": 22345134,
+            "hasPlus": false
+        },
+        {
+            "username": "thewind27",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/106076688/BK5n7w8_d4",
+            "name": "James",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 15475,
+            "id": 106076688,
+            "hasPlus": false
+        },
+        {
+            "username": "vloboda",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/257764128/7sRSaCYsy8",
+            "name": "Виталий",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 17216,
+            "id": 257764128,
+            "hasPlus": false
+        },
+        {
+            "username": "murattarik01",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/167689113/YHfhK0eOw3",
+            "name": "Murat",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 4335,
+            "id": 167689113,
+            "hasPlus": false
+        },
+        {
+            "username": "J1cl4",
+            "picture": "//s3.amazonaws.com/duolingo-images/avatar/default_2",
+            "name": null,
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 860,
+            "id": 400734539,
+            "hasPlus": false
+        },
+        {
+            "username": "Lucinda709",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/512049679/QAW7rkcurH",
+            "name": "Lucinda",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 6278,
+            "id": 512049679,
+            "hasPlus": false
+        },
+        {
+            "username": "iry0ATyandexru",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/440424671/ZRboTlqif-",
+            "name": "IVAN RY",
+            "monthlyXp": 2736,
+            "weeklyXp": 1076,
+            "hasRecentActivity15": true,
+            "totalXp": 258630,
+            "id": 440424671,
+            "hasPlus": false
+        },
+        {
+            "username": "MarcosMConcha",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/400405175/Av3x9lW63I",
+            "name": "Marcos",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 28666,
+            "id": 400405175,
+            "hasPlus": false
+        },
+        {
+            "username": "Amarillysdelmar",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/518493184/d9bTEFwTrQ",
+            "name": "Amarillys",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 32414,
+            "id": 518493184,
+            "hasPlus": false
+        },
+        {
+            "username": "Karisloo",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/158368460/42OOxL6GEo",
+            "name": "Karisloo",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 11902,
+            "id": 158368460,
+            "hasPlus": false
+        },
+        {
+            "username": "Armando140918",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/156717516/Im2axNHTb1",
+            "name": null,
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 368,
+            "id": 156717516,
+            "hasPlus": false
+        },
+        {
+            "username": "LPeo06",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/680726950/pYy-PVLWG1",
+            "name": "LPeo06",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 863,
+            "id": 680726950,
+            "hasPlus": false
+        },
+        {
+            "username": "KatoMelissa",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/786109966/idXr0IaRpG",
+            "name": "Kato Melissa",
+            "monthlyXp": 0,
+            "weeklyXp": 0,
+            "hasRecentActivity15": false,
+            "totalXp": 5592,
+            "id": 786109966,
+            "hasPlus": false
+        },
+        {
+            "username": "IgorEbaBernardes",
+            "picture": "//duolingo-images.s3.amazonaws.com/avatars/173697658/uDwCsXMpTt",
+            "name": "Bernardes",
+            "monthlyXp": 391,
+            "weeklyXp": 119,
+            "hasRecentActivity15": false,
+            "totalXp": 30293,
+            "id": 173697658,
+            "hasPlus": false
+        }
+    ],
+    "totalSubscribers": 30
+}
+@endjson
