@@ -7,6 +7,11 @@
 - Added a feature that allows you to get achievements information.
 - Added a feature that allows you to get forum topics information.
 - Added a feature that allows you to get forum topic information.
+- Added a feature that allows you to get forum comments information.
+
+### Destructive changes
+
+- Deleted `Activity API` because it already doesn't work.
 
 ## 0.3.0
 

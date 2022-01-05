@@ -28,19 +28,18 @@
     - [1.3.5. Overview API](#135-overview-api)
     - [1.3.6. Word Hint API](#136-word-hint-api)
     - [1.3.7. Switch Language API](#137-switch-language-api)
-    - [1.3.8. Activity API](#138-activity-api)
-    - [1.3.9. Leaderboard API](#139-leaderboard-api)
-    - [1.3.10. Dictionary API](#1310-dictionary-api)
-    - [1.3.11. Subscriptions API](#1311-subscriptions-api)
-    - [1.3.12. Follow API](#1312-follow-api)
-    - [1.3.13. Unfollow API](#1313-unfollow-api)
-    - [1.3.14. Shop Items API](#1314-shop-items-api)
-    - [1.3.15. Purchase API](#1315-purchase-api)
-    - [1.3.16. Alphabets API](#1316-alphabets-api)
-    - [1.3.17. Stories API](#1317-stories-api)
-    - [1.3.18. Achievements API](#1318-achievements-api)
-    - [1.3.19. Forum Topics API](#1319-forum-topics-api)
-    - [1.3.20. Forum Topic API](#1320-forum-topic-api)
+    - [1.3.8. Leaderboard API](#138-leaderboard-api)
+    - [1.3.9. Dictionary API](#139-dictionary-api)
+    - [1.3.10. Subscriptions API](#1310-subscriptions-api)
+    - [1.3.11. Follow API](#1311-follow-api)
+    - [1.3.12. Unfollow API](#1312-unfollow-api)
+    - [1.3.13. Shop Items API](#1313-shop-items-api)
+    - [1.3.14. Purchase API](#1314-purchase-api)
+    - [1.3.15. Alphabets API](#1315-alphabets-api)
+    - [1.3.16. Stories API](#1316-stories-api)
+    - [1.3.17. Achievements API](#1317-achievements-api)
+    - [1.3.18. Forum Topics API](#1318-forum-topics-api)
+    - [1.3.19. Forum Topic API](#1319-forum-topic-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -66,7 +65,6 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Overview**        |      ✅       | You can fetch information on all the words user have learned in Duolingo.                                          |
 | **Word Hint**       |      ✅       | You can fetch hint information about words and sentences.                                                          |
 | **Switch Language** |      ✅       | You can switch the learning language.                                                                              |
-| **Activity**        |      ✅       | You can get the activity of you and your friends in a ranking format.                                              |
 | **Leaderboard**     |      ✅       | You can get the information of leaderboard.                                                                        |
 | **Dictionary**      |      ✅       | You can get detailed information including discussions, audio and sample sentences associated with specific words. |
 | **Subscriptions**   |      ✅       | You can get information on all friends associated with a user id.                                                  |
@@ -391,42 +389,7 @@ void main() async {
 }
 ```
 
-### 1.3.8. Activity API
-
-| Auth Required |                                             Method                                              |                                                   JSON                                                    |
-| :-----------: | :---------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
-|      ✅       | [activity()](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/activity.html) | [Check!](https://github.com/myConsciousness/duolingo4d/blob/main/design/00_api/07_activity/response.json) |
-
-The Activity API allows you to get information about your ranking with friends who are following you on Duolingo. The [Ranking](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Ranking-class.html) provides the feature to sort in ascending or descending order by score item.
-
-```dart
-void main() async {
-  final duolingo = Duolingo.instance;
-
-  final authResponse = await duolingo.authenticate(
-    username: 'test_username',
-    password: 'test_password',
-  );
-
-  final activityResponse = await duolingo.activity();
-
-  print(activityResponse.ranking);
-  print(activityResponse.userIds);
-
-  final ranking = activityResponse.ranking;
-
-  // You can order ranking by score item.
-  print(ranking.orderByScoreNameDesc());
-  print(ranking.orderByScoreXpDesc());
-
-  for (final score in ranking.scores) {
-    print(score.userId);
-    print(score.xp);
-  }
-}
-```
-
-### 1.3.9. Leaderboard API
+### 1.3.8. Leaderboard API
 
 | Auth Required |                                                            Method                                                             |                                                     JSON                                                     |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
@@ -458,7 +421,7 @@ void main() async {
 }
 ```
 
-### 1.3.10. Dictionary API
+### 1.3.9. Dictionary API
 
 | Auth Required |                                                           Method                                                            |                                                      JSON                                                      |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
@@ -497,7 +460,7 @@ void main() async {
 }
 ```
 
-### 1.3.11. Subscriptions API
+### 1.3.10. Subscriptions API
 
 | Auth Required |                                                              Method                                                               |                                                      JSON                                                      |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
@@ -523,7 +486,7 @@ void main() async {
 }
 ```
 
-### 1.3.12. Follow API
+### 1.3.11. Follow API
 
 | Auth Required |                                                                      Method                                                                       |
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -549,7 +512,7 @@ void main() async {
 }
 ```
 
-### 1.3.13. Unfollow API
+### 1.3.12. Unfollow API
 
 | Auth Required |                                                                        Method                                                                         |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -575,7 +538,7 @@ void main() async {
 }
 ```
 
-### 1.3.14. Shop Items API
+### 1.3.13. Shop Items API
 
 | Auth Required |                                              Method                                               |                                                    JSON                                                     |
 | :-----------: | :-----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
@@ -600,7 +563,7 @@ void main() async {
 }
 ```
 
-### 1.3.15. Purchase API
+### 1.3.14. Purchase API
 
 | Auth Required |                                                                                      Method                                                                                       |                                                   JSON                                                    |
 | :-----------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------: |
@@ -635,7 +598,7 @@ void main() async {
 }
 ```
 
-### 1.3.16. Alphabets API
+### 1.3.15. Alphabets API
 
 | Auth Required |                                                                              Method                                                                               |                                                    JSON                                                    |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: |
@@ -682,7 +645,7 @@ void main() async {
 }
 ```
 
-### 1.3.17. Stories API
+### 1.3.16. Stories API
 
 | Auth Required |                                                                                                      Method                                                                                                       |                                                   JSON                                                   |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: |
@@ -715,7 +678,7 @@ void main() async {
 }
 ```
 
-### 1.3.18. Achievements API
+### 1.3.17. Achievements API
 
 | Auth Required |                                                                                             Method                                                                                              |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -746,7 +709,7 @@ void main() async {
 }
 ```
 
-### 1.3.19. Forum Topics API
+### 1.3.18. Forum Topics API
 
 | Auth Required |                                                Method                                                 |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -772,7 +735,7 @@ void main() async {
 }
 ```
 
-### 1.3.20. Forum Topic API
+### 1.3.19. Forum Topic API
 
 | Auth Required |                                                          Method                                                           |                                                     JSON                                                     |
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
