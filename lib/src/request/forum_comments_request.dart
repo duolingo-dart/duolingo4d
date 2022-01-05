@@ -6,30 +6,30 @@
 import 'package:http/http.dart' as http;
 
 // Project imports:
-import 'package:duolingo4d/src/adapter/forum_topic_adapter.dart';
+import 'package:duolingo4d/src/adapter/forum_comments_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
+import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 
-class ForumTopicRequest extends Request<ForumTopicResponse> {
-  /// Returns the new instance of [ForumTopicRequest] based on an argument.
-  ForumTopicRequest.from({
-    required this.topicId,
+class ForumCommentsRequest extends Request<ForumCommentsResponse> {
+  /// Returns the new instance of [ForumCommentsRequest] based on an argument.
+  ForumCommentsRequest.from({
+    required this.commentId,
   });
 
   /// The response adapter
-  static final _adapter = ForumTopicAdapter.newInstance();
+  static final _adapter = ForumCommentsAdapter.newInstance();
 
-  /// The topic id
-  final int topicId;
+  /// The comment id
+  final int commentId;
 
   @override
-  Future<ForumTopicResponse> send() async => _adapter.convert(
+  Future<ForumCommentsResponse> send() async => _adapter.convert(
         response: await http.get(
           Uri.parse(
-            '${Endpoint.forum.url}/${Resource.forumTopic.url}/$topicId',
+            '${Endpoint.forum.url}/${Resource.forumComments.url}/$commentId',
           ),
           headers: InternalSession.instance.headers,
         ),

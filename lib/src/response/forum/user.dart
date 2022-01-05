@@ -2,9 +2,9 @@
 // Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-class CommentedUser {
-  /// Returns the new instance of [CommentedUser] based on arguments.
-  CommentedUser.from({
+class User {
+  /// Returns the new instance of [User] based on arguments.
+  User.from({
     required this.id,
     required this.name,
     required this.fullname,
@@ -29,14 +29,14 @@ class CommentedUser {
 
   @override
   String toString() {
-    return 'CommentedUser(id: $id, name: $name, fullname: $fullname, avatarUrl: $avatarUrl, isAdmin: $isAdmin)';
+    return 'User(id: $id, name: $name, fullname: $fullname, avatarUrl: $avatarUrl, isAdmin: $isAdmin)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is CommentedUser &&
+    return other is User &&
         other.id == id &&
         other.name == name &&
         other.fullname == fullname &&

@@ -6,7 +6,7 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/response/forumtopics/forum_topic.dart';
+import 'package:duolingo4d/src/response/forum/topics/forum_topic.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
 

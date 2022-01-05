@@ -6,14 +6,10 @@
 import 'package:collection/collection.dart';
 
 // Project imports:
-import 'package:duolingo4d/src/response/forumtopic/comment.dart';
-import 'package:duolingo4d/src/response/forumtopic/subtopic.dart';
+import 'package:duolingo4d/src/response/forum/comment.dart';
+import 'package:duolingo4d/src/response/forum/topic/subtopic.dart';
 import 'package:duolingo4d/src/response/response.dart';
 import 'package:duolingo4d/src/response/status.dart';
-
-export 'package:duolingo4d/src/response/forumtopic/subtopic.dart';
-export 'package:duolingo4d/src/response/forumtopic/comment.dart';
-export 'package:duolingo4d/src/response/forumtopic/commented_user.dart';
 
 class ForumTopicResponse extends Response {
   /// Returns the new instance of [ForumTopicResponse] based on arguments.

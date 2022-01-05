@@ -8,7 +8,10 @@ import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/forumtopic/forum_topic_response.dart';
+import 'package:duolingo4d/src/response/forum/comment.dart';
+import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
+import 'package:duolingo4d/src/response/forum/topic/subtopic.dart';
+import 'package:duolingo4d/src/response/forum/user.dart';
 
 class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
   /// Returns the new instance of [ForumTopicAdapter].
@@ -60,13 +63,18 @@ class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
         Comment.from(
           id: json.getInt(key: 'id'),
           title: json.getString(key: 'title'),
-          commentedUser: _buildCommentedUser(
+          message: json.getString(key: 'message'),
+          markdownMessage: json.getString(key: 'mark_down_message'),
+          user: _buildUser(
             json: json.get(key: 'user'),
           ),
           likes: json.getInt(key: 'love'),
           votes: json.getInt(key: 'votes'),
           isUserUpvoted: json.getBool(key: 'user_upvoted'),
           isUserDownvoted: json.getBool(key: 'user_downvoted'),
+          comments: [],
+          isAdmin: json.getBool(key: 'user_admin'),
+          deleted: json.getBool(key: 'deleted'),
         ),
       );
     });
@@ -74,10 +82,10 @@ class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
     return comments;
   }
 
-  CommentedUser _buildCommentedUser({
+  User _buildUser({
     required Json json,
   }) =>
-      CommentedUser.from(
+      User.from(
         id: '${json.getInt(key: 'id')}',
         name: json.getString(key: 'username'),
         fullname: json.getString(key: 'fullname'),

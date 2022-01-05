@@ -8,8 +8,8 @@ import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
-import 'package:duolingo4d/src/response/forumtopics/forum_topic.dart';
-import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
+import 'package:duolingo4d/src/response/forum/topics/forum_topic.dart';
+import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
 
 class ForumTopicsAdapter extends Adapter<ForumTopicsResponse> {
   /// Returns the new instance of [ForumTopicsAdapter].

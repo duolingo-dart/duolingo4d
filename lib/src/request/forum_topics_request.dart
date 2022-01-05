@@ -7,7 +7,7 @@ import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/forumtopics/forum_topics_response.dart';
+import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
 
 class ForumTopicsRequest extends Request<ForumTopicsResponse> {
   /// Returns the new instance of [OverviewRequest].
