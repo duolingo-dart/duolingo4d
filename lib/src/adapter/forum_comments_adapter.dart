@@ -43,8 +43,8 @@ class ForumCommentsAdapter extends Adapter<ForumCommentsResponse> {
         translationLanguage: json.getString(key: 'translation_language'),
         ttsUrl: json.getString(key: 'tts_url'),
         canonicalUrl: json.getString(key: 'canonical_url'),
-        likes: json.getInt(key: 'love'),
-        votes: json.getInt(key: 'votes'),
+        likes: json.getInt(key: 'love', defaultValue: 0),
+        votes: json.getInt(key: 'votes', defaultValue: 0),
         comments: _buildComments(
           jsonArray: json.getArray(key: 'comments'),
         ),
@@ -75,8 +75,8 @@ class ForumCommentsAdapter extends Adapter<ForumCommentsResponse> {
           message: json.getString(key: 'message'),
           markdownMessage: json.getString(key: 'marked_down_message'),
           user: _buildUser(json: json.get(key: 'user')),
-          likes: json.getInt(key: 'love'),
-          votes: json.getInt(key: 'votes'),
+          likes: json.getInt(key: 'love', defaultValue: 0),
+          votes: json.getInt(key: 'votes', defaultValue: 0),
           comments: _buildComments(
             jsonArray: json.getArray(key: 'comments'),
           ),

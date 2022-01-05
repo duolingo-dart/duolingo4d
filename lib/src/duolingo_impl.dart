@@ -14,6 +14,7 @@ import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/follow_request.dart';
+import 'package:duolingo4d/src/request/forum_comments_request.dart';
 import 'package:duolingo4d/src/request/forum_topic_request.dart';
 import 'package:duolingo4d/src/request/forum_topics_request.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
@@ -34,6 +35,7 @@ import 'package:duolingo4d/src/response/achievements/achievements_response.dart'
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
+import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
 import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
@@ -224,6 +226,12 @@ class DuolingoImpl implements Duolingo {
     required int topicId,
   }) async =>
       await ForumTopicRequest.from(topicId: topicId).send();
+
+  @override
+  Future<ForumCommentsResponse> forumComments({
+    required int commentId,
+  }) async =>
+      await ForumCommentsRequest.from(commentId: commentId).send();
 
   @override
   Future<ManifestResponse> cachedManifest() async {
@@ -554,6 +562,32 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
+  Future<ForumCommentsResponse> cachedForumComments({
+    required int commentId,
+  }) async {
+    final cacheSubKeys = ['$commentId'];
+    if (_cacheStorage.has(
+      key: Resource.forumComments.name,
+      subKeys: cacheSubKeys,
+    )) {
+      return _cacheStorage.match(
+        key: Resource.forumComments.name,
+        subKeys: cacheSubKeys,
+      );
+    }
+
+    final response = await forumComments(commentId: commentId);
+
+    _cacheStorage.save(
+      key: Resource.forumComments.name,
+      subKeys: cacheSubKeys,
+      value: response,
+    );
+
+    return response;
+  }
+
+  @override
   void cleanCache() => _cacheStorage.delete();
 
   @override
@@ -610,4 +644,8 @@ class DuolingoImpl implements Duolingo {
   @override
   void cleanCachedForumTopic() =>
       _cacheStorage.deleteBy(key: Resource.forumTopic.name);
+
+  @override
+  void cleanCachedForumComments() =>
+      _cacheStorage.deleteBy(key: Resource.forumComments.name);
 }

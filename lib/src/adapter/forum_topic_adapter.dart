@@ -67,8 +67,8 @@ class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
           user: _buildUser(
             json: json.get(key: 'user'),
           ),
-          likes: json.getInt(key: 'love'),
-          votes: json.getInt(key: 'votes'),
+          likes: json.getInt(key: 'love', defaultValue: 0),
+          votes: json.getInt(key: 'votes', defaultValue: 0),
           isUserUpvoted: json.getBool(key: 'user_upvoted'),
           isUserDownvoted: json.getBool(key: 'user_downvoted'),
           comments: [],

@@ -10,6 +10,7 @@ import 'package:duolingo4d/src/response/achievements/achievements_response.dart'
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
+import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
 import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
 import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
@@ -350,6 +351,10 @@ abstract class Duolingo {
     required int topicId,
   });
 
+  Future<ForumCommentsResponse> forumComments({
+    required int commentId,
+  });
+
   Future<ManifestResponse> cachedManifest();
 
   /// Returns cached metadata about the configuration of the Duolingo service.
@@ -621,6 +626,10 @@ abstract class Duolingo {
     required int topicId,
   });
 
+  Future<ForumCommentsResponse> cachedForumComments({
+    required int commentId,
+  });
+
   /// Deletes all cached response objects.
   void cleanCache();
 
@@ -665,4 +674,7 @@ abstract class Duolingo {
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedForumTopic] method.
   void cleanCachedForumTopic();
+
+  /// Deletes the cached data of the response object that was cached by calling the [cachedForumComments] method.
+  void cleanCachedForumComments();
 }
