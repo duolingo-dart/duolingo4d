@@ -59,6 +59,9 @@ enum Resource {
 
   /// Forum Comments API
   forumComments,
+
+  /// Search Friend API
+  searchFriend,
 }
 
 extension ReourceFeature on Resource {
@@ -100,6 +103,8 @@ extension ReourceFeature on Resource {
         return 'topics';
       case Resource.forumComments:
         return 'comments';
+      case Resource.searchFriend:
+        return 'users/search';
     }
   }
 }

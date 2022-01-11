@@ -38,17 +38,18 @@ class PurchaseRequest extends Request<PurchaseResponse> {
 
   @override
   Future<PurchaseResponse> send() async => _adapter.convert(
-        response: InternalSession.instance.refreshRequestHeader(
-          response: await http.post(
-            Uri.parse(
-                '${Endpoint.base.url}/${Resource.purchase.url}/$userId/shop-items'),
-            headers: InternalSession.instance.headers,
-            body: json.encode(
-              {
-                'itemName': itemId,
-                'learningLanguage': learningLanguage,
-              },
-            ),
+        response: await http.post(
+          Uri.parse(
+              '${Endpoint.base.url}/${Resource.purchase.url}/$userId/shop-items'),
+          headers: {
+            'Content-type': 'application/json',
+            'Accept': 'application/json',
+          }..addAll(InternalSession.instance.headers),
+          body: json.encode(
+            {
+              'itemName': itemId,
+              'learningLanguage': learningLanguage,
+            },
           ),
         ),
       );

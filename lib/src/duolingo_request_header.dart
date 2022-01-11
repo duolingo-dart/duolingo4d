@@ -38,8 +38,6 @@ class DuolingoRequestHeader {
   Map<String, String> toMap() => {
         'Cookie': cookie.rawData,
         authHeader.name: authHeader.value,
-        'Content-type': 'application/json',
-        'Accept': 'application/json',
       };
 
   @override

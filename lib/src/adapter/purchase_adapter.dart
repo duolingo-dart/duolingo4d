@@ -11,7 +11,7 @@ import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
 
 class PurchaseAdapter extends Adapter<PurchaseResponse> {
-  /// Returns the new instance of [AuthAdapter].
+  /// Returns the new instance of [PurchaseAdapter].
   PurchaseAdapter.newInstance();
 
   @override

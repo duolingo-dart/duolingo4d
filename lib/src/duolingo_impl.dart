@@ -22,6 +22,7 @@ import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/purchase_request.dart';
+import 'package:duolingo4d/src/request/search_friend_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/stories_request.dart';
 import 'package:duolingo4d/src/request/subscribers_request.dart';
@@ -32,27 +33,6 @@ import 'package:duolingo4d/src/request/user_request.dart';
 import 'package:duolingo4d/src/request/version_info_request.dart';
 import 'package:duolingo4d/src/request/word_hint_request.dart';
 import 'package:duolingo4d/src/resource.dart';
-import 'package:duolingo4d/src/response/achievements/achievements_response.dart';
-import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
-import 'package:duolingo4d/src/response/auth/auth_response.dart';
-import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
-import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
-import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
-import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
-import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
-import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
-import 'package:duolingo4d/src/response/overview/overview_response.dart';
-import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
-import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
-import 'package:duolingo4d/src/response/stories/stories_response.dart';
-import 'package:duolingo4d/src/response/subscribers/subscribers_response.dart';
-import 'package:duolingo4d/src/response/subscriptions/follow_response.dart';
-import 'package:duolingo4d/src/response/subscriptions/subscriptions_response.dart';
-import 'package:duolingo4d/src/response/subscriptions/unfollow_response.dart';
-import 'package:duolingo4d/src/response/switchlanguage/switch_language_response.dart';
-import 'package:duolingo4d/src/response/user/user_response.dart';
-import 'package:duolingo4d/src/response/versioninfo/version_info_response.dart';
-import 'package:duolingo4d/src/response/wordhint/word_hint_response.dart';
 
 /// This is an implementation class of [Duolingo].
 class DuolingoImpl implements Duolingo {
@@ -69,20 +49,18 @@ class DuolingoImpl implements Duolingo {
   static final _cacheStorage = CacheStorage.open();
 
   @override
-  DuolingoSession get session => DuolingoSession.from(
+  get session => DuolingoSession.from(
         requestHeader: InternalSession.instance.requestHeader,
       );
 
   @override
-  Future<ManifestResponse> manifest() async =>
-      await ManifestRequest.newInstance().send();
+  manifest() async => await ManifestRequest.newInstance().send();
 
   @override
-  Future<VersionInfoResponse> versionInfo() async =>
-      await VersionInfoRequest.newInstance().send();
+  versionInfo() async => await VersionInfoRequest.newInstance().send();
 
   @override
-  Future<AuthResponse> authenticate({
+  authenticate({
     required String username,
     required String password,
   }) async {
@@ -100,17 +78,16 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<UserResponse> user({
+  user({
     required String userId,
   }) async =>
       await UserRequest.from(userId: userId).send();
 
   @override
-  Future<OverviewResponse> overview() async =>
-      await OverviewRequest.newInstance().send();
+  overview() async => await OverviewRequest.newInstance().send();
 
   @override
-  Future<WordHintResponse> wordHint({
+  wordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
@@ -122,7 +99,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<SwitchLanguageResponse> switchLanguage({
+  switchLanguage({
     required String fromLanguage,
     required String learningLanguage,
   }) async =>
@@ -132,35 +109,34 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<LeaderboardResponse> leaderboard({
+  leaderboard({
     required String userId,
   }) async =>
       await LeaderboardRequest.from(userId: userId).send();
 
   @override
-  Future<DictionaryResponse> dictionary({
+  dictionary({
     required String wordId,
   }) async =>
       await DictionaryRequest.from(wordId: wordId).send();
 
   @override
-  Future<SubscriptionsResponse> subscriptions({
+  subscriptions({
     required String userId,
   }) async =>
       await SubscriptionsRequest.from(userId: userId).send();
 
   @override
-  Future<SubscribersResponse> subscribers({
+  subscribers({
     required String userId,
   }) async =>
       await SubscribersRequest.from(userId: userId).send();
 
   @override
-  Future<ShopItemsResponse> shopItems() async =>
-      await ShopItemsRequest.newInstance().send();
+  shopItems() async => await ShopItemsRequest.newInstance().send();
 
   @override
-  Future<PurchaseResponse> purchase({
+  purchase({
     required String itemId,
     required String userId,
     required String learningLanguage,
@@ -172,7 +148,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<AlphabetsResponse> alphabets({
+  alphabets({
     required String fromLanguage,
     required String learningLanguage,
   }) async =>
@@ -182,7 +158,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<StoriesResponse> stories({
+  stories({
     required String fromLanguage,
     required String learningLanguage,
     IllustrationFormat format = IllustrationFormat.svg,
@@ -194,7 +170,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<FollowResponse> follow({
+  follow({
     required String userId,
     required String targetUserId,
   }) async =>
@@ -204,7 +180,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<UnfollowResponse> unfollow({
+  unfollow({
     required String userId,
     required String targetUserId,
   }) async =>
@@ -214,7 +190,7 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<AchievementsResponse> achievements({
+  achievements({
     required String userId,
     required String fromLanguage,
     required String learningLanguage,
@@ -226,23 +202,34 @@ class DuolingoImpl implements Duolingo {
       ).send();
 
   @override
-  Future<ForumTopicsResponse> forumTopics() async =>
-      ForumTopicsRequest.newInstance().send();
+  forumTopics() async => ForumTopicsRequest.newInstance().send();
 
   @override
-  Future<ForumTopicResponse> forumTopic({
+  forumTopic({
     required int topicId,
   }) async =>
       await ForumTopicRequest.from(topicId: topicId).send();
 
   @override
-  Future<ForumCommentsResponse> forumComments({
+  forumComments({
     required int commentId,
   }) async =>
       await ForumCommentsRequest.from(commentId: commentId).send();
 
   @override
-  Future<ManifestResponse> cachedManifest() async {
+  searchFriend({
+    required int page,
+    required int perPage,
+    required String query,
+  }) async =>
+      await SearchFriendRequest.from(
+        page: page,
+        perPage: perPage,
+        query: query,
+      ).send();
+
+  @override
+  cachedManifest() async {
     if (_cacheStorage.has(key: Resource.manifest.name)) {
       return _cacheStorage.match(key: Resource.manifest.name);
     }
@@ -254,7 +241,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<VersionInfoResponse> cachedVersionInfo() async {
+  cachedVersionInfo() async {
     if (_cacheStorage.has(key: Resource.versionInfo.name)) {
       return _cacheStorage.match(key: Resource.versionInfo.name);
     }
@@ -266,7 +253,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<UserResponse> cachedUser({
+  cachedUser({
     required String userId,
   }) async {
     final cacheSubKeys = [userId];
@@ -290,7 +277,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<OverviewResponse> cachedOverview() async {
+  cachedOverview() async {
     if (_cacheStorage.has(key: Resource.overview.name)) {
       return _cacheStorage.match(key: Resource.overview.name);
     }
@@ -302,7 +289,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<WordHintResponse> cachedWordHint({
+  cachedWordHint({
     required String fromLanguage,
     required String learningLanguage,
     required String sentence,
@@ -339,7 +326,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<LeaderboardResponse> cachedLeaderboard({
+  cachedLeaderboard({
     required String userId,
   }) async {
     final cacheSubKeys = [userId];
@@ -365,7 +352,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<DictionaryResponse> cachedDictionary({
+  cachedDictionary({
     required String wordId,
   }) async {
     final cacheSubKeys = [wordId];
@@ -391,7 +378,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<SubscriptionsResponse> cachedSubscriptions({
+  cachedSubscriptions({
     required String userId,
   }) async {
     final cacheSubKeys = [userId];
@@ -417,7 +404,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<SubscribersResponse> cachedSubscribers({
+  cachedSubscribers({
     required String userId,
   }) async {
     final cacheSubKeys = [userId];
@@ -443,7 +430,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<ShopItemsResponse> cachedShopItems() async {
+  cachedShopItems() async {
     if (_cacheStorage.has(key: Resource.shopItems.name)) {
       return _cacheStorage.match(key: Resource.shopItems.name);
     }
@@ -455,7 +442,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<AlphabetsResponse> cachedAlphabets({
+  cachedAlphabets({
     required String fromLanguage,
     required String learningLanguage,
   }) async {
@@ -485,7 +472,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<StoriesResponse> cachedStories({
+  cachedStories({
     required String fromLanguage,
     required String learningLanguage,
     IllustrationFormat format = IllustrationFormat.svg,
@@ -517,7 +504,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<AchievementsResponse> cachedAchievements({
+  cachedAchievements({
     required String userId,
     required String fromLanguage,
     required String learningLanguage,
@@ -554,7 +541,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<ForumTopicsResponse> cachedForumTopics() async {
+  cachedForumTopics() async {
     if (_cacheStorage.has(key: Resource.forumTopics.name)) {
       return _cacheStorage.match(key: Resource.forumTopics.name);
     }
@@ -570,7 +557,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<ForumTopicResponse> cachedForumTopic({
+  cachedForumTopic({
     required int topicId,
   }) async {
     final cacheSubKeys = ['$topicId'];
@@ -596,7 +583,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  Future<ForumCommentsResponse> cachedForumComments({
+  cachedForumComments({
     required int commentId,
   }) async {
     final cacheSubKeys = ['$commentId'];
@@ -622,68 +609,64 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  void cleanCache() => _cacheStorage.delete();
+  cleanCache() => _cacheStorage.delete();
 
   @override
-  void cleanCachedManifest() =>
-      _cacheStorage.deleteBy(key: Resource.manifest.name);
+  cleanCachedManifest() => _cacheStorage.deleteBy(key: Resource.manifest.name);
 
   @override
-  void cleanCachedVersionInfo() =>
+  cleanCachedVersionInfo() =>
       _cacheStorage.deleteBy(key: Resource.versionInfo.name);
 
   @override
-  void cleanCachedUser() => _cacheStorage.deleteBy(key: Resource.user.name);
+  cleanCachedUser() => _cacheStorage.deleteBy(key: Resource.user.name);
 
   @override
-  void cleanCachedOverview() =>
-      _cacheStorage.deleteBy(key: Resource.overview.name);
+  cleanCachedOverview() => _cacheStorage.deleteBy(key: Resource.overview.name);
 
   @override
-  void cleanCachedWordHint() =>
-      _cacheStorage.deleteBy(key: Resource.wordHint.name);
+  cleanCachedWordHint() => _cacheStorage.deleteBy(key: Resource.wordHint.name);
 
   @override
-  void cleanCachedLeaderboard() =>
+  cleanCachedLeaderboard() =>
       _cacheStorage.deleteBy(key: Resource.leaderboard.name);
 
   @override
-  void cleanCachedDictionary() =>
+  cleanCachedDictionary() =>
       _cacheStorage.deleteBy(key: Resource.dictionary.name);
 
   @override
-  void cleanCachedSubscriptions() =>
+  cleanCachedSubscriptions() =>
       _cacheStorage.deleteBy(key: Resource.subscriptions.name);
 
   @override
-  void cleanCachedSubscribers() =>
+  cleanCachedSubscribers() =>
       _cacheStorage.deleteBy(key: Resource.subscribers.name);
 
   @override
-  void cleanCachedShopItems() =>
+  cleanCachedShopItems() =>
       _cacheStorage.deleteBy(key: Resource.shopItems.name);
 
   @override
-  void cleanCachedAlphabets() =>
+  cleanCachedAlphabets() =>
       _cacheStorage.deleteBy(key: Resource.alphabets.name);
 
   @override
-  void cleanCachedStories() =>
-      _cacheStorage.deleteBy(key: Resource.stories.name);
+  cleanCachedStories() => _cacheStorage.deleteBy(key: Resource.stories.name);
 
   @override
-  void cleanCachedAchievements() =>
+  cleanCachedAchievements() =>
       _cacheStorage.deleteBy(key: Resource.achievements.name);
 
   @override
-  void cleanCachedForumTopics() =>
+  cleanCachedForumTopics() =>
       _cacheStorage.deleteBy(key: Resource.forumTopics.name);
 
   @override
-  void cleanCachedForumTopic() =>
+  cleanCachedForumTopic() =>
       _cacheStorage.deleteBy(key: Resource.forumTopic.name);
 
   @override
-  void cleanCachedForumComments() =>
+  cleanCachedForumComments() =>
       _cacheStorage.deleteBy(key: Resource.forumComments.name);
 }
