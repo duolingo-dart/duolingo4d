@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.0.0
+
+- Added a feature that allows you to search users.
+
 ## 0.4.1
 
 - Fixed README.

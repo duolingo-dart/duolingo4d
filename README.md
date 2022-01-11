@@ -42,6 +42,7 @@
     - [1.3.19. Forum Topics API](#1319-forum-topics-api)
     - [1.3.20. Forum Topic API](#1320-forum-topic-api)
     - [1.3.21. Forum Comments API](#1321-forum-comments-api)
+    - [1.3.22. Search Friend API](#1322-search-friend-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -81,6 +82,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Forum Topics**    |      ✅       | You can get a list of forum topics related to the language you are currently learning.                             |
 | **Forum Topic**     |      ✅       | You can get a forum topic related to the language you are currently learning and topic id.                         |
 | **Forum Comments**  |      ✅       | You can get forum comments related to the language you are currently learning and comment id.                      |
+| **Search Friend**   |      ✅       | You can get search users registered on Duolingo by search word.                                                    |
 
 ## 1.2. Introduction
 
@@ -833,6 +835,35 @@ void main() async {
   for (final dictionaryPath in forumCommentsResponse.dictionaryPaths) {
     print(dictionaryPath.word);
     print(dictionaryPath.url);
+  }
+}
+```
+
+### 1.3.22. Search Friend API
+
+| Auth Required |                                                                                 Method                                                                                  |                                                     JSON                                                      |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [searchFriend({required int page, required int perPage, required String query})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/searchFriend.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/21_search_friend/response.json) |
+
+With Search Friend API, You can get search users registered on Duolingo by search word.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final response = await duolingo.searchFriend(
+    page: 1,
+    perPage: 20,
+    query: 'test',
+  );
+
+  for (final user in response.users) {
+    print(user);
   }
 }
 ```
