@@ -3,6 +3,7 @@
 ## 1.0.0
 
 - Added a feature that allows you to search users.
+- Added a feature that allows you to get recommendations users.
 
 ## 0.4.1
 
