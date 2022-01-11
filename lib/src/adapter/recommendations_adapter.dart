@@ -3,14 +3,12 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/recommendations/recommendation.dart';
-import 'package:duolingo4d/src/response/recommendations/recommendations_response.dart';
-import 'package:duolingo4d/src/response/recommendations/recommended_user.dart';
 import 'package:http/http.dart';
 import 'package:json_response/json_response.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/adapter/adapter.dart';
+import 'package:duolingo4d/src/response/recommendations/recommendations_response.dart';
 
 class RecommendationsAdapter extends Adapter<RecommendationsResponse> {
   /// Returns the new instance of [RecommendationsAdapter].
