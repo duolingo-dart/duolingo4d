@@ -25,3 +25,4 @@ export 'src/response/leaderboard/leaderboard_response.dart';
 export 'src/response/alphabets/alphabets_response.dart';
 export 'src/response/forum/exporter.dart';
 export 'src/response/searchfriend/search_friend_response.dart';
+export 'src/response/recommendations/recommendations_response.dart';

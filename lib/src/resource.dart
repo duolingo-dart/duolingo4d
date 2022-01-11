@@ -62,6 +62,9 @@ enum Resource {
 
   /// Search Friend API
   searchFriend,
+
+  /// Recommendations API
+  recommendations,
 }
 
 extension ReourceFeature on Resource {
@@ -96,6 +99,7 @@ extension ReourceFeature on Resource {
       case Resource.stories:
         return 'api2/stories';
       case Resource.achievements:
+      case Resource.recommendations:
         return 'users';
       case Resource.forumTopics:
         return 'api/1/topics/list';

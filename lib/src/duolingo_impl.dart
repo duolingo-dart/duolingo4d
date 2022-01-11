@@ -22,6 +22,7 @@ import 'package:duolingo4d/src/request/leaderboard_request.dart';
 import 'package:duolingo4d/src/request/manifest_request.dart';
 import 'package:duolingo4d/src/request/overview_request.dart';
 import 'package:duolingo4d/src/request/purchase_request.dart';
+import 'package:duolingo4d/src/request/recommendations_request.dart';
 import 'package:duolingo4d/src/request/search_friend_request.dart';
 import 'package:duolingo4d/src/request/shop_items_request.dart';
 import 'package:duolingo4d/src/request/stories_request.dart';
@@ -227,6 +228,12 @@ class DuolingoImpl implements Duolingo {
         perPage: perPage,
         query: query,
       ).send();
+
+  @override
+  recommendations({
+    required String userId,
+  }) async =>
+      await RecommendationsRequest.from(userId: userId).send();
 
   @override
   cachedManifest() async {

@@ -17,6 +17,7 @@ import 'package:duolingo4d/src/response/leaderboard/leaderboard_response.dart';
 import 'package:duolingo4d/src/response/manifest/manifest_response.dart';
 import 'package:duolingo4d/src/response/overview/overview_response.dart';
 import 'package:duolingo4d/src/response/purchase/purchase_response.dart';
+import 'package:duolingo4d/src/response/recommendations/recommendations_response.dart';
 import 'package:duolingo4d/src/response/searchfriend/search_friend_response.dart';
 import 'package:duolingo4d/src/response/shopitems/shop_items_response.dart';
 import 'package:duolingo4d/src/response/stories/stories_response.dart';
@@ -365,6 +366,10 @@ abstract class Duolingo {
     required int page,
     required int perPage,
     required String query,
+  });
+
+  Future<RecommendationsResponse> recommendations({
+    required String userId,
   });
 
   Future<ManifestResponse> cachedManifest();
