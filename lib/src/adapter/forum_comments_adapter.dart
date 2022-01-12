@@ -3,7 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 import 'package:http/http.dart';
 import 'package:json_response/json_response.dart';
 
@@ -11,6 +10,7 @@ import 'package:json_response/json_response.dart';
 import 'package:duolingo4d/src/adapter/adapter.dart';
 import 'package:duolingo4d/src/response/forum/comment.dart';
 import 'package:duolingo4d/src/response/forum/comment/forum_comment_response.dart';
+import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 import 'package:duolingo4d/src/response/forum/user.dart';
 
 class ForumCommentsAdapter extends Adapter<ForumCommentsResponse> {

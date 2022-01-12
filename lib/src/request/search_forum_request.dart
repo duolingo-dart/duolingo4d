@@ -3,15 +3,15 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Package imports:
-import 'package:duolingo4d/src/adapter/search_forum_adapter.dart';
-import 'package:duolingo4d/src/response/searchforum/search_forum_response.dart';
 import 'package:http/http.dart' as http;
 
 // Project imports:
+import 'package:duolingo4d/src/adapter/search_forum_adapter.dart';
 import 'package:duolingo4d/src/endpoint.dart';
 import 'package:duolingo4d/src/request/internal_session.dart';
 import 'package:duolingo4d/src/request/request.dart';
 import 'package:duolingo4d/src/resource.dart';
+import 'package:duolingo4d/src/response/searchforum/search_forum_response.dart';
 
 class SearchForumRequest extends Request<SearchForumResponse> {
   /// Returns the new instance of [SearchForumRequest] based on an argument.

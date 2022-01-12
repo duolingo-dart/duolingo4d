@@ -4,9 +4,9 @@
 
 // Package imports:
 import 'package:cache_storage/cache_storage.dart';
-import 'package:duolingo4d/src/const/forum_comments_sort_pattern.dart';
 
 // Project imports:
+import 'package:duolingo4d/src/const/forum_comments_sort_pattern.dart';
 import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';

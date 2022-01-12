@@ -5,9 +5,8 @@
 // Package imports:
 import 'package:collection/collection.dart';
 
-import 'package:duolingo4d/src/response/forum/comment/forum_comment_response.dart';
-
 // Project imports:
+import 'package:duolingo4d/src/response/forum/comment/forum_comment_response.dart';
 import 'package:duolingo4d/src/response/forum/user.dart';
 
 class Comment {
