@@ -84,7 +84,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Achievements**    |      ✅       | You can get the achievement data that the user has achieved.                                                       |
 | **Forum Topics**    |      ✅       | You can get a list of forum topics related to the language you are currently learning.                             |
 | **Forum Topic**     |      ✅       | You can get a forum topic related to the language you are currently learning and topic id.                         |
-| **Forum Comments**  |      ✅       | You can get forum comments related to the language you are currently learning and comment id.                      |
+| **Forum Comments**  |      ✅       | You can get forum comments.                                                                                        |
 | **Forum Comment**   |      ✅       | You can get forum comment related to the language you are currently learning and comment id.                       |
 | **Search Friend**   |      ✅       | You can search users registered on Duolingo by search word.                                                        |
 | **Recommendations** |      ✅       | You can get recommended users on Duolingo.                                                                         |

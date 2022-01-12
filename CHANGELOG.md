@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.1.1
+
+- Fixed README.
+
 ## 1.1.0
 
 - Added a feature that allows you to search forums.
