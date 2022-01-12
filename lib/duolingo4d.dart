@@ -28,3 +28,4 @@ export 'src/response/forum/exporter.dart';
 export 'src/response/searchfriend/search_friend_response.dart';
 export 'src/response/recommendations/recommendations_response.dart';
 export 'src/response/searchforum/search_forum_response.dart';
+export 'src/response/forum/comments/forum_comments_response.dart';
