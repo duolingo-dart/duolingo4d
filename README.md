@@ -44,6 +44,7 @@
     - [1.3.21. Forum Comments API](#1321-forum-comments-api)
     - [1.3.22. Search Friend API](#1322-search-friend-api)
     - [1.3.23. Recommendations API](#1323-recommendations-api)
+    - [1.3.24. Search Forum API](#1324-search-forum-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -85,6 +86,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Forum Comments**  |      ✅       | You can get forum comments related to the language you are currently learning and comment id.                      |
 | **Search Friend**   |      ✅       | You can search users registered on Duolingo by search word.                                                        |
 | **Recommendations** |      ✅       | You can get recommended users on Duolingo.                                                                         |
+| **Search Forum**    |      ✅       | You can get search forums on Duolingo.                                                                             |
 
 ## 1.2. Introduction
 
@@ -893,6 +895,37 @@ void main() async {
   for (final recommendation in response.recommendations) {
     print(recommendation);
     print(recommendation.user);
+  }
+}
+```
+
+### 1.3.24. Search Forum API
+
+| Auth Required |                                                                              Method                                                                               |                                                     JSON                                                     |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [searchForum({required int page, int perPage = 10, required String query})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/searchForum.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/23_search_forum/response.json) |
+
+With Search Forum API, you can search forums on Duolingo.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final response = await duolingo.searchForum(
+    page: 1,
+    perPage: 20,
+    query: 'test',
+  );
+
+  print(response);
+
+  for (final forum in response.forums) {
+    print(forum);
   }
 }
 ```

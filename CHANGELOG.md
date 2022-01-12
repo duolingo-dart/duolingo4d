@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.1.0
+
+- Added a feature that allows you to search forums.
+
 ## 1.0.0
 
 - Added a feature that allows you to search users.
