@@ -42,9 +42,10 @@
     - [1.3.19. Forum Topics API](#1319-forum-topics-api)
     - [1.3.20. Forum Topic API](#1320-forum-topic-api)
     - [1.3.21. Forum Comments API](#1321-forum-comments-api)
-    - [1.3.22. Search Friend API](#1322-search-friend-api)
-    - [1.3.23. Recommendations API](#1323-recommendations-api)
-    - [1.3.24. Search Forum API](#1324-search-forum-api)
+    - [1.3.22. Forum Comment API](#1322-forum-comment-api)
+    - [1.3.23. Search Friend API](#1323-search-friend-api)
+    - [1.3.24. Recommendations API](#1324-recommendations-api)
+    - [1.3.25. Search Forum API](#1325-search-forum-api)
   - [1.4. License](#14-license)
   - [1.5. More Information](#15-more-information)
 
@@ -84,6 +85,7 @@ With `Duolingo4D`, you can easily integrate your application with the Duolingo A
 | **Forum Topics**    |      ✅       | You can get a list of forum topics related to the language you are currently learning.                             |
 | **Forum Topic**     |      ✅       | You can get a forum topic related to the language you are currently learning and topic id.                         |
 | **Forum Comments**  |      ✅       | You can get forum comments related to the language you are currently learning and comment id.                      |
+| **Forum Comment**   |      ✅       | You can get forum comment related to the language you are currently learning and comment id.                       |
 | **Search Friend**   |      ✅       | You can search users registered on Duolingo by search word.                                                        |
 | **Recommendations** |      ✅       | You can get recommended users on Duolingo.                                                                         |
 | **Search Forum**    |      ✅       | You can get search forums on Duolingo.                                                                             |
@@ -806,11 +808,11 @@ void main() async {
 
 ### 1.3.21. Forum Comments API
 
-| Auth Required |                                                              Method                                                               |                                                      JSON                                                      |
-| :-----------: | :-------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-|      ✅       | [forumComments({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/19_forum_comments/response.json) |
+| Auth Required |                                                                                                      Method                                                                                                       |                                                      JSON                                                      |
+| :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumComments({int page = 0, ForumCommentsSortPattern sortPattern = ForumCommentsSortPattern.newest, int topicId = -1})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComments.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/24_forum_comments/response.json) |
 
-From Forum Comments API, you can get forum comments related to the language you are currently learning and comment id.
+From Forum Comments API, you can get forum comments.
 
 ```dart
 void main() async {
@@ -821,13 +823,48 @@ void main() async {
     password: 'test_password',
   );
 
-  final forumCommentsResponse = await duolingo.forumComments(
+  // You can use this api without arguments and it's optional.
+  final forumCommentsResponse = await duolingo.forumComments();
+  print(forumCommentsResponse);
+
+  if (forumCommentsResponse.hasMore) {
+    for (final comment in forumCommentsResponse.comments) {
+      final response = await duolingo.forumComments(
+        page: 1, // The paging is supported for this API.
+        sortPattern: ForumCommentsSortPattern.hot, //  You can choose sort pattern.
+        topicId: comment.topic!.id, // You can get comments on specific topics.
+      );
+
+      print(response);
+    }
+  }
+}
+```
+
+### 1.3.22. Forum Comment API
+
+| Auth Required |                                                             Method                                                              |                                                     JSON                                                      |
+| :-----------: | :-----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
+|      ✅       | [forumComment({required int commentId})](https://pub.dev/documentation/duolingo4d/latest/duolingo4d/Duolingo/forumComment.html) | [Check!](https://github.com/duolingo4d/duolingo-api-design/tree/main/response/19_forum_comment/response.json) |
+
+From Forum Comment API, you can get forum comment related to the language you are currently learning and comment id.
+
+```dart
+void main() async {
+  final duolingo = Duolingo.instance;
+
+  final authResponse = await duolingo.authenticate(
+    username: 'test_username',
+    password: 'test_password',
+  );
+
+  final forumCommentResponse = await duolingo.forumComment(
     commentId: 1678438,
   );
 
-  print(forumCommentsResponse);
+  print(forumCommentResponse);
 
-  for (final comment in forumCommentsResponse.comments) {
+  for (final comment in forumCommentResponse.comments) {
     // This indicates a comment on a comment.
     print(comment);
 
@@ -836,14 +873,14 @@ void main() async {
     }
   }
 
-  for (final dictionaryPath in forumCommentsResponse.dictionaryPaths) {
+  for (final dictionaryPath in forumCommentResponse.dictionaryPaths) {
     print(dictionaryPath.word);
     print(dictionaryPath.url);
   }
 }
 ```
 
-### 1.3.22. Search Friend API
+### 1.3.23. Search Friend API
 
 | Auth Required |                                                                                 Method                                                                                  |                                                     JSON                                                      |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------: |
@@ -872,7 +909,7 @@ void main() async {
 }
 ```
 
-### 1.3.23. Recommendations API
+### 1.3.24. Recommendations API
 
 | Auth Required |                                                                Method                                                                 |                                                      JSON                                                       |
 | :-----------: | :-----------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------: |
@@ -899,7 +936,7 @@ void main() async {
 }
 ```
 
-### 1.3.24. Search Forum API
+### 1.3.25. Search Forum API
 
 | Auth Required |                                                                              Method                                                                               |                                                     JSON                                                     |
 | :-----------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |

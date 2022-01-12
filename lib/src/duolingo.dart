@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 // Project imports:
+import 'package:duolingo4d/src/const/forum_comments_sort_pattern.dart';
 import 'package:duolingo4d/src/const/illustration_format.dart';
 import 'package:duolingo4d/src/duolingo_impl.dart';
 import 'package:duolingo4d/src/duolingo_session.dart';
@@ -10,6 +11,7 @@ import 'package:duolingo4d/src/response/achievements/achievements_response.dart'
 import 'package:duolingo4d/src/response/alphabets/alphabets_response.dart';
 import 'package:duolingo4d/src/response/auth/auth_response.dart';
 import 'package:duolingo4d/src/response/dictionary/dictionary_response.dart';
+import 'package:duolingo4d/src/response/forum/comment/forum_comment_response.dart';
 import 'package:duolingo4d/src/response/forum/comments/forum_comments_response.dart';
 import 'package:duolingo4d/src/response/forum/topic/forum_topic_response.dart';
 import 'package:duolingo4d/src/response/forum/topics/forum_topics_response.dart';
@@ -359,7 +361,7 @@ abstract class Duolingo {
     required int topicId,
   });
 
-  Future<ForumCommentsResponse> forumComments({
+  Future<ForumCommentResponse> forumComment({
     required int commentId,
   });
 
@@ -374,9 +376,15 @@ abstract class Duolingo {
   });
 
   Future<SearchForumResponse> searchForum({
-    required int page,
+    int page = 0,
     int perPage = 10,
     required String query,
+  });
+
+  Future<ForumCommentsResponse> forumComments({
+    int page = 0,
+    ForumCommentsSortPattern sortPattern = ForumCommentsSortPattern.newest,
+    int topicId = -1,
   });
 
   Future<ManifestResponse> cachedManifest();
@@ -654,7 +662,7 @@ abstract class Duolingo {
     required int topicId,
   });
 
-  Future<ForumCommentsResponse> cachedForumComments({
+  Future<ForumCommentResponse> cachedForumComment({
     required int commentId,
   });
 
@@ -707,5 +715,5 @@ abstract class Duolingo {
   void cleanCachedForumTopic();
 
   /// Deletes the cached data of the response object that was cached by calling the [cachedForumComments] method.
-  void cleanCachedForumComments();
+  void cleanCachedForumComment();
 }

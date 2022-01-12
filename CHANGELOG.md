@@ -3,6 +3,7 @@
 ## 1.1.0
 
 - Added a feature that allows you to search forums.
+- Added a feature that allows you to get forum comments.
 
 ## 1.0.0
 

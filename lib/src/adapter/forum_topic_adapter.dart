@@ -64,6 +64,7 @@ class ForumTopicAdapter extends Adapter<ForumTopicResponse> {
           title: json.getString(key: 'title'),
           message: json.getString(key: 'message'),
           markdownMessage: json.getString(key: 'mark_down_message'),
+          topic: null,
           user: _buildUser(
             json: json.get(key: 'user'),
           ),

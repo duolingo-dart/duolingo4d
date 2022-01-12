@@ -9,6 +9,7 @@ export 'src/duolingo_cookie_jar.dart';
 export 'src/response/response.dart';
 export 'src/response/status.dart';
 export 'src/const/illustration_format.dart';
+export 'src/const/forum_comments_sort_pattern.dart';
 export 'src/response/manifest/manifest_response.dart';
 export 'src/response/versioninfo/version_info_response.dart';
 export 'src/response/auth/auth_response.dart';

@@ -4,6 +4,7 @@
 
 // Package imports:
 import 'package:cache_storage/cache_storage.dart';
+import 'package:duolingo4d/src/const/forum_comments_sort_pattern.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/const/illustration_format.dart';
@@ -14,6 +15,7 @@ import 'package:duolingo4d/src/request/alphabets_request.dart';
 import 'package:duolingo4d/src/request/auth_request.dart';
 import 'package:duolingo4d/src/request/dictionary_request.dart';
 import 'package:duolingo4d/src/request/follow_request.dart';
+import 'package:duolingo4d/src/request/forum_comment_request.dart';
 import 'package:duolingo4d/src/request/forum_comments_request.dart';
 import 'package:duolingo4d/src/request/forum_topic_request.dart';
 import 'package:duolingo4d/src/request/forum_topics_request.dart';
@@ -213,10 +215,10 @@ class DuolingoImpl implements Duolingo {
       await ForumTopicRequest.from(topicId: topicId).send();
 
   @override
-  forumComments({
+  forumComment({
     required int commentId,
   }) async =>
-      await ForumCommentsRequest.from(commentId: commentId).send();
+      await ForumCommentRequest.from(commentId: commentId).send();
 
   @override
   searchFriend({
@@ -238,7 +240,7 @@ class DuolingoImpl implements Duolingo {
 
   @override
   searchForum({
-    required int page,
+    int page = 0,
     int perPage = 10,
     required String query,
   }) async =>
@@ -246,6 +248,18 @@ class DuolingoImpl implements Duolingo {
         page: page,
         perPage: perPage,
         query: query,
+      ).send();
+
+  @override
+  forumComments({
+    int page = 0,
+    ForumCommentsSortPattern sortPattern = ForumCommentsSortPattern.newest,
+    int topicId = -1,
+  }) async =>
+      await ForumCommentsRequest.from(
+        page: page,
+        sortPattern: sortPattern,
+        topicId: topicId,
       ).send();
 
   @override
@@ -603,7 +617,7 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  cachedForumComments({
+  cachedForumComment({
     required int commentId,
   }) async {
     final cacheSubKeys = ['$commentId'];
@@ -617,7 +631,7 @@ class DuolingoImpl implements Duolingo {
       );
     }
 
-    final response = await forumComments(commentId: commentId);
+    final response = await forumComment(commentId: commentId);
 
     _cacheStorage.save(
       key: Resource.forumComments.name,
@@ -687,6 +701,6 @@ class DuolingoImpl implements Duolingo {
       _cacheStorage.deleteBy(key: Resource.forumTopic.name);
 
   @override
-  cleanCachedForumComments() =>
-      _cacheStorage.deleteBy(key: Resource.forumComments.name);
+  cleanCachedForumComment() =>
+      _cacheStorage.deleteBy(key: Resource.forumComment.name);
 }

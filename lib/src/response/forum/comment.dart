@@ -5,6 +5,8 @@
 // Package imports:
 import 'package:collection/collection.dart';
 
+import 'package:duolingo4d/src/response/forum/comment/forum_comment_response.dart';
+
 // Project imports:
 import 'package:duolingo4d/src/response/forum/user.dart';
 
@@ -15,6 +17,7 @@ class Comment {
     required this.title,
     required this.message,
     required this.markdownMessage,
+    required this.topic,
     required this.user,
     required this.likes,
     required this.votes,
@@ -36,6 +39,9 @@ class Comment {
 
   /// The markdown message
   final String markdownMessage;
+
+  /// The topic
+  final Topic? topic;
 
   /// The user
   final User user;
@@ -63,7 +69,7 @@ class Comment {
 
   @override
   String toString() {
-    return 'Comment(id: $id, title: $title, message: $message, markdownMessage: $markdownMessage, user: $user, likes: $likes, votes: $votes, comments: $comments, isUserUpvoted: $isUserUpvoted, isUserDownvoted: $isUserDownvoted, isAdmin: $isAdmin, deleted: $deleted)';
+    return 'Comment(id: $id, title: $title, message: $message, markdownMessage: $markdownMessage, topic: $topic, user: $user, likes: $likes, votes: $votes, comments: $comments, isUserUpvoted: $isUserUpvoted, isUserDownvoted: $isUserDownvoted, isAdmin: $isAdmin, deleted: $deleted)';
   }
 
   @override
@@ -76,6 +82,7 @@ class Comment {
         other.title == title &&
         other.message == message &&
         other.markdownMessage == markdownMessage &&
+        other.topic == topic &&
         other.user == user &&
         other.likes == likes &&
         other.votes == votes &&
@@ -92,6 +99,7 @@ class Comment {
         title.hashCode ^
         message.hashCode ^
         markdownMessage.hashCode ^
+        topic.hashCode ^
         user.hashCode ^
         likes.hashCode ^
         votes.hashCode ^
