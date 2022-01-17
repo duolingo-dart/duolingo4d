@@ -80,7 +80,7 @@ class WordHintResponse extends Response {
   /// The hint tokens
   final List<HintToken> tokens;
 
-  /// Return this Hint table returned by the Word Hint API as a simpler structure.
+  /// Return this hint table as a simpler structure.
   ///
   /// The Map to be returned is set to the word to be translated as the key,
   /// and the list of translated words as the value.
