@@ -56,6 +56,10 @@ export 'package:duolingo4d/src/response/wordhint/hint_token.dart';
 ///      }
 ///    }
 ///  }
+//
+///  // If you don't like the complex structure described above,
+///  // you can convert it to a simpler structure.
+///  print(wordHintResponse.prettify());
 ///}
 ///```
 class WordHintResponse extends Response {
@@ -75,6 +79,56 @@ class WordHintResponse extends Response {
 
   /// The hint tokens
   final List<HintToken> tokens;
+
+  /// Return this Hint table returned by the Word Hint API as a simpler structure.
+  ///
+  /// The Map to be returned is set to the word to be translated as the key,
+  /// and the list of translated words as the value.
+  Map<String, List<String>> prettify() {
+    final prettified = <String, List<String>>{};
+
+    for (final token in tokens) {
+      for (final row in token.table.rows) {
+        final cells = row.cells;
+        for (final cell in cells) {
+          final colspan = cell.span;
+          final key = colspan > 0
+              ? _fetchWordString(token: token).substring(0, colspan)
+              : token.value;
+
+          if (prettified.containsKey(key)) {
+            final hintsInternal = prettified[key]!;
+            final hint = cell.hint;
+
+            if (!hintsInternal.contains(hint)) {
+              hintsInternal.add(hint);
+            }
+          } else {
+            prettified[key] = [cell.hint];
+          }
+        }
+      }
+    }
+
+    return prettified;
+  }
+
+  String _fetchWordString({
+    required HintToken token,
+  }) {
+    final hintTable = token.table;
+
+    if (hintTable.headers.isEmpty) {
+      return token.value;
+    }
+
+    String wordString = '';
+    for (final header in hintTable.headers) {
+      wordString += header.token;
+    }
+
+    return wordString;
+  }
 
   @override
   String toString() => 'WordHintResponse(tokens: $tokens)';

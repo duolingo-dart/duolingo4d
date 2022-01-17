@@ -135,6 +135,9 @@ void _testWordHintApi() {
     expect(response.tokens[0].table.rows.isNotEmpty, true);
     expect(response.tokens[0].table.rows[0].cells.isNotEmpty, true);
     expect(response.tokens[0].table.references.isNotEmpty, true);
+
+    final prettified = response.prettify();
+    expect(prettified.isNotEmpty, true);
   });
 }
 

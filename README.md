@@ -369,6 +369,10 @@ void main() async {
       }
     }
   }
+
+  // If you don't like the complex structure described above,
+  // you can convert it to a simpler structure.
+  print(wordHintResponse.prettify());
 }
 ```
 

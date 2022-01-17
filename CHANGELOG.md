@@ -1,5 +1,9 @@
 # Release Note
 
+## 1.2.0
+
+- Added a `prettify()` method to the `WordHintResponse` class to convert responses from the Word Hint API into a simpler structure.
+
 ## 1.1.1
 
 - Fixed README.
