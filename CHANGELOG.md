@@ -1,5 +1,11 @@
 # Release Note
 
+## 1.3.0
+
+### New Features
+
+- By caching `userId`, `fromLanguage` and `learningLanguage` when authentication is completed, these arguments have been changed from required to optional in some API calls.
+
 ## 1.2.0
 
 - Added a `prettify()` method to the `WordHintResponse` class to convert responses from the Word Hint API into a simpler structure.
