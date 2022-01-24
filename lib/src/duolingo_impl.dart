@@ -4,6 +4,7 @@
 
 // Package imports:
 import 'package:cache_storage/cache_storage.dart';
+import 'package:duolingo4d/src/cache_key.dart';
 
 // Project imports:
 import 'package:duolingo4d/src/const/forum_comments_sort_pattern.dart';
@@ -76,6 +77,22 @@ class DuolingoImpl implements Duolingo {
     if (response.hasNotError) {
       // Delete the cache of another user.
       cleanCache();
+
+      // Caches user's basic information.
+      final userResponse = await user(userId: response.userId);
+
+      _cacheStorage.save(
+        key: CacheKey.userId.name,
+        value: userResponse.id,
+      );
+      _cacheStorage.save(
+        key: CacheKey.fromLanguage.name,
+        value: userResponse.fromLanguage,
+      );
+      _cacheStorage.save(
+        key: CacheKey.learningLanguage.name,
+        value: userResponse.learningLanguage,
+      );
     }
 
     return response;
@@ -83,40 +100,54 @@ class DuolingoImpl implements Duolingo {
 
   @override
   user({
-    required String userId,
+    String userId = '',
   }) async =>
-      await UserRequest.from(userId: userId).send();
+      await UserRequest.from(
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+      ).send();
 
   @override
   overview() async => await OverviewRequest.newInstance().send();
 
   @override
   wordHint({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
     required String sentence,
   }) async =>
       await WordHintRequest.from(
-        fromLanguage: fromLanguage,
-        learningLanguage: learningLanguage,
+        fromLanguage: fromLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.fromLanguage.name)
+            : fromLanguage,
+        learningLanguage: learningLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.learningLanguage.name)
+            : learningLanguage,
         sentence: sentence,
       ).send();
 
   @override
   switchLanguage({
-    required String fromLanguage,
+    String fromLanguage = '',
     required String learningLanguage,
   }) async =>
       await SwitchLanguageRequest.from(
-        fromLanguage: fromLanguage,
+        fromLanguage: fromLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.fromLanguage.name)
+            : fromLanguage,
         learningLanguage: learningLanguage,
       ).send();
 
   @override
   leaderboard({
-    required String userId,
+    String userId = '',
   }) async =>
-      await LeaderboardRequest.from(userId: userId).send();
+      await LeaderboardRequest.from(
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+      ).send();
 
   @override
   dictionary({
@@ -126,15 +157,23 @@ class DuolingoImpl implements Duolingo {
 
   @override
   subscriptions({
-    required String userId,
+    String userId = '',
   }) async =>
-      await SubscriptionsRequest.from(userId: userId).send();
+      await SubscriptionsRequest.from(
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+      ).send();
 
   @override
   subscribers({
-    required String userId,
+    String userId = '',
   }) async =>
-      await SubscribersRequest.from(userId: userId).send();
+      await SubscribersRequest.from(
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+      ).send();
 
   @override
   shopItems() async => await ShopItemsRequest.newInstance().send();
@@ -142,67 +181,89 @@ class DuolingoImpl implements Duolingo {
   @override
   purchase({
     required String itemId,
-    required String userId,
-    required String learningLanguage,
+    String userId = '',
+    String learningLanguage = '',
   }) async =>
       await PurchaseRequest.from(
         itemId: itemId,
-        userId: userId,
-        learningLanguage: learningLanguage,
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+        learningLanguage: learningLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.learningLanguage.name)
+            : learningLanguage,
       ).send();
 
   @override
   alphabets({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
   }) async =>
       await AlphabetsRequest.from(
-        fromLanguage: fromLanguage,
-        learningLanguage: learningLanguage,
+        fromLanguage: fromLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.fromLanguage.name)
+            : fromLanguage,
+        learningLanguage: learningLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.learningLanguage.name)
+            : learningLanguage,
       ).send();
 
   @override
   stories({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
     IllustrationFormat format = IllustrationFormat.svg,
   }) async =>
       await StoriesRequest.from(
-        fromLanguage: fromLanguage,
-        learningLanguage: learningLanguage,
+        fromLanguage: fromLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.fromLanguage.name)
+            : fromLanguage,
+        learningLanguage: learningLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.learningLanguage.name)
+            : learningLanguage,
         format: format,
       ).send();
 
   @override
   follow({
-    required String userId,
+    String userId = '',
     required String targetUserId,
   }) async =>
       await FollowRequest.from(
-        userId: userId,
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
         targetUserId: targetUserId,
       ).send();
 
   @override
   unfollow({
-    required String userId,
+    String userId = '',
     required String targetUserId,
   }) async =>
       await UnfollowRequest.from(
-        userId: userId,
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
         targetUserId: targetUserId,
       ).send();
 
   @override
   achievements({
-    required String userId,
-    required String fromLanguage,
-    required String learningLanguage,
+    String userId = '',
+    String fromLanguage = '',
+    String learningLanguage = '',
   }) async =>
       await AchievementsRequest.from(
-        userId: userId,
-        fromLanguage: fromLanguage,
-        learningLanguage: learningLanguage,
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+        fromLanguage: fromLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.fromLanguage.name)
+            : fromLanguage,
+        learningLanguage: learningLanguage.isEmpty
+            ? _cacheStorage.match(key: CacheKey.learningLanguage.name)
+            : learningLanguage,
       ).send();
 
   @override
@@ -222,8 +283,8 @@ class DuolingoImpl implements Duolingo {
 
   @override
   searchFriend({
-    required int page,
-    required int perPage,
+    int page = 0,
+    int perPage = 20,
     required String query,
   }) async =>
       await SearchFriendRequest.from(
@@ -234,14 +295,18 @@ class DuolingoImpl implements Duolingo {
 
   @override
   recommendations({
-    required String userId,
+    String userId = '',
   }) async =>
-      await RecommendationsRequest.from(userId: userId).send();
+      await RecommendationsRequest.from(
+        userId: userId.isEmpty
+            ? _cacheStorage.match(key: CacheKey.userId.name)
+            : userId,
+      ).send();
 
   @override
   searchForum({
     int page = 0,
-    int perPage = 10,
+    int perPage = 20,
     required String query,
   }) async =>
       await SearchForumRequest.from(
@@ -288,7 +353,7 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedUser({
-    required String userId,
+    String userId = '',
   }) async {
     final cacheSubKeys = [userId];
 
@@ -324,8 +389,8 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedWordHint({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
     required String sentence,
   }) async {
     final cacheSubKeys = <String>[
@@ -360,25 +425,19 @@ class DuolingoImpl implements Duolingo {
   }
 
   @override
-  cachedLeaderboard({
-    required String userId,
-  }) async {
-    final cacheSubKeys = [userId];
+  cachedLeaderboard() async {
     if (_cacheStorage.has(
       key: Resource.leaderboard.name,
-      subKeys: cacheSubKeys,
     )) {
       return _cacheStorage.match(
         key: Resource.leaderboard.name,
-        subKeys: cacheSubKeys,
       );
     }
 
-    final response = await leaderboard(userId: userId);
+    final response = await leaderboard();
 
     _cacheStorage.save(
       key: Resource.leaderboard.name,
-      subKeys: cacheSubKeys,
       value: response,
     );
 
@@ -413,7 +472,7 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedSubscriptions({
-    required String userId,
+    String userId = '',
   }) async {
     final cacheSubKeys = [userId];
     if (_cacheStorage.has(
@@ -439,7 +498,7 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedSubscribers({
-    required String userId,
+    String userId = '',
   }) async {
     final cacheSubKeys = [userId];
     if (_cacheStorage.has(
@@ -477,8 +536,8 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedAlphabets({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
   }) async {
     final cacheSubKeys = [fromLanguage, learningLanguage];
     if (_cacheStorage.has(
@@ -507,8 +566,8 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedStories({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage = '',
+    String learningLanguage = '',
     IllustrationFormat format = IllustrationFormat.svg,
   }) async {
     final cacheSubKeys = [fromLanguage, learningLanguage, format.name];
@@ -539,9 +598,9 @@ class DuolingoImpl implements Duolingo {
 
   @override
   cachedAchievements({
-    required String userId,
-    required String fromLanguage,
-    required String learningLanguage,
+    String userId = '',
+    String fromLanguage = '',
+    String learningLanguage = '',
   }) async {
     final cacheSubKeys = [
       userId,

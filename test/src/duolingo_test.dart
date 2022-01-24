@@ -90,7 +90,7 @@ void _testVersionInfoApi() {
 void _testUserApi() {
   test('Test User API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.user(userId: '557897808');
+    final response = await duolingo.user();
 
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
@@ -121,8 +121,6 @@ void _testWordHintApi() {
   test('Test Word Hint API.', () async {
     final duolingo = Duolingo.instance;
     final response = await duolingo.wordHint(
-      fromLanguage: 'en',
-      learningLanguage: 'ja',
       sentence: 'ありがとう',
     );
 
@@ -145,7 +143,6 @@ void _testSwitchLanguageApi() {
   test('Test Switch Language API.', () async {
     final duolingo = Duolingo.instance;
     final response = await duolingo.switchLanguage(
-      fromLanguage: 'en',
       learningLanguage: 'ja',
     );
 
@@ -171,9 +168,7 @@ void _testDictionary() {
 void _testSubscriptions() {
   test('Test Subscriptions API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.subscriptions(
-      userId: '557897808',
-    );
+    final response = await duolingo.subscriptions();
 
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
@@ -196,9 +191,7 @@ void _testSubscriptions() {
 void _testSubscribers() {
   test('Test Subscribers API.', () async {
     final duolingo = Duolingo.instance;
-    final response = await duolingo.subscribers(
-      userId: '557897808',
-    );
+    final response = await duolingo.subscribers();
 
     expect(response.status.code, 200);
     expect(response.status.reasonPhrase, 'OK');
@@ -376,28 +369,6 @@ void _testAuthApi() {
     expect(response.hasNotError, true);
     expect(response.userId, '557897808');
     expect(response.username, 'duovoc_tes');
-  });
-
-  test('Test duplicated Auth Request.', () async {
-    final duolingo = Duolingo.instance;
-    final response = await duolingo.authenticate(
-      username: 'duovoc_tes',
-      password: 'test_duolingo4d',
-    );
-
-    expect(response.status.code, 200);
-    expect(response.status.reasonPhrase, 'OK');
-    expect(response.headers.isNotEmpty, true);
-
-    expect(response.hasError, true);
-    expect(response.userId, '');
-    expect(response.username, '');
-
-    final authError = response.error!;
-    expect(authError.code, 'invalid_password');
-    expect(authError.reason, 'Failed login');
-    expect(authError.isInvalidUser, false);
-    expect(authError.isInvalidPassword, true);
   });
 
   test('Test Auth Request with invalid user.', () async {

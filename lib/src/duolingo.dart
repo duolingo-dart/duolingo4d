@@ -183,7 +183,7 @@ abstract class Duolingo {
   ///}
   ///```
   Future<UserResponse> user({
-    required String userId,
+    String userId,
   });
 
   /// Returns all learned words associated with the language that
@@ -255,20 +255,18 @@ abstract class Duolingo {
   ///}
   ///```
   Future<WordHintResponse> wordHint({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage,
+    String learningLanguage,
     required String sentence,
   });
 
   /// Switches the learning language for authenticated users.
   Future<SwitchLanguageResponse> switchLanguage({
-    required String fromLanguage,
+    String fromLanguage,
     required String learningLanguage,
   });
 
-  Future<LeaderboardResponse> leaderboard({
-    required String userId,
-  });
+  Future<LeaderboardResponse> leaderboard();
 
   /// Returns the dictionary information linked to [wordId].
   ///
@@ -313,46 +311,40 @@ abstract class Duolingo {
   });
 
   Future<SubscriptionsResponse> subscriptions({
-    required String userId,
+    String userId,
   });
 
   Future<SubscribersResponse> subscribers({
-    required String userId,
+    String userId,
   });
 
   Future<ShopItemsResponse> shopItems();
 
   Future<PurchaseResponse> purchase({
     required String itemId,
-    required String userId,
-    required String learningLanguage,
   });
 
   Future<AlphabetsResponse> alphabets({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage,
+    String learningLanguage,
   });
 
   Future<StoriesResponse> stories({
-    required String fromLanguage,
-    required String learningLanguage,
     IllustrationFormat format = IllustrationFormat.svg,
   });
 
   Future<FollowResponse> follow({
-    required String userId,
     required String targetUserId,
   });
 
   Future<UnfollowResponse> unfollow({
-    required String userId,
     required String targetUserId,
   });
 
   Future<AchievementsResponse> achievements({
-    required String userId,
-    required String fromLanguage,
-    required String learningLanguage,
+    String userId,
+    String fromLanguage,
+    String learningLanguage,
   });
 
   Future<ForumTopicsResponse> forumTopics();
@@ -366,13 +358,13 @@ abstract class Duolingo {
   });
 
   Future<SearchFriendResponse> searchFriend({
-    required int page,
-    required int perPage,
+    int page,
+    int perPage,
     required String query,
   });
 
   Future<RecommendationsResponse> recommendations({
-    required String userId,
+    String userId,
   });
 
   Future<SearchForumResponse> searchForum({
@@ -485,7 +477,7 @@ abstract class Duolingo {
   ///}
   ///```
   Future<UserResponse> cachedUser({
-    required String userId,
+    String userId,
   });
 
   /// Returns cached all learned words associated with the language that
@@ -571,14 +563,12 @@ abstract class Duolingo {
   ///}
   ///```
   Future<WordHintResponse> cachedWordHint({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage,
+    String learningLanguage,
     required String sentence,
   });
 
-  Future<LeaderboardResponse> cachedLeaderboard({
-    required String userId,
-  });
+  Future<LeaderboardResponse> cachedLeaderboard();
 
   /// Returns cached dictionary information linked to [wordId].
   ///
@@ -630,30 +620,30 @@ abstract class Duolingo {
   });
 
   Future<SubscriptionsResponse> cachedSubscriptions({
-    required String userId,
+    String userId,
   });
 
   Future<SubscribersResponse> cachedSubscribers({
-    required String userId,
+    String userId,
   });
 
   Future<ShopItemsResponse> cachedShopItems();
 
   Future<AlphabetsResponse> cachedAlphabets({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage,
+    String learningLanguage,
   });
 
   Future<StoriesResponse> cachedStories({
-    required String fromLanguage,
-    required String learningLanguage,
+    String fromLanguage,
+    String learningLanguage,
     IllustrationFormat format = IllustrationFormat.svg,
   });
 
   Future<AchievementsResponse> cachedAchievements({
-    required String userId,
-    required String fromLanguage,
-    required String learningLanguage,
+    String userId,
+    String fromLanguage,
+    String learningLanguage,
   });
 
   Future<ForumTopicsResponse> cachedForumTopics();
@@ -714,6 +704,6 @@ abstract class Duolingo {
   /// Deletes the cached data of the response object that was cached by calling the [cachedForumTopic] method.
   void cleanCachedForumTopic();
 
-  /// Deletes the cached data of the response object that was cached by calling the [cachedForumComments] method.
+  /// Deletes the cached data of the response object that was cached by calling the [cachedForumComment] method.
   void cleanCachedForumComment();
 }
